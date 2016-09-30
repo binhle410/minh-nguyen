@@ -1,0 +1,44 @@
+.stats-blk
+    .row
+        .col-xs-6.col-sm-7
+            .result-no
+                strong
+                    | 7,199
+                | &nbsp;jobs
+                span &nbsp;found in 6ms
+            button.btn-outline.btn.btn-default.btn-sm.hidden-xs
+                i.fa.fa-fw.fa-envelope-o
+                |  Email me similar jobs
+        //- .col-xs-6.text-right
+        //-     span
+        //-         a.icon-block.btn-create(href='#')
+        //-             i.fa.fa-fw.fa-envelope-o
+        //-     span
+        //-         a.icon-block.btn-filter
+        //-             i.fa.fa-fw.fa-filter
+        //-     span
+        //-         a.icon-block.btn-sort
+        //-             i.fa.fa-fw.fa-sort-alpha-asc
+        .col-xs-6.col-sm-5.hidden-xs
+            .filter-blk
+                .frow
+                    .col-sm-6.date-filter
+                        select
+                            option(value='') Date
+                            option(value='') Relevance
+                            option(value='') Salary
+                    .col-sm-6.page-filter
+                        select
+                            option(value='20') 20 per page
+                            option(value='30') 30 per page
+                            option(value='50') 50 per page
+        .col-xs-6.visible-xs.text-right
+            .mobile-filter
+                a.btn-create(href='javascript:;')
+                    i.fa.fa-fw.fa-envelope-o
+                a.btn-filter(href="javascript:;")
+                    i.fa.fa-fw.fa-filter
+                a.btn-sort(href="javascript:;")
+                    i.fa.fa-fw.fa-sort-alpha-asc
+
+

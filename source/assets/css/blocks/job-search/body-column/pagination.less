@@ -1,0 +1,46 @@
+/**
+ * JOB SEARCH: PAGINATION CSS
+ * Updated on 27/09/16
+ */
+
+.pagi-style() {
+    background: white;
+    border-color: #ccc;
+    color: #555;
+    &:hover, &:focus {
+        color: white;
+        background: #bcbcbc;
+        border-color: transparent;
+    }
+}
+
+.job-search {
+    nav {
+        text-align: center;
+        margin: 20px 40px;
+    }
+}
+
+ul.pagination {
+    margin: 0;
+    li {
+        &:first-child, &:last-child {
+            a {
+                .pagi-style();
+            }
+        }
+        &.active {
+            a {
+                background: @red;
+                border-color: transparent;
+                &:hover {
+                    background: @red;
+                    border-color: transparent;
+                }
+            }
+        }
+        a {
+            .pagi-style();
+        }
+    }
+}

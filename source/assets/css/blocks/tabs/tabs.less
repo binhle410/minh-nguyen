@@ -1,0 +1,84 @@
+/**
+ * TABS CSS
+ * Updated on 22/09/16
+ */
+.nav-tabs.style-1 {
+    margin: 0;
+    > li {
+        &.active {
+            a {
+                &, &:hover, &:focus {
+                    border-color: @red!important;
+                    background: @red!important;
+                }
+                &:before {
+                    border-color: transparent @red transparent transparent;
+                }
+                &:after {
+                    border-color: transparent transparent transparent @red;
+                }
+            }
+        } // end li.active
+        a {
+            &:hover {
+                border-color: @red!important;
+                background: @red!important;
+                &:before {
+                    border-color: transparent @red transparent transparent;
+                }
+            }
+        }
+    }
+}
+
+.top-job {
+    .tab-content {
+        border: 1px solid @lgray;
+        border-top: none;
+        height: 560px;
+        .border-radius(3px);
+        overflow: auto;
+        .tab-pane {
+            padding: 30px;
+        }
+    }
+}
+
+.job-list {
+    overflow: hidden;
+    li {
+        height: 58px;
+        float: left;
+        width: 50%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        border-bottom: 1px dotted #ccc;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        .score {
+            float: left;
+            width: 40px;
+            height: 1px;
+            display: block;
+            .label-danger {
+                background: @red;
+            }
+        }
+        .job-title {
+            width: 250px;
+            float: left;
+        }
+        strong {
+            display: inline-block;
+            font-size: 1.1em;
+            font-weight: 500;
+            color: #333;
+        }
+        em {
+            display: block;
+            font-style: normal;
+            color: #888;
+            font-weight: 400;
+        }
+    }
+}

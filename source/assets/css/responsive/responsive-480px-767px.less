@@ -1,0 +1,312 @@
+/**
+ * Media 480px-767px
+ *
+ * description: css rules for screen of new moderm smartphone
+ */
+@media (max-width: 767px) {
+    .container {
+        width: auto;
+    }
+    .header {
+        &.full-width {
+            padding: 0;
+        }
+        .navbar-collapse {
+            padding: 0;
+            position: absolute;
+            top: 52px;
+            left: 0;
+            right: 0;
+            background: white;
+            z-index: 200;
+        }
+    }
+    .navbar {
+        &.navbar-default {
+            margin: 0;
+            background: transparent;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-default {
+        height: auto;
+        border: none;
+        .navbar-collapse {
+            ul {
+                margin: 0;
+                li {
+                    height: auto;
+                    display: block;
+                    a {
+                        padding: 15px;
+                        margin: 0;
+                    }
+                    &.employer-site-link {
+                        a {
+                            margin: 0!important;
+                            padding: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-collapse {
+        .navbar-right {
+            > li {
+                > a {
+                    &.box-search-job, &.alert-notifications, &.comment-notifi {
+                        display: block;
+                        border-bottom: 1px solid #f3f3f3;
+                        border-right: 0;
+                    }
+                    &.alert-notifications {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-default {
+        .navbar-left {
+            > li {
+                &:last-child {
+                    > a {
+                        border-bottom: 1px solid #f3f3f3;
+                    }
+                }
+            }
+        }
+        .navbar-right {
+            li:not(.employer-site-link) {
+                a {
+                    position: relative;
+                    img, i {
+                        margin: 0 5px 0 0;
+                        position: absolute;
+                        top: 20px;
+                        right: 15px;
+                    }
+                    span {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .search-widget-container {
+        left: 0;
+        right: 0;
+        .transform(initial);
+        .search-widget {
+            top: 0;
+            margin: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding-top: 100px;
+            .transform(initial);
+            h1 {
+                text-align: center;
+                margin-top: 30px;
+                margin-bottom: 15px;
+            }
+            .border-text-box {
+                margin: 0;
+            }
+            .form-group {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .square-banner a img {
+        margin: 15px auto 0;
+        padding: 20px;
+        border: 1px #eee solid;
+    }
+}
+
+@media (max-width: 767px) {
+    .featured-employer {
+        margin-top: 30px;
+        .panel {
+            .panel-header {
+                background: @red;
+                color: white;
+            }
+        }
+    }
+    .nav-tabs {
+        > li {
+            > a {
+                font-size: 14px;
+            }
+        }
+    }
+    .job-list {
+        li {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        &.full-width {
+            .header-left {
+                padding: 0;
+            }
+        }
+        .logo {
+            a {
+                margin: 15px 0 0;
+            }
+        }
+    }
+    .side-column {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1033;
+        background: #fff;
+        overflow: auto;
+        padding: 15px;
+        &.active {
+            display: block;
+        }
+        .checkbox {
+            margin-bottom: 15px;
+        }
+        .btn-clear {
+            position: static;
+            margin: 50px 0 30px;
+        }
+        .btn-confirm {
+            display: block;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            margin: 0;
+            background: @dred;
+            border: none;
+            &:hover {
+                background: @red;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .filter-blk {
+        display: none;
+    }
+    .job-search {
+        overflow: hidden;
+        .box {
+            padding: 0;
+            .row {
+                margin: 0;
+            }
+            .job-search-body {
+                padding: 0;
+            }
+        }
+        .jobs {
+            margin: 0;
+        }
+        .stats-blk {
+            background: #d6d6d6;
+            font-size: 14px;
+            font-weight: 300;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            color: #fff;
+            .row {
+                margin: 0 -15px;
+            }
+        }
+    }
+    .job {
+        padding: 15px 0;
+        &.job-premium {
+            overflow: hidden;
+        }
+        .job-info {
+            h3 {
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+        .logo-placeholder {
+            width: 60px;
+            height: 60px;
+        }
+    }
+    .stats-blk {
+        height: 40px;
+        .result-no {
+            font-size: 16px;
+            padding: 0 15px;
+            line-height: 40px;
+            color: white;
+            strong {
+                color: @dred;
+            }
+            span {
+                display: none;
+            }
+        }
+        .mobile-filter {
+            height: 40px;
+            line-height: 40px;
+            a {
+                display: inline-block;
+                width: 50px;
+                height: 40px;
+                text-align: center;
+                border-left: 1px solid #eee;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .j-search-form {
+        margin: 0;
+        .btn-browse-job {
+            span {
+                font-size: 14px;
+                i {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    ul.pagination {
+        li {
+            &:not(.active) {
+                display: none;
+            }
+            &:first-child, &:last-child {
+                display: inline-block;
+            }
+        }
+    }
+}

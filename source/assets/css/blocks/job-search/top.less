@@ -1,0 +1,45 @@
+/**
+ * JOB SEARCH: TOP CSS
+ * Updated on 22/09/16
+ */
+
+.j-search-form {
+    margin: 30px auto;
+    position: relative;
+    padding: 15px;
+    .border-radius(4px);
+    background: #ccc;
+    overflow: hidden;
+    .frow {
+        margin: 0 -5px;
+        div[class*="col-"] {
+            padding: 0 5px;
+        }
+    }
+    .form-inline {
+        margin: 0;
+        .border-text-box {
+            margin: 0;
+        }
+        input {
+            .box-shadow(none);
+        }
+        .btn-search {
+            background: @red;
+            &:hover {
+                background: @dred;
+            }
+            &:focus {
+                color: white;
+            }
+        }
+    }
+    .btn-browse-job {
+        margin: 0;
+        height: 44px;
+        padding: 8px 0 0;
+        width: 100%;
+        background: @dgray;
+        border: none;
+    }
+}

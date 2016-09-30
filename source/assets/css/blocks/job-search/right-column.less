@@ -1,0 +1,60 @@
+/**
+ * JOB SEARCH: RIGHT COLUMN CSS
+ * Updated on 22/09/16
+ */
+.s-banners {
+    padding: 30px 0 30px 0;
+    a {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+.float-popup {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 3000;
+    .table {
+        margin: 0;
+        background: white;
+        border: 1px solid #f3f3f3;
+        > thead {
+            > tr {
+                > th {
+                    background: white;
+                    font-weight: 700;
+                }
+            }
+        }
+        > tbody {
+            span {
+                display: inline-block;
+                border-radius: 15px;
+                background: #5cb85c;
+                width: 16px;
+                height: 16px;
+                text-align: center;
+                color: #fff;
+                font-size: 11px;
+            }
+        }
+        > tfoot {
+            td {
+                padding: 0 15px 0 0;
+            }
+        }
+    }
+    .btn-minimize-panel, .delete-all-job, .delete-selected-job {
+        cursor: pointer;
+        font-size: 13px;
+    }
+    .btn-apply-job {
+        padding: 5px 30px;
+        background: @red;
+        border: none;
+        &:hover {
+            background: @dred;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.header-container
+  // header start
+  // classes:
+  // "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix"
+  // "dark": dark version of header e.g. class="header dark clearfix"
+  // "full-width": mandatory class for the full-width menu layout
+  // "centered": mandatory class for the centered logo layout
+  // ================
+  header.header.full-width.clearfix.transparent-header-on
+    // header-right start
+    // ================
+    .header-right.clearfix
+      // main-navigation start
+      // classes:
+      // "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick"
+      // "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated"
+      // "with-dropdown-buttons": Mandatory class that adds extra space, to the main navigation, for the search and cart dropdowns
+      // ================
+      .main-navigation.onclick.animated
+        // navbar start
+        // ================
+        nav.navbar.navbar-default(role='navigation')
+            include header/navbar-header
+            include header/right-menu
+
+
+

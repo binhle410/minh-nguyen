@@ -1,0 +1,211 @@
+/**
+ * HEADER CSS
+ * Updated on 22/09/16
+ */
+.header-container {
+    background: white;
+}
+
+.header {
+    background: transparent;
+    border: none;
+    .header-left {
+        padding: 0;
+        margin-right: 35px;
+        margin-left: 15px;
+    }
+    .logo {
+        a {
+            display: inline-block;
+            width: 220px;
+            margin: 18px 0 0;
+        }
+    }
+    .navbar-collapse {
+        padding: 0;
+    }
+}
+
+.navbar-default {
+    height: 60px;
+    .navbar-nav {
+        > li {
+            margin: 0;
+            height: 60px;
+            > a {
+                font-size: 14px!important;
+                line-height: 30px;
+                padding: 15px 15px 14px;
+                .transition(none);
+                &, &:focus {
+                    color: @dgray;
+                }
+                &:hover {
+                    color: @dred;
+                }
+            }
+        }
+    }
+    .fa-search {
+        font-size: 20px;
+    }
+}
+
+.navbar-default {
+    .navbar-right {
+        > li {
+            > a {
+                padding: 0 15px;
+                margin-top: 15px;
+                background: transparent;
+                &:hover, &:focus {
+                    background-color: transparent;
+                    z-index: 106;
+                }
+                &.lang-select, &.box-search-job, &.comment-notifi {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbar-default {
+    .navbar-right {
+        > li {
+            &.dropdown, &.open {
+                > a {
+                    &, &:focus {
+                        background: transparent;
+                        border: none;
+                    }
+                    &:hover {
+                        color: @dred;
+                    }
+                }
+            }
+            &.dropdown {
+                > a {
+                    &, &:focus {
+                        color: @dgray;
+                    }
+                }
+            }
+            &.open {
+                > a {
+                    &, &:focus {
+                        color: @dred;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbar-right {
+    > li {
+        > a {
+            &.box-search-job {
+                margin-right: 15px;
+                padding-right: 20px;
+                border-right: 1px #ccc solid;
+                display: inline-block;
+                i {
+                    color: @dred;
+                }
+                &:hover {
+                    i {
+                        color: @red;
+                    }
+                }
+            }
+            &.alert-notifications {
+                &:before {
+                    display: none;
+                }
+            }
+            img {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.navbar-right {
+    .dropdown-menu {
+        right: -199%;
+        top: 80.2%;
+        width: 300px;
+        border: 1px solid #e0e0e0;
+        .popover-title {
+            background: white;
+            color: black;
+            font-weight: bold;
+            text-align: left;
+        }
+        .notification-item {
+            .fa-fw {
+                color: black;
+                line-height: 17px;
+                text-align: center;
+                float: left;
+                font-size: 13px;
+            }
+            a {
+                color: black;
+                line-height: 17px;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+.employer-site-link {
+    background: @red;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    &:hover {
+        background: @dred;
+        a {
+            color: white;
+        }
+    }
+    a {
+        line-height: 20px!important;
+        margin-top: 10px!important;
+        strong {
+            color: white;
+            font-weight: 500;
+        }
+        span {
+            color: #ff8e82;
+            font-size: 13px;
+        }
+    }
+}
+
+.dropdown {
+    &.open {
+        span {
+            display: none;
+        }
+    }
+    span {
+        display: inline-block;
+        color: #fff;
+        background: @dred;
+        .border-radius(15px);
+        min-width: 15px;
+        height: 15px;
+        vertical-align: 15px;
+        text-align: center;
+        font-size: 10px;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        line-height: 13px;
+        padding: 0 4px;
+    }
+}

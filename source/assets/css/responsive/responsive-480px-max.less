@@ -1,0 +1,42 @@
+/**
+ * Media 480px-
+ *
+ * description: css rules for screen of old school smartphone
+ */
+@media (max-width: 480px) {
+    .stats-blk {
+        height: 40px;
+        .result-no {
+            font-size: 16px;
+            padding: 0 15px;
+            line-height: 40px;
+            color: white;
+            strong {
+                color: @dred;
+            }
+            span {
+                display: none;
+            }
+        }
+    }
+    .job {
+        .logo {
+            a {
+                img {
+                    max-width: 60px;
+                    max-height: 60px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .stats-blk {
+        .mobile-filter {
+            a {
+                width: 35px;
+            }
+        }
+    }
+}

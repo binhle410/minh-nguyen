@@ -1,0 +1,19 @@
+block vars
+  -title="interview-spot.com"
+  -bodyClass = "home"
+extends layouts/layout
+block main
+    .slideshow.clearfix
+        include blocks/mainslider/m-blk.jade
+        include blocks/search-widget.jade
+    section.main
+        include blocks/ads/top-ads.jade
+        section.feature.container
+            .row
+                .col-md-9.col-sm-12
+                    include blocks/tabs/m-blk
+                .col-md-3.col-sm-12
+                    include blocks/ads/sidebar-ads
+        // END: FEATURE BLOCK
+        include blocks/banners/m-blk
+        include blocks/blog/m-blk

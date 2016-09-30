@@ -1,0 +1,153 @@
+/**
+ * JOB SEARCH: JOB LIST CSS
+ * Updated on 27/09/16
+ */
+ .jobs {
+     margin-top: 20px;
+ }
+
+.top-jobs {
+    margin-bottom: 10px;
+}
+
+.job {
+    background:white;
+    border: 1px solid #ccc;
+    margin-top: -1px;
+    padding: 30px;
+    &:first-child {
+        margin: 0;
+    }
+    &.job-hot {
+        background: #fffcfc;
+        border: 1px solid @red;
+    }
+    &.job-premium {
+        position: relative;
+        &:after {
+            display: block;
+            width: 90px;
+            height: 90px;
+            background: url("../images/ribbon.png") no-repeat;
+            background-size: 70%;
+            z-index: 999;
+            content: "";
+            position: absolute;
+            top: -14px;
+            right: -40px;
+        }
+    }
+    .logo {
+        a {
+            display: block;
+            text-align: center;
+            img {
+                border: 1px solid #ccc;
+                padding: 5px;
+                display: block;
+                margin: 0 auto;
+                max-width: 100px;
+                max-width: 100px;
+                max-height: 70px;
+                .border-radius(3px);
+            }
+        }
+    }
+    .job-info {
+        h3 {
+            margin: 0;
+            line-height: 1.21;
+            a {
+                font-weight: 500;
+            }
+            span {
+                color: @red;
+                font-weight: 400;
+                font-style: italic;
+                font-size: 11px;
+                vertical-align: middle;
+                margin-left: 5px;
+            }
+        }
+        p {
+            margin: 5px 0;
+        }
+        .extra-info {
+            margin: 5px 0;
+            span {
+                border: 1px solid #ccc;
+                border-radius: 50%;
+                padding: 1px;
+                display: inline-block;
+                text-align: center;
+                width: 22px;
+                height: 22px;
+                margin-right: 5px;
+            }
+            a {
+                color: @red;
+                &:hover {
+                    color: @dred;
+                }
+            }
+        }
+        .posted {
+            margin-top: 10px;
+            color: #aaa;
+            small {
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+.job {
+    .logo-placeholder {
+        width: 80px;
+        height: 70px;
+        margin-top: 10px;
+        background: url("../images/logo-placeholder.png") no-repeat;
+        background-size: 100%;
+        display: inline-block;
+    }
+    .job-select {
+        position: relative;
+        z-index: 2000;
+        input {
+            display: none;
+        }
+        label {
+            &:before {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                width: 17px;
+                height: 17px;
+                left: 0;
+                border: 1px solid #ddd;
+                border-radius: 3px;
+                background-color: #fff;
+            }
+            &:after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                left: 0;
+                top: 0;
+                padding-left: 3px;
+                padding-top: 1px;
+                font-size: 11px;
+                color: #777;
+            }
+        }
+        input:checked + label {
+            &:after {
+                font-family: FontAwesome;
+                content: "\f00c";
+                color: #5cb85c;
+            }
+        }
+    }
+}

@@ -1,0 +1,104 @@
+/**
+ * Media 1200px+
+ *
+ * description: css rules for screen of tablets
+ */
+@media (max-width: 1200px) {
+    .container {
+        width: 98%;
+    }
+    .s-banners {
+        display: none;
+    }
+    // .form-inline {
+    //     .form-group {
+    //         display: block;
+    //         margin-bottom: 10px;
+    //     }
+    // }
+    // .search-form {
+    //     .category-widget {
+    //         margin: 10px 0 0;
+    //     }
+    // }
+}
+
+@media (max-width: 1024px) {
+    .navbar-header {
+        float: none;
+        .navbar-toggle {
+            display: inline-block;
+            position: relative;
+            float: right;
+            padding: 9px 10px;
+            margin-top: 10px;
+            margin-bottom: 8px;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            background-color: #fafafa;
+            border-color: transparent;
+            &:hover, &:focus {
+                border-color: transparent;
+                .icon-bar {
+                    background: @gray;
+                }
+            }
+            &.active {
+                border-color: transparent;
+                .icon-bar {
+                    background: @red;
+                }
+            }
+            .icon-bar {
+                background: @gray;
+            }
+        }
+    }
+    .navbar-collapse {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .navbar-header {
+        #logo-mobile {
+            img {
+                margin: 0;
+            }
+        }
+    }
+    .featured-employer .panel .panel-content {
+        height: auto;
+    }
+    footer {
+        .home-social {
+            text-align: center;
+            width: 100%;
+        }
+        .home-verified {
+            display: none;
+        }
+    }
+    .j-search-form {
+        .form-inline {
+            .btn-search {
+                font-size: 14px;
+                padding: 10px 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 979px) {
+}
+
+@media (min-width: 768px) {
+    .navbar-right {
+        > li  {
+            > a {
+                border: none;
+            }
+        }
+    }
+}

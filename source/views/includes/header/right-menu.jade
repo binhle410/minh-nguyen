@@ -1,0 +1,43 @@
+#navbar-collapse-1.navbar-collapse
+    // main-menu
+    ul.nav.navbar-nav.navbar-left
+        li
+            a(href="#") All Jobs
+        li
+            a(href="#") Advice
+    ul.nav.navbar-nav.navbar-right
+        li
+            a.box-search-job(href="job-search.html")
+                i.fa.fa-lg.fa-search
+                span Search
+        li
+            a.lang-select(href="#")
+                img(src="./images/us.png", alt="", width="24")
+                span US English
+        li.dropdown
+            a.alert-notifications.dropdown-toggle(href="#", data-toggle="dropdown")
+                i.fa.fa-lg.fa-bell
+                span 1
+            .dropdown-menu.popover.notification-popover
+                h3.popover-title Notification
+                .popover-content
+                    .notification-item
+                      div
+                        i.fa.fa-info-circle.fa-fw
+                        a(href='#') Sign up now to get your dream jobs
+        li
+            a.comment-notifi(href="#")
+                i.fa.fa-lg.fa-comments-o
+                span Comments
+        li
+            a(href="#")
+                i.fa.fa-fw.fa-lg.fa-sign-in
+                | Log In
+        li
+            a(href="#")
+                | Sign Up
+        li.employer-site-link
+            a(target='_blank', href='#')
+                strong.text-white EMPLOYERS
+                br
+                span.text-white Post Jobs & Find Talents
