@@ -20,22 +20,22 @@ form.form-horizontal
                                 |                                     Cell Number
                             .view-field.clearfix
                                 p.form-control-static.view-control.pull-left 01696872113
-                                ppull-left.form-control-static.text-gray-light
+                                .pull-left.form-control-static.text-gray-light
                                     em
                                         i.fa.fa-eye
-                                        span Visible to employer
+                                        span   Visible to employer
                             .edit-field
                                 input.form-control(type='tel', name='cellphone', placeholder='e.g. 0903012825', value='01696872113')
                                 .checkbox
                                     label
-                                        input(name='confidential', value='1', type='checkbox', data-control='visible-to-employer')
-                                        em Invisible to employer
+                                        input(name='confidential', value='1', type='checkbox')
+                                        em    Invisible to employer
                 .row
                     .col-sm-6
                         .form-group
                             label(for='date-of-birth')
                                 strong.text-red *
-                                | Date of birth
+                                |     Date of birth
                             .edit-field
                                 input.form-control(name='birthday', placeholder="{ 'e.g. 28/04/1986'|trans }}", value='25/09/1993')
                             .view-field
@@ -44,13 +44,13 @@ form.form-horizontal
                         .form-group
                             label(for='nationality')
                                 strong.text-red *
-                                | Nationality
+                                |     Nationality
                             .view-field
-                                p.form-control-static.view-control(data-type='select') Local Vietnamese
+                                p.form-control-static.view-control Local Vietnamese
                             .edit-field
                                 .border-text-box
-                                    select(name='nationality', data-placeholder='e.g. Vietnam', tabindex='-1', title='*\
-                                    Nationality', style='display: none;')
+                                    select(name='nationality', tabindex='-1', title='*\
+                                    Nationality')
                                         option(value='') Please select...
                                         option(value='1', selected='') Local Vietnamese
                                         option(value='2') Foreigner
@@ -59,28 +59,28 @@ form.form-horizontal
                         .form-group
                             label
                                 strong.text-red *
-                                |  Gender
+                                |    Gender
                             .edit-field
-                                label.radio-inline(for='gender-male')
-                                    input(type='radio', name='gender', value='1', checked='checked', data-text-value='Male')
+                                label.radio-inline
+                                    input(type='radio', name='gender', value='1', checked='checked')
                                     |                                         Male
-                                label.radio-inline(for='gender-male')
-                                    input(type='radio', name='gender', value='2', data-text-value='Female')
+                                label.radio-inline
+                                    input(type='radio', name='gender', value='2')
                                     |                                         Female
                             .view-field
-                                p.form-control-static.view-control(data-type='radio') Male
+                                p.form-control-static.view-control Male
                     .col-sm-6
                         .form-group
-                            label Marital Status
+                            label   Marital Status
                             .edit-field
                                 label.radio-inline(for='marital-single')
-                                    input#marital-single(type='radio', name='marital', value='1', checked='checked', data-text-value='Single')
+                                    input(type='radio', name='marital', value='1', checked='checked')
                                     |                                         Single
                                 label.radio-inline(for='marital-married')
-                                    input#marital-married(type='radio', name='marital', value='2', data-text-value='Married')
+                                    input(type='radio', name='marital', value='2')
                                     |                                         Married
                             .view-field
-                                p.form-control-static.view-control(data-type='radio') Single
+                                p.form-control-static.view-control Single
                 hr.m-t-xs
                 .row
                     .col-sm-6
@@ -89,11 +89,11 @@ form.form-horizontal
                                 strong.text-red *
                                 |                                     Country
                             .view-field
-                                p.form-control-static.view-control(data-type='select') Vietnam
+                                p.form-control-static.view-control Vietnam
                             .edit-field
                                 .border-text-box
-                                    select(name='country', data-placeholder='e.g. Vietnam', tabindex='-1', title='*\
-                                    Country', style='display: none;')
+                                    select(name='country', tabindex='-1', title='*\
+                                    Country')
                                         option(value='') Please select...
                                         option(value='1', selected='') Vietnam
                                         option(value='2') Afghanistan
@@ -340,13 +340,13 @@ form.form-horizontal
                         .form-group
                             label(for='city')
                                 strong.text-red *
-                                |Province/City
+                                |   Province/City
                             .view-field
-                                p.form-control-static.view-control(data-type='select') Singapore
+                                p.form-control-static.view-control Singapore
                             .edit-field
                                 .border-text-box
-                                    select(onchange='loadDistrict();', name='city', data-placeholder='e.g. Singapore', tabindex='-1', title='*\
-                                    Province/City', style='display: none;')
+                                    select(onchange='loadDistrict();', name='city', tabindex='-1', title='*\
+                                    Province/City')
                                         option(value='') Please select...
                                         option(value='29', selected='') Singapore
                                         option(value='24') Ha Noi
@@ -420,10 +420,10 @@ form.form-horizontal
                         .form-group
                             label(for='district') District
                             .view-field
-                                p.form-control-static.view-control(data-type='select', data-na='Not applicable') Tan Binh
+                                p.form-control-static.view-controlPost Centre
                             .edit-field
                                 .border-text-box
-                                    select(name='district', data-placeholder='e.g. District 3', tabindex='-1', title='District', style='display: none;')
+                                    select(name='district')
                                         option(value='') Please select...
                                         option(value='1') District 1
                                         option(value='2') District 2
@@ -454,15 +454,15 @@ form.form-horizontal
                         strong.text-red *
                         |                         Address
                     .view-field
-                        p.form-control-static.view-control 38 Cong Lo, Tan Binh District
+                        p.form-control-static.view-control #05-33 Singapore Post Centre
                     .edit-field
-                        input.form-control(type='text', name='address', placeholder='e.g.130 Suong Nguyet Anh', value='38 Cong Lo, Tan Binh District')
+                        input.form-control(type='text', name='address', placeholder='e.g.130 Suong Nguyet Anh', value='#05-33 Singapore Post Centre')
                 // Buttons
-                .form-group.push-top-md.edit-field
-                    .col-sm-6
+                .form-group.edit-field
+                    .pull-left
                         | (
                         strong.text-red *
                         | ) is required field
-                    .col-sm-6.text-right
+                    .pull-right.text-right
                         button.btn.btn-default.btn-cancel(type='button') Cancel
                         button.btn.btn-primary.btn-save(type='button') Save

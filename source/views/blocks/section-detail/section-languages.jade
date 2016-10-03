@@ -1,8 +1,7 @@
 .section-detail.section-languages
-    input#languageBlockResumeId(type='hidden', name='resumeId', value='3375529')
-    .box.border-primary
-        fieldset.form-view
-            legend.box-md(data-toggle='tooltip', data-placement='top', data-original-title='', title='')
+    .box
+        fieldset
+            legend.box-md
                 i.fa.fa-fw.fa-list
                 |  Languages
             .box-md.content-section-wrapper.m-b-n(style='display: block;')
@@ -15,8 +14,7 @@
                 span.placeholder Add all the languages you can speak to increase your job prospects.
             .sortable.content-section
                 // Sample
-                form#form-language-0.sample.form-view.box-md.form-wrapper.relative(hidden='')
-                    input(type='hidden', name='resumeLanguageId', value='0')
+                form.sample.box-md.form-wrapper.relative(hidden='')
                     span.form-btn-edit
                         button.btn.btn-sm.btn-default(type='button')
                             i.fa.fa-pencil
@@ -24,7 +22,7 @@
                         .col-sm-4
                             .edit-field
                                 .border-text-box.m-r-lg
-                                    select#language0.language-select.edit-control(name='language0', tabindex='2', data-placeholder='e.g. Vietnamese')
+                                    select.language-select(name='language0', tabindex='2')
                                         option(value='0', selected='') Please select...
                                         option(value='1') Arabic
                                         option(value='2') Bengali
@@ -66,27 +64,27 @@
                                         option(value='38') Vietnamese
                                         option(value='39') Other
                             .view-field
-                                p.form-control-static.view-control(data-type='select') Please select...
+                                p.form-control-static.view-control Please select...
                         .col-sm-8
                             .edit-field.m-t-sm
                                 .language-select0
                                     label.radio-inline
-                                        input.edit-control(type='radio', name='language-level0', data-text-value='Beginner', value='1')
+                                        input(type='radio', name='language-level0', value='1')
                                         |                                                 Beginner
                                     label.radio-inline
-                                        input.edit-control(type='radio', name='language-level0', data-text-value='Intermediate', value='2')
+                                        input(type='radio', name='language-level0', value='2')
                                         |                                                 Intermediate
                                     label.radio-inline
-                                        input.edit-control(type='radio', name='language-level0', data-text-value='Advanced', value='3')
+                                        input(type='radio', name='language-level0', value='3')
                                         |                                                 Advanced
                                     label.radio-inline
-                                        input.edit-control(type='radio', name='language-level0', data-text-value='Native', value='4')
+                                        input(type='radio', name='language-level0', value='4')
                                         |                                                 Native
                             .view-field
-                                p.form-control-static.view-control(data-type='radio')
+                                p.form-control-static.view-control
                     // Buttons
-                    .form-group.push-top-sm.edit-field
-                        .col-sm-6.text-right.pull-right
+                    .form-group.edit-field
+                        .text-right.pull-right
                             button.btn-remove-this-section.btn.btn-link.text-danger.btn-remove-language(type='button')
                                 i.fa.fa-trash-o
                             button.btn.btn-default.btn-cancel.btn-cancel-language(type='button')
@@ -94,8 +92,7 @@
                             button.btn.btn-primary.btn-save.btn-save-language(type='button')
                                 | Save
                 // Form
-                form#form-language-1.form-view.box-md.form-wrapper.relative
-                    input(type='hidden', name='resumeLanguageId', value='1')
+                form.box-md.form-wrapper.relative
                     span.form-btn-edit
                         button.btn.btn-sm.btn-default(type='button')
                             i.fa.fa-pencil
@@ -103,7 +100,7 @@
                         .col-sm-4
                             .edit-field(style='display: none;')
                                 .border-text-box.m-r-lg
-                                    select#language1.language-select.edit-control(name='language1', tabindex='-1', data-placeholder='e.g. Vietnamese', title='', style='display: none;')
+                                    select.language-select(name='language1', tabindex='-1', title='', style='display: none;')
                                         option(value='0', selected='') Please select...
                                         option(value='1') Arabic
                                         option(value='2') Bengali
@@ -145,33 +142,33 @@
                                         option(value='38') Vietnamese
                                         option(value='39') Other
                             .view-field(style='display: block;')
-                                p.form-control-static.view-control(data-type='select') English
+                                p.form-control-static.view-control English
                         .col-sm-8
                             .edit-field.m-t-sm(style='display: none;')
                                 .language-select0
                                     label.radio-inline
-                                        input.edit-control(type='radio', name='language-level1', data-text-value='Beginner', value='1')
+                                        input(type='radio', name='language-level1', value='1')
                                         |                                                 Beginner
                                     label.radio-inline
-                                        input.edit-control(type='radio', name='language-level1', data-text-value='Intermediate', value='2')
+                                        input(type='radio', name='language-level1', value='2')
                                         |                                                 Intermediate
                                     label.radio-inline
-                                        input.edit-control(type='radio', name='language-level1', data-text-value='Advanced', value='3')
+                                        input(type='radio', name='language-level1', value='3')
                                         |                                                 Advanced
                                     label.radio-inline
-                                        input.edit-control(type='radio', name='language-level1', data-text-value='Native', value='4')
+                                        input(type='radio', name='language-level1', value='4')
                                         |                                                 Native
                             .view-field(style='display: block;')
-                                p.form-control-static.view-control(data-type='radio') Advanced
+                                p.form-control-static.view-control Advanced
                     // Buttons
                     .form-group.push-top-sm.edit-field(style='display: none;')
-                        .col-sm-6.text-right.pull-right
+                        .text-right.pull-right
                             button.btn-remove-this-section.btn.btn-link.text-danger.btn-remove-language(type='button')
                                 i.fa.fa-trash-o
                             button.btn.btn-default.btn-cancel.btn-cancel-language(type='button')
                                 | Cancel
                             button.btn.btn-primary.btn-save.btn-save-language(type='button')
                                 | Save
-            button#add-language-button.btn.btn-default.btn-block.no-border.add-one-more-section(type='button', style='display: block;')
+            button.btn.btn-default.btn-block.add-one-more-section(type='button', style='display: block;')
                 strong Add Language
 

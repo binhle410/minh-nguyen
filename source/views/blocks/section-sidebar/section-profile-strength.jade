@@ -1,15 +1,15 @@
-#profileLevel.panel.panel-default.section-sidebar.section-profile-level
+.panel.panel-default.section-sidebar.section-profile-level
     .panel-heading
         | Your Profile Strength
-        span#loading-profile-level.pull-right(hidden='')
+        span.pull-right(hidden='')
             i.fa.fa-spinner.fa-pulse
     .panel-content.box-sm
-        input#online-profile-level(type='hidden', value='1')
+        input(type='hidden', value='1')
         .profile-strength
             span.pull-left.m-r-xs  Your profile strength is
             strong.text-success Beginner
         hr.m-t.m-b
-        p.take-to-next-level.strong-tooltip(data-complete-tip="Complete profile for your professional look! <i class='fa fa-times-circle'></i>", data-upgrade-tip="Polish your profile is the easiest way <br/> to get the dream job! <i class='fa fa-times-circle'></i>", data-original-title='', title='')
+        p.take-to-next-level.strong-tooltip
             strong Take your profile to the next level:
         .list-group
             a.list-group-item

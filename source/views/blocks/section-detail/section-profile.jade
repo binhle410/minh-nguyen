@@ -1,7 +1,7 @@
 .section-detail.section-profile.m-t
     .box.border-success
         fieldset.form-view
-            legend.box-md(data-toggle='tooltip', data-placement='top', data-original-title='', title='')
+            legend.box-md
                 i.fa.fa-fw.fa-list
                 |  Summary
             .relative
@@ -19,14 +19,10 @@
                             p
                                 label
                                     | Introduce yourself and describe your career objectives
-                            textarea.form-control.edit-control.countdown-target(rows='5', autofocus='', name='profile', placeholder='Specify briefly your profile and career objectives', maxlength='5000', aria-hidden='true', style='display: none;')
-                                | <p>I am Victor Lee, a HTML/CSS specialist and Front End Developer from Hochiminh City, Vietnam. I have more or less than one year of experience in front end development. I am highly skilled in HTML5/CSS3, Bootstrap & Responsive websites. I am currently looking for a job as a Frontend developer. You could find out more information of me at http://victor.lee</p>
-                                | <p>Thank you very much!</p>
-                            em.countdown.gray-light(data-text='character remaining') 4616 character remaining
+                            textarea.form-control.countdown-target(rows='5', autofocus='', name='profile', maxlength='5000')
+                            em.countdown.gray-light 5000 character remaining
                     // Buttons
                     .form-group.push-top-md.edit-field
-                        .row
-                            .col-sm-6
-                            .col-sm-6.text-right
-                                button.btn.btn-cancel.btn-default(type='button') Cancel
-                                button.btn.btn-save.btn-primary(type='button') Save
+                        .text-right
+                            button.btn.btn-cancel.btn-default(type='button') Cancel
+                            button.btn.btn-save.btn-primary(type='button') Save

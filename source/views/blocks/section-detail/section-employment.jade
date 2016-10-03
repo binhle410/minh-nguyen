@@ -23,7 +23,7 @@
                                 label
                                     strong.text-red *
                                     |  Position
-                                input.form-control.edit-control(type='text', name='position', placeholder='e.g. UI/UX Designer', value='', maxlength='150', autofocus='')
+                                input.form-control(type='text', name='position', placeholder='e.g. UI/UX Designer', value='', maxlength='150', autofocus='')
                     .feature-blk
                         .view-field
                             strong.view-control.placeholder e.g. interviewspot
@@ -32,13 +32,13 @@
                                 label
                                     strong.text-red *
                                     |  Company
-                                input.form-control.edit-control.company-name(type='text', name='companyName', placeholder='e.g. interviewspot', value='', maxlength='150')
+                                input.form-control.company-name(type='text', name='companyName', placeholder='e.g. interviewspot', value='', maxlength='150')
                     .feature-blk
                         .view-field
                             p
-                                span.view-control.placeholder(data-control='from-date') e.g. 09/2008
+                                span.view-control.placeholder e.g. 09/2008
                                 |                                     -
-                                span.view-control.placeholder(data-control='to-date', data-type='manual') e.g. 12/2014
+                                span.view-control.placeholder e.g. 12/2014
                                 span.total-time.placeholder
                                     | (
                                     span.years
@@ -53,16 +53,16 @@
                                 .col-sm-4
                                     .form-group
                                         label From month
-                                        input.form-control.edit-control.sample-datepicker(name='fromDate', placeholder='e.g. 09/2008', data-control='from-date')
+                                        input.form-control.sample-datepicker(name='fromDate', placeholder='e.g. 09/2008')
                                 .col-sm-4
                                     .form-group
                                         label To month
-                                        input.form-control.edit-control.sample-datepicker(name='toDate', placeholder='e.g. 12/2014', data-control='to-date')
+                                        input.form-control.sample-datepicker(name='toDate', placeholder='e.g. 12/2014')
                                 .col-sm-4
                                     .form-group
                                         .m-t-lg.hidden-xs
                                         label.control-label
-                                            input.to-present-checkbox.edit-control(type='checkbox', name='currentExp', value='1', data-text-value='to present')
+                                            input.to-present-checkbox(type='checkbox', name='currentExp', value='1')
                                             em Current Job
                     .feature-blk
                         .view-field
@@ -70,23 +70,22 @@
                         .edit-field
                             .form-group
                                 label Description
-                                textarea.form-control.edit-control.emp-description.countdown-target(rows='3', name='description', placeholder='Describe your duties and responsibilities...')
-                                em.countdown.gray-light(data-text='character remaining')
+                                textarea.form-control.emp-description.countdown-target(rows='3', name='description', placeholder='Describe your duties and responsibilities...')
+                                em.countdown.gray-light
                                 p.msg-description-limit-min.error-message(hidden='hidden') You have to enter more than 100 characters
                                 p.msg-description-limit-max.error-message(hidden='hidden') You have entered too many characters
                                 p.msg-description-valid.error-message(hidden='hidden') Please do not enter phone number or email.
                                 p.msg-description-suggestion.text-info(hidden='hidden') Please complete this field to improve your profile strength.
-                    .form-group.push-top-md.edit-field
-                        .row
-                            .col-sm-6
-                                | (
-                                strong.text-red *
-                                | ) is required field
-                            .col-sm-6.text-right
-                                button.btn-remove-this-section.btn.btn-link(type='button', onclick="deleteEmploymentHistory($(this).parents('form'))")
-                                    i.glyphicon.glyphicon-trash
-                                button.btn-cancel.btn.btn-default(type='button') Cancel
-                                button.btn-save.btn.btn-primary(type='button', onclick="saveEmploymentHistory($(this).parents('form'))") Save
+                    .form-group.edit-field
+                        .pull-left
+                            | (
+                            strong.text-red *
+                            | ) is required field
+                        .pull-right.text-right
+                            button.btn-remove-this-section.btn.btn-link(type='button')
+                                i.fa.fa-trash-o
+                            button.btn-cancel.btn.btn-default(type='button') Cancel
+                            button.btn-save.btn.btn-primary(type='button') Save
                 // Form
                 form.form-view.form-wrapper.box-md.relative
                     input(type='hidden', name='resume_id', value='3375529')
@@ -102,7 +101,7 @@
                                 label
                                     strong.text-red *
                                     |  Position
-                                input.form-control.edit-control(type='text', name='position', placeholder='e.g. UI/UX Designer', value='', maxlength='150', autofocus='')
+                                input.form-control(type='text', name='position', placeholder='e.g. UI/UX Designer', value='', maxlength='150', autofocus='')
                     .feature-blk
                         .view-field(style='display: block;')
                             p.view-control Staff.com
@@ -111,13 +110,13 @@
                                 label
                                     strong.text-red *
                                     |  Company
-                                input.form-control.edit-control.company-name(type='text', name='companyName', placeholder='e.g. interviewspot', value='', maxlength='150')
+                                input.form-control.company-name(type='text', name='companyName', placeholder='e.g. interviewspot', value='', maxlength='150')
                     .feature-blk
                         .view-field(style='display: block;')
                             p
-                                span.view-control.placeholder(data-control='from-date') e.g. 09/2008
+                                span.view-control.placeholder e.g. 09/2008
                                 |                                     -
-                                span.view-control.placeholder(data-control='to-date', data-type='manual') e.g. 12/2014
+                                span.view-control.placeholder e.g. 12/2014
                                 span.total-time.placeholder
                                     |  (
                                     span.years
@@ -132,16 +131,16 @@
                                 .col-sm-4
                                     .form-group
                                         label From month
-                                        input.form-control.edit-control.datepicker(name='fromDate', placeholder='e.g. 09/2008', data-control='from-date')
+                                        input.form-control.datepicker(name='fromDate', placeholder='e.g. 09/2008')
                                 .col-sm-4
                                     .form-group
                                         label To month
-                                        input.form-control.edit-control.datepicker(name='toDate', placeholder='e.g. 12/2014', data-control='to-date')
+                                        input.form-control.datepicker(name='toDate', placeholder='e.g. 12/2014')
                                 .col-sm-4
                                     .form-group
                                         .m-t-lg.hidden-xs
                                         label.control-label
-                                            input.to-present-checkbox.edit-control(type='checkbox', name='currentExp', value='1', data-text-value='to present')
+                                            input.to-present-checkbox(type='checkbox', name='currentExp', value='1')
                                             em Current Job
                     .feature-blk
                         .view-field(style='display: block;')
@@ -149,22 +148,17 @@
                         .edit-field(style='display: none;')
                             .form-group
                                 label Description
-                                #mceu_6.mce-tinymce.mce-container.mce-panel(hidefocus='1', tabindex='-1', role='application', style='visibility: hidden; border-width: 1px;')
-                                    #mceu_6-body.mce-container-body.mce-stack-layout
-                                        #mceu_7.mce-edit-area.mce-container.mce-panel.mce-first.mce-last.mce-stack-layout-item(hidefocus='1', tabindex='-1', role='group', style='border-width: 1px 0px 0px;')
-                                            iframe#mce_3_ifr(frameborder='0', allowtransparency='true', title='Rich Text Area. Press ALT-F9 for menu. Press ALT-F10 for toolbar. Press ALT-0 for help', src='javascript:""', style='width: 100%; height: 100px; display: block;')
-                                textarea#mce_3.form-control.edit-control.emp-description.countdown-target(rows='3', name='description', placeholder='Describe your duties and responsibilities...', aria-hidden='true', style='display: none;')
-                                em.countdown.gray-light(data-text='character remaining') 5000 character remaining
-                    .form-group.push-top-md.edit-field(style='display: none;')
-                        .row
-                            .col-sm-6
-                                | (
-                                strong.text-red *
-                                | ) is required field
-                            .col-sm-6.text-right
-                                button.btn-remove-this-section.btn.btn-link(type='button')
-                                    i.glyphicon.glyphicon-trash
-                                button.btn-cancel.btn.btn-default(type='button') Cancel
-                                button.btn-save.btn.btn-primary(type='button') Save
+                                textarea.form-control.emp-description.countdown-target(rows='3', name='description', placeholder='Describe your duties and responsibilities...', aria-hidden='true', style='display: none;')
+                                em.countdown.gray-light 5000 character remaining
+                    .form-group.edit-field(style='display: none;')
+                        .pull-left
+                            | (
+                            strong.text-red *
+                            | ) is required field
+                        .pull-right.text-right
+                            button.btn-remove-this-section.btn.btn-link(type='button')
+                                i.fa.fa-trash-o
+                            button.btn-cancel.btn.btn-default(type='button') Cancel
+                            button.btn-save.btn.btn-primary(type='button') Save
             button.btn.btn-default.btn-block.no-border.add-one-more-section(type='button')
                 strong Add Employment History

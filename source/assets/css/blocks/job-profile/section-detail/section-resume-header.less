@@ -5,27 +5,18 @@
 
 .section-header {
     margin-top: 10px;
+    .absolute-right {
+        right: 15px;
+    }
 }
 
 .section-resume-header {
-    .bg-gray {
-        .btn-default {
-            background: #e0e0e0;
-            border: none;
-            &:hover {
-                background: #e0e0e0;
-            }
-        }
-    }
     .dropdown {
         > a {
             &:before {
                 content: none;
             }
         }
-    }
-    .form-wrapper {
-        margin: 0;
     }
 }
 
@@ -87,13 +78,34 @@
         .text-gray-light {
             margin-right: 3px;
         }
+        p {
+            a {
+                color: @red;
+            }
+        }
+
     }
     .user-info {
         .box-md {
-            padding: 16px 10px 0 10px;
+            padding: 15px 10px 15px 10px;
         }
     }
     .contact-information-toggler {
         .border-radius(0);
+        background: #e0e0e0;
+        border: none;
+        &:hover {
+            background: #e0e0e0;
+        }
+    }
+    .view-control {
+        margin-right: 3px;
+    }
+}
+
+.new-graduate {
+    label {
+        font-weight: 400;
+        text-transform: initial;
     }
 }

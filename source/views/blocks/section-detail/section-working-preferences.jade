@@ -1,12 +1,12 @@
 .section-detail.section-working-preferences.benefit-section
-    form#form-summary.form-horizontal.form-view
+    form.form-horizontal.form-view
         input(type='hidden', name='resumeId', value='3375529')
         .box.border-primary
             fieldset
                 legend.box-md
                     i.fa.fa-fw.fa-list
                     |  Working Preferences
-                #section-summary-edit.box-md.form-wrapper.form-working-preference.relative
+                .box-md.form-wrapper.form-working-preference.relative
                     span.form-btn-edit
                         button.btn.btn-sm.btn-default(type='button')
                             i.fa.fa-pencil
@@ -19,7 +19,7 @@
                                 .clearfix
                                     .pull-left.expected-location-wrapper
                                         .edit-field(style='display: none;')
-                                            select#expected-location.edit-control(name='expectedLocation[]', multiple='', data-placeholder='e.g. Singapore', tabindex='-1', style='display: none;')
+                                            select(name='expectedLocation[]', multiple='', tabindex='-1', style='display: none;')
                                                 option(selected='', value='29') Singapore
                                                 option(value='24') Ha Noi
                                                 option(value='71') Mekong Delta
@@ -91,14 +91,14 @@
                                             br
                                             small.legend (Maximum 3 locations)
                                         .view-field(style='display: block;')
-                                            p.form-control-static.view-control(data-type='multiple-select') Singapore, Malaysia, USA
+                                            p.form-control-static.view-control Singapore, Malaysia, USA
                                     .pull-left.m-l-xs
                                         .view-field(style='display: block;')
                                             p.form-control-static
-                                                em.view-control(data-type='radio')
+                                                em.view-control
                                         .edit-field.m-t-sm(style='display: none;')
                                             label
-                                                input.edit-control(type='checkbox', name='willingToRelocate', data-text-value='(Willing to relocate)', value='false')
+                                                input(type='checkbox', name='willingToRelocate', value='false')
                                                 em Willing to relocate
                     .form-group
                         .row
@@ -107,7 +107,7 @@
                                     strong.text-red.edit-field(style='display: none;') *
                                     |                                     Expected Job Category
                                 .edit-field(style='display: none;')
-                                    select#expected-job-category.edit-control(name='expectedJobCategory[]', data-placeholder='e.g. Accounting', multiple='', tabindex='-1', style='display: none;')
+                                    select(name='expectedJobCategory[]', multiple='', tabindex='-1', style='display: none;')
                                         option(value='72') Printing
                                         option(value='73') Restaurant/Hotel
                                         option(value='74') FMCG
@@ -181,14 +181,14 @@
                                     br
                                     small.legend (Maximum 3 categories)
                                 .view-field(style='display: block;')
-                                    p.form-control-static.view-control(data-type='multiple-select') IT - Software
+                                    p.form-control-static.view-control IT - Software
                             .col-sm-6
                                 label(for='expected-job-level')
                                     strong.text-red.edit-field(style='display: none;') *
                                     |                                     Expected Job Level
                                 .edit-field(style='display: none;')
                                     .border-text-box.edit-field(style='display: none;')
-                                        select#expected-job-level.edit-control(name='expectedJobLevel', data-placeholder='e.g. Team Leader/Supervisor', tabindex='-1', title='\
+                                        select(name='expectedJobLevel', tabindex='-1', title='\
                                         *\
                                         Expected Job Level\
                                         ', style='display: none;')
@@ -198,7 +198,7 @@
                                             option(value='7') Manager
                                             option(value='3') Director and above
                                 .view-field(style='display: block;')
-                                    p.form-control-static.view-control(data-type='select') Experienced (non-manager)
+                                    p.form-control-static.view-control Experienced (non-manager)
                     .form-group
                         label(for='expected-location')
                             strong.text-red.edit-field(style='display: none;') *
@@ -207,9 +207,9 @@
                         .edit-field(style='display: none;')
                             .row
                                 .col-sm-6
-                                    input#specific-salary-input.form-control.edit-control(type='text', placeholder='e.g. 5000', name='expectedSalaryRange', value='400')
+                                    input.form-control(type='text', placeholder='e.g. 5000', name='expectedSalaryRange', value='400')
                         .view-field(style='display: block;')
-                            p#static-specific-salary.form-control-static.view-control 400
+                            p.form-control-static.view-control 400
                     .expected-company-benefit
                         label
                             strong.text-red.edit-field(style='display: none;') *
@@ -477,13 +477,12 @@
                             // / Benefit Edit Mode
                         // Buttons
                         .form-group.push-top-sm.edit-field(style='display: none;')
-                            .row
-                                .col-sm-6
-                                    | (
-                                    strong.text-red *
-                                    | ) is required field
-                                .col-sm-6.text-right
-                                    button#cancelSummaryInforBtn.btn.btn-default.btn-cancel(type='button', onclick='mdlBenefit.cancelSaveBenefit()') Cancel
-                                    button#saveSummaryInforBtn.btn.btn-primary.btn-save(type='button') Save
-                    button.btn.hidden.btn-default.btn-block.no-border.add-one-more-section.hide(type='button', data-type='edit-only', style='display: inline-block;')
+                            .pull-left
+                                | (
+                                strong.text-red *
+                                | ) is required field
+                            .pull-right.text-right
+                                button.btn.btn-default.btn-cancel(type='button') Cancel
+                                button.btn.btn-primary.btn-save(type='button') Save
+                    button.btn.hidden.btn-default.btn-block.add-one-more-section.hide(type='button')
                         strong Add Working Preferences

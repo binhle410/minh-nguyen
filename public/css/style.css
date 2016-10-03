@@ -16852,6 +16852,9 @@ body.bodyover {
 .m-t-n-lg {
   margin-top: -30px;
 }
+.m-t-xs {
+  margin-top: 5px;
+}
 .no-padding {
   padding: 0!important;
 }
@@ -19182,17 +19185,21 @@ ul.pagination li a:focus {
   border: 0;
   margin: 0;
   padding: 0;
-  background: inherit;
+  background: none;
 }
 .main-profile .btn {
   border: 1px solid transparent;
   padding: 5px 25px;
   line-height: 1.42857143;
   border-radius: 2px;
-  font-size: 14px;
+  font-size: 12px;
+  margin: 0 0 0 5px;
 }
 .main-profile .btn:hover {
   background: #ddd;
+}
+.main-profile .btn:first-child {
+  margin: 0;
 }
 .main-profile .btn.btn-primary {
   background: #de5749;
@@ -19221,16 +19228,20 @@ ul.pagination li a:focus {
   padding-right: 0;
 }
 .main-profile {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
-.main-profile .panel,
-.main-profile .section-resume-header .box {
+.main-profile .panel {
   background: #fff;
   margin-bottom: 0;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
   border-top: 1px #ddd solid;
   border-left: 0;
   border-right: 0;
@@ -19255,24 +19266,33 @@ ul.pagination li a:focus {
   background: #fff;
   margin-bottom: 15px;
   border: 0;
-  box-shadow: 0 1px 1px #ccc;
+  border-top: 1px solid #ddd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
-.main-profile .box-md {
-  padding: 20px;
-}
-.main-profile form {
-  margin: 0;
-}
-.main-profile form label {
-  font-weight: 400;
+.main-profile label {
+  font-weight: 700;
   font-size: 14px;
   color: #555;
 }
-.main-profile form label small {
+.main-profile label.radio-inline {
+  font-weight: 400;
+}
+.main-profile label.radio-inline input {
+  margin-top: 3px;
+}
+.main-profile label small {
   font-size: 80%;
 }
 .main-profile .btn.add-one-more-section {
   margin: 0;
+  padding: 10px 0;
 }
 .main-profile .btn.add-one-more-section.no-border {
   border-top: 1px #ddd solid!important;
@@ -19290,6 +19310,7 @@ ul.pagination li a:focus {
 .main-profile .form-wrapper.box-md,
 .main-profile .placeholder-section.box-md {
   padding: 20px;
+  background: none;
 }
 .main-profile .form-control-static {
   padding-top: 0;
@@ -19309,17 +19330,24 @@ ul.pagination li a:focus {
   padding: 10px 15px;
   border-bottom: 0;
   text-transform: capitalize;
-  border-top-right-radius: 1px;
-  border-top-left-radius: 1px;
 }
 .main-profile .panel-default > .panel-heading {
   color: #555;
   background-color: #f5f5f5;
   border-color: #ddd;
+  border: none;
 }
 .main-profile .label {
   width: 30px;
   padding: 2px 5px;
+}
+.main-profile .form-control,
+.main-profile .form-control:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
 }
 .main-profile .list-group {
   margin-bottom: 0;
@@ -19352,7 +19380,6 @@ ul.pagination li a:focus {
   color: #555;
 }
 .main-profile .section-detail legend.box-md {
-  background: #fff!important;
   color: #666!important;
   margin: 0;
   font-weight: 400;
@@ -19364,6 +19391,9 @@ ul.pagination li a:focus {
   border-left: none;
   border-right: none;
   width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ddd;
 }
 .main-profile .section-detail h4 {
   font-size: 16px;
@@ -19383,7 +19413,7 @@ ul.pagination li a:focus {
   padding: 5px 10px;
   margin: 0;
 }
-.main-profile .form-wrapper input {
+.main-profile .form-wrapper .form-control {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -19399,16 +19429,29 @@ ul.pagination li a:focus {
   -ms-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none;
+  border-color: #ddd;
 }
-.main-profile .form-wrapper input.input-sm {
+.main-profile .form-wrapper .form-control[disabled],
+.main-profile .form-wrapper .form-control[readonly] {
+  opacity: 1;
+}
+.main-profile .form-wrapper .form-control.input-sm {
   height: 28px;
   padding: 3px 6px;
   font-size: 11px;
   line-height: 1.5;
-  border-radius: 2px;
 }
-.main-profile .form-wrapper input[type="checkbox"] {
+.main-profile .form-wrapper .form-control[type="checkbox"] {
   margin-right: 5px;
+}
+.main-profile .edit-field {
+  display: none;
+}
+.main-profile .form-horizontal {
+  margin: 0;
+}
+.main-profile .box-md {
+  padding: 20px;
 }
 /**
  * SECTION RESUME HEADER CSS
@@ -19417,18 +19460,11 @@ ul.pagination li a:focus {
 .section-header {
   margin-top: 10px;
 }
-.section-resume-header .bg-gray .btn-default {
-  background: #e0e0e0;
-  border: none;
-}
-.section-resume-header .bg-gray .btn-default:hover {
-  background: #e0e0e0;
+.section-header .absolute-right {
+  right: 15px;
 }
 .section-resume-header .dropdown > a:before {
   content: none;
-}
-.section-resume-header .form-wrapper {
-  margin: 0;
 }
 .main-profile .user-pic .avatar {
   padding: 5px;
@@ -19479,8 +19515,11 @@ ul.pagination li a:focus {
 .main-profile .profile-info .text-gray-light {
   margin-right: 3px;
 }
+.main-profile .profile-info p a {
+  color: #de5749;
+}
 .main-profile .user-info .box-md {
-  padding: 16px 10px 0 10px;
+  padding: 15px 10px 15px 10px;
 }
 .main-profile .contact-information-toggler {
   -webkit-border-radius: 0;
@@ -19491,6 +19530,18 @@ ul.pagination li a:focus {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  background: #e0e0e0;
+  border: none;
+}
+.main-profile .contact-information-toggler:hover {
+  background: #e0e0e0;
+}
+.main-profile .view-control {
+  margin-right: 3px;
+}
+.new-graduate label {
+  font-weight: 400;
+  text-transform: initial;
 }
 /**
  * SECTION PROFILE CSS
