@@ -79,6 +79,7 @@ function scanCkBox($elemObj) {
         if( $(this).prop("checked") ) {
             var vKey = $(this).data('key');
             if (!data[vKey]) {
+                console.log(data[vKey]);
                 data[vKey] = [];
             }
             data[vKey].push($(this).val());

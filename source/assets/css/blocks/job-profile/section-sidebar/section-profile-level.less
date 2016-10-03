@@ -1,0 +1,71 @@
+/**
+ * SECTION PROFILE LEVEL CSS
+ * Updated on 01/10/16
+ */
+
+ .section-profile-level {
+    .list-group {
+        a {
+            cursor: pointer;
+        }
+    }
+    fieldset {
+        display: table-cell;
+        width: 100%;
+    }
+    .text-clip {
+        margin-right: 3px;
+    }
+ }
+
+ .main-profile {
+     .attached-cv {
+         .attached-cv-update {
+             &:hover {
+                border: 1px #ccc solid;
+                border-left: 0;
+                box-shadow: 0 0 5px #ccc;
+                .button-update {
+                    opacity: 1;
+                    filter: alpha(opacity=100);
+                    color: #999;
+                    .btn {
+                        color: #999;
+                    }
+                }
+             }
+             .button-update {
+                opacity: 0;
+                filter: alpha(opacity=0);
+                -webkit-transition: opacity .2s;
+                transition: opacity .2s;
+                .btn {
+                    padding: 0;
+                }
+             }
+         }
+    }
+    .switchery {
+        background-color: #fff;
+        border: 1px solid #dfdfdf;
+        border-radius: 20px;
+        cursor: pointer;
+        display: inline-block;
+        height: 20px;
+        position: relative;
+        vertical-align: middle;
+        width: 40px;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        > small {
+            background: #fff;
+            border-radius: 100%;
+            box-shadow: 0 1px 3px rgba(0,0,0,.4);
+            height: 20px;
+            position: absolute;
+            top: 0;
+            width: 20px;
+        }
+    }
+}

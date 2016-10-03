@@ -1,0 +1,275 @@
+.section-detail.section-education
+    .box.border-primary
+        fieldset
+            legend.box-md
+                i.fa.fa-fw.fa-graduation-cap
+                |  Education History
+            .placeholder-section.box-md(hidden='')
+                p.placeholder
+                    | Input details of your education, as well as any professional qualifications or relevant training
+            .sortable.content-section
+                // Sample
+                form.form-view.form-wrapper.box-md.relative.sample(data-order='0', hidden='')
+                    input(type='hidden', name='resume_id', value='3375529')
+                    input(type='hidden', name='entry_id', value='')
+                    span.form-btn-edit
+                        button.btn.btn-sm.btn-default(type='button')
+                            i.glyphicon.glyphicon-pencil
+                    .feature-blk
+                        .view-field
+                            h4.view-control.placeholder e.g. International Business
+                        .edit-field
+                            .form-group
+                                label
+                                    strong.text-red *
+                                    | Subject
+                                input.form-control.edit-control(type='text', name='subject', placeholder='e.g. International Business', value='', maxlength='150', autofocus='')
+                    .feature-blk
+                        .view-field
+                            p.view-control.placeholder(data-control='edu-school') e.g. University of Economics of Ho Chi Minh City
+                            br
+                            span.view-control(data-control='edu-qualification', data-type='select') Please select...
+                        .edit-field
+                            .row
+                                .col-sm-6
+                                    .form-group
+                                        label
+                                            strong.text-red *
+                                            | School
+                                        input.form-control.edit-control(type='text', name='school', placeholder='e.g. University of Economics of Ho Chi Minh City', value='', maxlength='150', data-control='edu-school')
+                                .col-sm-6
+                                    .form-group
+                                        label
+                                            strong.text-red *
+                                            |                                                 Qualification
+                                        .border-text-box
+                                            select.edit-control.qualification(name='qualification', data-placeholder='e.g. College', data-control='edu-qualification')
+                                                option(value='0') Please select...
+                                                option(value='2', data-weight='1') High school
+                                                option(value='3', data-weight='2') Associate’s degree
+                                                option(value='12', data-weight='3') College
+                                                option(value='4', data-weight='4') Bachelors
+                                                option(value='5', data-weight='7') Masters
+                                                option(value='6', data-weight='8') Doctorate
+                                                option(value='11', data-weight='-2') Others
+                        .feature-blk
+                            .view-field
+                                p
+                                    span.view-control.placeholder(data-control='from-date') e.g. 09/2008
+                                    |                                         -
+                                    span.view-control.placeholder(data-control='to-date') e.g. 12/2014
+                                    span.total-time.placeholder
+                                        | (
+                                        span.years
+                                            span.number-of-years 6
+                                            span.lbl years
+                                        span.months
+                                            span.number-of-months 3
+                                            span.lbl months
+                                        |                                             )
+                            .edit-field
+                                .row
+                                    .col-sm-6
+                                        .form-group
+                                            label From month
+                                            input.form-control.edit-control.sample-datepicker(name='fromDate', placeholder='e.g. 09/2008', data-control='from-date')
+                                    .col-sm-6
+                                        .form-group
+                                            label To month
+                                            input.form-control.edit-control.sample-datepicker(name='toDate', placeholder='e.g. 12/2014', data-control='to-date')
+                        .feature-blk
+                            .view-field
+                                .view-control.placeholder Education Achievements
+                            .edit-field
+                                .form-group
+                                    label Achievements
+                                    textarea.form-control.edit-control.emp-description.achievement-textarea.countdown-target(rows='3', name='description', placeholder='Education Achievements', maxlength='5000')
+                                    em.countdown.gray-light(data-text='character remaining')
+                                    p.msg-description-limit-max.error-message(hidden='hidden') You have entered too many characters
+                                    p.msg-description-valid.error-message(hidden='hidden') Please do not enter phone number or email.
+                                    p.msg-description-suggestion.text-info(hidden='hidden') Please complete this field to improve your profile strength.
+                        .form-group.push-top-md.edit-field
+                            .row
+                                .col-sm-6
+                                    | (
+                                    strong.text-red *
+                                    | ) is required field
+                                .col-sm-6.text-right
+                                    button.btn-remove-this-section.btn.btn-link(type='button', data-toggle='modal', data-target='#dialog-remove-item', onclick="deleteEducationHistory($(this).parents('form'))")
+                                        i.glyphicon.glyphicon-trash
+                                    button.btn-cancel.btn.btn-default(type='button') Cancel
+                                    button.btn-save.btn.btn-primary(type='button', onclick="saveEducationHistory($(this).parents('form'))") Save
+                // Form
+                form.form-view.form-wrapper.box-md.relative
+                    input(type='hidden', name='resume_id', value='3375529')
+                    input(type='hidden', name='entry_id', value='1756213')
+                    span.form-btn-edit
+                        button.btn.btn-sm.btn-default(type='button')
+                            i.fa.fa-pencil
+                    .subject-blk
+                        .view-field
+                            h4.view-control International Economics
+                        .edit-field
+                            .form-group
+                                label
+                                    strong.text-red *
+                                    | Subject
+                                input.form-control.edit-control(type='text', name='subject', placeholder='e.g. International Business', value='International Economics', maxlength='150', autofocus='')
+                    .school-blk
+                        .view-field
+                            span.view-control(data-control='edu-school') Foreign Trade University
+                            p.view-control(data-control='edu-qualification', data-type='select') Bachelors
+                        .edit-field
+                            .row
+                                .col-sm-6
+                                    .form-group
+                                        label
+                                            strong.text-red *
+                                            | School
+                                        input.form-control.edit-control(type='text', name='school', placeholder='e.g. University of Economics of Singapore City', value='Foreign Trade University', maxlength='150', data-control='edu-school')
+                                .col-sm-6
+                                    .form-group
+                                        label
+                                            strong.text-red *
+                                            | Qualification
+                                        .border-text-box
+                                            select.edit-control.qualification(name='qualification', data-placeholder='e.g. College', data-control='edu-qualification', tabindex='-1', title='', style='display: none;')
+                                                option(value='0') Please select...
+                                                option(value='2', data-weight='1') High school
+                                                option(value='3', data-weight='2') Associate’s degree
+                                                option(value='12', data-weight='3') College
+                                                option(value='4', data-weight='4', selected='selected') Bachelors
+                                                option(value='5', data-weight='7') Masters
+                                                option(value='6', data-weight='8') Doctorate
+                                                option(value='11', data-weight='-2') Others
+                        .time-blk
+                            .view-field
+                                p
+                                    span.view-control(data-control='from-date') 09/2011
+                                    |                                         -
+                                    span.view-control(data-control='to-date') 01/2015
+                                    span.total-time
+                                        | (
+                                        span.years
+                                            span.number-of-years 3
+                                            span.lbl years
+                                        span.months
+                                            span.number-of-months 4
+                                            span.lbl months
+                                        |                                             )
+                            .edit-field
+                                .row
+                                    .col-sm-6
+                                        .form-group
+                                            label From month
+                                            input.form-control.edit-control.datepicker(name='fromDate', placeholder='e.g. 09/2008', value='09/2011', data-control='from-date')
+                                    .col-sm-6
+                                        .form-group
+                                            label To month
+                                            input.form-control.edit-control.datepicker(name='toDate', placeholder='e.g. 12/2014', value='01/2015', data-control='to-date')
+                        .achievement-blk
+                            .view-field
+                                .view-control.placeholder Education Achievements
+                            .edit-field
+                                .form-group
+                                    label Achievements
+                                    textarea#mce_0.form-control.edit-control.emp-description.achievement-textarea.countdown-target(rows='3', name='description', placeholder='Education Achievements', maxlength='5000', style='display: none;', aria-hidden='true')
+                                    em.countdown.gray-light(data-text='character remaining') 5000 character remaining
+
+                        .form-group.push-top-md.edit-field
+                            .col-sm-6
+                                | (
+                                strong.text-red *
+                                | ) is required field
+                            .col-sm-6.text-right
+                                button.btn-remove-this-section.btn.btn-link(type='button', data-toggle='modal', data-target='#dialog-remove-item')
+                                    i.glyphicon.glyphicon-trash
+                                button.btn-cancel.btn.btn-default(type='button') Cancel
+                                button.btn-save.btn.btn-primary(type='button') Save
+                form.form-view.form-wrapper.box-md.relative
+                    input(type='hidden', name='resume_id', value='3375529')
+                    input(type='hidden', name='entry_id', value='1756214')
+                    span.form-btn-edit
+                        button.btn.btn-sm.btn-default(type='button')
+                            i.fa.fa-pencil
+                    .subject-blk
+                        .view-field
+                            h4.view-control English
+                        .edit-field
+                            .form-group
+                                label
+                                    strong.text-red *
+                                    | Subject
+                                input.form-control.edit-control(type='text', name='subject', placeholder='e.g. International Business', value='English', maxlength='150', autofocus='')
+                    .school-blk
+                        .view-field
+                            span.view-control(data-control='edu-school') Self-study
+                            p.view-control(data-control='edu-qualification', data-type='select') Others
+                        .edit-field
+                            .row
+                                .col-sm-6
+                                    .form-group
+                                        label
+                                            strong.text-red *
+                                            | School
+                                        input.form-control.edit-control(type='text', name='school', placeholder='e.g. University of Economics of Singapore City', value='Self-study', maxlength='150', data-control='edu-school')
+                                .col-sm-6
+                                    .form-group
+                                        label
+                                            strong.text-red *
+                                            | Qualification
+                                        .border-text-box
+                                            select.edit-control.qualification(name='qualification', data-placeholder='e.g. College', data-control='edu-qualification', tabindex='-1', title='', style='display: none;')
+                                                option(value='0') Please select...
+                                                option(value='2', data-weight='1') High school
+                                                option(value='3', data-weight='2') Associate’s degree
+                                                option(value='12', data-weight='3') College
+                                                option(value='4', data-weight='4') Bachelors
+                                                option(value='5', data-weight='7') Masters
+                                                option(value='6', data-weight='8') Doctorate
+                                                option(value='11', data-weight='-2', selected='selected') Others
+                        .time-blk
+                            .view-field
+                                p
+                                    span.view-control.placeholder(data-control='from-date') e.g. 09/2008
+                                    |                                         -
+                                    span.view-control.placeholder(data-control='to-date') e.g. 12/2014
+                                    span.total-time.placeholder
+                                        | (
+                                        span.years
+                                            span.number-of-years 6
+                                            span.lbl years
+                                        span.months
+                                            span.number-of-months 3
+                                            span.lbl months
+                                        |                                             )
+                            .edit-field
+                                .row
+                                    .col-sm-6
+                                        .form-group
+                                            label From month
+                                            input.form-control.edit-control.datepicker(name='fromDate', placeholder='e.g. 09/2008', value='', data-control='from-date')
+                                    .col-sm-6
+                                        .form-group
+                                            label To month
+                                            input.form-control.edit-control.datepicker(name='toDate', placeholder='e.g. 12/2014', value='', data-control='to-date')
+                        .achievement-blk
+                            .view-field
+                                .view-control
+                                    p TOEIC 830
+                            .edit-field
+                                .form-group
+                                    label Achievements
+                                    textarea#mce_1.form-control.edit-control.emp-description.achievement-textarea.countdown-target(rows='3', name='description', placeholder='Education Achievements', maxlength='5000', style='display: none;', aria-hidden='true') <p>TOEIC 830</p>
+                        .form-group.push-top-md.edit-field
+                            .col-sm-6
+                                | (
+                                strong.text-red *
+                                | ) is required field
+                            .col-sm-6.text-right
+                                button.btn-remove-this-section.btn.btn-link(type='button', data-toggle='modal', data-target='#dialog-remove-item')
+                                    i.glyphicon.glyphicon-trash
+                                button.btn-cancel.btn.btn-default(type='button') Cancel
+                                button.btn-save.btn.btn-primary(type='button')
+            button#btn-add-education.btn.btn-default.btn-block.no-border.add-one-more-section(type='button')
+                strong Add Education History

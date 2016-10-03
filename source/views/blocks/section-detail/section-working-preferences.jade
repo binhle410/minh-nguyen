@@ -1,0 +1,489 @@
+.section-detail.section-working-preferences.benefit-section
+    form#form-summary.form-horizontal.form-view
+        input(type='hidden', name='resumeId', value='3375529')
+        .box.border-primary
+            fieldset
+                legend.box-md
+                    i.fa.fa-fw.fa-list
+                    |  Working Preferences
+                #section-summary-edit.box-md.form-wrapper.form-working-preference.relative
+                    span.form-btn-edit
+                        button.btn.btn-sm.btn-default(type='button')
+                            i.fa.fa-pencil
+                    .form-group
+                        .row
+                            .col-sm-12
+                                label(for='expected-location')
+                                    strong.text-red.edit-field(style='display: none;') *
+                                    |                                     Preferred Working Location
+                                .clearfix
+                                    .pull-left.expected-location-wrapper
+                                        .edit-field(style='display: none;')
+                                            select#expected-location.edit-control(name='expectedLocation[]', multiple='', data-placeholder='e.g. Singapore', tabindex='-1', style='display: none;')
+                                                option(selected='', value='29') Singapore
+                                                option(value='24') Ha Noi
+                                                option(value='71') Mekong Delta
+                                                option(value='2') An Giang
+                                                option(value='3') Ba Ria - Vung Tau
+                                                option(value='4') Bac Can
+                                                option(value='5') Bac Giang
+                                                option(value='6') Bac Lieu
+                                                option(value='7') Bac Ninh
+                                                option(value='8') Ben Tre
+                                                option(value='9') Bien Hoa
+                                                option(value='10') Binh Dinh
+                                                option(selected='', value='11') Binh Duong
+                                                option(value='12') Binh Phuoc
+                                                option(value='13') Binh Thuan
+                                                option(value='14') Ca Mau
+                                                option(value='15') Can Tho
+                                                option(value='16') Cao Bang
+                                                option(selected='', value='17') Da Nang
+                                                option(value='18') Dac Lac
+                                                option(value='69') Dien Bien
+                                                option(value='19') Dong Nai
+                                                option(value='20') Dong Thap
+                                                option(value='21') Gia Lai
+                                                option(value='22') Ha Giang
+                                                option(value='23') Ha Nam
+                                                option(value='25') Ha Tay
+                                                option(value='26') Ha Tinh
+                                                option(value='27') Hai Duong
+                                                option(value='28') Hai Phong
+                                                option(value='30') Hoa Binh
+                                                option(value='31') Hue
+                                                option(value='32') Hung Yen
+                                                option(value='33') Khanh Hoa
+                                                option(value='34') Kon Tum
+                                                option(value='35') Lai Chau
+                                                option(value='36') Lam Dong
+                                                option(value='37') Lang Son
+                                                option(value='38') Lao Cai
+                                                option(value='39') Long An
+                                                option(value='40') Nam Dinh
+                                                option(value='41') Nghe An
+                                                option(value='42') Ninh Binh
+                                                option(value='43') Ninh Thuan
+                                                option(value='44') Phu Tho
+                                                option(value='45') Phu Yen
+                                                option(value='46') Quang Binh
+                                                option(value='47') Quang Nam
+                                                option(value='48') Quang Ngai
+                                                option(value='49') Quang Ninh
+                                                option(value='50') Quang Tri
+                                                option(value='51') Soc Trang
+                                                option(value='52') Son La
+                                                option(value='53') Tay Ninh
+                                                option(value='54') Thai Binh
+                                                option(value='55') Thai Nguyen
+                                                option(value='56') Thanh Hoa
+                                                option(value='57') Thua Thien-Hue
+                                                option(value='58') Tien Giang
+                                                option(value='59') Tra Vinh
+                                                option(value='60') Tuyen Quang
+                                                option(value='61') Kien Giang
+                                                option(value='62') Vinh Long
+                                                option(value='63') Vinh Phuc
+                                                option(value='65') Yen Bai
+                                                option(value='66') Other
+                                                option(value='70') International
+                                                option(value='72') Hau Giang
+                                            br
+                                            small.legend (Maximum 3 locations)
+                                        .view-field(style='display: block;')
+                                            p.form-control-static.view-control(data-type='multiple-select') Singapore, Malaysia, USA
+                                    .pull-left.m-l-xs
+                                        .view-field(style='display: block;')
+                                            p.form-control-static
+                                                em.view-control(data-type='radio')
+                                        .edit-field.m-t-sm(style='display: none;')
+                                            label
+                                                input.edit-control(type='checkbox', name='willingToRelocate', data-text-value='(Willing to relocate)', value='false')
+                                                em Willing to relocate
+                    .form-group
+                        .row
+                            .col-sm-6
+                                label(for='expected-job-category')
+                                    strong.text-red.edit-field(style='display: none;') *
+                                    |                                     Expected Job Category
+                                .edit-field(style='display: none;')
+                                    select#expected-job-category.edit-control(name='expectedJobCategory[]', data-placeholder='e.g. Accounting', multiple='', tabindex='-1', style='display: none;')
+                                        option(value='72') Printing
+                                        option(value='73') Restaurant/Hotel
+                                        option(value='74') FMCG
+                                        option(value='75') Household
+                                        option(value='76') HVAC
+                                        option(value='77') Geology/Mineral
+                                        option(value='78') Doctors
+                                        option(value='79') Doctors/nurses
+                                        option(value='80') Pharmacist
+                                        option(value='81') Pharmaceutical representatives
+                                        option(value='82') Marine
+                                        option(value='83') HSE
+                                        option(value='84') Maintenance
+                                        option(value='1') Accounting
+                                        option(value='58') Auditing
+                                        option(value='67') Auto/Automotive
+                                        option(value='2') Administrative/Clerical
+                                        option(value='3') Advertising/Promotion/PR
+                                        option(value='4') Agriculture/Forestry
+                                        option(value='5') Architecture/Interior Design
+                                        option(value='22') Health/Medical Care
+                                        option(value='10') Arts/Design
+                                        option(value='42') Banking
+                                        option(value='43') Chemical/Biochemical
+                                        option(value='7') Civil/Construction
+                                        option(value='68') Industrial Products
+                                        option(value='8') Consulting
+                                        option(value='11') Customer Service
+                                        option(value='12') Education/Training
+                                        option(value='64') Electrical/Electronics
+                                        option(value='15') Entry level
+                                        option(value='16') Environment/Waste Services
+                                        option(value='17') Executive management
+                                        option(value='18') Expatriate Jobs in Vietnam
+                                        option(value='19') Export-Import
+                                        option(value='54') Food & Beverage
+                                        option(value='59') Finance/Investment
+                                        option(value='63') Fashion/Lifestyle
+                                        option(value='66') High Technology
+                                        option(value='23') Human Resources
+                                        option(value='24') Insurance
+                                        option(value='47') Interpreter/Translator
+                                        option(value='55') IT - Hardware/Networking
+                                        option(value='57') Internet/Online Media
+                                        option(selected='', value='35') IT - Software
+                                        option(value='25') Legal/Contracts
+                                        option(value='62') Luxury Goods
+                                        option(value='65') Mechanical
+                                        option(value='27') Marketing
+                                        option(value='21') NGO/Non-Profit
+                                        option(value='28') Oil/Gas
+                                        option(value='6') Pharmaceutical/Biotech
+                                        option(value='69') Planning/Projects
+                                        option(value='26') Production/Process
+                                        option(value='49') Merchandising/Purchasing/Supply Chain
+                                        option(value='30') Real Estate
+                                        option(value='32') Retail/Wholesale
+                                        option(value='33') Sales
+                                        option(value='34') Sales Technical
+                                        option(value='56') Securities & Trading
+                                        option(value='41') Telecommunications
+                                        option(value='51') Temporary/Contract
+                                        option(value='52') Textiles/Garments/Footwear
+                                        option(value='37') Airlines/Tourism
+                                        option(value='48') TV/Media/Newspaper
+                                        option(value='36') Freight/Logistics
+                                        option(value='53') Warehouse
+                                        option(value='70') QA/QC
+                                        option(value='71') Overseas Jobs
+                                        option(value='39') Other
+                                    br
+                                    small.legend (Maximum 3 categories)
+                                .view-field(style='display: block;')
+                                    p.form-control-static.view-control(data-type='multiple-select') IT - Software
+                            .col-sm-6
+                                label(for='expected-job-level')
+                                    strong.text-red.edit-field(style='display: none;') *
+                                    |                                     Expected Job Level
+                                .edit-field(style='display: none;')
+                                    .border-text-box.edit-field(style='display: none;')
+                                        select#expected-job-level.edit-control(name='expectedJobLevel', data-placeholder='e.g. Team Leader/Supervisor', tabindex='-1', title='\
+                                        *\
+                                        Expected Job Level\
+                                        ', style='display: none;')
+                                            option(value='') Please select...
+                                            option(value='1') Entry Level
+                                            option(value='5', selected='') Experienced (non-manager)
+                                            option(value='7') Manager
+                                            option(value='3') Director and above
+                                .view-field(style='display: block;')
+                                    p.form-control-static.view-control(data-type='select') Experienced (non-manager)
+                    .form-group
+                        label(for='expected-location')
+                            strong.text-red.edit-field(style='display: none;') *
+                            |                             Expected Salary
+                            small  (USD per month)
+                        .edit-field(style='display: none;')
+                            .row
+                                .col-sm-6
+                                    input#specific-salary-input.form-control.edit-control(type='text', placeholder='e.g. 5000', name='expectedSalaryRange', value='400')
+                        .view-field(style='display: block;')
+                            p#static-specific-salary.form-control-static.view-control 400
+                    .expected-company-benefit
+                        label
+                            strong.text-red.edit-field(style='display: none;') *
+                            |                             My Top 5 Desired Benefits
+                        #benefit-view-mode.icon-group.expected-company-benefit-list.push-top-sm.view-mode(style='display: block;')
+                            .row
+                                .col-sm-4
+                                   .benefit-itm
+                                        label.active
+                                            span(title='Awards')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-trophy
+                                                span.benefit-name Awards
+                                                span.ic-check
+                                                    i.fa.fa-fw.fa-check
+                                   .benefit-itm
+                                        label.active
+                                            span(title='Bonus')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-dollar
+                                                span.benefit-name Bonus
+                                                span.ic-check
+                                                    i.fa.fa-fw.fa-check
+                                   .benefit-itm
+                                        label
+                                            span(title='Canteen')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-coffee
+                                                span.benefit-name Canteen
+                                                span.ic-check
+                                                    i.fa.fa-fw
+                                   .benefit-itm
+                                        label.active
+                                            span(title='Healthcare Plan')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-user-md
+                                                span.benefit-name Healthcare Plan
+                                                span.ic-check
+                                                    i.fa.fa-fw.fa-check
+                                   .benefit-itm
+                                        label
+                                            span(title='Kindergarten')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-child
+                                                span.benefit-name Kindergarten
+                                                span.ic-check
+                                                    i.fa.fa-fw
+                                .col-sm-4
+                                   .benefit-itm
+                                        label
+                                            span(title='Laptop')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-laptop
+                                                span.benefit-name Laptop
+                                                span.ic-check
+                                                    i.fa.fa-fw
+                                   .benefit-itm
+                                        label
+                                            span(title='Library')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-book
+                                                span.benefit-name Library
+                                                span.ic-check
+                                                    i.fa.fa-fw
+                                   .benefit-itm
+                                        label
+                                            span(title='Mobile')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-mobile
+                                                span.benefit-name Mobile
+                                                span.ic-check
+                                                    i.fa.fa-fw
+                                   .benefit-itm
+                                        label.active
+                                            span(title='Paid Leave')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-file-image-o
+                                                span.benefit-name Paid Leave
+                                                span.ic-check
+                                                    i.fa.fa-fw.fa-check
+                                   .benefit-itm
+                                        label
+                                            span(title='Team Activities')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-glass
+                                                span.benefit-name Team Activities
+                                                span.ic-check
+                                                    i.fa.fa-fw
+                                .col-sm-4
+                                   .benefit-itm
+                                        label.active
+                                            span(title='Training')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-graduation-cap
+                                                span.benefit-name Training
+                                                span.ic-check
+                                                    i.fa.fa-fw.fa-check
+                                   .benefit-itm
+                                        label
+                                            span(title='Transportation')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-cab
+                                                span.benefit-name Transportation
+                                                span.ic-check
+                                                    i.fa.fa-fw
+                                   .benefit-itm
+                                        label
+                                            span(title='Travel Opportunities')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-plane
+                                                span.benefit-name Travel Opportunities
+                                                span.ic-check
+                                                    i.fa.fa-fw
+                                   .benefit-itm
+                                        label
+                                            span(title='Vouchers')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-gift
+                                                span.benefit-name Vouchers
+                                                span.ic-check
+                                                    i.fa.fa-fw
+                            .row
+                                .col-sm-12
+                                    p.text-danger.min-number-of-benefits(hidden='hidden', style='')
+                                        em Please select at least one benefit.
+                            // / Benefit Edit Mode
+                        // Benefit View Mode
+                        #benefit-edit-mode.box-md.icon-group.expected-company-benefit-list.well.dash(hidden='hidden', style='display: none;')
+                            .row
+                                .col-sm-4
+                                   .benefit-itm
+                                        label.active
+                                            input.filter-ipt(type='checkbox', data-key="Awards", name='benefits[]', hidden='hidden', checked='', value='5')
+                                            span(title='Awards')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-trophy
+                                                span.benefit-name Awards
+                                                span.ic-check
+                                                    i.fa.fa-fw.fa-check
+                                   .benefit-itm
+                                        label.active
+                                            input.filter-ipt(type='checkbox', data-key="Bonus", name='benefits[]', hidden='hidden', checked='', value='1')
+                                            span(title='Bonus')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-dollar
+                                                span.benefit-name Bonus
+                                                span.ic-check
+                                                    i.fa.fa-fw.fa-check
+                                   .benefit-itm
+                                        label
+                                            input.filter-ipt(type='checkbox', data-key="Canteen", name='benefits[]', hidden='hidden', value='12')
+                                            span(title='Canteen')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-coffee
+                                                span.benefit-name Canteen
+                                                span.ic-check
+                                                    i.fa.fa-fw
+                                   .benefit-itm
+                                        label.active
+                                            input.filter-ipt(type='checkbox', data-key="Healthcare Plan", name='benefits[]', hidden='hidden', checked='', value='2')
+                                            span(title='Healthcare Plan')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-user-md
+                                                span.benefit-name Healthcare Plan
+                                                span.ic-check
+                                                    i.fa.fa-fw.fa-check
+                                   .benefit-itm
+                                        label
+                                            input.filter-ipt(type='checkbox', data-key="Kindergarten", name='benefits[]', hidden='hidden', value='14')
+                                            span(title='Kindergarten')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-child
+                                                span.benefit-name Kindergarten
+                                                span.ic-check
+                                                    i.fa.fa-fw
+                                .col-sm-4
+                                   .benefit-itm
+                                        label
+                                            input.filter-ipt(type='checkbox', data-key="Laptop", name='benefits[]', hidden='hidden', value='7')
+                                            span(title='Laptop')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-laptop
+                                                span.benefit-name Laptop
+                                                span.ic-check
+                                                    i.fa.fa-fw
+                                   .benefit-itm
+                                        label
+                                            input.filter-ipt(type='checkbox', data-key="Library", name='benefits[]', hidden='hidden', value='6')
+                                            span(title='Library')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-book
+                                                span.benefit-name Library
+                                                span.ic-check
+                                                    i.fa.fa-fw
+                                   .benefit-itm
+                                        label
+                                            input.filter-ipt(type='checkbox', data-key="Mobile", name='benefits[]', hidden='hidden', value='8')
+                                            span(title='Mobile')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-mobile
+                                                span.benefit-name Mobile
+                                                span.ic-check
+                                                    i.fa.fa-fw
+                                   .benefit-itm
+                                        label.active
+                                            input.filter-ipt(type='checkbox', data-key="Paid Leave", name='benefits[]', hidden='hidden', checked='', value='3')
+                                            span(title='Paid Leave')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-file-image-o
+                                                span.benefit-name Paid Leave
+                                                span.ic-check
+                                                    i.fa.fa-fw.fa-check
+                                   .benefit-itm
+                                        label
+                                            input.filter-ipt(type='checkbox', data-key="Team Activities", name='benefits[]', hidden='hidden', value='10')
+                                            span(title='Team Activities')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-glass
+                                                span.benefit-name Team Activities
+                                                span.ic-check
+                                                    i.fa.fa-fw
+                                .col-sm-4
+                                   .benefit-itm
+                                        label.active
+                                            input.filter-ipt(type='checkbox', data-key="Training", name='benefits[]', hidden='hidden', checked='', value='4')
+                                            span(title='Training')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-graduation-cap
+                                                span.benefit-name Training
+                                                span.ic-check
+                                                    i.fa.fa-fw.fa-check
+                                   .benefit-itm
+                                        label
+                                            input.filter-ipt(type='checkbox', data-key="Transportation", name='benefits[]', hidden='hidden', value='11')
+                                            span(title='Transportation')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-cab
+                                                span.benefit-name Transportation
+                                                span.ic-check
+                                                    i.fa.fa-fw
+                                   .benefit-itm
+                                        label
+                                            input.filter-ipt(type='checkbox', data-key="Travel Opportunities", name='benefits[]', hidden='hidden', value='9')
+                                            span(title='Travel Opportunities')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-plane
+                                                span.benefit-name Travel Opportunities
+                                                span.ic-check
+                                                    i.fa.fa-fw
+                                   .benefit-itm
+                                        label
+                                            input.filter-ipt(type='checkbox', data-key="Vouchers", name='benefits[]', hidden='hidden', value='13')
+                                            span(title='Vouchers')
+                                                a.benefit-icon
+                                                    i.fa.fa-fw.fa-gift
+                                                span.benefit-name Vouchers
+                                                span.ic-check
+                                                    i.fa.fa-fw
+                            .row
+                                .col-sm-12
+                                    p.text-orange.max-number-of-benefits(hidden='hidden', style='display: block;')
+                                        em You have selected the maximum number of benefits! Remove one to add another.
+                                    p.text-danger.min-number-of-benefits(hidden='hidden', style='')
+                                        em Please select at least one benefit.
+                            // / Benefit Edit Mode
+                        // Buttons
+                        .form-group.push-top-sm.edit-field(style='display: none;')
+                            .row
+                                .col-sm-6
+                                    | (
+                                    strong.text-red *
+                                    | ) is required field
+                                .col-sm-6.text-right
+                                    button#cancelSummaryInforBtn.btn.btn-default.btn-cancel(type='button', onclick='mdlBenefit.cancelSaveBenefit()') Cancel
+                                    button#saveSummaryInforBtn.btn.btn-primary.btn-save(type='button') Save
+                    button.btn.hidden.btn-default.btn-block.no-border.add-one-more-section.hide(type='button', data-type='edit-only', style='display: inline-block;')
+                        strong Add Working Preferences

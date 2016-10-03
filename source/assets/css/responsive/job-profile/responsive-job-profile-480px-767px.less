@@ -1,0 +1,39 @@
+/**
+ * Media 480px-767px
+ *
+ * description: css rules for screen of new moderm smartphone
+ */
+@media (max-width: 767px) {
+    .main-profile {
+        .section-resume-header {
+            .user-info {
+                // background: @red;
+                .download-resume {
+                    .btn-default {
+                        margin-top: 10px;
+                    }
+                }
+                .btn {
+                    &.btn-block {
+                        border: none;
+                    }
+                    &.contact-information-toggler {
+                        text-align: right;
+                        margin-top: -10px!important;
+                        margin-right: 10px;
+                        background: 0 0!important;
+                    }
+                }
+            }
+            .user-pic {
+                .avatar {
+                    padding: 2px;
+                    margin: 10px auto;
+                    width: 78px;
+                    height: 78px;
+                    line-height: 78px;
+                }
+            }
+        }
+    }
+}

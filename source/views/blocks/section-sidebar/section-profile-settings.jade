@@ -1,0 +1,61 @@
+.panel.panel-default.section-sidebar.section-profile-level
+    .panel-heading
+        | Profile Settings
+    .panel-content.box-sm
+        fieldset
+            .attached-cv
+                | Attached Resume
+                .well.well-sm.dash.m-t-sm.relative.attached-cv-update
+                    form.m-b-none.relative
+                        .btn-group.btn-group-sm.pull-right.button-update
+                            a.btn.btn-link.relative(type='button')
+                                label(for='profileAttachFile')
+                                    i.fa.fa-pencil(data-toggle='tooltip', title='', data-placement='top', data-original-title='Replace')
+                                input.transparent.absolute(type='file', name='resumeFile', style='width: 20px; height: 20px; top:0')
+                        .messages.no-margin
+                            small.have-resume
+                                span.text-clip Your resume
+                                span.resume-name.text-clip    Victor Lee CV.doc
+                                span.gray-light.text-clip
+                                    | was uploaded on
+                                    span.resume-date 13/09/2016
+                            small.no-resume(hidden="")
+                                label.m-t-xs
+                                    a.btn.btn-default.btn-xs.relative Upload
+                                .note-resume
+                                    span.gray-light
+                                        small You can only attach .doc, .docx, and .pdf files that are less than 2MB in size
+                            p.gray-light(hidden='', style='display: none;')
+                                small
+                                    i.fa.fa-spinner.fa-pulse.fa-fw
+                            p.text-success(style='display: none;')
+                                small
+                                    | Your resume
+                                    span.resume-name
+                                        |    Victor Lee CV.doc
+                                    |  was uploaded successfully!
+                            p.text-danger(style='display: none;')
+                                small
+                                    | You can only attach .doc, .docx, and .pdf files that are less than 2MB in size
+                    // Existing attached CV
+        hr.divider.no-margin
+        fieldset.m-t-sm
+            .searchable-setting
+                .strong-tooltip(data-searchable-tip="Make your profile visible to employers <br/> to never miss your job offer! <i class='fa fa-times-circle'></i>")
+                    | Searchable
+                span.pull-right
+                    input#chb-searchable.js-switch(type='checkbox', checked='', data-switchery='true', style='display: none;')
+                    span#chb-searchable.switchery(style='background-color: rgb(100, 189, 99); border-color: rgb(100, 189, 99); box-shadow: rgb(100, 189, 99) 0px 0px 0px 16px inset; transition: border 0.5s, box-shadow 0.5s, background-color 1.5s;')
+                        small(style='left: 20px; transition: left 0.25s;')
+                .note-searchable
+                    small.gray-light You can track who viewed your profile
+                .note-unsearchable(hidden='')
+                    small.gray-light
+                        | Make your profile searchable to increase your visibility to employers
+            .searchable-choice.m-t
+                .well.well-sm.dash.no-margin
+                    p.gray-light Your Searchable Profile
+                    .radio
+                        label.text-clip(title='Interviewspot profile')
+                            input(type='radio', name='resumeId', value='3375529', data-last-update='1475311310', checked='')
+                            | Interviewspot profile

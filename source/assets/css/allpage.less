@@ -2,6 +2,8 @@
  * ALLPAGE CSS
  * Updated on 22/09/16
  */
+
+ // General settings
 .page-wrapper {
     background: transparent;
 }
@@ -16,15 +18,10 @@ body {
 }
 
 .main {
-    // .row {
-    //     margin: 0 -5px;
-    // }
-    // .container {
-    //     padding: 0 5px;
-    // }
-    // [class*="col-"] {
-    //     padding: 0 5px;
-    // }
+    .home & {
+        background: white;
+        overflow: hidden;
+    }
     .feature {
         margin-top: 10px!important;
         margin-bottom: 10px;
@@ -36,13 +33,7 @@ body {
     }
 }
 
-.no-padding {
-    padding: 0!important;
-}
 
-.no-margin {
-    margin: 0!important;
-}
 
 .text-clip {
     display: inline-block;
@@ -58,6 +49,122 @@ body {
     background-color: transparent;
 }
 
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Position class ----------
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.absolute-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.absolute-right {
+    position: absolute;
+    right: 0;
+}
+
+.transparent {
+    opacity: 0;
+}
+
+.block {
+    display: block;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+// Form classes -------
+.form-wrapper {
+    background: #fff;
+    border: 1px solid transparent;
+    border-left: 0;
+    margin: 0;
+    &:hover {
+        border-left: 0;
+        box-shadow: 0 0 5px #ccc;
+        z-index: 2;
+        .form-btn-edit {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+    }
+    .form-btn-edit {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+}
+.form-horizontal {
+    .form-group {
+        margin-bottom: 10px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+// Background color class --------
+.bg-gray {
+    background: #f4f4f4!important;
+}
+
+// Color class
+.gray-light {
+    color: #999!important;
+}
+
+// Border class ---------
+.border-primary {
+    border-left: 5px solid @red;
+    .border-radius(3px);
+}
+.border-success {
+    border-left: 5px solid #5cb85c;
+    .border-radius(3px);
+}
+
+// Distance classes ---------
+.m-t {
+    margin-top: 15px
+}
+.m-b {
+    margin-bottom: 15px;
+}
+.m-b-n {
+    margin-bottom: -15px;
+}
+.m-b-none {
+    margin-bottom: 0;
+}
+.m-r-xs {
+    margin-right: 5px;
+}
+.m-t-sm {
+    margin-top: 10px;
+}
+.m-t-n-lg {
+    margin-top: -30px;
+}
+.no-padding {
+    padding: 0!important;
+}
+.no-margin {
+    margin: 0!important;
+}
+.push-top-15, .push-top-sm {
+    margin-top: 15px;
+}
+
+// Scroll to Top class -------
 .scrollToTop {
     width: 30px;
     height: 30px;
@@ -65,5 +172,28 @@ body {
     i {
         line-height: 30px;
         font-size: 15px;
+    }
+}
+
+// Typography classes
+.text-gray-light {
+    color: #999;
+}
+.text-success {
+    color: #5cb85c!important;
+}
+.text-info {
+    color: #00b9f2;
+}
+.placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+// Well effect
+.well {
+    background: inherit;
+    &.dash {
+        border: 1px dashed #ccc;
     }
 }

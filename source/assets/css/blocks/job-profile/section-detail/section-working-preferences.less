@@ -1,0 +1,55 @@
+/**
+ * SECTION WORKING PREFERENCES CSS
+ * Updated on 01/10/16
+ */
+
+ .icon-group {
+    &.expected-company-benefit-list {
+        &.view-mode {
+            label {
+                cursor: default;
+            }
+        }
+        label {
+            &.active {
+                color: @green;
+                &:hover {
+                    a.benefit-icon {
+                        background: #eee;
+                    }
+                }
+                a.benefit-icon {
+                    background: #e5ffe5;
+                    border: 1px solid @green;
+                    i {
+                        color: @green;
+                    }
+                }
+                .benefit-name, .ic-check .fa {
+                    color: @green;
+                }
+            }
+            &.disabled {
+                .benefit-icon {
+                    opacity: 0.7;
+                    filter: alpha(opacity=70);
+                }
+            }
+            .benefit-icon, .benefit-name, i {
+                color: #777;
+            }
+            a {
+                padding: 7px;
+            }
+        }
+    }
+    a {
+        background: #eee;
+        display: inline-block;
+        border: 1px #ddd solid;
+        padding: 10px 5px;
+        margin: 2px 5px 2px 2px!important;
+        color: #666;
+        font-size: 14px;
+    }
+ }

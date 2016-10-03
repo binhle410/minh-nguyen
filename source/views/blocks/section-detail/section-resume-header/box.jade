@@ -1,0 +1,102 @@
+.user-info.border-primary
+    .row
+        .col-xs-4.col-sm-3.center-block
+            .form-wrapper.relative.no-edit-mode
+                .user-pic
+                    form
+                        input(type='hidden', name='resume_id', value='3375529')
+                        span.form-btn-edit.hidden-xs
+                            button.btn.btn-sm.btn-default(type='button')
+                                i.fa.fa-pencil
+                        .dropdown
+                            a.dropdown-toggle(data-toggle='dropdown', aria-expanded='true')
+                                .avatar.img-circle
+                                    .avatar-sample
+                                        i.fa.fa-3x.fa-user
+                            ul.dropdown-menu.hidden-xs(role='menu', aria-labelledby='pic-dropdown')
+                                li(role='presentation')
+                                    a.block.relative(role='menuitem', tabindex='-1')
+                                        i.fa.fa-pencil.fa-fw
+                                        | Upload photo
+                                        input.absolute-left.transparent(name='avatar', type='file')
+                                //- li.divider(role='presentation', hidden='')
+                                //- li(role='presentation', hidden='')
+                                //-     a.dropdown-remove-avatar-btn(role='menuitem', tabindex='-1')
+                                //-         i.fa.fa-trash-o.fa-fw
+                                //-         |  Remove this photo
+        .section-header.hidden-section.col-xs-8.col-sm-9
+            form.form-view.form-wrapper
+                input(type='hidden', name='resume_id', value='3375529')
+                .relative.box-md
+                    span.form-btn-edit
+                        button.btn.btn-sm.btn-default(type='button')
+                            i.fa.fa-pencil
+                    .profile-info
+                        .profile-name.clearfix
+                            .name.pull-left
+                                .view-field
+                                    h3.profile-name.text-orange Victor
+                                .edit-field
+                                    label
+                                        strong.text-red *
+                                        |  Last Name
+                                    input.form-control.edit-control.input-sm(placeholder='Last Name', type='text', name='lastName', autofocus='', value='Lee')
+                            .last-name.pull-left
+                                .view-field
+                                    h3.profile-name.text-orange Lee
+                                .edit-field
+                                    label
+                                        strong.text-red *
+                                        |  First Name
+                                    input.form-control.edit-control.input-sm(placeholder='First Name', type='text', name='firstName', autofocus='', value='Victor')
+                        .profile-expected-position
+                            .view-field
+                                span.view-control(data-update-tip="It's been more than a year!!!<br/>Let update your profile to keep it in sync with your career! <i class='fa fa-times-circle'></i>") Frontend Developer
+                            .edit-field.form-group
+                                label
+                                    strong.text-red *
+                                    |  Professional Title
+                                input.form-control.edit-control.input-sm(placeholder='Current job title e.g. Developer', type='text', name='expectedPosition', value='Frontend Developer')
+                        .year-of-exp
+                            .view-field
+                                span.year-of-ex-view-field
+                                    span.view-control 1
+                                    |  years of Experience
+                            .edit-field.form-group
+                                label.lbl-year-ex
+                                    strong.text-red *
+                                    |  Years of Experience
+                                input.form-control.edit-control.input-sm(placeholder='e.g. 7', type='text', name='yearOfExperience', maxlength='2', value='1')
+                        .new-graduate
+                            .view-field
+                                span.view-control(data-type='radio')
+                            .edit-field.form-group.m-t-n-xs
+                                label
+                                    input.edit-control.new-graduate-checkbox(type='checkbox', name='newGraduate', value='false', data-text-value='I am a new graduate / have no work experience')
+                                    | I am a new graduate / have no work experience
+                        .view-field.hidden-xs
+                            p
+                                span.text-gray-light Latest company:
+                                a.current-company.clickable Staff.com
+                                br
+                                span.text-gray-light Highest education:
+                                a.current-highest-education.clickable Bachelors
+                        .row.edit-field
+                            .col-sm-6
+                            .col-sm-6.text-right
+                                button.btn-cancel.btn.btn-sm.btn-default(type='button') Cancel
+                                button.btn-save.btn.btn-sm.btn-primary(type='button') Save
+                        .view-field.download-resume.m-b
+                            a.btn.btn-sm.btn-default.btn-outline(href='#')
+                                i.fa.fa-fw.fa-file-pdf-o
+                                |  Download profile
+            .absolute-right.m-t-n-lg.m-r-xs.visible-xs
+                a.btn.btn-block.btn-sm.btn-default.contact-information-toggler(href='#')
+                    i.fa.fa-fw.fa-suitcase
+                    span.hidden-xs Contact Information
+    .bg-gray.text-right.hidden-xs
+        .row
+            .col-xs-12.col-sm-5.pull-right
+                a.btn.btn-block.btn-sm.btn-default.contact-information-toggler(href='#')
+                    i.fa.fa-fw.fa-suitcase
+                    span Contact Information

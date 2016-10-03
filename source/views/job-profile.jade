@@ -1,0 +1,28 @@
+block vars
+  -title="interview-spot.com"
+  -bodyClass="job-profile-pg"
+extends layouts/layout
+block main
+    section.main.main-profile.container
+        .row
+            .col-xs-12.col-sm-8.col-md-9
+                include blocks/section-detail/section-resume-header
+                include blocks/section-detail/section-profile
+                include blocks/section-detail/section-skills
+                include blocks/section-detail/section-languages
+                include blocks/section-detail/section-employment
+                include blocks/section-detail/section-education
+                include blocks/section-detail/section-reference
+                include blocks/section-detail/section-working-preferences
+                //- include blocks/modals/modal-delete-section
+            .col-xs-12.col-sm-4.col-md-3
+                include blocks/section-sidebar/section-profile-strength
+                include blocks/section-sidebar/section-profile-settings
+                include blocks/section-sidebar/section-who-viewed-profile
+                include blocks/section-sidebar/section-profile-jobs
+                include blocks/section-sidebar/section-recommended-jobs
+
+
+// JS : JOB profile ----------
+block script
+  script(type='text/javascript', src="js/actions/job-profile.js")

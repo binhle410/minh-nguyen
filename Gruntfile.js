@@ -54,6 +54,10 @@ module.exports = function(grunt) {
         src: 'source/assets/js/actions/filter-form.js',
         dest: 'public/js/actions/filter-form.js'
       },
+      job_profile: {
+        src: 'source/assets/js/actions/job-profile.js',
+        dest: 'public/js/actions/job-profile.js'
+      },
       template: {
         src: 'source/assets/js/template.js',
         dest: 'public/js/template.js'

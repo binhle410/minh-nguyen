@@ -1,0 +1,17 @@
+.panel.panel-default.section-sidebar.section-profile-jobs.hidden-xs
+    .panel-heading
+        | Applied Jobs
+        span.loading-applied-job.pull-right(hidden='', style='display: none;')
+            i.fa.fa-spinner.fa-pulse
+    .panel-content.box-sm
+        ul.list-group
+            li.list-group-item
+                span.number.open.label.label-success.pull-right 0
+                a.clickable(href='#', data-toggle='tooltip', title='', data-original-title='Applications that waiting for employer to proceed')
+                    | Open
+            li.list-group-item.text-info
+                span.number.review.label.label-primary.pull-right 0
+                a.clickable(href='#', data-toggle='tooltip', title='', data-original-title='The employer has viewed your applications') Viewed
+            li.list-group-item.text-danger
+                span.number.closed.label.label-danger.pull-right 10
+                a.clickable(href='#', data-toggle='tooltip', title='', data-original-title='The job is no longer open on interviewspot; however you might still get contacted by the employer') Closed

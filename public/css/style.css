@@ -1750,6 +1750,8 @@ output {
   -ms-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  color: #999;
+  font-style: italic;
 }
 .form-control:focus {
   border-color: #66afe9;
@@ -16585,7 +16587,7 @@ h6.media-heading {
  * SET UP WHOLE SITE
  */
 body {
-  background: white;
+  background: #eee;
   color: #555;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
@@ -16723,6 +16725,10 @@ body.job-search-pg {
 body.bodyover {
   overflow: hidden;
 }
+.home .main {
+  background: white;
+  overflow: hidden;
+}
 .main .feature {
   margin-top: 10px!important;
   margin-bottom: 10px;
@@ -16731,12 +16737,6 @@ body.bodyover {
 .main .panel {
   border: 1px #e5e5e5 solid;
   box-shadow: 0 3px 13px #333;
-}
-.no-padding {
-  padding: 0!important;
-}
-.no-margin {
-  margin: 0!important;
 }
 .text-clip {
   display: inline-block;
@@ -16750,6 +16750,118 @@ body.bodyover {
   color: #de5749 !important;
   background-color: transparent;
 }
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.absolute-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.absolute-right {
+  position: absolute;
+  right: 0;
+}
+.transparent {
+  opacity: 0;
+}
+.block {
+  display: block;
+}
+.clickable {
+  cursor: pointer;
+}
+.form-wrapper {
+  background: #fff;
+  border: 1px solid transparent;
+  border-left: 0;
+  margin: 0;
+}
+.form-wrapper:hover {
+  border-left: 0;
+  box-shadow: 0 0 5px #ccc;
+  z-index: 2;
+}
+.form-wrapper:hover .form-btn-edit {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.form-wrapper .form-btn-edit {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.form-horizontal .form-group {
+  margin-bottom: 10px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.bg-gray {
+  background: #f4f4f4!important;
+}
+.gray-light {
+  color: #999!important;
+}
+.border-primary {
+  border-left: 5px solid #de5749;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.border-success {
+  border-left: 5px solid #5cb85c;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.m-t {
+  margin-top: 15px;
+}
+.m-b {
+  margin-bottom: 15px;
+}
+.m-b-n {
+  margin-bottom: -15px;
+}
+.m-b-none {
+  margin-bottom: 0;
+}
+.m-r-xs {
+  margin-right: 5px;
+}
+.m-t-sm {
+  margin-top: 10px;
+}
+.m-t-n-lg {
+  margin-top: -30px;
+}
+.no-padding {
+  padding: 0!important;
+}
+.no-margin {
+  margin: 0!important;
+}
+.push-top-15,
+.push-top-sm {
+  margin-top: 15px;
+}
 .scrollToTop {
   width: 30px;
   height: 30px;
@@ -16758,6 +16870,25 @@ body.bodyover {
 .scrollToTop i {
   line-height: 30px;
   font-size: 15px;
+}
+.text-gray-light {
+  color: #999;
+}
+.text-success {
+  color: #5cb85c!important;
+}
+.text-info {
+  color: #00b9f2;
+}
+.placeholder {
+  color: #999;
+  font-style: italic;
+}
+.well {
+  background: inherit;
+}
+.well.dash {
+  border: 1px dashed #ccc;
 }
 /**
  * Page components
@@ -19040,6 +19171,520 @@ ul.pagination li a:focus {
   width: 280px;
 }
 /**
+ * JOB PROFILE CSS
+ * Updated on 01/10/16
+ */
+/**
+ * SECTION DETAIL CSS
+ * Updated on 01/10/16
+ */
+.main-profile fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: inherit;
+}
+.main-profile .btn {
+  border: 1px solid transparent;
+  padding: 5px 25px;
+  line-height: 1.42857143;
+  border-radius: 2px;
+  font-size: 14px;
+}
+.main-profile .btn:hover {
+  background: #ddd;
+}
+.main-profile .btn.btn-primary {
+  background: #de5749;
+}
+.main-profile .btn.btn-primary:hover,
+.main-profile .btn.btn-primary:focus {
+  background: #bf253d;
+  border-color: #bf253d;
+  color: white;
+  outline: none;
+}
+.main-profile .btn-default {
+  color: #555;
+  background-color: #f4f4f4;
+  border-color: #ccc;
+}
+.main-profile .btn-outline {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background: 0 0;
+}
+.main-profile .btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.main-profile {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.main-profile .panel,
+.main-profile .section-resume-header .box {
+  background: #fff;
+  margin-bottom: 0;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  border-top: 1px #ddd solid;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  box-shadow: 0 1px 1px #ccc;
+}
+.main-profile .form-btn-edit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+.main-profile .form-btn-edit .btn {
+  border: 0;
+  background: 0 0;
+  font-size: 1.1em;
+}
+.main-profile .form-btn-edit .btn:hover {
+  color: #555;
+}
+.main-profile .box {
+  background: #fff;
+  margin-bottom: 15px;
+  border: 0;
+  box-shadow: 0 1px 1px #ccc;
+}
+.main-profile .box-md {
+  padding: 20px;
+}
+.main-profile form {
+  margin: 0;
+}
+.main-profile form label {
+  font-weight: 400;
+  font-size: 14px;
+  color: #555;
+}
+.main-profile form label small {
+  font-size: 80%;
+}
+.main-profile .btn.add-one-more-section {
+  margin: 0;
+}
+.main-profile .btn.add-one-more-section.no-border {
+  border-top: 1px #ddd solid!important;
+  border-radius: 0;
+  border-color: #ddd;
+}
+.main-profile .btn.add-one-more-section.no-border:hover {
+  color: #555;
+  background-color: #e0e0e0;
+}
+.main-profile .form-wrapper:hover .btn-default,
+.main-profile .placeholder-section:hover .btn-default {
+  color: #555;
+}
+.main-profile .form-wrapper.box-md,
+.main-profile .placeholder-section.box-md {
+  padding: 20px;
+}
+.main-profile .form-control-static {
+  padding-top: 0;
+}
+.main-profile .box-sm {
+  padding: 15px;
+}
+.main-profile .placeholder {
+  font-style: normal;
+}
+.main-profile .panel {
+  margin-bottom: 15px;
+}
+.main-profile .panel-heading {
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 15px;
+  border-bottom: 0;
+  text-transform: capitalize;
+  border-top-right-radius: 1px;
+  border-top-left-radius: 1px;
+}
+.main-profile .panel-default > .panel-heading {
+  color: #555;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+}
+.main-profile .label {
+  width: 30px;
+  padding: 2px 5px;
+}
+.main-profile .list-group {
+  margin-bottom: 0;
+}
+.main-profile .list-group.pic-item .list-group-item .item-content-col .list-group-item-heading {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  display: block;
+}
+.main-profile .list-group.pic-item .list-group-item .item-content-col .list-group-item-text {
+  color: #999;
+  line-height: 1.3;
+}
+.main-profile .list-group.pic-item .list-group-item p {
+  margin: 0;
+}
+.main-profile .list-group .list-group-item {
+  width: 100%;
+  display: table-row;
+  padding: 3px 0;
+  display: block;
+  border: 0 red solid;
+}
+.main-profile .list-group .list-group-item .item-content-col {
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.main-profile .list-group .list-group-item a {
+  color: #555;
+}
+.main-profile .section-detail legend.box-md {
+  background: #fff!important;
+  color: #666!important;
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+}
+.main-profile .section-detail h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+.main-profile .section-detail .tag-xs {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background: #f8f8f8;
+  border: 1px #ddd solid;
+}
+.main-profile .btn-sm {
+  padding: 5px 10px;
+  margin: 0;
+}
+.main-profile .form-wrapper input {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  color: #555;
+  font-style: initial;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+.main-profile .form-wrapper input.input-sm {
+  height: 28px;
+  padding: 3px 6px;
+  font-size: 11px;
+  line-height: 1.5;
+  border-radius: 2px;
+}
+.main-profile .form-wrapper input[type="checkbox"] {
+  margin-right: 5px;
+}
+/**
+ * SECTION RESUME HEADER CSS
+ * Updated on 01/10/16
+ */
+.section-header {
+  margin-top: 10px;
+}
+.section-resume-header .bg-gray .btn-default {
+  background: #e0e0e0;
+  border: none;
+}
+.section-resume-header .bg-gray .btn-default:hover {
+  background: #e0e0e0;
+}
+.section-resume-header .dropdown > a:before {
+  content: none;
+}
+.section-resume-header .form-wrapper {
+  margin: 0;
+}
+.main-profile .user-pic .avatar {
+  padding: 5px;
+  border: 1px #E5E5E5 solid;
+  background: #fff;
+  width: 115px;
+  height: 115px;
+  line-height: 115px;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  margin: 18px auto;
+  margin-right: 25px;
+}
+.main-profile .user-pic .avatar-sample {
+  line-height: 135px;
+  color: #eee;
+  font-size: 2em;
+}
+.main-profile .user-pic .dropdown-menu {
+  margin-left: 10px;
+  margin-top: 3px;
+  min-width: 160px;
+}
+.main-profile .user-pic .dropdown-menu a {
+  margin: 0;
+}
+.main-profile .editMode .profile-info .name {
+  width: 50%;
+}
+.main-profile .editMode .profile-info .last-name {
+  margin-left: 0;
+  width: 50%;
+}
+.main-profile .profile-info {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.main-profile .profile-info .profile-name {
+  color: #de5749;
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.main-profile .profile-info .last-name {
+  margin-left: 5px;
+}
+.main-profile .profile-info .text-gray-light {
+  margin-right: 3px;
+}
+.main-profile .user-info .box-md {
+  padding: 16px 10px 0 10px;
+}
+.main-profile .contact-information-toggler {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+/**
+ * SECTION PROFILE CSS
+ * Updated on 01/10/16
+ */
+/**
+ * SECTION SKILLS CSS
+ * Updated on 01/10/16
+ */
+.main-profile .section-detail .tag-xs {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background: #f8f8f8;
+  border: 1px #ddd solid;
+}
+.main-profile .tag-xs {
+  display: inline-block;
+  padding: 0 10px 0 10px;
+  cursor: pointer;
+  overflow: hidden;
+  line-height: 30px;
+  height: 30px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background: #f8f8f8;
+  border: 1px #ddd solid;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+.main-profile .tag-name {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 135px;
+  vertical-align: middle;
+}
+/**
+ * SECTION LANGUAGES CSS
+ * Updated on 01/10/16
+ */
+.section-languages .box-md.content-section-wrapper {
+  padding-left: 30px;
+  background: white;
+}
+.section-languages .form-wrapper.form-view.box-md {
+  padding: 2px 30px;
+}
+.section-languages .form-btn-edit {
+  margin-top: -2px;
+}
+.section-languages .form-control-static.view-control {
+  margin-top: 4px;
+}
+/**
+ * SECTION WORKING PREFERENCES CSS
+ * Updated on 01/10/16
+ */
+.icon-group.expected-company-benefit-list.view-mode label {
+  cursor: default;
+}
+.icon-group.expected-company-benefit-list label.active {
+  color: #5cb85c;
+}
+.icon-group.expected-company-benefit-list label.active:hover a.benefit-icon {
+  background: #eee;
+}
+.icon-group.expected-company-benefit-list label.active a.benefit-icon {
+  background: #e5ffe5;
+  border: 1px solid #5cb85c;
+}
+.icon-group.expected-company-benefit-list label.active a.benefit-icon i {
+  color: #5cb85c;
+}
+.icon-group.expected-company-benefit-list label.active .benefit-name,
+.icon-group.expected-company-benefit-list label.active .ic-check .fa {
+  color: #5cb85c;
+}
+.icon-group.expected-company-benefit-list label.disabled .benefit-icon {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+.icon-group.expected-company-benefit-list label .benefit-icon,
+.icon-group.expected-company-benefit-list label .benefit-name,
+.icon-group.expected-company-benefit-list label i {
+  color: #777;
+}
+.icon-group.expected-company-benefit-list label a {
+  padding: 7px;
+}
+.icon-group a {
+  background: #eee;
+  display: inline-block;
+  border: 1px #ddd solid;
+  padding: 10px 5px;
+  margin: 2px 5px 2px 2px!important;
+  color: #666;
+  font-size: 14px;
+}
+/**
+ * SECTION SIDEBAR CSS
+ * Updated on 01/10/16
+ */
+/**
+ * SECTION PROFILE LEVEL CSS
+ * Updated on 01/10/16
+ */
+.section-profile-level .list-group a {
+  cursor: pointer;
+}
+.section-profile-level fieldset {
+  display: table-cell;
+  width: 100%;
+}
+.section-profile-level .text-clip {
+  margin-right: 3px;
+}
+.main-profile .attached-cv .attached-cv-update:hover {
+  border: 1px #ccc solid;
+  border-left: 0;
+  box-shadow: 0 0 5px #ccc;
+}
+.main-profile .attached-cv .attached-cv-update:hover .button-update {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  color: #999;
+}
+.main-profile .attached-cv .attached-cv-update:hover .button-update .btn {
+  color: #999;
+}
+.main-profile .attached-cv .attached-cv-update .button-update {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+.main-profile .attached-cv .attached-cv-update .button-update .btn {
+  padding: 0;
+}
+.main-profile .switchery {
+  background-color: #fff;
+  border: 1px solid #dfdfdf;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  vertical-align: middle;
+  width: 40px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.main-profile .switchery > small {
+  background: #fff;
+  border-radius: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  height: 20px;
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+/**
+ * SECTION WHO VIEWED PROFILE CSS
+ * Updated on 01/10/16
+ */
+.main-profile .total-view {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f7941d;
+  line-height: 24px;
+}
+.main-profile .link-list a {
+  color: #555!important;
+}
+/**
+ * SECTION RECOMMENDED JOBS CSS
+ * Updated on 02/10/16
+ */
+.main-profile .list-group.pic-item .list-group-item {
+  border: 1px #eee solid;
+  padding: 11px 0;
+}
+.main-profile .list-group.pic-item .list-group-item:hover {
+  background: #fafafa;
+}
+.main-profile .list-group.pic-item .list-group-item:hover a {
+  color: #de5749;
+}
+/**
  * FOOTER CSS
  * Updated on 22/09/16
  */
@@ -19103,6 +19748,55 @@ footer .copyright {
  * Media 1200px+
  *
  * description: css rules for screen of tablets
+ */
+/* --------------------------- */
+/* MEDIA RESPONSIVE */
+/* ------ */
+/**
+ * Media 1200px+
+ *
+ * description: css rules for screen of desktop
+ */
+/**
+ * Media 1024px-
+ *
+ * description: css rules for screen of tablets
+ */
+@media (max-width: 1024px) {
+  .main-profile .form-btn-edit {
+    opacity: .5;
+  }
+}
+/**
+ * Media 480px-767px
+ *
+ * description: css rules for screen of new moderm smartphone
+ */
+@media (max-width: 767px) {
+  .main-profile .section-resume-header .user-info .download-resume .btn-default {
+    margin-top: 10px;
+  }
+  .main-profile .section-resume-header .user-info .btn.btn-block {
+    border: none;
+  }
+  .main-profile .section-resume-header .user-info .btn.contact-information-toggler {
+    text-align: right;
+    margin-top: -10px !important;
+    margin-right: 10px;
+    background: 0 0!important;
+  }
+  .main-profile .section-resume-header .user-pic .avatar {
+    padding: 2px;
+    margin: 10px auto;
+    width: 78px;
+    height: 78px;
+    line-height: 78px;
+  }
+}
+/**
+ * Media 480px-
+ *
+ * description: css rules for screen of old school smartphone
  */
 @media (max-width: 1200px) {
   .container {

@@ -1,0 +1,158 @@
+.section-detail.section-reference
+    .box.border-gray
+        fieldset
+            legend.box-md
+                i.fa.fa-fw.fa-book
+                |  References
+            .placeholder-section.box-md(hidden="")
+                span.placeholder
+                    | Provide past employment references to stand out among the crowd
+            .sortable.content-section
+                // Sample
+                form.form-view.sample.form-wrapper.box-md.relative(hidden='')
+                    input(type='hidden', name='resume_id', value='3375529')
+                    input(type='hidden', name='entry_id', value='')
+                    span.form-btn-edit
+                        button.btn.btn-sm.btn-default(type='button')
+                            i.glyphicon.glyphicon-pencil
+                    .feature-blk
+                        .view-field
+                            h4.view-control.placeholder(data-control='ref-fullname') e.g. Mark Twain
+                            span.view-control.placeholder(data-control='ref-position') e.g. Project Manager
+                            br
+                        .edit-field
+                            .row
+                                .col-sm-6
+                                    .form-group
+                                        label
+                                            strong.text-red *
+                                            |  Full Name
+                                        input.form-control.edit-control(type='text', name='name', placeholder='e.g. Mark Twain', value='', maxlength='150', data-control='ref-fullname', autofocus='')
+                                        span.msg-name-required.error-message(hidden='hidden') This field is required
+                                        span.msg-name-invalid.error-message(hidden='hidden') Please do not enter phone number or email
+                                .col-sm-6
+                                    .form-group
+                                        label
+                                            strong.text-red *
+                                            |  Position
+                                        input.form-control.edit-control(type='text', name='position', placeholder='e.g. Project Manager', value='', maxlength='150', data-control='ref-position')
+                                        span.msg-position-required.error-message(hidden='hidden') This field is required
+                                        span.msg-position-invalid.error-message(hidden='hidden') Please do not enter phone number or email
+                    .feature-blk
+                        .view-field
+                            span.view-control.placeholder e.g. Navigos Group Vietnam
+                            br
+                        .edit-field
+                            .form-group
+                                label
+                                    strong.text-red *
+                                    |  Company
+                                input.form-control.edit-control(type='text', name='company', placeholder='e.g. Navigos Group', value='', maxlength='150')
+                                span.msg-company-required.error-message(hidden='hidden') This field is required
+                                span.msg-company-invalid.error-message(hidden='hidden') Please do not enter phone number or email
+                    .feature-blk
+                        .view-field
+                            span.view-control.placeholder(data-control='ref-email') e.g. reference@navigosgroup.com
+                            |                                 -
+                            span.view-control.placeholder(data-control='ref-phone') e.g. 0903035333
+                        .edit-field
+                            .row
+                                .col-sm-6
+                                    .form-group
+                                        label
+                                            strong.text-red *
+                                            |                                                 Email
+                                        input.form-control.edit-control(type='email', name='email', placeholder='e.g. reference@navigosgroup.com', value='', maxlength='150', data-control='ref-email')
+                                        span.msg-email-required.error-message(hidden='hidden') This field is required
+                                        span.msg-email-invalid.error-message(hidden='hidden') Please enter correct email
+                                .col-sm-6
+                                    .form-group
+                                        label Phone Number
+                                        input.form-control.edit-control(type='text', name='phone', placeholder='e.g. 0903035333', value='', maxlength='150', data-control='ref-phone')
+                                        span.msg-phone-invalid.error-message(hidden='hidden') Please enter correct phone number
+                                        p.msg-description-suggestion.text-info(hidden='hidden') Please complete this field to improve your profile strength.
+                    .form-group.push-top-md.edit-field
+                        .col-sm-6
+                            | (
+                            strong.text-red *
+                            |  ) is required field
+                        .col-sm-6.text-right
+                            button.btn-remove-this-section.btn.btn-link(type='button')
+                                i.glyphicon.glyphicon-trash
+                            button.btn-cancel.btn.btn-default(type='button') Cancel
+                            button.btn-save.btn.btn-primary(type='button') Save
+                // Form
+                form.form-view.form-wrapper.box-md.relative.form-horizontal
+                    input(type='hidden', name='resume_id', value='3375529')
+                    input(type='hidden', name='entry_id', value='708744')
+                    span.form-btn-edit
+                        button.btn.btn-sm.btn-default(type='button')
+                            i.fa.fa-pencil
+                    .feature-blk
+                        .view-field(style='display: block;')
+                            h4.view-control(data-control='ref-fullname') Robert M. Dock
+                            span.view-control(data-control='ref-position') PM
+                            br
+                        .edit-field(style='display: none;')
+                            .row
+                                .col-sm-6
+                                    .form-group
+                                        label
+                                            strong.text-red *
+                                            |  Full Name
+                                        input.form-control.edit-control(type='text', name='name', placeholder='e.g. Mark Twain', value='Mark Twain', maxlength='150', data-control='ref-fullname', autofocus='')
+                                        span.msg-name-required.error-message(hidden='hidden') This field is required
+                                        span.msg-name-invalid.error-message(hidden='hidden') Please do not enter phone number or email
+                                .col-sm-6
+                                    .form-group
+                                        label
+                                            strong.text-red *
+                                            |  Position
+                                        input.form-control.edit-control(type='text', name='position', placeholder='e.g. Project Manager', value='PM', maxlength='150', data-control='ref-position')
+                                        span.msg-position-required.error-message(hidden='hidden') This field is required
+                                        span.msg-position-invalid.error-message(hidden='hidden') Please do not enter phone number or email
+                    .feature-blk
+                        .view-field(style='display: block;')
+                            span.view-control Staff.com
+                            br
+                        .edit-field(style='display: none;')
+                            .form-group
+                                label
+                                    strong.text-red *
+                                    |  Company
+                                input.form-control.edit-control(type='text', name='company', placeholder='e.g. Navigos Group', value='Staff.com', maxlength='150')
+                                span.msg-company-required.error-message(hidden='hidden') This field is required
+                                span.msg-company-invalid.error-message(hidden='hidden') Please do not enter phone number or email
+                    .feature-blk
+                        .view-field(style='display: block;')
+                            span.view-control(data-control='ref-email') robert.m.dock@gmail.com
+                            |                                 -
+                            span.view-control.placeholder(data-control='ref-phone')  e.g. 0903035333
+                        .edit-field(style='display: none;')
+                            .row
+                                .col-sm-6
+                                    .form-group
+                                        label
+                                            strong.text-red *
+                                            |                                                 Email
+                                        input.form-control.edit-control(type='email', name='email', placeholder='e.g. reference@navigosgroup.com', value='nguyenvan@gmail.com', maxlength='150', data-control='ref-email')
+                                        span.msg-email-required.error-message(hidden='hidden') This field is required
+                                        span.msg-email-invalid.error-message(hidden='hidden') Please enter correct email
+                                .col-sm-6
+                                    .form-group
+                                        label Phone Number
+                                        input.form-control.edit-control(type='text', name='phone', placeholder='e.g. 0903035333', value='', maxlength='150', data-control='ref-phone')
+                                        span.msg-phone-invalid.error-message(hidden='hidden') Please enter correct phone number
+                                        p.msg-description-suggestion.text-info(hidden='hidden') Please complete this field to improve your profile strength.
+                    .form-group.push-top-md.edit-field(style='display: none;')
+                        .col-sm-6
+                            | (
+                            strong.text-red *
+                            |  ) is required field
+                        .col-sm-6.text-right
+                            button.btn-remove-this-section.btn.btn-link(type='button', onclick="deleteReference($(this).parents('form'))")
+                                i.glyphicon.glyphicon-trash
+                            button.btn-cancel.btn.btn-default(type='button') Cancel
+                            button.btn-save.btn.btn-primary(type='button', onclick="saveReference($(this).parents('form'))") Save
+            button.btn.btn-default.btn-block.no-border.add-one-more-section(type='button')
+                strong Add Reference
