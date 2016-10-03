@@ -10,7 +10,7 @@ var bodyParser = require('body-parser');
 var app = express();
 
 // Default configuration
-app.set('port', process.env.PORT || 3050);
+app.set('port', process.env.PORT || 3011);
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'jade');
 app.use(logger('dev'));
