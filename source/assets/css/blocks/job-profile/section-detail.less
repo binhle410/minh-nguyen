@@ -87,6 +87,7 @@
         border: 0;
         border-top: 1px solid #ddd;
         .border-radius(3px);
+        .box-shadow(0 1px 1px #ccc);
     }
     label {
         font-weight: 700;
@@ -106,14 +107,13 @@
         &.add-one-more-section {
             margin: 0;
             padding: 10px 0;
-            &.no-border {
-                border-top: 1px #ddd solid!important;
-                border-radius: 0;
-                border-color: #ddd;
-                &:hover {
-                    color: #555;
-                    background-color: #e0e0e0;
-                }
+            border: none;
+            border-top: 1px #ddd solid;
+            .border-radius(0 0 3px 3px);
+            font-size: 14px;
+            &:hover {
+                color: #555;
+                background-color: #e0e0e0;
             }
         }
     }
@@ -249,7 +249,6 @@
     }
     .form-wrapper {
         .form-control {
-            .border-radius(0);
             color: #555;
             font-style: initial;
             .box-shadow(none);
@@ -273,6 +272,9 @@
 .main-profile {
     .edit-field {
         display: none;
+    }
+    .edit-btns {
+        margin: 15px 0 0;
     }
     .form-horizontal {
         margin: 0;

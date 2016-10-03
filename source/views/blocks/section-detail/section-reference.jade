@@ -9,7 +9,7 @@
                     | Provide past employment references to stand out among the crowd
             .sortable.content-section
                 // Sample
-                form.form-view.sample.form-wrapper.box-md.relative(hidden='')
+                form.sample.form-wrapper.box-md.relative(hidden='')
                     input(type='hidden', name='resume_id', value='3375529')
                     input(type='hidden', name='entry_id', value='')
                     span.form-btn-edit
@@ -71,7 +71,7 @@
                                         input.form-control(type='text', name='phone', placeholder='e.g. 0903035333', value='', maxlength='150')
                                         span.msg-phone-invalid.error-message(hidden='hidden') Please enter correct phone number
                                         p.msg-description-suggestion.text-info(hidden='hidden') Please complete this field to improve your profile strength.
-                    .form-group.edit-field
+                    .form-group.edit-field.edit-btns
                         .pull-left
                             | (
                             strong.text-red *
@@ -82,7 +82,7 @@
                             button.btn-cancel.btn.btn-default(type='button') Cancel
                             button.btn-save.btn.btn-primary(type='button') Save
                 // Form
-                form.form-view.form-wrapper.box-md.relative.form-horizontal
+                form.form-wrapper.box-md.relative.form-horizontal
                     input(type='hidden', name='resume_id', value='3375529')
                     input(type='hidden', name='entry_id', value='708744')
                     span.form-btn-edit
@@ -144,7 +144,7 @@
                                         input.form-control(type='text', name='phone', placeholder='e.g. 0903035333', value='', maxlength='150')
                                         span.msg-phone-invalid.error-message(hidden='hidden') Please enter correct phone number
                                         p.msg-description-suggestion.text-info(hidden='hidden') Please complete this field to improve your profile strength.
-                    .form-group.edit-field(style='display: none;')
+                    .form-group.edit-field.edit-btns(style='display: none;')
                         .pull-left
                             | (
                             strong.text-red *

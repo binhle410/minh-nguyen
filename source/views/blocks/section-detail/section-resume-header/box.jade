@@ -20,7 +20,7 @@
                                         | Upload photo
                                         input.absolute-left.transparent(name='avatar', type='file')
         .section-header.hidden-section.col-xs-8.col-sm-9
-            form.form-view.form-wrapper
+            form.form-wrapper
                 .relative.box-md
                     span.form-btn-edit
                         button.btn.btn-default(type='button')
@@ -30,7 +30,7 @@
                             .name.pull-left
                                 .view-field
                                     h3.profile-name.text-orange Victor
-                                .edit-field
+                                .edit-field.form-group
                                     label
                                         strong.text-red *
                                         |  Last Name
@@ -63,7 +63,7 @@
                                 input.form-control(placeholder='e.g. 7', type='text', name='yearOfExperience', maxlength='2', value='1')
                         .profile-itm.new-graduate
                             .view-field
-                                span.view-control
+                                //- span.view-control
                             .edit-field.form-group.m-t-n-xs
                                 label
                                     input(type='checkbox', name='newGraduate', value='false')

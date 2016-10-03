@@ -16779,6 +16779,9 @@ body.bodyover {
 .clickable {
   cursor: pointer;
 }
+form {
+  margin: 0;
+}
 .form-wrapper {
   background: #fff;
   border: 1px solid transparent;
@@ -16882,6 +16885,9 @@ body.bodyover {
 }
 .text-info {
   color: #00b9f2;
+}
+.text-red {
+  color: #de5749 !important;
 }
 .placeholder {
   color: #999;
@@ -19275,6 +19281,11 @@ ul.pagination li a:focus {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  -webkit-box-shadow: 0 1px 1px #ccc;
+  -moz-box-shadow: 0 1px 1px #ccc;
+  -ms-box-shadow: 0 1px 1px #ccc;
+  -o-box-shadow: 0 1px 1px #ccc;
+  box-shadow: 0 1px 1px #ccc;
 }
 .main-profile label {
   font-weight: 700;
@@ -19293,13 +19304,19 @@ ul.pagination li a:focus {
 .main-profile .btn.add-one-more-section {
   margin: 0;
   padding: 10px 0;
+  border: none;
+  border-top: 1px #ddd solid;
+  -webkit-border-radius: 0 0 3px 3px;
+  -moz-border-radius: 0 0 3px 3px;
+  -ms-border-radius: 0 0 3px 3px;
+  -o-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  font-size: 14px;
 }
-.main-profile .btn.add-one-more-section.no-border {
-  border-top: 1px #ddd solid!important;
-  border-radius: 0;
-  border-color: #ddd;
-}
-.main-profile .btn.add-one-more-section.no-border:hover {
+.main-profile .btn.add-one-more-section:hover {
   color: #555;
   background-color: #e0e0e0;
 }
@@ -19414,14 +19431,6 @@ ul.pagination li a:focus {
   margin: 0;
 }
 .main-profile .form-wrapper .form-control {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
   color: #555;
   font-style: initial;
   -webkit-box-shadow: none;
@@ -19447,6 +19456,9 @@ ul.pagination li a:focus {
 .main-profile .edit-field {
   display: none;
 }
+.main-profile .edit-btns {
+  margin: 15px 0 0;
+}
 .main-profile .form-horizontal {
   margin: 0;
 }
@@ -19465,6 +19477,9 @@ ul.pagination li a:focus {
 }
 .section-resume-header .dropdown > a:before {
   content: none;
+}
+.section-resume-header .box {
+  margin: 0;
 }
 .main-profile .user-pic .avatar {
   padding: 5px;
@@ -19517,9 +19532,6 @@ ul.pagination li a:focus {
 }
 .main-profile .profile-info p a {
   color: #de5749;
-}
-.main-profile .user-info .box-md {
-  padding: 15px 10px 15px 10px;
 }
 .main-profile .contact-information-toggler {
   -webkit-border-radius: 0;
@@ -19591,7 +19603,7 @@ ul.pagination li a:focus {
   padding-left: 30px;
   background: white;
 }
-.section-languages .form-wrapper.form-view.box-md {
+.section-languages .form-wrapper.box-md {
   padding: 2px 30px;
 }
 .section-languages .form-btn-edit {
@@ -19606,6 +19618,9 @@ ul.pagination li a:focus {
  */
 .icon-group.expected-company-benefit-list.view-mode label {
   cursor: default;
+}
+.icon-group.expected-company-benefit-list label {
+  cursor: pointer;
 }
 .icon-group.expected-company-benefit-list label.active {
   color: #5cb85c;

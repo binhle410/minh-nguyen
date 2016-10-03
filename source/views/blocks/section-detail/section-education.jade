@@ -9,7 +9,7 @@
                     | Input details of your education, as well as any professional qualifications or relevant training
             .sortable.content-section
                 // Sample
-                form.form-view.form-wrapper.box-md.relative.sample(hidden='')
+                form.form-wrapper.box-md.relative.sample(hidden='')
                     input(type='hidden', name='resume_id', value='3375529')
                     input(type='hidden', name='entry_id', value='')
                     span.form-btn-edit
@@ -84,8 +84,7 @@
                                 .form-group
                                     label Achievements
                                     textarea.form-control.emp-description.achievement-textarea.countdown-target(rows='3', name='description', placeholder='Education Achievements', maxlength='5000')
-                        .form-group.edit-field
-                            .row
+                        .form-group.edit-field.edit-btns.clearfix
                                 .pull-left
                                     | (
                                     strong.text-red *
@@ -96,14 +95,14 @@
                                     button.btn-cancel.btn.btn-default(type='button') Cancel
                                     button.btn-save.btn.btn-primary(type='button') Save
                 // Form
-                form.form-view.form-wrapper.box-md.relative
+                form.form-wrapper.box-md.relative
                     span.form-btn-edit
                         button.btn.btn-sm.btn-default(type='button')
                             i.fa.fa-pencil
                     .subject-blk
                         .view-field
                             h4.view-control International Economics
-                        .edit-field
+                        .edit-field.clearfix
                             .form-group
                                 label
                                     strong.text-red *
@@ -170,7 +169,7 @@
                                     textarea.form-control.emp-description.achievement-textarea.countdown-target(rows='3', name='description', placeholder='Education Achievements', maxlength='5000', style='display: none;', aria-hidden='true')
                                     em.countdown.gray-light 5000 character remaining
 
-                        .edit-field
+                        .form-group.edit-field.edit-btns.clearfix
                             .pull-left
                                 | (
                                 strong.text-red *
@@ -180,7 +179,7 @@
                                     i.fa.fa-trash-o
                                 button.btn-cancel.btn.btn-default(type='button') Cancel
                                 button.btn-save.btn.btn-primary(type='button') Save
-                form.form-view.form-wrapper.box-md.relative
+                form.form-wrapper.box-md.relative
                     input(type='hidden', name='resume_id', value='3375529')
                     input(type='hidden', name='entry_id', value='1756214')
                     span.form-btn-edit
@@ -255,7 +254,7 @@
                                 .form-group
                                     label Achievements
                                     textarea.form-control.emp-description.achievement-textarea.countdown-target(rows='3', name='description', placeholder='Education Achievements', maxlength='5000', style='display: none;', aria-hidden='true') <p>TOEIC 830</p>
-                        .edit-field
+                        .form-group.edit-field.edit-btns.clearfix
                             .pull-left
                                 | (
                                 strong.text-red *
@@ -264,6 +263,6 @@
                                 button.btn-remove-this-section.btn.btn-link(type='button', data-toggle='modal', data-target='#dialog-remove-item')
                                     i.fa.fa-trash-o
                                 button.btn-cancel.btn.btn-default(type='button') Cancel
-                                button.btn-save.btn.btn-primary(type='button')
+                                button.btn-save.btn.btn-primary(type='button') Save
             button.btn.btn-default.btn-block.add-one-more-section(type='button')
                 strong Add Education History

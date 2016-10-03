@@ -9,7 +9,7 @@
                     | Input details of your employment history. The more detail you include about your previous experience, the more likely you are to appear in search results
             .sortable.content-section
                 // Sample
-                form.sample.form-view.form-wrapper.box-md.relative(hidden='hidden')
+                form.sample.form-wrapper.box-md.relative(hidden='hidden')
                     input(type='hidden', name='resume_id', value='3375529')
                     input(type='hidden', name='entry_id', value='')
                     span.form-btn-edit
@@ -76,7 +76,7 @@
                                 p.msg-description-limit-max.error-message(hidden='hidden') You have entered too many characters
                                 p.msg-description-valid.error-message(hidden='hidden') Please do not enter phone number or email.
                                 p.msg-description-suggestion.text-info(hidden='hidden') Please complete this field to improve your profile strength.
-                    .form-group.edit-field
+                    .form-group.edit-field.edit-btns
                         .pull-left
                             | (
                             strong.text-red *
@@ -87,7 +87,7 @@
                             button.btn-cancel.btn.btn-default(type='button') Cancel
                             button.btn-save.btn.btn-primary(type='button') Save
                 // Form
-                form.form-view.form-wrapper.box-md.relative
+                form.form-wrapper.box-md.relative
                     input(type='hidden', name='resume_id', value='3375529')
                     input(type='hidden', name='entry_id', value='2451908')
                     span.form-btn-edit
@@ -150,7 +150,7 @@
                                 label Description
                                 textarea.form-control.emp-description.countdown-target(rows='3', name='description', placeholder='Describe your duties and responsibilities...', aria-hidden='true', style='display: none;')
                                 em.countdown.gray-light 5000 character remaining
-                    .form-group.edit-field(style='display: none;')
+                    .form-group.edit-field.edit-btns.clearfix(style='display: none;')
                         .pull-left
                             | (
                             strong.text-red *

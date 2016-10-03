@@ -76,8 +76,10 @@ function activeBnfItem() {
         var $ckbox = $(this).find("input.filter-ipt");
         if($ckbox.prop("checked")) {
             $(this).addClass("active");
+            $(this).find(".fa.fa-fw").addClass("fa-check");
         } else {
             $(this).removeClass("active");
+            $(this).find(".fa.fa-fw").removeClass("fa-check");
         }
     });
 }
