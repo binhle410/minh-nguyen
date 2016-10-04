@@ -83,7 +83,7 @@
                             .edit-field
                                 .form-group
                                     label Achievements
-                                    textarea.form-control.emp-description.achievement-textarea.countdown-target(rows='3', name='description', maxlength='5000')
+                                    textarea.form-control(rows='3', name='description', maxlength='5000')
                         .form-group.edit-field.edit-btns.clearfix
                                 .pull-left
                                     | (
@@ -146,7 +146,7 @@
                                             span.lbl    years
                                         span.months
                                             span.number-of-months    4
-                                            span.lbl    months
+                                            span.lbl    months)
                             .edit-field
                                 .row
                                     .col-sm-6
@@ -163,7 +163,7 @@
                             .edit-field
                                 .form-group
                                     label Achievements
-                                    textarea.form-control.emp-description.achievement-textarea.countdown-target(rows='3', name='description', maxlength='5000', aria-hidden='true')
+                                    textarea.form-control(rows='3', name='description', maxlength='5000', aria-hidden='true')
                                     em.countdown.gray-light 5000 character remaining
 
                         .form-group.edit-field.edit-btns.clearfix
@@ -219,20 +219,19 @@
                                                 option(value='6', ) Doctorate
                                                 option(value='11', selected='selected') Others
                         .time-blk
-                            .view-field
-                                p
-                                    span.view-control.placeholder e.g. 09/2008
-                                    |                                         -
-                                    span.view-control.placeholder e.g. 12/2014
-                                    span.total-time.placeholder
-                                        | (
-                                        span.years
-                                            span.number-of-years 6
-                                            span.lbl years
-                                        span.months
-                                            span.number-of-months 3
-                                            span.lbl months
-                                        |                                             )
+                            //- .view-field
+                            //-     p
+                            //-         span.view-control.placeholder e.g. 09/2008
+                            //-         |                                         -
+                            //-         span.view-control.placeholder e.g. 12/2014
+                            //-         span.total-time.placeholder
+                            //-             | (
+                            //-             span.years
+                            //-                 span.number-of-years 6
+                            //-                 span.lbl   years
+                            //-             span.months
+                            //-                 span.number-of-months    3
+                            //-                 span.lbl    months)
                             .edit-field
                                 .row
                                     .col-sm-6
@@ -250,7 +249,7 @@
                             .edit-field
                                 .form-group
                                     label Achievements
-                                    textarea.form-control.emp-description.achievement-textarea.countdown-target(rows='3', name='description', maxlength='5000', aria-hidden='true') <p>TOEIC 830</p>
+                                    textarea.form-control(rows='3', name='description', maxlength='5000', aria-hidden='true') <p>TOEIC 830</p>
                         .form-group.edit-field.edit-btns.clearfix
                             .pull-left
                                 | (

@@ -32,6 +32,12 @@ function editForms() {
             $("#benefit-view-mode").hide();
             $("#benefit-edit-mode").show();
         }
+
+        if($this_f.hasClass("skill-section")) {
+            console.log("abc");
+            $this_f.find(".view-skills").hide();
+            $this_f.find(".edit-skills").show();
+        }
     });
 }
 
@@ -50,6 +56,11 @@ function cancelEdit() {
         if($this_f.hasClass("form-working-preference")) {
             $("#benefit-view-mode").show();
             $("#benefit-edit-mode").hide();
+        }
+
+        if($this_f.hasClass("skill-section")) {
+            $this_f.find(".view-skills").show();
+            $this_f.find(".edit-skills").hide();
         }
     });
 }
@@ -123,6 +134,8 @@ function addForm() {
 
         // Append new cloned Form into current section
         $currSec.append($cloneElem);
+
+        inputDateFm();
     });
 }
 
@@ -198,6 +211,29 @@ function inputDateFm() {
 
 }
 
+// 7. countRmCh(): Count remaining characters when user types in textarea
+function countRmCh() {
+    if(!$("textarea.form-control").length) { return; }
+
+    var $txtArea = $("textarea.form-control");
+    $txtArea.on("keyup", function(e) {
+        var maxLength = 5000,
+            rmLength  = null;
+        rmLength = maxLength - $(this).val().length;
+        $(this).next().text(rmLength + " character remaining");
+    });
+}
+
+// 8. addSkill(): Add one more skill
+function addSkill() {
+    if(!$(".skill-input .btn").length) { return; }
+
+    var $skBtn = $(".skill-input .btn");
+    $skBtn.on("click", function(e) {
+
+    });
+}
+
 /* ----------------------------------------------- */
 /* ----------------------------------------------- */
 /* OnLoad Page */
@@ -211,6 +247,7 @@ $(document).ready(function($){
     toggleCttBox();
     tnSrchBtn();
     inputDateFm();
+    countRmCh();
 });
 /* OnLoad Window */
 var init = function () {

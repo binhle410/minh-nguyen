@@ -23,7 +23,7 @@
                                 label
                                     strong.text-red *
                                     |Position
-                              input.form-control(type='text', name='position', value='', maxlength='150', autofocus='')
+                                input.form-control(type='text', name='position', value='', maxlength='150', autofocus='')
                     .feature-blk
                         .view-field
                             strong.view-control.placeholder e.g. interviewspot
@@ -32,7 +32,7 @@
                                 label
                                     strong.text-red *
                                     |Company
-                                inputorm-control.company-name(type='text', name='companyName', value='', maxlength='150')
+                                input.form-control.company-name(type='text', name='companyName', value='', maxlength='150')
                     .feature-blk
                         .view-field
                             p
@@ -43,11 +43,11 @@
                                     | (
                                     span.years
                                         span.number-of-years 6
-                                        span.lbl years
+                                        span.lbl     years
                                     span.months
-                                        span.number-of-months 3
-                                        span.lbl months
-                                    |                                         )
+                                        span.number-of-months     3
+                                        span.lbl    months
+                                    |)
                         .edit-field
                             .row
                                 .col-sm-4
@@ -70,7 +70,7 @@
                         .edit-field
                             .form-group
                                 label Description
-                                textarea.form-control.emp-description.countdown-target(rows='3', name='description')
+                                textarea.form-control(rows='3', name='description')
                     .form-group.edit-field.edit-btns.clearfix 
                         .pull-left
                             | (
@@ -114,10 +114,10 @@
                                     |  (
                                     span.years
                                         span.number-of-years 6
-                                        span.lbl  years
+                                        span.lbl    years
                                     span.months
-                                        span.number-of-months  3
-                                        span.lbl  months
+                                        span.number-of-months    3
+                                        span.lbl    months
                                     | )
                         .edit-field(style='display: none;')
                             .row
@@ -141,7 +141,7 @@
                         .edit-field(style='display: none;')
                             .form-group
                                 label Description
-                                textarea.form-control.emp-description.countdown-target(rows='3', name='description', style='display: none;')
+                                textarea.form-control(rows='3', name='description')
                                 em.countdown.gray-light 5000 character remaining
                     .form-group.edit-field.edit-btns.clearfix(style='display: none;')
                         .pull-left

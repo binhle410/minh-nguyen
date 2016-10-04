@@ -19395,6 +19395,10 @@ ul.pagination li a:focus {
   -o-box-shadow: none;
   box-shadow: none;
 }
+.main-profile .countdown {
+  display: block;
+  margin-top: 10px;
+}
 .main-profile .list-group {
   margin-bottom: 0;
 }
@@ -19714,6 +19718,7 @@ ul.pagination li a:focus {
   float: left;
 }
 .main-profile .skill-input .btn {
+  margin-left: 10px;
   height: 40px;
   font-size: 14px;
   width: 40px;
@@ -20039,6 +20044,7 @@ footer .copyright {
     margin-top: -10px !important;
     margin-right: 10px;
     background: 0 0!important;
+    font-size: 20px;
   }
   .main-profile .section-resume-header .user-pic .avatar {
     padding: 2px;
@@ -20069,6 +20075,11 @@ footer .copyright {
   }
   .main-profile .editMode .profile-info .profile-name {
     margin-bottom: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .main-profile .section-detail legend.box-md {
+    font-size: 16px;
   }
 }
 /**
