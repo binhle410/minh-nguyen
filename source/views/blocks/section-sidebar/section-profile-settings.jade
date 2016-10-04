@@ -21,23 +21,30 @@
                                     span.resume-date 13/09/2016
                             small.no-resume(hidden="")
                                 label.m-t-xs
-                                    a.btn.btn-default.btn-xs.relative Upload
+                                    a.btn.relative Upload
                                 .note-resume
                                     span.gray-light
                                         small You can only attach .doc, .docx, and .pdf files that are less than 2MB in size
-                            p.gray-light(hidden='', style='display: none;')
-                                small
-                                    i.fa.fa-spinner.fa-pulse.fa-fw
-                            p.text-success(style='display: none;')
-                                small
-                                    | Your resume
-                                    span.resume-name
-                                        |    Victor Lee CV.doc
-                                    |  was uploaded successfully!
-                            p.text-danger(style='display: none;')
-                                small
-                                    | You can only attach .doc, .docx, and .pdf files that are less than 2MB in size
-                    // Existing attached CV
+                .well.well-sm.dash.m-t-sm.relative.attached-cv-update
+                    form.m-b-none.relative
+                        .btn-group.btn-group-sm.pull-right.button-update
+                            a.btn.btn-link.relative(type='button')
+                                label(for='profileAttachFile')
+                                    i.fa.fa-pencil
+                                input.transparent.absolute#profileAttachFile(type='file', name='resumeFile', style='width: 20px; height: 20px; top:0')
+                        .messages.no-margin
+                            small.have-resume(hidden="")
+                                span.text-clip Your resume
+                                span.resume-name.text-clip    Victor Lee CV.doc
+                                span.gray-light.text-clip
+                                    | was uploaded on
+                                    span.resume-date 13/09/2016
+                            small.no-resume
+                                label.m-t-xs(for='profileAttachFile')
+                                    a.btn.relative Upload
+                                .note-resume
+                                    span.gray-light
+                                        small You can only attach .doc, .docx, and .pdf files that are less than 2MB in size
         hr.divider.no-margin
         fieldset.m-t-sm
             .searchable-setting

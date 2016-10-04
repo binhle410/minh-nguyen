@@ -2707,6 +2707,7 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
         }
     }), Inputmask;
 }(jQuery, Inputmask);
+
 /**
  * jQuery CSS Customizable Scrollbar
  *

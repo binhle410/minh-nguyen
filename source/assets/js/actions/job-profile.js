@@ -256,6 +256,24 @@ function delSkill() {
     });
 }
 
+
+// 9. linkAct(): Trigger events when clicking elements
+function linkAct() {
+    if(!$(".list-add-skill").length && !$(".list-add-exp").length  && !$(".list-add-edu").length ) { return; }
+
+    $(".list-add-skill").on("click", function(e) {
+        $(".skill-section .form-btn-edit").click();
+    });
+
+    $(".list-add-exp").on("click", function(e) {
+        $(".section-employment .form-btn-edit").click();
+    });
+
+    $(".list-add-edu").on("click", function(e) {
+        $(".section-education .form-btn-edit").click();
+    });
+}
+
 /* ----------------------------------------------- */
 /* ----------------------------------------------- */
 /* OnLoad Page */
@@ -272,6 +290,7 @@ $(document).ready(function($){
     countRmCh();
     addSkill();
     delSkill();
+    linkAct();
 });
 /* OnLoad Window */
 var init = function () {

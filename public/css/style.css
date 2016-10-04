@@ -19934,6 +19934,35 @@ ul.pagination li a:focus {
   background: #bf253d;
 }
 /**
+ * WARNING BOX CSS
+ * Updated on 04/10/16
+ */
+.warning {
+  padding: 15px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border-left: 5px solid #5cb85c;
+  background: white;
+  margin-bottom: 15px;
+}
+.warning i.fa-info-circle {
+  color: #de5749;
+  font-size: 15px;
+  margin-right: 5px;
+}
+.warning strong {
+  margin-right: 5px;
+}
+.warning a {
+  color: #ccc;
+}
+/**
  * FOOTER CSS
  * Updated on 22/09/16
  */

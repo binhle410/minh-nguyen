@@ -9,11 +9,15 @@
             span.pull-left.m-r-xs  Your profile strength is
             strong.text-success Beginner
         hr.m-t.m-b
-        p.take-to-next-level.strong-tooltip
+        p.take-to-next-level.strong-tooltip.relative
             strong Take your profile to the next level:
+            .guide-box
+                a.close-msg(href="javascript:;")
+                    i.fa.fa-close
+                span Complete profile for your professional look!
         .list-group
-            a.list-group-item
+            a.list-group-item.list-add-skill
                 | + Add Key Skill
                 | (1)
-            a.list-group-item + Add Work Experience
-            a.list-group-item + Add Education
+            a.list-group-item.list-add-exp + Add Work Experience
+            a.list-group-item.list-add-edu + Add Education
