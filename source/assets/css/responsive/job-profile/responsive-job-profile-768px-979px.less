@@ -10,5 +10,21 @@
         .form-btn-edit {
             opacity: .5;
         }
+        label {
+            &.radio-inline {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    label {
+        &.radio-inline {
+            width: 100%;
+            + label.radio-inline {
+                margin: 10px 0 0;
+            }
+        }
     }
 }

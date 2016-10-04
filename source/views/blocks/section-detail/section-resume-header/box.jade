@@ -43,7 +43,7 @@
                                         strong.text-red *
                                         |  First Name
                                     input.form-control(type='text', name='firstName', autofocus='', value='Victor')
-                        .profile-itm.profile-expected-position
+                        .profile-itm.prof-itm-sm
                             .view-field
                                 span.view-control Frontend Developer
                             .edit-field.form-group
@@ -51,7 +51,7 @@
                                     strong.text-red *
                                     |  Professional Title
                                 input.form-control(type='text', name='expectedPosition', value='Frontend Developer')
-                        .profile-itm.year-of-exp
+                        .profile-itm.prof-itm-sm
                             .view-field
                                 span.year-of-ex-view-field
                                     span.view-control 1
@@ -61,14 +61,14 @@
                                     strong.text-red *
                                     |  Years of Experience
                                 input.form-control(type='text', name='yearOfExperience', maxlength='2', value='1')
-                        .profile-itm.new-graduate
+                        .profile-itm.new-graduate.prof-itm-sm
                             .view-field
                                 //- span.view-control
                             .edit-field.form-group.m-t-n-xs
                                 label
                                     input(type='checkbox', name='newGraduate', value='false')
                                     |    I am a new graduate / have no work experience
-                        .profile-itm.latest-company
+                        .profile-itm.prof-itm-sm
                             .view-field.hidden-xs
                                 p
                                     span.text-gray-light Latest company:
@@ -79,8 +79,8 @@
                             .edit-field.text-right
                                 button.btn-cancel.btn(type='button') Cancel
                                 button.btn-save.btn.btn-primary(type='button') Save
-                        .profile-itm.download-resume
-                            .view-field.m-b
+                        .profile-itm.download-resume.prof-itm-sm
+                            .view-field
                                 a.btn.btn-outline(href='javascript:;')
                                     i.fa.fa-fw.fa-file-pdf-o
                                     |  Download profile

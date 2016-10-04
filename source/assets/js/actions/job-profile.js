@@ -14,40 +14,40 @@
 
 // 1. editForms(): Edit forms on Job Profile page
 function editForms() {
-    if(!$(".form-wrapper").length) { return; }
+    if(!$(".form-wrapper .form-btn-edit").length) { return; }
+
+    var $editBtn = $(".form-wrapper .form-btn-edit");
 
     // Toggle editMode on a form
-    $(".form-wrapper").on("click", function(e) {
-        if(!$(this).hasClass("editMode")) {
-            $(this).addClass("editMode");
-            $(this).find(".view-field").hide();
-            $(this).find(".edit-field").show();
+    $editBtn.on("click", function(e) {
+        var $this_f = $(this).closest(".form-wrapper");
+        if(!$this_f.hasClass("editMode")) {
+            $this_f.addClass("editMode");
+            $this_f.find(".view-field").hide();
+            $this_f.find(".edit-field").show();
         }
 
         // Show benefit-list's edit mode if edit Working Preference form
-        if($(this).hasClass("form-working-preference")) {
+        if($this_f.hasClass("form-working-preference")) {
             $("#benefit-view-mode").hide();
             $("#benefit-edit-mode").show();
         }
-
-        // Cancel editting if pressing Cancel button
-        cancelEdit($(this));
     });
 }
 
 // 1.1. Cancel editing a form
-function cancelEdit($fWrap) {
-    if(!$fWrap.find(".btn-cancel").length) { return; }
+function cancelEdit() {
+    if(!(".btn-cancel").length) { return; }
 
-    var $btnCancel = $fWrap.find(".btn-cancel");
-    $btnCancel.on("click", function(e) {
-        e.stopPropagation();
-        $fWrap.removeClass("editMode");
-        $fWrap.find(".view-field").show();
-        $fWrap.find(".edit-field").hide();
+    var $btnCl = $(".btn-cancel");
+    $btnCl.on("click", function(e) {
+        var $this_f = $(this).closest(".form-wrapper");
+        $this_f.removeClass("editMode");
+        $this_f.find(".view-field").show();
+        $this_f.find(".edit-field").hide();
 
         // Show benefit-list's view mode if press Cancel in Working Preference form
-        if($fWrap.hasClass("form-working-preference")) {
+        if($this_f.hasClass("form-working-preference")) {
             $("#benefit-view-mode").show();
             $("#benefit-edit-mode").hide();
         }
@@ -106,29 +106,48 @@ function addForm() {
 
     var $addMore = $(".add-one-more-section");
     $addMore.on("click", function(e) {
+        if($(this).hasClass("active")) {
+            return false;
+            $(this).removeClass("active");
+        } else {
+            $(this).addClass("active");
+        }
+
         var $currSec   = $(this).prev(".sortable.content-section"),
             $cloneElem = $currSec.find(".form-wrapper.sample").clone();
         $cloneElem.removeAttr("hidden");
         $cloneElem.removeClass("sample");
         $cloneElem.addClass("editMode");
+        $cloneElem.addClass("newForm");
         $cloneElem.find(".view-field").hide();
         $cloneElem.find(".edit-field").show();
 
         // Append new cloned Form into current section
         $currSec.append($cloneElem);
-
-        // Cancel editting if pressing Cancel button
-        delForm($cloneElem);
     });
 }
 
-function delForm($fWrap) {
-    if(!$fWrap.find(".btn-cancel").length) { return; }
+// 3.1. Delete one form
+function delForm() {
+    $("body").on("click", ".newForm .btn-cancel", function(e) {
+        // console.log("ac");
+        $(this).closest(".form-wrapper").remove();
+    });
+}
 
-    var $btnCancel = $fWrap.find(".btn-cancel");
-    $btnCancel.on("click", function(e) {
-        e.stopPropagation();
-        $fWrap.remove();
+function toggleCttBox() {
+    if(!$(".contact-information-toggler").length) { return; }
+
+    var $cttBtn = $(".contact-information-toggler");
+    $cttBtn.on("click", function(e) {
+        var $secCtt = $(".section-contact");
+        if($secCtt.hasClass("active")) {
+            $secCtt.removeClass("active");
+            $secCtt.hide();
+        } else {
+            $secCtt.addClass("active");
+            $secCtt.show();
+        }
     });
 }
 
@@ -137,9 +156,12 @@ function delForm($fWrap) {
 /* OnLoad Page */
 $(document).ready(function($){
     editForms();
+    cancelEdit();
     getBnfList();
     activeBnfItem();
     addForm();
+    delForm();
+    toggleCttBox();
 });
 /* OnLoad Window */
 var init = function () {

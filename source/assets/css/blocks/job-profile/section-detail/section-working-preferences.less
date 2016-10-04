@@ -14,11 +14,6 @@
             cursor: pointer;
             &.active {
                 color: @green;
-                &:hover {
-                    a.benefit-icon {
-                        background: #eee;
-                    }
-                }
                 a.benefit-icon {
                     background: #e5ffe5;
                     border: 1px solid @green;
@@ -36,6 +31,7 @@
                     filter: alpha(opacity=70);
                 }
             }
+
             .benefit-icon, .benefit-name, i {
                 color: #777;
             }
@@ -44,13 +40,37 @@
             }
         }
     }
+    &#benefit-edit-mode {
+        label {
+            &:hover {
+                color: @green;
+                a.benefit-icon {
+                    background: #e5ffe5;
+                    border: 1px solid @green;
+                    i {
+                        color: @green;
+                    }
+                }
+                .benefit-name, .ic-check .fa {
+                    color: @green;
+                }
+            }
+        }
+    }
     a {
         background: #eee;
         display: inline-block;
         border: 1px #ddd solid;
         padding: 10px 5px;
-        margin: 2px 5px 2px 2px!important;
+        margin: 2px 5px 2px 2px;
         color: #666;
         font-size: 14px;
     }
  }
+
+.section-working-preferences {
+    .expected-location-wrapper {
+        width: 50%;
+        margin-right: 5px;
+    }
+}

@@ -15,11 +15,11 @@
                             .col-sm-12
                                 label(for='expected-location')
                                     strong.text-red.edit-field(style='display: none;') *
-                                    |                                     Preferred Working Location
+                                    |Preferred Working Location
                                 .clearfix
                                     .pull-left.expected-location-wrapper
                                         .edit-field(style='display: none;')
-                                            select(name='expectedLocation[]', multiple='', tabindex='-1', style='display: none;')
+                                            select.form-control(name='expectedLocation[]', tabindex='-1')
                                                 option(selected='', value='29') Singapore
                                                 option(value='24') Ha Noi
                                                 option(value='71') Mekong Delta
@@ -88,7 +88,6 @@
                                                 option(value='66') Other
                                                 option(value='70') International
                                                 option(value='72') Hau Giang
-                                            br
                                             small.legend (Maximum 3 locations)
                                         .view-field(style='display: block;')
                                             p.form-control-static.view-control Singapore, Malaysia, USA
@@ -105,9 +104,9 @@
                             .col-sm-6
                                 label(for='expected-job-category')
                                     strong.text-red.edit-field(style='display: none;') *
-                                    |                                     Expected Job Category
+                                    |Expected Job Category
                                 .edit-field(style='display: none;')
-                                    select(name='expectedJobCategory[]', multiple='', tabindex='-1', style='display: none;')
+                                    select.form-control(name='expectedJobCategory[]', tabindex='-1')
                                         option(value='72') Printing
                                         option(value='73') Restaurant/Hotel
                                         option(value='74') FMCG
@@ -178,7 +177,6 @@
                                         option(value='70') QA/QC
                                         option(value='71') Overseas Jobs
                                         option(value='39') Other
-                                    br
                                     small.legend (Maximum 3 categories)
                                 .view-field(style='display: block;')
                                     p.form-control-static.view-control IT - Software
@@ -188,10 +186,7 @@
                                     |                                     Expected Job Level
                                 .edit-field(style='display: none;')
                                     .border-text-box.edit-field(style='display: none;')
-                                        select(name='expectedJobLevel', tabindex='-1', title='\
-                                        *\
-                                        Expected Job Level\
-                                        ', style='display: none;')
+                                        select.form-control(name='expectedJobLevel', tabindex='-1')
                                             option(value='') Please select...
                                             option(value='1') Entry Level
                                             option(value='5', selected='') Experienced (non-manager)
@@ -476,7 +471,7 @@
                                         em Please select at least one benefit.
                             // / Benefit Edit Mode
                         // Buttons
-                        .form-group.clearfix.edit-field(style='display: none;')
+                        .form-group.edit-field.edit-btns.clearfix(style='display: none;')
                             .pull-left
                                 | (
                                 strong.text-red *

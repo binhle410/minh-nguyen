@@ -17,7 +17,7 @@ form.form-horizontal
                         .form-group
                             label(for='cell-number')
                                 strong.text-red *
-                                |                                     Cell Number
+                                |Cell Number
                             .view-field.clearfix
                                 p.form-control-static.view-control.pull-left 01696872113
                                 .pull-left.form-control-static.text-gray-light
@@ -26,16 +26,15 @@ form.form-horizontal
                                         span   Visible to employer
                             .edit-field
                                 input.form-control(type='tel', name='cellphone', value='01696872113')
-                                .checkbox
-                                    label
-                                        input(name='confidential', value='1', type='checkbox')
-                                        em    Invisible to employer
+                                label.push-top-sm
+                                    input(name='confidential', value='1', type='checkbox')
+                                    em    Invisible to employer
                 .row
                     .col-sm-6
                         .form-group
                             label(for='date-of-birth')
                                 strong.text-red *
-                                |     Date of birth
+                                |Date of birth
                             .edit-field
                                 input.form-control(name='birthday', value='25/09/1993')
                             .view-field
@@ -44,16 +43,15 @@ form.form-horizontal
                         .form-group
                             label(for='nationality')
                                 strong.text-red *
-                                |     Nationality
+                                |Nationality
                             .view-field
                                 p.form-control-static.view-control Local Vietnamese
                             .edit-field
-                                .border-text-box
-                                    select(name='nationality', tabindex='-1', title='*\
-                                    Nationality')
-                                        option(value='') Please select...
-                                        option(value='1', selected='') Local Vietnamese
-                                        option(value='2') Foreigner
+                                select.form-control(name='nationality', tabindex='-1', title='*\
+                                Nationality')
+                                    option(value='') Please select...
+                                    option(value='1', selected='') Local Vietnamese
+                                    option(value='2') Foreigner
                 .row
                     .col-sm-6
                         .form-group
@@ -81,7 +79,7 @@ form.form-horizontal
                                     |                                         Married
                             .view-field
                                 p.form-control-static.view-control Single
-                hr.m-t-xs
+                hr
                 .row
                     .col-sm-6
                         .form-group
@@ -92,7 +90,7 @@ form.form-horizontal
                                 p.form-control-static.view-control Vietnam
                             .edit-field
                                 .border-text-box
-                                    select(name='country', tabindex='-1', title='*\
+                                    select.form-control(name='country', tabindex='-1', title='*\
                                     Country')
                                         option(value='') Please select...
                                         option(value='1', selected='') Vietnam
@@ -345,7 +343,7 @@ form.form-horizontal
                                 p.form-control-static.view-control Singapore
                             .edit-field
                                 .border-text-box
-                                    select(onchange='loadDistrict();', name='city', tabindex='-1', title='*\
+                                    select.form-control(onchange='loadDistrict();', name='city', tabindex='-1', title='*\
                                     Province/City')
                                         option(value='') Please select...
                                         option(value='29', selected='') Singapore
@@ -423,7 +421,7 @@ form.form-horizontal
                                 p.form-control-static.view-controlPost Centre
                             .edit-field
                                 .border-text-box
-                                    select(name='district')
+                                    select.form-control(name='district')
                                         option(value='') Please select...
                                         option(value='1') District 1
                                         option(value='2') District 2

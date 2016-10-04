@@ -35,7 +35,7 @@
                                     .form-group
                                         label
                                             strong.text-red *
-                                            | School
+                                            |School
                                         input.form-control(type='text', name='school', value='', maxlength='150')
                                 .col-sm-6
                                     .form-group
@@ -43,7 +43,7 @@
                                             strong.text-red *
                                             |                                                 Qualification
                                         .border-text-box
-                                            select.qualification(name='qualification')
+                                            select.form-control(name='qualification')
                                                 option(value='0') Please select...
                                                 option(value='2' ) High school
                                                 option(value='3' ) Associate’s degree
@@ -62,10 +62,10 @@
                                         | (
                                         span.years
                                             span.number-of-years 6
-                                            span.lbl years
+                                            span.lbl    years
                                         span.months
-                                            span.number-of-months 3
-                                            span.lbl months
+                                            span.number-of-months   3
+                                            span.lbl    months
                                         | )
                             .edit-field
                                 .row
@@ -90,8 +90,6 @@
                                     strong.text-red *
                                     | ) is required field
                                 .pull-right.text-right
-                                    button.btn-remove-this-section.btn(type='button', data-toggle='modal', data-target='#dialog-remove-item')
-                                        i.fa.fa-trash-o
                                     button.btn.btn-cancel(type='button') Cancel
                                     button.btn.btn-primary(type='button') Save
                 // Form
@@ -126,7 +124,7 @@
                                             strong.text-red *
                                             | Qualification
                                         .border-text-box
-                                            select.qualification(name='qualification' tabindex='-1', title='')
+                                            select.form-control(name='qualification' tabindex='-1', title='')
                                                 option(value='0') Please select...
                                                 option(value='2' ) High school
                                                 option(value='3' ) Associate’s degree
@@ -145,11 +143,10 @@
                                         | (
                                         span.years
                                             span.number-of-years 3
-                                            span.lbl years
+                                            span.lbl    years
                                         span.months
-                                            span.number-of-months 4
-                                            span.lbl months
-                                        |                                             )
+                                            span.number-of-months    4
+                                            span.lbl    months
                             .edit-field
                                 .row
                                     .col-sm-6
@@ -166,7 +163,7 @@
                             .edit-field
                                 .form-group
                                     label Achievements
-                                    textarea.form-control.emp-description.achievement-textarea.countdown-target(rows='3', name='description', maxlength='5000', style='display: none;', aria-hidden='true')
+                                    textarea.form-control.emp-description.achievement-textarea.countdown-target(rows='3', name='description', maxlength='5000', aria-hidden='true')
                                     em.countdown.gray-light 5000 character remaining
 
                         .form-group.edit-field.edit-btns.clearfix
@@ -212,7 +209,7 @@
                                             strong.text-red *
                                             | Qualification
                                         .border-text-box
-                                            select.qualification(name='qualification' tabindex='-1', title='')
+                                            select.form-control(name='qualification' tabindex='-1', title='')
                                                 option(value='0') Please select...
                                                 option(value='2', ) High school
                                                 option(value='3', ) Associate’s degree
@@ -253,7 +250,7 @@
                             .edit-field
                                 .form-group
                                     label Achievements
-                                    textarea.form-control.emp-description.achievement-textarea.countdown-target(rows='3', name='description', maxlength='5000', style='display: none;', aria-hidden='true') <p>TOEIC 830</p>
+                                    textarea.form-control.emp-description.achievement-textarea.countdown-target(rows='3', name='description', maxlength='5000', aria-hidden='true') <p>TOEIC 830</p>
                         .form-group.edit-field.edit-btns.clearfix
                             .pull-left
                                 | (

@@ -19315,13 +19315,21 @@ ul.pagination li a:focus {
 .main-profile label.radio-inline input {
   margin-top: 3px;
 }
+.main-profile label input[type="checkbox"] {
+  vertical-align: middle;
+  margin: 0;
+}
 .main-profile label em {
   font-weight: normal;
-  margin-top: 2px;
   display: inline-block;
+  margin-left: 3px;
+  vertical-align: middle;
 }
 .main-profile label small {
   font-size: 80%;
+}
+.main-profile label strong {
+  margin-right: 3px;
 }
 .main-profile .btn.add-one-more-section {
   margin: 0;
@@ -19498,6 +19506,17 @@ ul.pagination li a:focus {
 }
 .section-resume-header .box {
   margin: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.section-resume-header hr {
+  margin: 5px 0 20px 0;
 }
 .main-profile .user-pic .avatar {
   padding: 5px;
@@ -19723,9 +19742,6 @@ ul.pagination li a:focus {
 .icon-group.expected-company-benefit-list label.active {
   color: #5cb85c;
 }
-.icon-group.expected-company-benefit-list label.active:hover a.benefit-icon {
-  background: #eee;
-}
 .icon-group.expected-company-benefit-list label.active a.benefit-icon {
   background: #e5ffe5;
   border: 1px solid #5cb85c;
@@ -19749,14 +19765,32 @@ ul.pagination li a:focus {
 .icon-group.expected-company-benefit-list label a {
   padding: 7px;
 }
+.icon-group#benefit-edit-mode label:hover {
+  color: #5cb85c;
+}
+.icon-group#benefit-edit-mode label:hover a.benefit-icon {
+  background: #e5ffe5;
+  border: 1px solid #5cb85c;
+}
+.icon-group#benefit-edit-mode label:hover a.benefit-icon i {
+  color: #5cb85c;
+}
+.icon-group#benefit-edit-mode label:hover .benefit-name,
+.icon-group#benefit-edit-mode label:hover .ic-check .fa {
+  color: #5cb85c;
+}
 .icon-group a {
   background: #eee;
   display: inline-block;
   border: 1px #ddd solid;
   padding: 10px 5px;
-  margin: 2px 5px 2px 2px!important;
+  margin: 2px 5px 2px 2px;
   color: #666;
   font-size: 14px;
+}
+.section-working-preferences .expected-location-wrapper {
+  width: 50%;
+  margin-right: 5px;
 }
 /**
  * SECTION SIDEBAR CSS
@@ -19973,6 +20007,17 @@ footer .copyright {
   .main-profile .form-btn-edit {
     opacity: .5;
   }
+  .main-profile label.radio-inline {
+    font-size: 12px;
+  }
+}
+@media (max-width: 900px) {
+  label.radio-inline {
+    width: 100%;
+  }
+  label.radio-inline + label.radio-inline {
+    margin: 10px 0 0;
+  }
 }
 /**
  * Media 480px-767px
@@ -19999,12 +20044,40 @@ footer .copyright {
     height: 78px;
     line-height: 78px;
   }
+  .main-profile .section-resume-header .prof-itm-sm {
+    font-size: 12px;
+  }
+  .main-profile .section-resume-header .download-resume {
+    margin-top: 5px;
+  }
+  .main-profile .section-resume-header .download-resume .btn {
+    padding: 5px;
+  }
+  .main-profile .section-resume-header .box-md {
+    padding-bottom: 40px;
+  }
+  .main-profile .editMode .profile-info .name,
+  .main-profile .editMode .profile-info .last-name {
+    width: 100%;
+    padding: 0;
+  }
+  .main-profile .editMode .profile-info .name .edit-field {
+    margin-bottom: 5px;
+  }
+  .main-profile .editMode .profile-info .profile-name {
+    margin-bottom: 15px;
+  }
 }
 /**
  * Media 480px-
  *
  * description: css rules for screen of old school smartphone
  */
+@media (max-width: 480px) {
+  .main-profile .box-md {
+    padding: 10px;
+  }
+}
 @media (max-width: 1200px) {
   .container {
     width: 98%;

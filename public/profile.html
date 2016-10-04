@@ -132,21 +132,21 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="profile-itm profile-expected-position">
+                            <div class="profile-itm prof-itm-sm">
                               <div class="view-field"><span class="view-control">Frontend Developer</span></div>
                               <div class="edit-field form-group">
                                 <label><strong class="text-red">*</strong> Professional Title</label>
                                 <input type="text" name="expectedPosition" value="Frontend Developer" class="form-control">
                               </div>
                             </div>
-                            <div class="profile-itm year-of-exp">
+                            <div class="profile-itm prof-itm-sm">
                               <div class="view-field"><span class="year-of-ex-view-field"><span class="view-control">1</span> years of Experience</span></div>
                               <div class="edit-field form-group">
                                 <label class="lbl-year-ex"><strong class="text-red">*</strong> Years of Experience</label>
                                 <input type="text" name="yearOfExperience" maxlength="2" value="1" class="form-control">
                               </div>
                             </div>
-                            <div class="profile-itm new-graduate">
+                            <div class="profile-itm new-graduate prof-itm-sm">
                               <div class="view-field">
                               </div>
                               <div class="edit-field form-group m-t-n-xs">
@@ -155,7 +155,7 @@
                                 </label>
                               </div>
                             </div>
-                            <div class="profile-itm latest-company">
+                            <div class="profile-itm prof-itm-sm">
                               <div class="view-field hidden-xs">
                                 <p><span class="text-gray-light">Latest company:</span><a class="current-company clickable">Staff.com</a><br><span class="text-gray-light">Highest education:</span><a class="current-highest-education clickable">Bachelors</a></p>
                               </div>
@@ -164,8 +164,8 @@
                                 <button type="button" class="btn-save btn btn-primary">Save</button>
                               </div>
                             </div>
-                            <div class="profile-itm download-resume">
-                              <div class="view-field m-b"><a href="javascript:;" class="btn btn-outline"><i class="fa fa-fw fa-file-pdf-o"></i> Download profile</a></div>
+                            <div class="profile-itm download-resume prof-itm-sm">
+                              <div class="view-field"><a href="javascript:;" class="btn btn-outline"><i class="fa fa-fw fa-file-pdf-o"></i> Download profile</a></div>
                             </div>
                           </div>
                         </div>
@@ -180,7 +180,7 @@
                   </div>
                 </div>
               </div>
-              <div class="section-contact">
+              <div hidden="" class="section-contact">
                 <form class="form-horizontal">
                   <div class="box">
                     <fieldset>
@@ -200,18 +200,16 @@
                           </div>
                           <div class="col-sm-6">
                             <div class="form-group">
-                              <label for="cell-number"><strong class="text-red">*</strong>                                    Cell Number</label>
+                              <label for="cell-number"><strong class="text-red">*</strong>Cell Number</label>
                               <div class="view-field clearfix">
                                 <p class="form-control-static view-control pull-left">01696872113</p>
                                 <div class="pull-left form-control-static text-gray-light"><em><i class="fa fa-eye"></i><span>  Visible to employer</span></em></div>
                               </div>
                               <div class="edit-field">
                                 <input type="tel" name="cellphone" value="01696872113" class="form-control">
-                                <div class="checkbox">
-                                  <label>
-                                    <input name="confidential" value="1" type="checkbox"><em>   Invisible to employer</em>
-                                  </label>
-                                </div>
+                                <label class="push-top-sm">
+                                  <input name="confidential" value="1" type="checkbox"><em>   Invisible to employer</em>
+                                </label>
                               </div>
                             </div>
                           </div>
@@ -219,7 +217,7 @@
                         <div class="row">
                           <div class="col-sm-6">
                             <div class="form-group">
-                              <label for="date-of-birth"><strong class="text-red">*</strong>    Date of birth</label>
+                              <label for="date-of-birth"><strong class="text-red">*</strong>Date of birth</label>
                               <div class="edit-field">
                                 <input name="birthday" value="25/09/1993" class="form-control">
                               </div>
@@ -230,18 +228,16 @@
                           </div>
                           <div class="col-sm-6">
                             <div class="form-group">
-                              <label for="nationality"><strong class="text-red">*</strong>    Nationality</label>
+                              <label for="nationality"><strong class="text-red">*</strong>Nationality</label>
                               <div class="view-field">
                                 <p class="form-control-static view-control">Local Vietnamese</p>
                               </div>
                               <div class="edit-field">
-                                <div class="border-text-box">
-                                  <select name="nationality" tabindex="-1" title="*                                    Nationality">
-                                    <option value="">Please select...</option>
-                                    <option value="1" selected="">Local Vietnamese</option>
-                                    <option value="2">Foreigner</option>
-                                  </select>
-                                </div>
+                                <select name="nationality" tabindex="-1" title="*                                Nationality" class="form-control">
+                                  <option value="">Please select...</option>
+                                  <option value="1" selected="">Local Vietnamese</option>
+                                  <option value="2">Foreigner</option>
+                                </select>
                               </div>
                             </div>
                           </div>
@@ -280,7 +276,7 @@
                             </div>
                           </div>
                         </div>
-                        <hr class="m-t-xs">
+                        <hr>
                         <div class="row">
                           <div class="col-sm-6">
                             <div class="form-group">
@@ -290,7 +286,7 @@
                               </div>
                               <div class="edit-field">
                                 <div class="border-text-box">
-                                  <select name="country" tabindex="-1" title="*                                    Country">
+                                  <select name="country" tabindex="-1" title="*                                    Country" class="form-control">
                                     <option value="">Please select...</option>
                                     <option value="1" selected="">Vietnam</option>
                                     <option value="2">Afghanistan</option>
@@ -547,7 +543,7 @@
                               </div>
                               <div class="edit-field">
                                 <div class="border-text-box">
-                                  <select onchange="loadDistrict();" name="city" tabindex="-1" title="*                                    Province/City">
+                                  <select onchange="loadDistrict();" name="city" tabindex="-1" title="*                                    Province/City" class="form-control">
                                     <option value="">Please select...</option>
                                     <option value="29" selected="">Singapore</option>
                                     <option value="24">Ha Noi</option>
@@ -630,7 +626,7 @@
                               </div>
                               <div class="edit-field">
                                 <div class="border-text-box">
-                                  <select name="district">
+                                  <select name="district" class="form-control">
                                     <option value="">Please select...</option>
                                     <option value="1">District 1</option>
                                     <option value="2">District 2</option>
@@ -747,7 +743,7 @@
               <div class="box">
                 <fieldset>
                   <legend class="box-md"><i class="fa fa-fw fa-list"></i> Languages</legend>
-                  <div class="box-md content-section-wrapper m-b-n">
+                  <div class="box-md content-section-wrapper m-b-n hidden-xs">
                     <div class="row">
                       <div class="col-sm-4"><strong>Language</strong></div>
                       <div class="col-sm-8"><strong>Proficiency</strong></div>
@@ -762,7 +758,7 @@
                         <div class="col-sm-4">
                           <div class="edit-field">
                             <div class="border-text-box m-r-lg">
-                              <select name="language0" tabindex="2" class="language-select">
+                              <select name="language0" tabindex="2" class="form-control">
                                 <option value="0" selected="">Please select...</option>
                                 <option value="1">Arabic</option>
                                 <option value="2">Bengali</option>
@@ -812,7 +808,7 @@
                         </div>
                         <div class="col-sm-8">
                           <div class="edit-field m-t-sm">
-                            <div class="language-select0">
+                            <div class="form-control0">
                               <label class="radio-inline">
                                 <input type="radio" name="language-level0" value="1">                                                Beginner
                               </label>
@@ -835,7 +831,6 @@
                       <!-- Buttons-->
                       <div class="form-group edit-field edit-btns push-top-sm clearfix">
                         <div class="text-right pull-right">
-                          <button type="button" data-toggle="modal" data-target="#dialog-remove-item" class="btn-remove-this-section btn"><i class="fa fa-trash-o"></i></button>
                           <button type="button" class="btn btn-cancel">Cancel</button>
                           <button type="button" class="btn btn-primary">Save</button>
                         </div>
@@ -848,7 +843,7 @@
                         <div class="col-sm-4">
                           <div style="display: none;" class="edit-field">
                             <div class="border-text-box m-r-lg">
-                              <select name="language1" tabindex="-1" title="" class="language-select">
+                              <select name="language1" tabindex="-1" title="" class="form-control">
                                 <option value="0" selected="">Please select...</option>
                                 <option value="1">Arabic</option>
                                 <option value="2">Bengali</option>
@@ -857,7 +852,7 @@
                                 <option value="5">Cambodian</option>
                                 <option value="6">Cebuano</option>
                                 <option value="7">Chinese (Cantonese)</option>
-                                <option value="8">Chinese (Mandarin)</option>
+                                <option value="8">Chinese (Mandarin) </option>
                                 <option value="9">Czech</option>
                                 <option value="10">Danish</option>
                                 <option value="11">Dutch</option>
@@ -898,7 +893,7 @@
                         </div>
                         <div class="col-sm-8">
                           <div style="display: none;" class="edit-field m-t-sm">
-                            <div class="language-select0">
+                            <div class="form-control0">
                               <label class="radio-inline">
                                 <input type="radio" name="language-level1" value="1">                                                Beginner
                               </label>
@@ -951,17 +946,17 @@
                         </div>
                         <div class="edit-field">
                           <div class="form-group">
-                            <label><strong class="text-red">*</strong> Position</label>
-                            <input type="text" name="position" value="" maxlength="150" autofocus="" class="form-control">
+                            <label><strong class="text-red">*</strong>Position</label>
                           </div>
+                          <input type="text" name="position" value="" maxlength="150" autofocus="" class="form-control">
                         </div>
                       </div>
                       <div class="feature-blk">
                         <div class="view-field"><strong class="view-control placeholder">e.g. interviewspot</strong></div>
                         <div class="edit-field">
                           <div class="form-group">
-                            <label><strong class="text-red">*</strong> Company</label>
-                            <input type="text" name="companyName" value="" maxlength="150" class="form-control company-name">
+                            <label><strong class="text-red">*</strong>Company</label>
+                            <inputorm-control type="text" name="companyName" value="" maxlength="150" class="company-name"></inputorm-control>
                           </div>
                         </div>
                       </div>
@@ -1008,7 +1003,6 @@
                       <div class="form-group edit-field edit-btns clearfix">
                         <div class="pull-left">(<strong class="text-red">*</strong>) is required field</div>
                         <div class="pull-right text-right">
-                          <button type="button" data-toggle="modal" data-target="#dialog-remove-item" class="btn-remove-this-section btn"><i class="fa fa-trash-o"></i></button>
                           <button type="button" class="btn-cancel btn">Cancel</button>
                           <button type="button" class="btn btn-primary">Save</button>
                         </div>
@@ -1025,7 +1019,7 @@
                         </div>
                         <div style="display: none;" class="edit-field">
                           <div class="form-group">
-                            <label><strong class="text-red">*</strong> Position</label>
+                            <label><strong class="text-red">*</strong>Position</label>
                             <input type="text" name="position" value="" maxlength="150" autofocus="" class="form-control">
                           </div>
                         </div>
@@ -1036,7 +1030,7 @@
                         </div>
                         <div style="display: none;" class="edit-field">
                           <div class="form-group">
-                            <label><strong class="text-red">*</strong> Company</label>
+                            <label><strong class="text-red">*</strong>Company</label>
                             <input type="text" name="companyName" value="" maxlength="150" class="form-control company-name">
                           </div>
                         </div>
@@ -1135,7 +1129,7 @@
                               <div class="form-group">
                                 <label><strong class="text-red">*</strong>                                                Qualification</label>
                                 <div class="border-text-box">
-                                  <select name="qualification" class="qualification">
+                                  <select name="qualification" class="form-control">
                                     <option value="0">Please select...</option>
                                     <option value="2">High school</option>
                                     <option value="3">Associate’s degree</option>
@@ -1152,7 +1146,7 @@
                         </div>
                         <div class="feature-blk">
                           <div class="view-field">
-                            <p><span class="view-control placeholder">e.g. 09/2008</span>                                        -<span class="view-control placeholder">e.g. 12/2014</span><span class="total-time placeholder">(<span class="years"><span class="number-of-years">6</span><span class="lbl">years</span></span><span class="months"><span class="number-of-months">3</span><span class="lbl">months</span></span>)</span></p>
+                            <p><span class="view-control placeholder">e.g. 09/2008</span>                                        -<span class="view-control placeholder">e.g. 12/2014</span><span class="total-time placeholder">(<span class="years"><span class="number-of-years">6</span><span class="lbl">   years</span></span><span class="months"><span class="number-of-months">  3</span><span class="lbl">   months</span></span>)</span></p>
                           </div>
                           <div class="edit-field">
                             <div class="row">
@@ -1185,7 +1179,6 @@
                         <div class="form-group edit-field edit-btns clearfix">
                           <div class="pull-left">(<strong class="text-red">*</strong>) is required field</div>
                           <div class="pull-right text-right">
-                            <button type="button" data-toggle="modal" data-target="#dialog-remove-item" class="btn-remove-this-section btn"><i class="fa fa-trash-o"></i></button>
                             <button type="button" class="btn btn-cancel">Cancel</button>
                             <button type="button" class="btn btn-primary">Save</button>
                           </div>
@@ -1222,7 +1215,7 @@
                               <div class="form-group">
                                 <label><strong class="text-red">*</strong>Qualification</label>
                                 <div class="border-text-box">
-                                  <select name="qualification" tabindex="-1" title="" class="qualification">
+                                  <select name="qualification" tabindex="-1" title="" class="form-control">
                                     <option value="0">Please select...</option>
                                     <option value="2">High school</option>
                                     <option value="3">Associate’s degree</option>
@@ -1239,7 +1232,7 @@
                         </div>
                         <div class="time-blk">
                           <div class="view-field">
-                            <p><span class="view-control">09/2011</span>                                        -<span class="view-control">01/2015</span><span class="total-time">(<span class="years"><span class="number-of-years">3</span><span class="lbl">years</span></span><span class="months"><span class="number-of-months">4</span><span class="lbl">months</span></span>                                            )</span></p>
+                            <p><span class="view-control">09/2011</span>                                        -<span class="view-control">01/2015</span><span class="total-time">(<span class="years"><span class="number-of-years">3</span><span class="lbl">   years</span></span><span class="months"><span class="number-of-months">   4</span><span class="lbl">   months</span></span></span></p>
                           </div>
                           <div class="edit-field">
                             <div class="row">
@@ -1265,7 +1258,7 @@
                           <div class="edit-field">
                             <div class="form-group">
                               <label>Achievements</label>
-                              <textarea rows="3" name="description" maxlength="5000" style="display: none;" aria-hidden="true" class="form-control emp-description achievement-textarea countdown-target"></textarea><em class="countdown gray-light">5000 character remaining</em>
+                              <textarea rows="3" name="description" maxlength="5000" aria-hidden="true" class="form-control emp-description achievement-textarea countdown-target"></textarea><em class="countdown gray-light">5000 character remaining</em>
                             </div>
                           </div>
                         </div>
@@ -1310,7 +1303,7 @@
                               <div class="form-group">
                                 <label><strong class="text-red">*</strong>Qualification</label>
                                 <div class="border-text-box">
-                                  <select name="qualification" tabindex="-1" title="" class="qualification">
+                                  <select name="qualification" tabindex="-1" title="" class="form-control">
                                     <option value="0">Please select...</option>
                                     <option value="2">High school</option>
                                     <option value="3">Associate’s degree</option>
@@ -1355,7 +1348,7 @@
                           <div class="edit-field">
                             <div class="form-group">
                               <label>Achievements</label>
-                              <textarea rows="3" name="description" maxlength="5000" style="display: none;" aria-hidden="true" class="form-control emp-description achievement-textarea countdown-target"><p>TOEIC 830</p></textarea>
+                              <textarea rows="3" name="description" maxlength="5000" aria-hidden="true" class="form-control emp-description achievement-textarea countdown-target"><p>TOEIC 830</p></textarea>
                             </div>
                           </div>
                         </div>
@@ -1394,13 +1387,13 @@
                             <div class="col-sm-6">
                               <div class="form-group">
                                 <label><strong class="text-red">*</strong> Full Name</label>
-                                <input type="text" name="name" value="" maxlength="150" autofocus="" class="form-control"><span hidden="hidden" class="msg-name-required error-message">This field is required</span><span hidden="hidden" class="msg-name-invalid error-message">Please do not enter phone number or email</span>
+                                <input type="text" name="name" value="" maxlength="150" autofocus="" class="form-control">
                               </div>
                             </div>
                             <div class="col-sm-6">
                               <div class="form-group">
                                 <label><strong class="text-red">*</strong> Position</label>
-                                <input type="text" name="position" value="" maxlength="150" class="form-control"><span hidden="hidden" class="msg-position-required error-message">This field is required</span><span hidden="hidden" class="msg-position-invalid error-message">Please do not enter phone number or email</span>
+                                <input type="text" name="position" value="" maxlength="150" class="form-control">
                               </div>
                             </div>
                           </div>
@@ -1411,7 +1404,7 @@
                         <div class="edit-field">
                           <div class="form-group">
                             <label><strong class="text-red">*</strong> Company</label>
-                            <input type="text" name="company" value="" maxlength="150" class="form-control"><span hidden="hidden" class="msg-company-required error-message">This field is required</span><span hidden="hidden" class="msg-company-invalid error-message">Please do not enter phone number or email</span>
+                            <input type="text" name="company" value="" maxlength="150" class="form-control">
                           </div>
                         </div>
                       </div>
@@ -1422,32 +1415,28 @@
                             <div class="col-sm-6">
                               <div class="form-group">
                                 <label><strong class="text-red">*</strong>                                                Email</label>
-                                <input type="email" name="email" value="" maxlength="150" class="form-control"><span hidden="hidden" class="msg-email-required error-message">This field is required</span><span hidden="hidden" class="msg-email-invalid error-message">Please enter correct email</span>
+                                <input type="email" name="email" value="" maxlength="150" class="form-control">
                               </div>
                             </div>
                             <div class="col-sm-6">
                               <div class="form-group">
                                 <label>Phone Number</label>
-                                <input type="text" name="phone" value="" maxlength="150" class="form-control"><span hidden="hidden" class="msg-phone-invalid error-message">Please enter correct phone number</span>
-                                <p hidden="hidden" class="msg-description-suggestion text-info">Please complete this field to improve your profile strength.</p>
+                                <input type="text" name="phone" value="" maxlength="150" class="form-control">
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
                       <div class="form-group edit-field edit-btns clearfix">
-                        <div class="pull-left">(<strong class="text-red">*</strong> ) is required field</div>
+                        <div class="pull-left">(<strong class="text-red">*</strong>) is required field</div>
                         <div class="pull-right text-right">
-                          <button type="button" data-toggle="modal" data-target="#dialog-remove-item" class="btn btn-remove-this-section btn-link"><i class="fa fa-pencil"></i></button>
                           <button type="button" class="btn-cancel btn">Cancel</button>
                           <button type="button" class="btn-save btn btn-primary">Save</button>
                         </div>
                       </div>
                     </form>
                     <!-- Form-->
-                    <form class="form-wrapper box-md relative form-horizontal">
-                      <input type="hidden" name="resume_id" value="3375529">
-                      <input type="hidden" name="entry_id" value="708744"><span class="form-btn-edit">
+                    <form class="form-wrapper box-md relative form-horizontal"><span class="form-btn-edit">
                         <button type="button" class="btn btn-sm"><i class="fa fa-pencil"></i></button></span>
                       <div class="feature-blk">
                         <div style="display: block;" class="view-field">
@@ -1500,7 +1489,7 @@
                         </div>
                       </div>
                       <div style="display: none;" class="form-group edit-field edit-btns">
-                        <div class="pull-left">(<strong class="text-red">*</strong> ) is required field</div>
+                        <div class="pull-left">(<strong class="text-red">*</strong>) is required field</div>
                         <div class="pull-right text-right">
                           <button type="button" data-toggle="modal" data-target="#dialog-remove-item" class="btn btn-remove-this-section btn-link"><i class="fa fa-trash-o"></i></button>
                           <button type="button" class="btn-cancel btn">Cancel</button>
@@ -1524,11 +1513,11 @@
                       <div class="form-group">
                         <div class="row">
                           <div class="col-sm-12">
-                            <label for="expected-location"><strong style="display: none;" class="text-red edit-field">*</strong>                                    Preferred Working Location</label>
+                            <label for="expected-location"><strong style="display: none;" class="text-red edit-field">*</strong>Preferred Working Location</label>
                             <div class="clearfix">
                               <div class="pull-left expected-location-wrapper">
                                 <div style="display: none;" class="edit-field">
-                                  <select name="expectedLocation[]" multiple="" tabindex="-1" style="display: none;">
+                                  <select name="expectedLocation[]" tabindex="-1" class="form-control">
                                     <option selected="" value="29">Singapore</option>
                                     <option value="24">Ha Noi</option>
                                     <option value="71">Mekong Delta</option>
@@ -1597,7 +1586,7 @@
                                     <option value="66">Other</option>
                                     <option value="70">International</option>
                                     <option value="72">Hau Giang</option>
-                                  </select><br><small class="legend">(Maximum 3 locations)</small>
+                                  </select><small class="legend">(Maximum 3 locations)</small>
                                 </div>
                                 <div style="display: block;" class="view-field">
                                   <p class="form-control-static view-control">Singapore, Malaysia, USA</p>
@@ -1620,9 +1609,9 @@
                       <div class="form-group">
                         <div class="row">
                           <div class="col-sm-6">
-                            <label for="expected-job-category"><strong style="display: none;" class="text-red edit-field">*</strong>                                    Expected Job Category</label>
+                            <label for="expected-job-category"><strong style="display: none;" class="text-red edit-field">*</strong>Expected Job Category</label>
                             <div style="display: none;" class="edit-field">
-                              <select name="expectedJobCategory[]" multiple="" tabindex="-1" style="display: none;">
+                              <select name="expectedJobCategory[]" tabindex="-1" class="form-control">
                                 <option value="72">Printing</option>
                                 <option value="73">Restaurant/Hotel</option>
                                 <option value="74">FMCG</option>
@@ -1693,7 +1682,7 @@
                                 <option value="70">QA/QC</option>
                                 <option value="71">Overseas Jobs</option>
                                 <option value="39">Other</option>
-                              </select><br><small class="legend">(Maximum 3 categories)</small>
+                              </select><small class="legend">(Maximum 3 categories)</small>
                             </div>
                             <div style="display: block;" class="view-field">
                               <p class="form-control-static view-control">IT - Software</p>
@@ -1703,7 +1692,7 @@
                             <label for="expected-job-level"><strong style="display: none;" class="text-red edit-field">*</strong>                                    Expected Job Level</label>
                             <div style="display: none;" class="edit-field">
                               <div style="display: none;" class="border-text-box edit-field">
-                                <select name="expectedJobLevel" tabindex="-1" title="                                        *                                        Expected Job Level                                        " style="display: none;">
+                                <select name="expectedJobLevel" tabindex="-1" class="form-control">
                                   <option value="">Please select...</option>
                                   <option value="1">Entry Level</option>
                                   <option value="5" selected="">Experienced (non-manager)</option>
@@ -1880,7 +1869,7 @@
                           <!-- / Benefit Edit Mode-->
                         </div>
                         <!-- Buttons-->
-                        <div style="display: none;" class="form-group clearfix edit-field">
+                        <div style="display: none;" class="form-group edit-field edit-btns clearfix">
                           <div class="pull-left">(<strong class="text-red">*</strong>) is required field</div>
                           <div class="pull-right text-right">
                             <button type="button" class="btn btn-cancel">Cancel</button>

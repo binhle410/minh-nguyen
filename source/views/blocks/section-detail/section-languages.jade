@@ -4,7 +4,7 @@
             legend.box-md
                 i.fa.fa-fw.fa-list
                 |  Languages
-            .box-md.content-section-wrapper.m-b-n
+            .box-md.content-section-wrapper.m-b-n.hidden-xs
                 .row
                     .col-sm-4
                         strong Language
@@ -22,7 +22,7 @@
                         .col-sm-4
                             .edit-field
                                 .border-text-box.m-r-lg
-                                    select.language-select(name='language0', tabindex='2')
+                                    select.form-control(name='language0', tabindex='2')
                                         option(value='0', selected='') Please select...
                                         option(value='1') Arabic
                                         option(value='2') Bengali
@@ -67,7 +67,7 @@
                                 p.form-control-static.view-control Please select...
                         .col-sm-8
                             .edit-field.m-t-sm
-                                .language-select0
+                                .form-control0
                                     label.radio-inline
                                         input(type='radio', name='language-level0', value='1')
                                         |                                                 Beginner
@@ -85,8 +85,6 @@
                     // Buttons
                     .form-group.edit-field.edit-btns.push-top-sm.clearfix
                         .text-right.pull-right
-                            button.btn-remove-this-section.btn(type='button', data-toggle='modal', data-target='#dialog-remove-item')
-                                i.fa.fa-trash-o
                             button.btn.btn-cancel(type='button')
                                 | Cancel
                             button.btn.btn-primary(type='button')
@@ -100,7 +98,7 @@
                         .col-sm-4
                             .edit-field(style='display: none;')
                                 .border-text-box.m-r-lg
-                                    select.language-select(name='language1', tabindex='-1', title='')
+                                    select.form-control(name='language1', tabindex='-1', title='')
                                         option(value='0', selected='') Please select...
                                         option(value='1') Arabic
                                         option(value='2') Bengali
@@ -109,7 +107,7 @@
                                         option(value='5') Cambodian
                                         option(value='6') Cebuano
                                         option(value='7') Chinese (Cantonese)
-                                        option(value='8') Chinese (Mandarin)
+                                        option(value='8') Chinese (Mandarin) 
                                         option(value='9') Czech
                                         option(value='10') Danish
                                         option(value='11') Dutch
@@ -145,7 +143,7 @@
                                 p.form-control-static.view-control English
                         .col-sm-8
                             .edit-field.m-t-sm(style='display: none;')
-                                .language-select0
+                                .form-control0
                                     label.radio-inline
                                         input(type='radio', name='language-level1', value='1')
                                         |                                                 Beginner
