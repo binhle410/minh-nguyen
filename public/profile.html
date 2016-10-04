@@ -969,13 +969,13 @@
                             <div class="col-sm-4">
                               <div class="form-group">
                                 <label>From month</label>
-                                <input name="fromDate" class="form-control sample-datepicker">
+                                <input name="fromDate" class="form-control datepicker">
                               </div>
                             </div>
                             <div class="col-sm-4">
                               <div class="form-group">
                                 <label>To month</label>
-                                <input name="toDate" class="form-control sample-datepicker">
+                                <input name="toDate" class="form-control datepicker">
                               </div>
                             </div>
                             <div class="col-sm-4">
@@ -1153,13 +1153,13 @@
                               <div class="col-sm-6">
                                 <div class="form-group">
                                   <label>From month</label>
-                                  <input name="fromDate" class="form-control sample-datepicker">
+                                  <input name="fromDate" class="form-control datepicker">
                                 </div>
                               </div>
                               <div class="col-sm-6">
                                 <div class="form-group">
                                   <label>To month</label>
-                                  <input name="toDate" class="form-control sample-datepicker">
+                                  <input name="toDate" class="form-control datepicker">
                                 </div>
                               </div>
                             </div>
@@ -1941,11 +1941,11 @@
                 <fieldset class="m-t-sm">
                   <div class="searchable-setting">
                     <div class="strong-tooltip">Searchable</div><span class="pull-right">
-                      <input type="checkbox" checked="" style="display: none;" class="js-switch"><span style="background-color: rgb(100, 189, 99); border-color: rgb(100, 189, 99); box-shadow: rgb(100, 189, 99) 0px 0px 0px 16px inset; transition: border 0.5s, box-shadow 0.5s, background-color 1.5s;" class="switchery"><small style="left: 20px; transition: left 0.25s;"></small></span></span>
-                    <div class="note-searchable"><small class="gray-light">You can track who viewed your profile</small></div>
-                    <div hidden="" class="note-unsearchable"><small class="gray-light">Make your profile searchable to increase your visibility to employers</small></div>
+                      <input type="checkbox" checked="" style="display: none;" class="js-switch"><span class="switchery"><small style="left: 0; transition: left 0.25s;"></small></span></span>
+                    <div hidden="" class="note-searchable"><small class="gray-light">You can track who viewed your profile</small></div>
+                    <div class="note-unsearchable"><small class="gray-light">Make your profile searchable to increase your visibility to employers</small></div>
                   </div>
-                  <div class="searchable-choice m-t">
+                  <div hidden="" class="searchable-choice m-t">
                     <div class="well well-sm dash no-margin">
                       <p class="gray-light">Your Searchable Profile</p>
                       <div class="radio">
@@ -2106,6 +2106,7 @@
       <!-- Custom JS-->
       <script type="text/javascript" src="js/start.js"></script>
       <script type="text/javascript" src="js/actions/job-profile.js"></script>
+      <script type="text/javascript" src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
     </div>
   </body>
 </html>

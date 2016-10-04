@@ -19346,9 +19346,12 @@ ul.pagination li a:focus {
   background-clip: padding-box;
   font-size: 14px;
 }
-.main-profile .btn.add-one-more-section:hover {
+.main-profile .btn.add-one-more-section:hover,
+.main-profile .btn.add-one-more-section:focus {
   color: #555;
   background-color: #e0e0e0;
+  outline: none;
+  box-shadow: none;
 }
 .main-profile .form-wrapper.box-md,
 .main-profile .placeholder-section.box-md {

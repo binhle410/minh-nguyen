@@ -108,7 +108,6 @@ function addForm() {
     $addMore.on("click", function(e) {
         if($(this).hasClass("active")) {
             return false;
-            $(this).removeClass("active");
         } else {
             $(this).addClass("active");
         }
@@ -131,10 +130,12 @@ function addForm() {
 function delForm() {
     $("body").on("click", ".newForm .btn-cancel", function(e) {
         // console.log("ac");
+        $(this).closest(".section-detail").find(".add-one-more-section").removeClass("active");
         $(this).closest(".form-wrapper").remove();
     });
 }
 
+// 4. Toggle contact box
 function toggleCttBox() {
     if(!$(".contact-information-toggler").length) { return; }
 
@@ -151,6 +152,52 @@ function toggleCttBox() {
     });
 }
 
+// 5. Turn on/off Searchable button
+function tnSrchBtn() {
+    if(!$(".switchery").length) { return; }
+
+    var $swBtn = $(".switchery");
+    $swBtn.on("click", function(e) {
+        if(!$(this).hasClass("active")) {
+            $(this).css({
+                            "background-color": "rgb(100, 189, 99)",
+                            "border-color": "rgb(100, 189, 99)",
+                            "box-shadow": "rgb(100, 189, 99) 0px 0px 0px 16px inset",
+                            "transition": "border 0.5s, box-shadow 0.5s, background-color 1.5s"
+                        });
+            $(this).find("small").css({
+                                        "left": "20px"
+                                    });
+            $(this).parent().siblings(".note-searchable").show();
+            $(this).parent().siblings(".note-unsearchable").hide();
+            $(this).closest(".searchable-setting").next().show();
+            $(this).addClass("active");
+        } else {
+            $(this).css({
+                            "background-color": "#fff",
+                            "box-shadow":" rgb(223, 223, 223) 0px 0px 0px 0px inset",
+                            "border-color": "rgb(223, 223, 223)",
+                            "transition": "border 0.5s, box-shadow 0.5s"
+                        });
+            $(this).find("small").css({
+                                        "left": "0"
+                                    });
+            $(this).parent().siblings(".note-searchable").hide();
+            $(this).parent().siblings(".note-unsearchable").show();
+            $(this).closest(".searchable-setting").next().hide();
+            $(this).removeClass("active");
+        }
+    });
+}
+
+// 6. inputDateFm(): Format date input
+function inputDateFm() {
+    if(!$(".datepicker").length) { return; }
+
+    $(".datepicker").inputmask('dd/mm/yyyy');
+
+}
+
 /* ----------------------------------------------- */
 /* ----------------------------------------------- */
 /* OnLoad Page */
@@ -162,6 +209,8 @@ $(document).ready(function($){
     addForm();
     delForm();
     toggleCttBox();
+    tnSrchBtn();
+    inputDateFm();
 });
 /* OnLoad Window */
 var init = function () {

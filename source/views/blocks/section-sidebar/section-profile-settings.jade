@@ -45,14 +45,14 @@
                     | Searchable
                 span.pull-right
                     input.js-switch(type='checkbox', checked='', style='display: none;')
-                    span.switchery(style='background-color: rgb(100, 189, 99); border-color: rgb(100, 189, 99); box-shadow: rgb(100, 189, 99) 0px 0px 0px 16px inset; transition: border 0.5s, box-shadow 0.5s, background-color 1.5s;')
-                        small(style='left: 20px; transition: left 0.25s;')
-                .note-searchable
+                    span.switchery
+                        small(style='left: 0; transition: left 0.25s;')
+                .note-searchable(hidden='')
                     small.gray-light You can track who viewed your profile
-                .note-unsearchable(hidden='')
+                .note-unsearchable
                     small.gray-light
                         | Make your profile searchable to increase your visibility to employers
-            .searchable-choice.m-t
+            .searchable-choice.m-t(hidden="")
                 .well.well-sm.dash.no-margin
                     p.gray-light Your Searchable Profile
                     .radio
