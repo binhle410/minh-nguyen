@@ -230,7 +230,29 @@ function addSkill() {
 
     var $skBtn = $(".skill-input .btn");
     $skBtn.on("click", function(e) {
+        $inp = $(this).prev();
+        if($inp.val().length) {
+            var newSkill = "<span class='tag-xs'>"
+                            +   "<span class='tag-name'>" + $inp.val() + "</span>"
+                            +   "<a href='javascript:;'>"
+                            +       "<i class='fa fa-fw fa-remove'></i>"
+                            +   "</a>"
+                            + "</span>",
+                 $skTags = $(this).parent().prev();
+            $skTags.append(newSkill);
+            delSkill();
+        }
+    });
+}
 
+
+// 8.1 delSkill(): Delete a skill
+function delSkill() {
+    if(!$(".tag-xs > a").length) { return; }
+
+    var $delBtn = $(".tag-xs > a");
+    $delBtn.on("click", function(e) {
+        $(this).parent().remove();
     });
 }
 
@@ -248,6 +270,8 @@ $(document).ready(function($){
     tnSrchBtn();
     inputDateFm();
     countRmCh();
+    addSkill();
+    delSkill();
 });
 /* OnLoad Window */
 var init = function () {
