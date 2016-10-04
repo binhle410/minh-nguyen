@@ -13,7 +13,7 @@
                     input(type='hidden', name='resume_id', value='3375529')
                     input(type='hidden', name='entry_id', value='')
                     span.form-btn-edit
-                        button.btn.btn-sm.btn-default(type='button')
+                        button.btn.btn-sm(type='button')
                             i.fa.fa-pencil
                     .feature-blk
                         .view-field
@@ -23,7 +23,7 @@
                                 label
                                     strong.text-red *
                                     |  Position
-                                input.form-control(type='text', name='position', placeholder='e.g. UI/UX Designer', value='', maxlength='150', autofocus='')
+                                input.form-control(type='text', name='position', value='', maxlength='150', autofocus='')
                     .feature-blk
                         .view-field
                             strong.view-control.placeholder e.g. interviewspot
@@ -32,7 +32,7 @@
                                 label
                                     strong.text-red *
                                     |  Company
-                                input.form-control.company-name(type='text', name='companyName', placeholder='e.g. interviewspot', value='', maxlength='150')
+                                input.form-control.company-name(type='text', name='companyName', value='', maxlength='150')
                     .feature-blk
                         .view-field
                             p
@@ -53,12 +53,12 @@
                                 .col-sm-4
                                     .form-group
                                         label From month
-                                        input.form-control.sample-datepicker(name='fromDate', placeholder='e.g. 09/2008')
+                                        input.form-control.sample-datepicker(name='fromDate')
                                 .col-sm-4
                                     .form-group
                                         label To month
-                                        input.form-control.sample-datepicker(name='toDate', placeholder='e.g. 12/2014')
-                                .col-sm-4
+                                        input.form-control.sample-datepicker(name='toDate')
+                                .col-sm-4  
                                     .form-group
                                         .m-t-lg.hidden-xs
                                         label.control-label
@@ -70,28 +70,23 @@
                         .edit-field
                             .form-group
                                 label Description
-                                textarea.form-control.emp-description.countdown-target(rows='3', name='description', placeholder='Describe your duties and responsibilities...')
-                                em.countdown.gray-light
-                                p.msg-description-limit-min.error-message(hidden='hidden') You have to enter more than 100 characters
-                                p.msg-description-limit-max.error-message(hidden='hidden') You have entered too many characters
-                                p.msg-description-valid.error-message(hidden='hidden') Please do not enter phone number or email.
-                                p.msg-description-suggestion.text-info(hidden='hidden') Please complete this field to improve your profile strength.
-                    .form-group.edit-field.edit-btns
+                                textarea.form-control.emp-description.countdown-target(rows='3', name='description')
+                    .form-group.edit-field.edit-btns.clearfix 
                         .pull-left
                             | (
                             strong.text-red *
                             | ) is required field
                         .pull-right.text-right
-                            button.btn-remove-this-section.btn.btn-link(type='button')
+                            button.btn-remove-this-section.btn(type='button', data-toggle='modal', data-target='#dialog-remove-item')
                                 i.fa.fa-trash-o
-                            button.btn-cancel.btn.btn-default(type='button') Cancel
-                            button.btn-save.btn.btn-primary(type='button') Save
+                            button.btn-cancel.btn(type='button') Cancel
+                            button.btn.btn-primary(type='button') Save
                 // Form
                 form.form-wrapper.box-md.relative
                     input(type='hidden', name='resume_id', value='3375529')
                     input(type='hidden', name='entry_id', value='2451908')
                     span.form-btn-edit
-                        button.btn.btn-sm.btn-default(type='button')
+                        button.btn.btn-sm(type='button')
                             i.fa.fa-pencil
                     .feature-blk
                         .view-field(style='display: block;')
@@ -101,7 +96,7 @@
                                 label
                                     strong.text-red *
                                     |  Position
-                                input.form-control(type='text', name='position', placeholder='e.g. UI/UX Designer', value='', maxlength='150', autofocus='')
+                                input.form-control(type='text', name='position', value='', maxlength='150', autofocus='')
                     .feature-blk
                         .view-field(style='display: block;')
                             p.view-control Staff.com
@@ -110,7 +105,7 @@
                                 label
                                     strong.text-red *
                                     |  Company
-                                input.form-control.company-name(type='text', name='companyName', placeholder='e.g. interviewspot', value='', maxlength='150')
+                                input.form-control.company-name(type='text', name='companyName', value='', maxlength='150')
                     .feature-blk
                         .view-field(style='display: block;')
                             p
@@ -131,11 +126,11 @@
                                 .col-sm-4
                                     .form-group
                                         label From month
-                                        input.form-control.datepicker(name='fromDate', placeholder='e.g. 09/2008')
+                                        input.form-control.datepicker(name='fromDate')
                                 .col-sm-4
                                     .form-group
                                         label To month
-                                        input.form-control.datepicker(name='toDate', placeholder='e.g. 12/2014')
+                                        input.form-control.datepicker(name='toDate')
                                 .col-sm-4
                                     .form-group
                                         .m-t-lg.hidden-xs
@@ -148,7 +143,7 @@
                         .edit-field(style='display: none;')
                             .form-group
                                 label Description
-                                textarea.form-control.emp-description.countdown-target(rows='3', name='description', placeholder='Describe your duties and responsibilities...', aria-hidden='true', style='display: none;')
+                                textarea.form-control.emp-description.countdown-target(rows='3', name='description', style='display: none;')
                                 em.countdown.gray-light 5000 character remaining
                     .form-group.edit-field.edit-btns.clearfix(style='display: none;')
                         .pull-left
@@ -156,9 +151,9 @@
                             strong.text-red *
                             | ) is required field
                         .pull-right.text-right
-                            button.btn-remove-this-section.btn.btn-link(type='button')
+                            button.btn-remove-this-section.btn(type='button', data-toggle='modal', data-target='#dialog-remove-item')
                                 i.fa.fa-trash-o
-                            button.btn-cancel.btn.btn-default(type='button') Cancel
-                            button.btn-save.btn.btn-primary(type='button') Save
-            button.btn.btn-default.btn-block.no-border.add-one-more-section(type='button')
+                            button.btn-cancel.btn(type='button') Cancel
+                            button.btn.btn-primary(type='button') Save
+            button.btn.btn-block.no-border.add-one-more-section(type='button')
                 strong Add Employment History

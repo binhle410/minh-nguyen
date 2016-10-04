@@ -1,19 +1,35 @@
 .section-detail.section-skills.skill-section
-    .box.border-danger
-        fieldset.edit-mode
+    .box
+        fieldset
             legend.box-md
                 i.fa.fa-fw.fa-flash
                 |  Key Skills
-            .box-md.skill-section.form-wrapper.relative
-                .skill-section
-                    span.form-btn-edit
-                        button.btn.btn-sm.btn-default(type='button')
-                            i.fa.fa-pencil
+            .box-md.skill-section.form-wrapper.relative.clearfix
+                span.form-btn-edit
+                    button.btn.btn-sm(type='button')
+                        i.fa.fa-pencil
+                .view-skills
+                    span.tag-xs
+                        span.tag-name - Front-end Development
+                    span.tag-xs
+                        span.tag-name CSS
+                .edit-skills(hidden="")
                     form.form-horizontal
-                        .view-mode
-                            span.tag-xs(title='- Front-end Development')
-                                span.tag-name - Front-end Development
-                                input.input-tag-name(type='hidden', name='skills[]', value='157386')
-                            span.tag-xs
-                                span.tag-name CSS
-                                input.input-tag-name(type='hidden', name='skills[]', value='787')
+                        .content-section.relative
+                            .tags-edit
+                                span.tag-xs
+                                    span.tag-name CSS
+                                    a(href="javascript:;")
+                                        i.fa.fa-fw.fa-remove
+                                span.tag-xs
+                                    span.tag-name - Front-end Development
+                                    a(href="javascript:;")
+                                        i.fa.fa-fw.fa-remove
+                            .skill-input
+                                input.form-control(type="text", name="skills[]", autofocus)
+                                button.btn(type="button")
+                                    i.fa.fa-plus
+                        .push-top-sm.pull-right
+                            button.btn(type="button") Cancel
+                            button.btn.btn-primary(type="button") Save
+

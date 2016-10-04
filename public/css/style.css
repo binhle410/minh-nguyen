@@ -19199,7 +19199,9 @@ ul.pagination li a:focus {
   line-height: 1.42857143;
   border-radius: 2px;
   font-size: 12px;
-  margin: 0 0 0 5px;
+  background-color: #f4f4f4;
+  border-color: #ccc;
+  margin: 0;
 }
 .main-profile .btn:hover {
   background: #ddd;
@@ -19207,8 +19209,18 @@ ul.pagination li a:focus {
 .main-profile .btn:first-child {
   margin: 0;
 }
+.main-profile .btn.btn-cancel {
+  margin-right: 10px;
+}
+.main-profile .btn.btn-link {
+  border: none;
+  background: none;
+  color: #555;
+}
 .main-profile .btn.btn-primary {
   background: #de5749;
+  color: white;
+  border-color: transparent;
 }
 .main-profile .btn.btn-primary:hover,
 .main-profile .btn.btn-primary:focus {
@@ -19217,10 +19229,15 @@ ul.pagination li a:focus {
   color: white;
   outline: none;
 }
-.main-profile .btn-default {
-  color: #555;
-  background-color: #f4f4f4;
-  border-color: #ccc;
+.main-profile .btn.btn-remove-this-section {
+  border: none;
+  background: none;
+  font-size: 17px;
+  padding: 5px 25px;
+  margin-right: 10px;
+}
+.main-profile .btn.btn-remove-this-section:hover {
+  color: #de5749;
 }
 .main-profile .btn-outline {
   border: 1px solid #ccc;
@@ -19298,6 +19315,11 @@ ul.pagination li a:focus {
 .main-profile label.radio-inline input {
   margin-top: 3px;
 }
+.main-profile label em {
+  font-weight: normal;
+  margin-top: 2px;
+  display: inline-block;
+}
 .main-profile label small {
   font-size: 80%;
 }
@@ -19319,10 +19341,6 @@ ul.pagination li a:focus {
 .main-profile .btn.add-one-more-section:hover {
   color: #555;
   background-color: #e0e0e0;
-}
-.main-profile .form-wrapper:hover .btn-default,
-.main-profile .placeholder-section:hover .btn-default {
-  color: #555;
 }
 .main-profile .form-wrapper.box-md,
 .main-profile .placeholder-section.box-md {
@@ -19430,7 +19448,7 @@ ul.pagination li a:focus {
   padding: 5px 10px;
   margin: 0;
 }
-.main-profile .form-wrapper .form-control {
+.main-profile .form-control {
   color: #555;
   font-style: initial;
   -webkit-box-shadow: none;
@@ -19440,17 +19458,17 @@ ul.pagination li a:focus {
   box-shadow: none;
   border-color: #ddd;
 }
-.main-profile .form-wrapper .form-control[disabled],
-.main-profile .form-wrapper .form-control[readonly] {
+.main-profile .form-control[disabled],
+.main-profile .form-control[readonly] {
   opacity: 1;
 }
-.main-profile .form-wrapper .form-control.input-sm {
+.main-profile .form-control.input-sm {
   height: 28px;
   padding: 3px 6px;
   font-size: 11px;
   line-height: 1.5;
 }
-.main-profile .form-wrapper .form-control[type="checkbox"] {
+.main-profile .form-control[type="checkbox"] {
   margin-right: 5px;
 }
 .main-profile .edit-field {
@@ -19509,10 +19527,12 @@ ul.pagination li a:focus {
 }
 .main-profile .editMode .profile-info .name {
   width: 50%;
+  padding-right: 15px;
 }
 .main-profile .editMode .profile-info .last-name {
   margin-left: 0;
   width: 50%;
+  padding-left: 15px;
 }
 .main-profile .profile-info {
   margin-top: 0;
@@ -19547,6 +19567,9 @@ ul.pagination li a:focus {
 }
 .main-profile .contact-information-toggler:hover {
   background: #e0e0e0;
+}
+.main-profile .contact-information-toggler .fa {
+  margin-right: 3px;
 }
 .main-profile .view-control {
   margin-right: 3px;
@@ -19595,16 +19618,91 @@ ul.pagination li a:focus {
   max-width: 135px;
   vertical-align: middle;
 }
+.main-profile .skill-input {
+  *zoom: 1;
+}
+.main-profile .skill-input:before,
+.main-profile .skill-input:after {
+  content: " ";
+  display: table;
+}
+.main-profile .skill-input:after {
+  clear: both;
+}
+.main-profile .skill-input:before,
+.main-profile .skill-input:after {
+  content: " ";
+  display: table;
+}
+.main-profile .skill-input:after {
+  clear: both;
+}
+.main-profile .skill-input:before,
+.main-profile .skill-input:after {
+  content: " ";
+  display: table;
+}
+.main-profile .skill-input:after {
+  clear: both;
+}
+.main-profile .skill-input:before,
+.main-profile .skill-input:after {
+  content: " ";
+  display: table;
+}
+.main-profile .skill-input:after {
+  clear: both;
+}
+.main-profile .skill-input:before,
+.main-profile .skill-input:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.main-profile .skill-input:after {
+  clear: both;
+}
+.main-profile .skill-input:before,
+.main-profile .skill-input:after {
+  content: " ";
+  display: table;
+}
+.main-profile .skill-input:after {
+  clear: both;
+}
+.main-profile .skill-input:before,
+.main-profile .skill-input:after {
+  content: " ";
+  display: table;
+}
+.main-profile .skill-input:after {
+  clear: both;
+}
+.main-profile .skill-input:before,
+.main-profile .skill-input:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.main-profile .skill-input:after {
+  clear: both;
+}
+.main-profile .skill-input .form-control {
+  width: 300px;
+  float: left;
+}
+.main-profile .skill-input .btn {
+  height: 40px;
+  font-size: 14px;
+  width: 40px;
+  padding: 0;
+}
 /**
  * SECTION LANGUAGES CSS
  * Updated on 01/10/16
  */
 .section-languages .box-md.content-section-wrapper {
-  padding-left: 30px;
   background: white;
-}
-.section-languages .form-wrapper.box-md {
-  padding: 2px 30px;
 }
 .section-languages .form-btn-edit {
   margin-top: -2px;
@@ -19678,6 +19776,9 @@ ul.pagination li a:focus {
 .section-profile-level .text-clip {
   margin-right: 3px;
 }
+.section-profile-level hr {
+  padding-bottom: 3px;
+}
 .main-profile .attached-cv .attached-cv-update:hover {
   border: 1px #ccc solid;
   border-left: 0;
@@ -19749,6 +19850,46 @@ ul.pagination li a:focus {
 }
 .main-profile .list-group.pic-item .list-group-item:hover a {
   color: #de5749;
+}
+/**
+ * MODAL CSS
+ * Updated on 22/09/16
+ */
+.modal-content .modal-header {
+  background: #de5749;
+}
+.modal-content .modal-header .close {
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  color: white;
+}
+.modal-content .modal-body p {
+  margin: 0;
+}
+.modal-content .modal-footer {
+  padding: 20px;
+}
+.modal-content .modal-footer .btn {
+  border: 1px solid #ccc;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 5px 25px;
+  font-size: 12px;
+}
+.modal-content .modal-footer .btn:hover {
+  background: #ddd;
+}
+.modal-content .modal-footer .btn + .btn {
+  margin-left: 10px;
+}
+.modal-content .modal-footer .btn.btn-primary {
+  background: #de5749;
+  border-color: transparent;
+}
+.modal-content .modal-footer .btn.btn-primary:hover {
+  background: #bf253d;
 }
 /**
  * FOOTER CSS

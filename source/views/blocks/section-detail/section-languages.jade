@@ -4,19 +4,19 @@
             legend.box-md
                 i.fa.fa-fw.fa-list
                 |  Languages
-            .box-md.content-section-wrapper.m-b-n(style='display: block;')
+            .box-md.content-section-wrapper.m-b-n
                 .row
                     .col-sm-4
                         strong Language
                     .col-sm-8
                         strong Proficiency
-            .placeholder-section.box-md(hidden='', style='display: none;')
+            .placeholder-section.box-md(hidden='')
                 span.placeholder Add all the languages you can speak to increase your job prospects.
             .sortable.content-section
                 // Sample
                 form.sample.box-md.form-wrapper.relative(hidden='')
                     span.form-btn-edit
-                        button.btn.btn-sm.btn-default(type='button')
+                        button.btn.btn-sm(type='button')
                             i.fa.fa-pencil
                     .row.choose-language.language-0
                         .col-sm-4
@@ -83,24 +83,24 @@
                             .view-field
                                 p.form-control-static.view-control
                     // Buttons
-                    .form-group.edit-field.edit-btns
+                    .form-group.edit-field.edit-btns.push-top-sm.clearfix
                         .text-right.pull-right
-                            button.btn-remove-this-section.btn.btn-link.text-danger.btn-remove-language(type='button')
+                            button.btn-remove-this-section.btn(type='button', data-toggle='modal', data-target='#dialog-remove-item')
                                 i.fa.fa-trash-o
-                            button.btn.btn-default.btn-cancel.btn-cancel-language(type='button')
+                            button.btn.btn-cancel(type='button')
                                 | Cancel
-                            button.btn.btn-primary.btn-save.btn-save-language(type='button')
+                            button.btn.btn-primary(type='button')
                                 | Save
                 // Form
                 form.box-md.form-wrapper.relative
                     span.form-btn-edit
-                        button.btn.btn-sm.btn-default(type='button')
+                        button.btn.btn-sm(type='button')
                             i.fa.fa-pencil
                     .row.choose-language.language-0
                         .col-sm-4
                             .edit-field(style='display: none;')
                                 .border-text-box.m-r-lg
-                                    select.language-select(name='language1', tabindex='-1', title='', style='display: none;')
+                                    select.language-select(name='language1', tabindex='-1', title='')
                                         option(value='0', selected='') Please select...
                                         option(value='1') Arabic
                                         option(value='2') Bengali
@@ -161,14 +161,14 @@
                             .view-field(style='display: block;')
                                 p.form-control-static.view-control Advanced
                     // Buttons
-                    .form-group.clearfix.edit-field(style='display: none;')
+                    .form-group.edit-field.edit-btns.push-top-sm.clearfix(style='display: none;')
                         .text-right.pull-right
-                            button.btn-remove-this-section.btn.btn-link.text-danger.btn-remove-language(type='button')
+                            button.btn-remove-this-section.btn(type='button', data-toggle='modal', data-target='#dialog-remove-item')
                                 i.fa.fa-trash-o
-                            button.btn.btn-default.btn-cancel.btn-cancel-language(type='button')
+                            button.btn.btn-cancel.btn-cancel-language(type='button')
                                 | Cancel
                             button.btn.btn-primary.btn-save.btn-save-language(type='button')
                                 | Save
-            button.btn.btn-default.btn-block.add-one-more-section(type='button', style='display: block;')
+            button.btn.btn-block.add-one-more-section(type='button', style='display: block;')
                 strong Add Language
 

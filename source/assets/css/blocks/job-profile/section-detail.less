@@ -16,15 +16,27 @@
         line-height: 1.42857143;
         border-radius: 2px;
         font-size: 12px;
-        margin: 0 0 0 5px;
+        background-color: #f4f4f4;
+        border-color: #ccc;
+        margin: 0;
         &:hover {
             background: #ddd;
         }
         &:first-child {
             margin: 0;
         }
+        &.btn-cancel {
+            margin-right: 10px;
+        }
+        &.btn-link {
+            border: none;
+            background: none;
+            color: #555;
+        }
         &.btn-primary {
             background: @red;
+            color: white;
+            border-color: transparent;
             &:hover, &:focus {
                 background: @dred;
                 border-color: @dred;
@@ -32,11 +44,16 @@
                 outline: none;
             }
         }
-    }
-    .btn-default {
-        color: #555;
-        background-color: #f4f4f4;
-        border-color: #ccc;
+        &.btn-remove-this-section {
+            border: none;
+            background: none;
+            font-size: 17px;
+            padding: 5px 25px;
+            margin-right: 10px;
+            &:hover {
+                color: @red;
+            }
+        }
     }
     .btn-outline {
         border: 1px solid #ccc;
@@ -99,6 +116,11 @@
                 margin-top: 3px;
             }
         }
+        em {
+            font-weight: normal;
+            margin-top: 2px;
+            display: inline-block;
+        }
         small {
             font-size: 80%;
         }
@@ -118,11 +140,6 @@
         }
     }
     .form-wrapper, .placeholder-section {
-        &:hover {
-            .btn-default {
-                color: #555;
-            }
-        }
         &.box-md {
             padding: 20px;
             background: none;
@@ -247,24 +264,22 @@
         padding: 5px 10px;
         margin: 0;
     }
-    .form-wrapper {
-        .form-control {
-            color: #555;
-            font-style: initial;
-            .box-shadow(none);
-            border-color: #ddd;
-            &[disabled], &[readonly] {
-                opacity: 1;
-            }
-            &.input-sm {
-                height: 28px;
-                padding: 3px 6px;
-                font-size: 11px;
-                line-height: 1.5;
-            }
-            &[type="checkbox"] {
-                margin-right: 5px;
-            }
+    .form-control {
+        color: #555;
+        font-style: initial;
+        .box-shadow(none);
+        border-color: #ddd;
+        &[disabled], &[readonly] {
+            opacity: 1;
+        }
+        &.input-sm {
+            height: 28px;
+            padding: 3px 6px;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+        &[type="checkbox"] {
+            margin-right: 5px;
         }
     }
 }

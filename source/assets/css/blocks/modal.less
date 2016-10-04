@@ -1,0 +1,41 @@
+/**
+ * MODAL CSS
+ * Updated on 22/09/16
+ */
+ .modal-content {
+     .modal-header {
+         background: @red;
+         .close {
+             .opacity(1);
+             color: white;
+         }
+     }
+     .modal-body {
+         p {
+             margin: 0;
+         }
+     }
+     .modal-footer {
+         padding: 20px;
+         .btn {
+             border: 1px solid #ccc;
+             background: #f4f4f4;
+             margin: 0;
+             padding: 5px 25px;
+             font-size: 12px;
+             &:hover {
+                 background: #ddd;
+             }
+             + .btn {
+                 margin-left: 10px;
+             }
+             &.btn-primary {
+                 background: @red;
+                 border-color: transparent;
+                 &:hover {
+                     background: @dred;
+                 }
+             }
+         }
+     }
+ }

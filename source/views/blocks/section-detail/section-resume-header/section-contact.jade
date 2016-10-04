@@ -1,9 +1,9 @@
 form.form-horizontal
-    .box.border-info
+    .box
         fieldset
             .form-wrapper.relative.box-md
                 span.form-btn-edit
-                    button.btn.btn-sm.btn-default(type='button')
+                    button.btn.btn-sm(type='button')
                         i.fa.fa-pencil
                 .row
                     .col-sm-6
@@ -12,7 +12,7 @@ form.form-horizontal
                             .view-field
                                 p.form-control-static.view-control victor.lee@gmail.com
                             .edit-field
-                                input.form-control(type='email', autofocus='', disabled='', placeholder='e.g. john.doe@navigosgroup.com', value='victor.lee@gmail.com')
+                                input.form-control(type='email', autofocus='', disabled='', value='victor.lee@gmail.com')
                     .col-sm-6
                         .form-group
                             label(for='cell-number')
@@ -25,7 +25,7 @@ form.form-horizontal
                                         i.fa.fa-eye
                                         span   Visible to employer
                             .edit-field
-                                input.form-control(type='tel', name='cellphone', placeholder='e.g. 0903012825', value='01696872113')
+                                input.form-control(type='tel', name='cellphone', value='01696872113')
                                 .checkbox
                                     label
                                         input(name='confidential', value='1', type='checkbox')
@@ -37,7 +37,7 @@ form.form-horizontal
                                 strong.text-red *
                                 |     Date of birth
                             .edit-field
-                                input.form-control(name='birthday', placeholder="{ 'e.g. 28/04/1986'|trans }}", value='25/09/1993')
+                                input.form-control(name='birthday', value='25/09/1993')
                             .view-field
                                 p.form-control-static.view-control 25/09/1993
                     .col-sm-6
@@ -456,7 +456,7 @@ form.form-horizontal
                     .view-field
                         p.form-control-static.view-control #05-33 Singapore Post Centre
                     .edit-field
-                        input.form-control(type='text', name='address', placeholder='e.g.130 Suong Nguyet Anh', value='#05-33 Singapore Post Centre')
+                        input.form-control(type='text', name='address', value='#05-33 Singapore Post Centre')
                 // Buttons
                 .form-group.edit-field.edit-btns
                     .pull-left
@@ -464,5 +464,5 @@ form.form-horizontal
                         strong.text-red *
                         | ) is required field
                     .pull-right.text-right
-                        button.btn.btn-default.btn-cancel(type='button') Cancel
+                        button.btn.btn-cancel(type='button') Cancel
                         button.btn.btn-primary.btn-save(type='button') Save

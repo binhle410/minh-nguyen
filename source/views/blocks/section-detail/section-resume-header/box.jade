@@ -6,7 +6,7 @@
                     form
                         input(type='hidden', name='resume_id', value='3375529')
                         span.form-btn-edit.hidden-xs
-                            button.btn.btn-default(type='button')
+                            button.btn(type='button')
                                 i.fa.fa-pencil
                         .dropdown
                             a.dropdown-toggle(data-toggle='dropdown', aria-expanded='true')
@@ -23,7 +23,7 @@
             form.form-wrapper
                 .relative.box-md
                     span.form-btn-edit
-                        button.btn.btn-default(type='button')
+                        button.btn(type='button')
                             i.fa.fa-pencil
                     .profile-info
                         .profile-itm.profile-name.clearfix
@@ -34,7 +34,7 @@
                                     label
                                         strong.text-red *
                                         |  Last Name
-                                    input.form-control(placeholder='Last Name', type='text', name='lastName', autofocus='', value='Lee')
+                                    input.form-control(type='text', name='lastName', autofocus='', value='Lee')
                             .last-name.pull-left
                                 .view-field
                                     h3.profile-name.text-orange Lee
@@ -42,7 +42,7 @@
                                     label
                                         strong.text-red *
                                         |  First Name
-                                    input.form-control(placeholder='First Name', type='text', name='firstName', autofocus='', value='Victor')
+                                    input.form-control(type='text', name='firstName', autofocus='', value='Victor')
                         .profile-itm.profile-expected-position
                             .view-field
                                 span.view-control Frontend Developer
@@ -50,7 +50,7 @@
                                 label
                                     strong.text-red *
                                     |  Professional Title
-                                input.form-control(placeholder='Current job title e.g. Developer', type='text', name='expectedPosition', value='Frontend Developer')
+                                input.form-control(type='text', name='expectedPosition', value='Frontend Developer')
                         .profile-itm.year-of-exp
                             .view-field
                                 span.year-of-ex-view-field
@@ -60,7 +60,7 @@
                                 label.lbl-year-ex
                                     strong.text-red *
                                     |  Years of Experience
-                                input.form-control(placeholder='e.g. 7', type='text', name='yearOfExperience', maxlength='2', value='1')
+                                input.form-control(type='text', name='yearOfExperience', maxlength='2', value='1')
                         .profile-itm.new-graduate
                             .view-field
                                 //- span.view-control
@@ -77,20 +77,20 @@
                                     span.text-gray-light Highest education:
                                     a.current-highest-education.clickable Bachelors
                             .edit-field.text-right
-                                button.btn-cancel.btn.btn-default(type='button') Cancel
+                                button.btn-cancel.btn(type='button') Cancel
                                 button.btn-save.btn.btn-primary(type='button') Save
                         .profile-itm.download-resume
                             .view-field.m-b
-                                a.btn.btn-default.btn-outline(href='#')
+                                a.btn.btn-outline(href='javascript:;')
                                     i.fa.fa-fw.fa-file-pdf-o
                                     |  Download profile
                 .absolute-right.m-t-n-lg.m-r-xs.visible-xs
-                    a.btn.btn-block.btn-default.contact-information-toggler(href='#')
+                    a.btn.btn-block.contact-information-toggler(href='#')
                         i.fa.fa-fw.fa-suitcase
                         span.hidden-xs Contact Information
     .bg-gray.text-right.hidden-xs
         .row
             .col-xs-12.col-sm-5.pull-right
-                a.btn.btn-block.btn-default.contact-information-toggler(href='#')
+                a.btn.btn-block.contact-information-toggler.add-one-more-section(href='#')
                     i.fa.fa-fw.fa-suitcase
-                    span Contact Information
+                    strong Contact Information

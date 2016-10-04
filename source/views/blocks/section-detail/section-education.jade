@@ -13,7 +13,7 @@
                     input(type='hidden', name='resume_id', value='3375529')
                     input(type='hidden', name='entry_id', value='')
                     span.form-btn-edit
-                        button.btn.btn-sm.btn-default(type='button')
+                        button.btn.btn-sm(type='button')
                             i.fa.fa-pencil
                     .feature-blk
                         .view-field
@@ -23,10 +23,10 @@
                                 label
                                     strong.text-red *
                                     | Subject
-                                input.form-control(type='text', name='subject', placeholder='e.g. International Business', value='', maxlength='150', autofocus='')
+                                input.form-control(type='text', name='subject', value='', maxlength='150', autofocus='')
                     .feature-blk
                         .view-field
-                            p.view-control.placeholder e.g. University of Economics of Ho Chi Minh City
+                            p.view-control.placeholder e.g. University of Economics
                             br
                             span.view-control Please select...
                         .edit-field
@@ -36,7 +36,7 @@
                                         label
                                             strong.text-red *
                                             | School
-                                        input.form-control(type='text', name='school', placeholder='e.g. University of Economics of Ho Chi Minh City', value='', maxlength='150')
+                                        input.form-control(type='text', name='school', value='', maxlength='150')
                                 .col-sm-6
                                     .form-group
                                         label
@@ -72,32 +72,32 @@
                                     .col-sm-6
                                         .form-group
                                             label From month
-                                            input.form-control.sample-datepicker(name='fromDate', placeholder='e.g. 09/2008')
+                                            input.form-control.sample-datepicker(name='fromDate')
                                     .col-sm-6
                                         .form-group
                                             label To month
-                                            input.form-control.sample-datepicker(name='toDate', placeholder='e.g. 12/2014')
+                                            input.form-control.sample-datepicker(name='toDate')
                         .feature-blk
                             .view-field
                                 .view-control.placeholder Education Achievements
                             .edit-field
                                 .form-group
                                     label Achievements
-                                    textarea.form-control.emp-description.achievement-textarea.countdown-target(rows='3', name='description', placeholder='Education Achievements', maxlength='5000')
+                                    textarea.form-control.emp-description.achievement-textarea.countdown-target(rows='3', name='description', maxlength='5000')
                         .form-group.edit-field.edit-btns.clearfix
                                 .pull-left
                                     | (
                                     strong.text-red *
                                     | ) is required field
                                 .pull-right.text-right
-                                    button.btn-remove-this-section.btn.btn-link(type='button', data-toggle='modal', data-target='#dialog-remove-item')
+                                    button.btn-remove-this-section.btn(type='button', data-toggle='modal', data-target='#dialog-remove-item')
                                         i.fa.fa-trash-o
-                                    button.btn-cancel.btn.btn-default(type='button') Cancel
-                                    button.btn-save.btn.btn-primary(type='button') Save
+                                    button.btn.btn-cancel(type='button') Cancel
+                                    button.btn.btn-primary(type='button') Save
                 // Form
                 form.form-wrapper.box-md.relative
                     span.form-btn-edit
-                        button.btn.btn-sm.btn-default(type='button')
+                        button.btn.btn-sm(type='button')
                             i.fa.fa-pencil
                     .subject-blk
                         .view-field
@@ -107,7 +107,7 @@
                                 label
                                     strong.text-red *
                                     | Subject
-                                input.form-control(type='text', name='subject', placeholder='e.g. International Business', value='International Economics', maxlength='150', autofocus='')
+                                input.form-control(type='text', name='subject', value='International Economics', maxlength='150', autofocus='')
                     .school-blk
                         .view-field
                             span.view-control Foreign Trade University
@@ -119,14 +119,14 @@
                                         label
                                             strong.text-red *
                                             | School
-                                        input.form-control(type='text', name='school', placeholder='e.g. University of Economics of Singapore City', value='Foreign Trade University', maxlength='150')
+                                        input.form-control(type='text', name='school', value='Foreign Trade University', maxlength='150')
                                 .col-sm-6
                                     .form-group
                                         label
                                             strong.text-red *
                                             | Qualification
                                         .border-text-box
-                                            select.qualification(name='qualification' tabindex='-1', title='', style='display: none;')
+                                            select.qualification(name='qualification' tabindex='-1', title='')
                                                 option(value='0') Please select...
                                                 option(value='2' ) High school
                                                 option(value='3' ) Associate’s degree
@@ -155,18 +155,18 @@
                                     .col-sm-6
                                         .form-group
                                             label From month
-                                            input.form-control.datepicker(name='fromDate', placeholder='e.g. 09/2008', value='09/2011')
+                                            input.form-control.datepicker(name='fromDate', value='09/2011')
                                     .col-sm-6
                                         .form-group
                                             label To month
-                                            input.form-control.datepicker(name='toDate', placeholder='e.g. 12/2014', value='01/2015')
+                                            input.form-control.datepicker(name='toDate', value='01/2015')
                         .achievement-blk
                             .view-field
                                 .view-control.placeholder Education Achievements
                             .edit-field
                                 .form-group
                                     label Achievements
-                                    textarea.form-control.emp-description.achievement-textarea.countdown-target(rows='3', name='description', placeholder='Education Achievements', maxlength='5000', style='display: none;', aria-hidden='true')
+                                    textarea.form-control.emp-description.achievement-textarea.countdown-target(rows='3', name='description', maxlength='5000', style='display: none;', aria-hidden='true')
                                     em.countdown.gray-light 5000 character remaining
 
                         .form-group.edit-field.edit-btns.clearfix
@@ -175,15 +175,15 @@
                                 strong.text-red *
                                 | ) is required field
                             .pull-right
-                                button.btn-remove-this-section.btn.btn-link(type='button', data-toggle='modal', data-target='#dialog-remove-item')
+                                button.btn-remove-this-section.btn(type='button', data-toggle='modal', data-target='#dialog-remove-item')
                                     i.fa.fa-trash-o
-                                button.btn-cancel.btn.btn-default(type='button') Cancel
-                                button.btn-save.btn.btn-primary(type='button') Save
+                                button.btn-cancel.btn(type='button') Cancel
+                                button.btn.btn-primary(type='button') Save
                 form.form-wrapper.box-md.relative
                     input(type='hidden', name='resume_id', value='3375529')
                     input(type='hidden', name='entry_id', value='1756214')
                     span.form-btn-edit
-                        button.btn.btn-sm.btn-default(type='button')
+                        button.btn.btn-sm(type='button')
                             i.fa.fa-pencil
                     .subject-blk
                         .view-field
@@ -193,7 +193,7 @@
                                 label
                                     strong.text-red *
                                     | Subject
-                                input.form-control(type='text', name='subject', placeholder='e.g. International Business', value='English', maxlength='150', autofocus='')
+                                input.form-control(type='text', name='subject', value='English', maxlength='150', autofocus='')
                     .school-blk
                         .view-field
                             span.view-control Self-study
@@ -205,14 +205,14 @@
                                         label
                                             strong.text-red *
                                             | School
-                                        input.form-control(type='text', name='school', placeholder='e.g. University of Economics of Singapore City', value='Self-study', maxlength='150')
+                                        input.form-control(type='text', name='school', value='Self-study', maxlength='150')
                                 .col-sm-6
                                     .form-group
                                         label
                                             strong.text-red *
                                             | Qualification
                                         .border-text-box
-                                            select.qualification(name='qualification' tabindex='-1', title='', style='display: none;')
+                                            select.qualification(name='qualification' tabindex='-1', title='')
                                                 option(value='0') Please select...
                                                 option(value='2', ) High school
                                                 option(value='3', ) Associate’s degree
@@ -241,11 +241,11 @@
                                     .col-sm-6
                                         .form-group
                                             label From month
-                                            input.form-control.datepicker(name='fromDate', placeholder='e.g. 09/2008', value='')
+                                            input.form-control.datepicker(name='fromDate', value='')
                                     .col-sm-6
                                         .form-group
                                             label To month
-                                            input.form-control.datepicker(name='toDate', placeholder='e.g. 12/2014', value='')
+                                            input.form-control.datepicker(name='toDate', value='')
                         .achievement-blk
                             .view-field
                                 .view-control
@@ -253,16 +253,16 @@
                             .edit-field
                                 .form-group
                                     label Achievements
-                                    textarea.form-control.emp-description.achievement-textarea.countdown-target(rows='3', name='description', placeholder='Education Achievements', maxlength='5000', style='display: none;', aria-hidden='true') <p>TOEIC 830</p>
+                                    textarea.form-control.emp-description.achievement-textarea.countdown-target(rows='3', name='description', maxlength='5000', style='display: none;', aria-hidden='true') <p>TOEIC 830</p>
                         .form-group.edit-field.edit-btns.clearfix
                             .pull-left
                                 | (
                                 strong.text-red *
                                 | ) is required field
                             .pull-right.text-right
-                                button.btn-remove-this-section.btn.btn-link(type='button', data-toggle='modal', data-target='#dialog-remove-item')
+                                button.btn-remove-this-section.btn(type='button', data-toggle='modal', data-target='#dialog-remove-item')
                                     i.fa.fa-trash-o
-                                button.btn-cancel.btn.btn-default(type='button') Cancel
-                                button.btn-save.btn.btn-primary(type='button') Save
-            button.btn.btn-default.btn-block.add-one-more-section(type='button')
+                                button.btn-cancel.btn(type='button') Cancel
+                                button.btn.btn-primary(type='button') Save
+            button.btn.btn-block.add-one-more-section(type='button')
                 strong Add Education History
