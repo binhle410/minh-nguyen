@@ -19586,7 +19586,6 @@ ul.pagination li a:focus {
   margin: 5px 0 20px 0;
 }
 .main-profile .user-pic .avatar {
-  padding: 5px;
   border: 1px #E5E5E5 solid;
   background: #fff;
   width: 115px;
@@ -19597,11 +19596,8 @@ ul.pagination li a:focus {
   text-align: center;
   margin: 18px auto;
   margin-right: 25px;
-}
-.main-profile .user-pic .avatar-sample {
-  line-height: 135px;
-  color: #eee;
-  font-size: 2em;
+  background: url("../images/no_img_user.png") center no-repeat;
+  background-size: cover;
 }
 .main-profile .user-pic .dropdown-menu {
   margin-left: 10px;
@@ -20147,11 +20143,9 @@ footer .copyright {
     font-size: 20px;
   }
   .main-profile .section-resume-header .user-pic .avatar {
-    padding: 2px;
     margin: 10px auto;
-    width: 78px;
-    height: 78px;
-    line-height: 78px;
+    width: 70px;
+    height: 70px;
   }
   .main-profile .section-resume-header .prof-itm-sm {
     font-size: 12px;
