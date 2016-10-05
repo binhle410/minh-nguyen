@@ -212,12 +212,34 @@ form {
     position: absolute;
     top: 50%;
     left: 0;
-    .transfrom(translateY(-50%));
+    .transform(translate(-103%, -50%));
     background: @blue;
-    padding: 5px;
+    padding: 10px 15px 10px 30px;
     .border-radius(3px);
+    color: white;
+    .box-shadow(0 0 30px rgba(0,55,72,.3));
+    &:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+        top: 50%;
+        right: -5px;
+        margin-top: -5px;
+        border-width: 5px 0 5px 6px;
+        border-left-color: @blue;
+    }
     .close-msg {
-        background: rgba(0, 0, 0, .7);
-        color:
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        color: #2ba3d0;
+        margin-right: 10px;
+        .transform(translate(-50%, -50%));
+        &:hover {
+            color: @dred;
+        }
     }
 }

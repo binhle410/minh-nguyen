@@ -1907,9 +1907,9 @@
                 <input type="hidden" value="1">
                 <div class="profile-strength"><span class="pull-left m-r-xs"> Your profile strength is</span><strong class="text-success">Beginner</strong></div>
                 <hr class="m-t m-b">
-                <p class="take-to-next-level strong-tooltip relative"><strong>Take your profile to the next level:</strong>
-                  <div class="guide-box"><a href="javascript:;" class="close-msg"><i class="fa fa-close"></i></a><span>Complete profile for your professional look!</span></div>
-                </p>
+                <div class="take-to-next-level strong-tooltip relative"><strong>Take your profile to the next level:</strong>
+                  <div class="guide-box"><a href="javascript:;" class="close-msg"><i class="fa fa-times-circle"></i></a><span>Complete profile for your professional look!</span></div>
+                </div>
                 <div class="list-group"><a class="list-group-item list-add-skill">
                     + Add Key Skill
                     (1)</a><a class="list-group-item list-add-exp">+ Add Work Experience</a><a class="list-group-item list-add-edu">+ Add Education</a></div>
@@ -1925,19 +1925,12 @@
                         <div class="btn-group btn-group-sm pull-right button-update"><a type="button" class="btn btn-link relative">
                             <label for="profileAttachFile"><i class="fa fa-pencil"></i></label>
                             <input type="file" name="resumeFile" style="width: 20px; height: 20px; top:0" class="transparent absolute"></a></div>
-                        <div class="messages no-margin"><small class="have-resume"><span class="text-clip">Your resume</span><span class="resume-name text-clip">   Victor Lee CV.doc</span><span class="gray-light text-clip">was uploaded on<span class="resume-date">13/09/2016</span></span></small><small hidden="" class="no-resume">
-                            <label class="m-t-xs"><a class="btn relative">Upload</a></label>
-                            <div class="note-resume"><span class="gray-light"><small>You can only attach .doc, .docx, and .pdf files that are less than 2MB in size</small></span></div></small></div>
-                      </form>
-                    </div>
-                    <div class="well well-sm dash m-t-sm relative attached-cv-update">
-                      <form class="m-b-none relative">
-                        <div class="btn-group btn-group-sm pull-right button-update"><a type="button" class="btn btn-link relative">
-                            <label for="profileAttachFile"><i class="fa fa-pencil"></i></label>
-                            <input id="profileAttachFile" type="file" name="resumeFile" style="width: 20px; height: 20px; top:0" class="transparent absolute"></a></div>
-                        <div class="messages no-margin"><small hidden="" class="have-resume"><span class="text-clip">Your resume</span><span class="resume-name text-clip">   Victor Lee CV.doc</span><span class="gray-light text-clip">was uploaded on<span class="resume-date">13/09/2016</span></span></small><small class="no-resume">
+                        <div class="messages no-margin">
+                          <!-- Use this block when user has uploaded CV successfully--><small class="have-resume"><span class="text-clip">Your resume</span><span class="resume-name text-clip">   Victor Lee CV.doc</span><span class="gray-light text-clip">was uploaded on<span class="resume-date">13/09/2016</span></span></small>
+                          <!-- Use this block when user has not uploaded CV yet--><small hidden="" class="no-resume">
                             <label for="profileAttachFile" class="m-t-xs"><a class="btn relative">Upload</a></label>
-                            <div class="note-resume"><span class="gray-light"><small>You can only attach .doc, .docx, and .pdf files that are less than 2MB in size</small></span></div></small></div>
+                            <div class="note-resume"><span class="gray-light"><small>You can only attach .doc, .docx, and .pdf files that are less than 2MB in size </small></span></div></small>
+                        </div>
                       </form>
                     </div>
                   </div>
