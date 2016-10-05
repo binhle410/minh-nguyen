@@ -103,7 +103,6 @@
 .main-profile {
     .box {
         background: #fff;
-        margin-bottom: 15px;
         border: 0;
         border-top: 1px solid #ddd;
         .border-radius(3px);
@@ -244,6 +243,10 @@
 
 .main-profile {
     .section-detail {
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
         legend {
             &.box-md {
                 color: #666!important;

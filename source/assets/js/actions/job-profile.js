@@ -5,8 +5,17 @@
  * 2.   getBnfList()    : Get Benefit list
  * 2.1. activeBnfItem() : Toggle class active on each benefit item label
  * 2.2. scanCkbox()     : Scan all checked checkboxes
+ * 3. addForm()         :  Add one more form in each section
+ * 3.1. delForm()       : Delete one form
+ * 4. toggleCttBox()    : Toggle contact box
+ * 5. tnSrchBtn()       : Turn on/off Searchable button
+ * 6. inputDateFm()     : Format date input
+ * 7. countRmCh()       : Count remaining characters when user types in textarea
+ * 8. addSkill()        : Add one more skill
+ * 8.1 delSkill()       : Delete a skill
+ * 9. linkAct()         : Trigger events when clicking elements
  *
- * _bnfList        : json Obj will be used for sending to server side.
+ * _bnfList             : json Obj will be used for sending to server side.
  */
 /* ----------------------------------------------- */
 /* ------------- FrontEnd Functions -------------- */

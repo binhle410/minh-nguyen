@@ -19342,7 +19342,6 @@ ul.pagination li a:focus {
 }
 .main-profile .box {
   background: #fff;
-  margin-bottom: 15px;
   border: 0;
   border-top: 1px solid #ddd;
   -webkit-border-radius: 3px;
@@ -19483,6 +19482,12 @@ ul.pagination li a:focus {
 }
 .main-profile .list-group .list-group-item a {
   color: #555;
+}
+.main-profile .section-detail {
+  margin-bottom: 15px;
+}
+.main-profile .section-detail:last-child {
+  margin-bottom: 0;
 }
 .main-profile .section-detail legend.box-md {
   color: #666!important;
@@ -19634,7 +19639,7 @@ ul.pagination li a:focus {
 .main-profile .profile-info p a {
   color: #de5749;
 }
-.main-profile .contact-information-toggler {
+.main-profile .btn.contact-information-toggler {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -19646,10 +19651,10 @@ ul.pagination li a:focus {
   background: #e0e0e0;
   border: none;
 }
-.main-profile .contact-information-toggler:hover {
+.main-profile .btn.contact-information-toggler:hover {
   background: #e0e0e0;
 }
-.main-profile .contact-information-toggler .fa {
+.main-profile .btn.contact-information-toggler .fa {
   margin-right: 3px;
 }
 .main-profile .view-control {
@@ -19898,6 +19903,9 @@ ul.pagination li a:focus {
 .main-profile .attached-cv .attached-cv-update .button-update .btn {
   padding: 0;
 }
+.main-profile .attached-cv .attached-cv-update .button-update input[type="file"] {
+  overflow: hidden;
+}
 .main-profile .switchery {
   background-color: #fff;
   border: 1px solid #dfdfdf;
@@ -19993,7 +20001,8 @@ ul.pagination li a:focus {
  * Updated on 04/10/16
  */
 .warning {
-  padding: 15px;
+  position: relative;
+  padding: 15px 30px 15px 15px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -20007,15 +20016,22 @@ ul.pagination li a:focus {
   margin-bottom: 15px;
 }
 .warning i.fa-info-circle {
-  color: #de5749;
+  color: #bf253d;
   font-size: 15px;
   margin-right: 5px;
 }
 .warning strong {
   margin-right: 5px;
 }
-.warning a {
+.warning .warning-msg {
+  position: absolute;
   color: #ccc;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translate(50%, -50%);
+  -moz-transform: translate(50%, -50%);
+  -ms-transform: translate(50%, -50%);
+  -o-transform: translate(50%, -50%);
 }
 /**
  * FOOTER CSS

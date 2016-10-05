@@ -4,7 +4,6 @@
             .form-wrapper.relative.no-edit-mode
                 .user-pic
                     form
-                        input(type='hidden', name='resume_id', value='3375529')
                         span.form-btn-edit.hidden-xs
                             button.btn(type='button')
                                 i.fa.fa-pencil
@@ -26,7 +25,7 @@
                         button.btn(type='button')
                             i.fa.fa-pencil
                     .profile-info
-                        .profile-itm.profile-name.clearfix
+                        .prof-itm.profile-name.clearfix
                             .name.pull-left
                                 .view-field
                                     h3.profile-name.text-orange Victor
@@ -43,7 +42,7 @@
                                         strong.text-red *
                                         |  First Name
                                     input.form-control(type='text', name='firstName', autofocus='', value='Victor')
-                        .profile-itm.prof-itm-sm
+                        .prof-itm.prof-itm-sm.clearfix
                             .view-field
                                 span.view-control Frontend Developer
                             .edit-field.form-group
@@ -51,7 +50,7 @@
                                     strong.text-red *
                                     |  Professional Title
                                 input.form-control(type='text', name='expectedPosition', value='Frontend Developer')
-                        .profile-itm.prof-itm-sm
+                        .prof-itm.prof-itm-sm.clearfix
                             .view-field
                                 span.year-of-ex-view-field
                                     span.view-control 1
@@ -61,25 +60,25 @@
                                     strong.text-red *
                                     |  Years of Experience
                                 input.form-control(type='text', name='yearOfExperience', maxlength='2', value='1')
-                        .profile-itm.new-graduate.prof-itm-sm
+                        .prof-itm.prof-itm-sm.clearfix
                             .view-field
                                 //- span.view-control
                             .edit-field.form-group.m-t-n-xs
                                 label
                                     input(type='checkbox', name='newGraduate', value='false')
                                     |    I am a new graduate / have no work experience
-                        .profile-itm.prof-itm-sm
+                        .prof-itm.prof-itm-sm.clearfix
                             .view-field.hidden-xs
                                 p
                                     span.text-gray-light Latest company:
-                                    a.current-company.clickable Staff.com
+                                    a.current-company Staff.com
                                     br
                                     span.text-gray-light Highest education:
-                                    a.current-highest-education.clickable Bachelors
+                                    a.current-highest-education Bachelors
                             .edit-field.text-right
                                 button.btn-cancel.btn(type='button') Cancel
                                 button.btn-save.btn.btn-primary(type='button') Save
-                        .profile-itm.download-resume.prof-itm-sm
+                        .prof-itm.prof-itm-sm.clearfix.download-resume
                             .view-field
                                 a.btn.btn-outline(href='javascript:;')
                                     i.fa.fa-fw.fa-file-pdf-o
