@@ -16951,6 +16951,39 @@ form {
 .guide-box .close-msg:hover {
   color: #bf253d;
 }
+.auto-dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.auto-dropdown.f-w {
+  display: block;
+}
+.auto-dropdown .auto-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  background: white;
+  z-index: 10;
+  padding: 10px 0;
+  -webkit-box-shadow: 0 0 3px rgba(0, 55, 72, 0.3);
+  -moz-box-shadow: 0 0 3px rgba(0, 55, 72, 0.3);
+  -ms-box-shadow: 0 0 3px rgba(0, 55, 72, 0.3);
+  -o-box-shadow: 0 0 3px rgba(0, 55, 72, 0.3);
+  box-shadow: 0 0 3px rgba(0, 55, 72, 0.3);
+  border: 1px solid #ddd;
+}
+.auto-dropdown .auto-content li {
+  display: block;
+  font-weight: 700;
+  padding: 10px 15px;
+  color: #555;
+}
+.auto-dropdown .auto-content li:hover {
+  background: #ddd;
+}
 /**
  * Page components
  *
@@ -19369,6 +19402,9 @@ ul.pagination li a:focus {
 .main-profile label.radio-inline input {
   margin-top: 3px;
 }
+.main-profile label.control-label {
+  margin-top: 35px;
+}
 .main-profile label input[type="checkbox"] {
   vertical-align: middle;
   margin: 0;
@@ -19378,6 +19414,7 @@ ul.pagination li a:focus {
   display: inline-block;
   margin-left: 3px;
   vertical-align: middle;
+  cursor: pointer;
 }
 .main-profile label small {
   font-size: 80%;
@@ -19700,79 +19737,6 @@ ul.pagination li a:focus {
   max-width: 135px;
   vertical-align: middle;
 }
-.main-profile .skill-input {
-  *zoom: 1;
-}
-.main-profile .skill-input:before,
-.main-profile .skill-input:after {
-  content: " ";
-  display: table;
-}
-.main-profile .skill-input:after {
-  clear: both;
-}
-.main-profile .skill-input:before,
-.main-profile .skill-input:after {
-  content: " ";
-  display: table;
-}
-.main-profile .skill-input:after {
-  clear: both;
-}
-.main-profile .skill-input:before,
-.main-profile .skill-input:after {
-  content: " ";
-  display: table;
-}
-.main-profile .skill-input:after {
-  clear: both;
-}
-.main-profile .skill-input:before,
-.main-profile .skill-input:after {
-  content: " ";
-  display: table;
-}
-.main-profile .skill-input:after {
-  clear: both;
-}
-.main-profile .skill-input:before,
-.main-profile .skill-input:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.main-profile .skill-input:after {
-  clear: both;
-}
-.main-profile .skill-input:before,
-.main-profile .skill-input:after {
-  content: " ";
-  display: table;
-}
-.main-profile .skill-input:after {
-  clear: both;
-}
-.main-profile .skill-input:before,
-.main-profile .skill-input:after {
-  content: " ";
-  display: table;
-}
-.main-profile .skill-input:after {
-  clear: both;
-}
-.main-profile .skill-input:before,
-.main-profile .skill-input:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.main-profile .skill-input:after {
-  clear: both;
-}
-.main-profile .skill-input .form-control {
-  width: 300px;
-  float: left;
-}
 .main-profile .skill-input .btn {
   margin-left: 10px;
   height: 40px;
@@ -19853,8 +19817,14 @@ ul.pagination li a:focus {
   font-size: 14px;
 }
 .section-working-preferences .expected-location-wrapper {
+  float: left;
   width: 50%;
-  margin-right: 5px;
+  padding-right: 15px;
+}
+.section-working-preferences .willing-relocate {
+  float: left;
+  width: 50%;
+  padding-left: 15px;
 }
 /**
  * SECTION SIDEBAR CSS
@@ -20175,6 +20145,9 @@ footer .copyright {
   .main-profile .section-detail legend.box-md {
     font-size: 16px;
   }
+  .main-profile label.control-label {
+    margin: 0;
+  }
 }
 /**
  * Media 480px-
@@ -20184,6 +20157,24 @@ footer .copyright {
 @media (max-width: 480px) {
   .main-profile .box-md {
     padding: 10px;
+  }
+  .section-working-preferences .expected-location-wrapper,
+  .section-working-preferences .willing-relocate {
+    width: auto;
+    padding: 0;
+    float: none;
+  }
+}
+@media (max-width: 360px) {
+  .main-profile .btn.btn-remove-this-section {
+    padding: 5px 10px;
+  }
+  .main-profile .skill-input .auto-dropdown {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .main-profile .skill-input .btn {
+    margin: 0;
   }
 }
 @media (max-width: 1200px) {

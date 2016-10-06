@@ -9,7 +9,30 @@
             padding: 10px;
         }
     }
-    .section-resume-header {
+    .section-working-preferences {
+        .expected-location-wrapper, .willing-relocate {
+            width: auto;
+            padding: 0;
+            float: none;
+        }
+    }
+}
 
+@media (max-width: 360px) {
+    .main-profile {
+        .btn {
+            &.btn-remove-this-section {
+                padding: 5px 10px;
+            }
+        }
+        .skill-input {
+            .auto-dropdown {
+                display: block;
+                margin-bottom: 10px;
+            }
+            .btn {
+                margin: 0;
+            }
+        }
     }
 }

@@ -722,7 +722,16 @@
                         <div class="content-section relative">
                           <div class="tags-edit"><span class="tag-xs"><span class="tag-name">CSS</span><a href="javascript:;"><i class="fa fa-fw fa-remove"></i></a></span><span class="tag-xs"><span class="tag-name">- Front-end Development</span><a href="javascript:;"><i class="fa fa-fw fa-remove"></i></a></span></div>
                           <div class="skill-input">
-                            <input type="text" name="skills[]" autofocus class="form-control">
+                            <div class="auto-dropdown">
+                              <input type="text" name="skills[]" autofocus class="form-control">
+                              <ul class="auto-content">
+                                <li data-id="1" data-name="Team working" class="auto-itm">Team working</li>
+                                <li data-id="2" data-name="Teacher" class="auto-itm">Teacher</li>
+                                <li data-id="3" data-name="TAA" class="auto-itm">TAA</li>
+                                <li data-id="4" data-name="Teaching" class="auto-itm">Teaching</li>
+                                <li data-id="5" data-name="Teen Services" class="auto-itm">Teen Services</li>
+                              </ul>
+                            </div>
                             <button type="button" class="btn"><i class="fa fa-plus"></i></button>
                           </div>
                         </div>
@@ -975,7 +984,6 @@
                             </div>
                             <div class="col-sm-4">
                               <div class="form-group">
-                                <div class="m-t-lg hidden-xs"></div>
                                 <label class="control-label">
                                   <input type="checkbox" name="currentExp" value="1" class="to-present-checkbox"><em>Current Job</em>
                                 </label>
@@ -1048,7 +1056,6 @@
                             </div>
                             <div class="col-sm-4">
                               <div class="form-group">
-                                <div class="m-t-lg hidden-xs"></div>
                                 <label class="control-label">
                                   <input type="checkbox" name="currentExp" value="1" class="to-present-checkbox"><em>Current Job</em>
                                 </label>
@@ -1334,7 +1341,7 @@
                           <div class="edit-field">
                             <div class="form-group">
                               <label>Achievements</label>
-                              <textarea rows="3" name="description" maxlength="5000" aria-hidden="true" class="form-control"><p>TOEIC 830</p></textarea>
+                              <textarea rows="3" name="description" maxlength="5000" aria-hidden="true" class="form-control"></textarea><em class="countdown gray-light">5000 character remaining</em>
                             </div>
                           </div>
                         </div>
@@ -1497,84 +1504,24 @@
                         <div class="col-sm-12 form-group">
                           <label for="expected-location"><strong style="display: none;" class="text-red edit-field">*</strong>Preferred Working Location</label>
                           <div class="clearfix">
-                            <div class="pull-left expected-location-wrapper">
+                            <div class="expected-location-wrapper">
                               <div style="display: none;" class="edit-field">
-                                <select name="expectedLocation[]" tabindex="-1" multiple class="form-control">
-                                  <option selected="" value="29">Singapore</option>
-                                  <option value="24">Ha Noi</option>
-                                  <option value="71">Mekong Delta</option>
-                                  <option value="2">An Giang</option>
-                                  <option value="3">Ba Ria - Vung Tau</option>
-                                  <option value="4">Bac Can</option>
-                                  <option value="5">Bac Giang</option>
-                                  <option value="6">Bac Lieu</option>
-                                  <option value="7">Bac Ninh</option>
-                                  <option value="8">Ben Tre</option>
-                                  <option value="9">Bien Hoa</option>
-                                  <option value="10">Binh Dinh</option>
-                                  <option selected="" value="11">Binh Duong</option>
-                                  <option value="12">Binh Phuoc</option>
-                                  <option value="13">Binh Thuan</option>
-                                  <option value="14">Ca Mau</option>
-                                  <option value="15">Can Tho</option>
-                                  <option value="16">Cao Bang</option>
-                                  <option selected="" value="17">Da Nang</option>
-                                  <option value="18">Dac Lac</option>
-                                  <option value="69">Dien Bien</option>
-                                  <option value="19">Dong Nai</option>
-                                  <option value="20">Dong Thap</option>
-                                  <option value="21">Gia Lai</option>
-                                  <option value="22">Ha Giang</option>
-                                  <option value="23">Ha Nam</option>
-                                  <option value="25">Ha Tay</option>
-                                  <option value="26">Ha Tinh</option>
-                                  <option value="27">Hai Duong</option>
-                                  <option value="28">Hai Phong</option>
-                                  <option value="30">Hoa Binh</option>
-                                  <option value="31">Hue</option>
-                                  <option value="32">Hung Yen</option>
-                                  <option value="33">Khanh Hoa</option>
-                                  <option value="34">Kon Tum</option>
-                                  <option value="35">Lai Chau</option>
-                                  <option value="36">Lam Dong</option>
-                                  <option value="37">Lang Son</option>
-                                  <option value="38">Lao Cai</option>
-                                  <option value="39">Long An</option>
-                                  <option value="40">Nam Dinh</option>
-                                  <option value="41">Nghe An</option>
-                                  <option value="42">Ninh Binh</option>
-                                  <option value="43">Ninh Thuan</option>
-                                  <option value="44">Phu Tho</option>
-                                  <option value="45">Phu Yen</option>
-                                  <option value="46">Quang Binh</option>
-                                  <option value="47">Quang Nam</option>
-                                  <option value="48">Quang Ngai</option>
-                                  <option value="49">Quang Ninh</option>
-                                  <option value="50">Quang Tri</option>
-                                  <option value="51">Soc Trang</option>
-                                  <option value="52">Son La</option>
-                                  <option value="53">Tay Ninh</option>
-                                  <option value="54">Thai Binh</option>
-                                  <option value="55">Thai Nguyen</option>
-                                  <option value="56">Thanh Hoa</option>
-                                  <option value="57">Thua Thien-Hue</option>
-                                  <option value="58">Tien Giang</option>
-                                  <option value="59">Tra Vinh</option>
-                                  <option value="60">Tuyen Quang</option>
-                                  <option value="61">Kien Giang</option>
-                                  <option value="62">Vinh Long</option>
-                                  <option value="63">Vinh Phuc</option>
-                                  <option value="65">Yen Bai</option>
-                                  <option value="66">Other</option>
-                                  <option value="70">International</option>
-                                  <option value="72">Hau Giang</option>
-                                </select><small class="legend">(Maximum 3 locations)</small>
+                                <div class="auto-dropdown f-w">
+                                  <input type="text" autofocus class="form-control">
+                                  <ul class="auto-content">
+                                    <li data-id="1" data-name="Singapore" class="auto-itm">Singapore</li>
+                                    <li data-id="2" data-name="Ha noi" class="auto-itm">Ha noi</li>
+                                    <li data-id="3" data-name="Mekong Delta" class="auto-itm">Mekong Delta</li>
+                                    <li data-id="41" data-name="An Giang" class="auto-itm">An Giang</li>
+                                    <li data-id="5" data-name="Bac Ninh" class="auto-itm">Bac Ninh</li>
+                                  </ul>
+                                </div><small class="legend">(Maximum 3 locations)</small>
                               </div>
                               <div style="display: block;" class="view-field">
                                 <p class="form-control-static view-control">Singapore, Malaysia, USA</p>
                               </div>
                             </div>
-                            <div class="pull-left m-l-xs">
+                            <div class="willing-relocate">
                               <div style="display: block;" class="view-field">
                                 <p class="form-control-static"><em class="view-control"></em></p>
                               </div>
@@ -1591,78 +1538,16 @@
                         <div class="col-sm-6 form-group">
                           <label for="expected-job-category"><strong style="display: none;" class="text-red edit-field">*</strong>Expected Job Category</label>
                           <div style="display: none;" class="edit-field">
-                            <select name="expectedJobCategory[]" tabindex="-1" multiple class="form-control">
-                              <option value="72">Printing</option>
-                              <option value="73">Restaurant/Hotel</option>
-                              <option value="74">FMCG</option>
-                              <option value="75">Household</option>
-                              <option value="76">HVAC</option>
-                              <option value="77">Geology/Mineral</option>
-                              <option value="78">Doctors</option>
-                              <option value="79">Doctors/nurses</option>
-                              <option value="80">Pharmacist</option>
-                              <option value="81">Pharmaceutical representatives</option>
-                              <option value="82">Marine</option>
-                              <option value="83">HSE</option>
-                              <option value="84">Maintenance</option>
-                              <option value="1">Accounting</option>
-                              <option value="58">Auditing</option>
-                              <option value="67">Auto/Automotive</option>
-                              <option value="2">Administrative/Clerical</option>
-                              <option value="3">Advertising/Promotion/PR</option>
-                              <option value="4">Agriculture/Forestry</option>
-                              <option value="5">Architecture/Interior Design</option>
-                              <option value="22">Health/Medical Care</option>
-                              <option value="10">Arts/Design</option>
-                              <option value="42">Banking</option>
-                              <option value="43">Chemical/Biochemical</option>
-                              <option value="7">Civil/Construction</option>
-                              <option value="68">Industrial Products</option>
-                              <option value="8">Consulting</option>
-                              <option value="11">Customer Service</option>
-                              <option value="12">Education/Training</option>
-                              <option value="64">Electrical/Electronics</option>
-                              <option value="15">Entry level</option>
-                              <option value="16">Environment/Waste Services</option>
-                              <option value="17">Executive management</option>
-                              <option value="18">Expatriate Jobs in Vietnam</option>
-                              <option value="19">Export-Import</option>
-                              <option value="54">Food & Beverage</option>
-                              <option value="59">Finance/Investment</option>
-                              <option value="63">Fashion/Lifestyle</option>
-                              <option value="66">High Technology</option>
-                              <option value="23">Human Resources</option>
-                              <option value="24">Insurance</option>
-                              <option value="47">Interpreter/Translator</option>
-                              <option value="55">IT - Hardware/Networking</option>
-                              <option value="57">Internet/Online Media</option>
-                              <option selected="" value="35">IT - Software</option>
-                              <option value="25">Legal/Contracts</option>
-                              <option value="62">Luxury Goods</option>
-                              <option value="65">Mechanical</option>
-                              <option value="27">Marketing</option>
-                              <option value="21">NGO/Non-Profit</option>
-                              <option value="28">Oil/Gas</option>
-                              <option value="6">Pharmaceutical/Biotech</option>
-                              <option value="69">Planning/Projects</option>
-                              <option value="26">Production/Process</option>
-                              <option value="49">Merchandising/Purchasing/Supply Chain</option>
-                              <option value="30">Real Estate</option>
-                              <option value="32">Retail/Wholesale</option>
-                              <option value="33">Sales</option>
-                              <option value="34">Sales Technical</option>
-                              <option value="56">Securities & Trading</option>
-                              <option value="41">Telecommunications</option>
-                              <option value="51">Temporary/Contract</option>
-                              <option value="52">Textiles/Garments/Footwear</option>
-                              <option value="37">Airlines/Tourism</option>
-                              <option value="48">TV/Media/Newspaper</option>
-                              <option value="36">Freight/Logistics</option>
-                              <option value="53">Warehouse</option>
-                              <option value="70">QA/QC</option>
-                              <option value="71">Overseas Jobs</option>
-                              <option value="39">Other</option>
-                            </select><small class="legend">(Maximum 3 categories)</small>
+                            <div class="auto-dropdown f-w">
+                              <input type="text" class="form-control">
+                              <ul class="auto-content">
+                                <li data-id="1" data-name="Programmer" class="auto-itm">Programmer</li>
+                                <li data-id="2" data-name="Teacher" class="auto-itm">Teacher</li>
+                                <li data-id="3" data-name="Artist" class="auto-itm">Artist</li>
+                                <li data-id="4" data-name="Athletes" class="auto-itm">Athletes</li>
+                                <li data-id="5" data-name="Lecturer" class="auto-itm">Lecturer</li>
+                              </ul>
+                            </div><small class="legend">(Maximum 3 categories)</small>
                           </div>
                           <div style="display: block;" class="view-field">
                             <p class="form-control-static view-control">IT - Software</p>
