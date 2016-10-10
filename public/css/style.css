@@ -18716,7 +18716,6 @@ form {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   background: #ccc;
-  overflow: hidden;
 }
 .j-search-form .frow {
   margin: 0 -5px;
@@ -18982,6 +18981,9 @@ form {
 .job:first-child {
   margin: 0;
 }
+.job:hover {
+  background: #eee;
+}
 .job.job-hot {
   background: #fffcfc;
   border: 1px solid #de5749;
@@ -19171,13 +19173,41 @@ ul.pagination li:last-child a:focus {
   background: #bcbcbc;
   border-color: transparent;
 }
-ul.pagination li.active a {
-  background: #de5749;
-  border-color: transparent;
+ul.pagination li:first-child span,
+ul.pagination li:last-child span {
+  display: inline-block;
+  background: white;
+  border-color: #ccc;
+  color: #555;
+  cursor: not-allowed;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
-ul.pagination li.active a:hover {
+ul.pagination li.active span {
+  display: inline-block;
   background: #de5749;
   border-color: transparent;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+ul.pagination li.active span:hover {
+  background: #de5749;
+  border: none;
 }
 ul.pagination li a {
   background: white;
@@ -19189,6 +19219,20 @@ ul.pagination li a:focus {
   color: white;
   background: #bcbcbc;
   border-color: transparent;
+}
+ul.pagination li span {
+  text-align: center;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  line-height: 39px;
+  display: inline-block;
+  background: white;
+  border-color: #ccc;
+  color: #555;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 /**
  * JOB SEARCH: RIGHT COLUMN CSS

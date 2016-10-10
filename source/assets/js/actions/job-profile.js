@@ -14,9 +14,6 @@
  * 8. addSkill()        : Add one more skill
  * 8.1 delSkill()       : Delete a skill
  * 9. linkAct()         : Trigger events when clicking elements
- * 10. debounceInp(): Delay an amount of time before sending AJAX request to server
- * 10.1. ajax_lookup(): Perform AJAX request after debouncing input
- * 10.2 Save id of autocomplete box items for sending AJAX requests later
  *
  * _bnfList             : json Obj will be used for sending to server side.
  */
@@ -286,52 +283,6 @@ function linkAct() {
     });
 }
 
-// 10. debounceInp(): Delay an amount of time before sending AJAX request to server
-function debounceInp() {
-    if(!$(".auto-dropdown input.form-control").length) { return; }
-
-    var $auto_inp = $(".auto-dropdown input.form-control");
-    $auto_inp.keyup( $.debounce( 250, ajax_lookup ) );
-}
-
-// 10.1. ajax_lookup(): Perform AJAX request after debouncing input
-function ajax_lookup() {
-    var $auto_box = $(this).next(),
-        $auto_itm = $auto_box.find(".auto-itm");
-    // Show autocomplete box
-    $auto_box.show();
-
-    // Hide the autocomplete box when user clicks outside of it.
-    $(this).next().bind("clickoutside", function(event){
-        $(this).hide();
-    });
-
-    // Perform an AJAX GET lookup on $(this).val();
-    // ..........
-    // END: AJAX GET.
-
-    // Save id of autocomplete box items for sending AJAX requests later
-    saveItemId($auto_itm);
-}
-
-// 10.2 Save id of autocomplete box items for sending AJAX requests later
-function saveItemId($itm) {
-    var sendingData = [];
-
-    $itm.on("click", function(e) {
-        var itmObj = {
-                        "id"   : $(this).data("id"),
-                        "name" : $(this).data("name")
-                    }
-        sendingData.push(itmObj);
-        console.log(sendingData);
-    });
-
-    // Sending AJAX here
-    // ...
-    // END: Sending AjAX
-}
-
 /* ----------------------------------------------- */
 /* ----------------------------------------------- */
 /* OnLoad Page */
@@ -349,7 +300,6 @@ $(document).ready(function($){
     addSkill();
     delSkill();
     linkAct();
-    debounceInp();
 });
 /* OnLoad Window */
 var init = function () {

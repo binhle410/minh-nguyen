@@ -134,8 +134,16 @@
                   <form action="#" method="POST" name="search-form" class="form-inline form-adjacent">
                     <div class="search-group clearfix">
                       <div class="form-group col-sm-4 keyword-search">
-                        <div class="border-text-box"><span class="twitter-typeahead">
-                            <input type="text" name="keyword" value="" placeholder="Enter job title, position, skills..." class="form-control job-typeahead"></span></div>
+                        <div class="border-text-box auto-dropdown f-w">
+                          <input type="text" name="keyword" value="" placeholder="Enter job title, position, skills..." class="form-control job-typeahead">
+                          <ul class="auto-content">
+                            <li data-id="1" data-name="Programmer" class="auto-itm">Programmer</li>
+                            <li data-id="2" data-name="Teacher" class="auto-itm">Teacher</li>
+                            <li data-id="3" data-name="Artist" class="auto-itm">Artist</li>
+                            <li data-id="4" data-name="Athletes" class="auto-itm">Athletes</li>
+                            <li data-id="5" data-name="Lecturer" class="auto-itm">Lecturer</li>
+                          </ul>
+                        </div>
                       </div>
                       <div class="form-group col-sm-3 category-search">
                         <div class="border-text-box">
