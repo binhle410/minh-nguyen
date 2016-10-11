@@ -6,6 +6,21 @@
                 |  Media
             .content-section
                 .form-wrapper.box-md
+                    .add-media.well.well-sm.dash
+                        form
+                            .row
+                                .media-upl.t-c.col-md-5
+                                    p.media-desc Upload file .doc, .docx, .pdf, .mp4 only.
+                                    input.hidden(type="file", name="media-upl", id="media-upl")
+                                    label.btn(for="media-upl") Upload
+                                    span.text-or
+                                        span.line
+                                        span.or-ct OR
+                                .media-youtb.t-c.col-md-5
+                                    p.media-desc You can copy & paste to embed a youtube video. Ex: https://youtu.be/*gwH8D4y5ZnM*
+                                    input.form-control(type="text", name="youtb-link", placeholder="YouTube embed code")
+                                .media-btn-group.t-c.col-md-2
+                                    a.btn.btn-primary(href="javascript:;") ADD
                     .table-responsive
                         table.table
                             tr.tbl-head

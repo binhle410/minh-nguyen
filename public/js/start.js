@@ -76,38 +76,6 @@ function slider() {
     });
 }
 
-// 5. drdownSrch(): Create a search dropdown when user type in search input
-//$("#job-search")
-// JOBS is a preloaded data 
-var jobs = [
-            { value: 'Programmer', data: 'AD' },
-            { value: 'Accountant', data: 'Corel abc' },
-            { value: 'Accenture Consulting Internship Opportunity', data: 'Accenture' },
-            { value: 'PHP - Java Development Project Leader', data: 'Java' },
-            { value: 'Design Quality Officer', data: 'Design' },
-            { value: 'Internship Opportunity', data: 'Internship' }
-        ];
-function drdownSrch(objClass, preData, fnCallback) {
-    if(!$(objClass).length) { return; }
-
-    // SEARCH SUB
-    $(objClass).autocomplete({
-        lookup: preData,
-        onSelect: function (suggestion) {
-            // Handler
-            if (typeof fnCallback == 'function') {
-                fnCallback(suggestion);
-            }
-        }
-    });
-}
-
-
-// Callback when searching and select 1
-function anyFnCallbackSelect(suggestion) {
-    console.log('This is selected item', suggestion);
-}
-
 /* ----------------------------------------------- */
 /* ----------------------------------------------- */
 /* OnLoPSD Page */
@@ -116,7 +84,6 @@ $(document).ready(function($){
     scrollbar();
     toggleMenu();
     slider();
-    drdownSrch('#job-search', jobs, anyFnCallbackSelect);
 });
 /* OnLoad Window */
 var init = function () {

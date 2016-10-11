@@ -19910,6 +19910,83 @@ ul.pagination li span {
  * SECTION PROFILE CSS
  * Updated on 01/10/16
  */
+.add-media {
+  height: 110px;
+}
+.add-media .media-upl {
+  margin-top: 15px;
+  font-size: 12px;
+}
+.add-media label {
+  font-weight: normal;
+}
+.add-media .text-or {
+  font-weight: bold;
+  color: #555;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.add-media .text-or .line {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 50px;
+  background: #555;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.add-media .text-or .or-ct {
+  position: relative;
+  z-index: 5;
+  background: white;
+  display: inline-block;
+  padding: 3px 0;
+}
+.add-media .media-youtb {
+  font-size: 12px;
+}
+.add-media .form-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 14px;
+  color: #ccc;
+}
+.add-media .form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 14px;
+  color: #ccc;
+}
+.add-media .form-control:-ms-input-placeholder {
+  /* IE 10+ */
+  font-size: 14px;
+  color: #ccc;
+}
+.add-media .form-control:-moz-placeholder {
+  /* Firefox 18- */
+  font-size: 14px;
+  color: #ccc;
+}
+.add-media .media-btn-group {
+  height: 90px;
+}
+.add-media .media-btn-group .btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
 .table {
   margin: 0;
   font-size: 12px;
@@ -20348,6 +20425,19 @@ footer .copyright {
   .j-search-form .form-inline .btn-search {
     font-size: 14px;
     padding: 10px 0;
+  }
+}
+@media (max-width: 991px) {
+  .add-media {
+    height: auto;
+  }
+  .add-media .text-or {
+    position: relative;
+    display: block;
+    margin: 35px 0 10px;
+  }
+  .add-media .media-btn-group {
+    height: 50px;
   }
 }
 @media (min-width: 768px) {

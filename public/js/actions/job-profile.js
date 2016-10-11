@@ -286,7 +286,7 @@ function linkAct() {
 /* ----------------------------------------------- */
 /* ----------------------------------------------- */
 /* OnLoad Page */
-$(document).ready(function($){
+$(document).ready(function($) {
     editForms();
     cancelEdit();
     getBnfList();

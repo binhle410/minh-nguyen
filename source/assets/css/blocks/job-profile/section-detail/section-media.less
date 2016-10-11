@@ -3,6 +3,73 @@
  * Updated on 01/10/16
  */
 
+.add-media {
+    height: 110px;
+    .media-upl {
+        margin-top: 15px;
+        font-size: 12px;
+    }
+    label {
+        font-weight: normal;
+    }
+    .text-or {
+        font-weight: bold;
+        color: #555;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        .transform(translateY(-50%));
+        .line {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 50px;
+            background: #555;
+            left: 50%;
+            top: 50%;
+            .transform(translate(-50%, -50%));
+            z-index: 1;
+        }
+        .or-ct {
+            position: relative;
+            z-index: 5;
+            background: white;
+            display: inline-block;
+            padding: 3px 0;
+        }
+    }
+    .media-youtb {
+        font-size: 12px;
+    }
+    .form-control {
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            font-size: 14px;
+            color: #ccc;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+            font-size: 14px;
+            color: #ccc;
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+            font-size: 14px;
+            color: #ccc;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+            font-size: 14px;
+            color: #ccc;
+        }
+    }
+    .media-btn-group {
+        height: 90px;
+        .btn {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            .transform(translate(-50%, -50%));
+        }
+    }
+}
+
 .table {
     margin: 0;
     font-size: 12px;
@@ -30,3 +97,4 @@
         color: @red;
     }
 }
+

@@ -58,6 +58,10 @@ module.exports = function(grunt) {
         src: 'source/assets/js/actions/job-profile.js',
         dest: 'public/js/actions/job-profile.js'
       },
+      search_job_js: {
+        src: 'source/assets/js/actions/search_job.plg.js',
+        dest: 'public/js/actions/search_job.plg.js'
+      },
       template: {
         src: 'source/assets/js/template.js',
         dest: 'public/js/template.js'

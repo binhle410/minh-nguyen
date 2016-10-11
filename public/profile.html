@@ -1730,6 +1730,22 @@
                   <legend class="box-md"><i class="fa fa-fw fa-cubes"></i> Media</legend>
                   <div class="content-section">
                     <div class="form-wrapper box-md">
+                      <div class="add-media well well-sm dash">
+                        <form>
+                          <div class="row">
+                            <div class="media-upl t-c col-md-5">
+                              <p class="media-desc">Upload file .doc, .docx, .pdf, .mp4 only.</p>
+                              <input type="file" name="media-upl" id="media-upl" class="hidden">
+                              <label for="media-upl" class="btn">Upload</label><span class="text-or"><span class="line"> </span><span class="or-ct">OR</span></span>
+                            </div>
+                            <div class="media-youtb t-c col-md-5">
+                              <p class="media-desc">You can copy & paste to embed a youtube video. Ex: https://youtu.be/*gwH8D4y5ZnM*</p>
+                              <input type="text" name="youtb-link" placeholder="YouTube embed code" class="form-control">
+                            </div>
+                            <div class="media-btn-group t-c col-md-2"><a href="javascript:;" class="btn btn-primary">ADD</a></div>
+                          </div>
+                        </form>
+                      </div>
                       <div class="table-responsive">
                         <table class="table">
                           <tr class="tbl-head">
@@ -1762,7 +1778,7 @@
                           </tr>
                           <tr>
                             <td class="ico-youtube"><i class="fa fa-youtube"></i></td>
-                            <td> <a href="#">https://www.youtube.com/watch?v=hnc_qF-WnmI</a></td>
+                            <td><a href="#">https://www.youtube.com/watch?v=hnc_qF-WnmI</a></td>
                             <td class="t-c">-</td>
                             <td class="t-c">01:20:06 - 08.10.2016</td>
                             <td class="t-c"><a href="javascript:;" class="del-row"><i class="fa fa-trash-o"></i></a></td>
@@ -1997,6 +2013,7 @@
       <!-- Custom JS-->
       <script type="text/javascript" src="js/start.js"></script>
       <script type="text/javascript" src="js/actions/job-profile.js"></script>
+      <script type="text/javascript" src="./js/actions/search_job.plg.js"></script>
     </div>
   </body>
 </html>
