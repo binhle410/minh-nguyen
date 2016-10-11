@@ -77,36 +77,35 @@ function slider() {
 }
 
 // 5. drdownSrch(): Create a search dropdown when user type in search input
-function drdownSrch() {
-    if(!$("#job-search").length) { return; }
+//$("#job-search")
+// JOBS is a preloaded data 
+var jobs = [
+            { value: 'Programmer', data: 'AD' },
+            { value: 'Accountant', data: 'Corel abc' },
+            { value: 'Accenture Consulting Internship Opportunity', data: 'Accenture' },
+            { value: 'PHP - Java Development Project Leader', data: 'Java' },
+            { value: 'Design Quality Officer', data: 'Design' },
+            { value: 'Internship Opportunity', data: 'Internship' }
+        ];
+function drdownSrch(objClass, preData, fnCallback) {
+    if(!$(objClass).length) { return; }
 
-    var jobs = [
-                        { value: 'Programmer', data: 'AD' },
-                        { value: 'Accountant', data: 'Corel abc' },
-                        { value: 'Accountant dsgds gdsghs dhdfhfdhdf hdfhdf hfdh dhdf hdfh dfhfdh dfhfd hfdhd fhfd hfdh dfhdfh fd', data: 'Corel sfsf' }
-                    ];
-
-    $("#job-search").autocomplete({
-        lookup: jobs,
+    // SEARCH SUB
+    $(objClass).autocomplete({
+        lookup: preData,
         onSelect: function (suggestion) {
             // Handler
+            if (typeof fnCallback == 'function') {
+                fnCallback(suggestion);
+            }
         }
     });
+}
 
-    // if(!$("$skill-srch").length) { return; }
 
-    // var skills = [
-    //                     { value: 'PSD', data: 'PSD' },
-    //                     { value: 'HTML', data: 'HTML' },
-    //                     { value: 'CSS', data: 'CSS' },
-    //                     { value: 'Corel', data: 'Corel' }
-    //                 ];
-    // $("$skill-srch").autocomplete({
-    //     lookup: skills,
-    //     onSelect: function (suggestion) {
-    //         // Handler
-    //     }
-    // });
+// Callback when searching and select 1
+function anyFnCallbackSelect(suggestion) {
+    console.log('This is selected item', suggestion);
 }
 
 /* ----------------------------------------------- */
@@ -117,10 +116,7 @@ $(document).ready(function($){
     scrollbar();
     toggleMenu();
     slider();
-    drdownSrch();
-
-
-
+    drdownSrch('#job-search', jobs, anyFnCallbackSelect);
 });
 /* OnLoad Window */
 var init = function () {
