@@ -16713,288 +16713,6 @@ ul {
   clear: both;
 }
 /**
- * ALLPAGE CSS
- * Updated on 22/09/16
- */
-.page-wrapper {
-  background: transparent;
-}
-body.job-search-pg {
-  background: #eee;
-}
-body.bodyover {
-  overflow: hidden;
-}
-.home .main {
-  background: white;
-  overflow: hidden;
-}
-.main .feature {
-  margin-top: 10px!important;
-  margin-bottom: 10px;
-  display: block;
-}
-.main .panel {
-  border: 1px #e5e5e5 solid;
-  box-shadow: 0 3px 13px #333;
-}
-.text-clip {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
-  vertical-align: middle;
-}
-.dred {
-  color: #de5749 !important;
-  background-color: transparent;
-}
-.center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.relative {
-  position: relative;
-}
-.absolute {
-  position: absolute;
-}
-.absolute-left {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.absolute-right {
-  position: absolute;
-  right: 0;
-}
-.transparent {
-  opacity: 0;
-}
-.block {
-  display: block;
-}
-.clickable {
-  cursor: pointer;
-}
-form {
-  margin: 0;
-}
-.form-wrapper {
-  background: #fff;
-  border: 1px solid transparent;
-  border-left: 0;
-  margin: 0;
-}
-.form-wrapper:hover {
-  border-left: 0;
-  box-shadow: 0 0 5px #ccc;
-  z-index: 2;
-}
-.form-wrapper:hover .form-btn-edit {
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
-.form-wrapper .form-btn-edit {
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-.form-horizontal .form-group {
-  margin-bottom: 10px;
-  margin-left: 0;
-  margin-right: 0;
-}
-.bg-gray {
-  background: #f4f4f4!important;
-}
-.gray-light {
-  color: #999!important;
-}
-.border-primary {
-  border-left: 5px solid #de5749;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-}
-.border-success {
-  border-left: 5px solid #5cb85c;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-}
-.m-t {
-  margin-top: 15px;
-}
-.m-b {
-  margin-bottom: 15px;
-}
-.m-b-n {
-  margin-bottom: -15px;
-}
-.m-b-none {
-  margin-bottom: 0;
-}
-.m-r-xs {
-  margin-right: 5px;
-}
-.m-t-sm {
-  margin-top: 10px;
-}
-.m-t-n-lg {
-  margin-top: -30px;
-}
-.m-t-xs {
-  margin-top: 5px;
-}
-.no-padding {
-  padding: 0!important;
-}
-.no-margin {
-  margin: 0!important;
-}
-.push-top-15,
-.push-top-sm {
-  margin-top: 15px;
-}
-.scrollToTop {
-  width: 30px;
-  height: 30px;
-  bottom: 15px;
-}
-.scrollToTop i {
-  line-height: 30px;
-  font-size: 15px;
-}
-.text-gray-light {
-  color: #999;
-}
-.text-success {
-  color: #5cb85c!important;
-}
-.text-info {
-  color: #00b9f2;
-}
-.text-red {
-  color: #de5749 !important;
-}
-.placeholder {
-  color: #999;
-  font-style: italic;
-}
-.well {
-  background: inherit;
-}
-.well.dash {
-  border: 1px dashed #ccc;
-}
-.guide-box {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  -webkit-transform: translate(-103%, -50%);
-  -moz-transform: translate(-103%, -50%);
-  -ms-transform: translate(-103%, -50%);
-  -o-transform: translate(-103%, -50%);
-  background: #00b9f2;
-  padding: 10px 15px 10px 30px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  color: white;
-  -webkit-box-shadow: 0 0 30px rgba(0, 55, 72, 0.3);
-  -moz-box-shadow: 0 0 30px rgba(0, 55, 72, 0.3);
-  -ms-box-shadow: 0 0 30px rgba(0, 55, 72, 0.3);
-  -o-box-shadow: 0 0 30px rgba(0, 55, 72, 0.3);
-  box-shadow: 0 0 30px rgba(0, 55, 72, 0.3);
-}
-.guide-box:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  top: 50%;
-  right: -5px;
-  margin-top: -5px;
-  border-width: 5px 0 5px 6px;
-  border-left-color: #00b9f2;
-}
-.guide-box .close-msg {
-  position: absolute;
-  top: 50%;
-  left: 15px;
-  color: #2ba3d0;
-  margin-right: 10px;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-}
-.guide-box .close-msg:hover {
-  color: #bf253d;
-}
-.auto-dropdown {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-}
-.auto-dropdown.f-w {
-  display: block;
-}
-.auto-dropdown .auto-content {
-  display: none;
-  position: absolute;
-  width: 100%;
-  top: 100%;
-  left: 0;
-  background: white;
-  z-index: 10;
-  padding: 10px 0;
-  -webkit-box-shadow: 0 0 3px rgba(0, 55, 72, 0.3);
-  -moz-box-shadow: 0 0 3px rgba(0, 55, 72, 0.3);
-  -ms-box-shadow: 0 0 3px rgba(0, 55, 72, 0.3);
-  -o-box-shadow: 0 0 3px rgba(0, 55, 72, 0.3);
-  box-shadow: 0 0 3px rgba(0, 55, 72, 0.3);
-  border: 1px solid #ddd;
-}
-.auto-dropdown .auto-content li {
-  display: block;
-  font-weight: 700;
-  padding: 10px 15px;
-  color: #555;
-}
-.auto-dropdown .auto-content li:hover {
-  background: #ddd;
-}
-/**
- * Page components
- *
- * Description: This is the most accessible LESS file. For creating stucture of a LESS project
- * There're some simple rules:
- *  - use base rule on this file. E.g. every single rule/indent or each component. To generate the fast view for the parent components
- *  - for children rules put it in matched folders and import it in parent's section
- *
- */
-/* ================================= */
-/**
  * PLUGIN CSS
  * Updated on 22/09/16
  */
@@ -18011,6 +17729,324 @@ form {
 .scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
   top: -12px;
 }
+/*
+ *  Autocomplete Plugin
+ */
+.autocomplete-suggestions {
+  border: 1px solid #999;
+  background: #FFF;
+  overflow: auto;
+}
+.autocomplete-suggestion {
+  padding: 2px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.autocomplete-selected {
+  background: #eee;
+}
+.autocomplete-suggestions strong {
+  font-weight: normal;
+  color: #3399FF;
+}
+.autocomplete-group {
+  padding: 2px 5px;
+}
+.autocomplete-group strong {
+  display: block;
+  border-bottom: 1px solid #000;
+}
+/**
+ * ALLPAGE CSS
+ * Updated on 22/09/16
+ */
+.page-wrapper {
+  background: transparent;
+}
+body.job-search-pg {
+  background: #eee;
+}
+body.bodyover {
+  overflow: hidden;
+}
+.home .main {
+  background: white;
+  overflow: hidden;
+}
+.main .feature {
+  margin-top: 10px!important;
+  margin-bottom: 10px;
+  display: block;
+}
+.main .panel {
+  border: 1px #e5e5e5 solid;
+  box-shadow: 0 3px 13px #333;
+}
+.text-clip {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  vertical-align: middle;
+}
+.dred {
+  color: #de5749 !important;
+  background-color: transparent;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.absolute-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.absolute-right {
+  position: absolute;
+  right: 0;
+}
+.transparent {
+  opacity: 0;
+}
+.block {
+  display: block;
+}
+.clickable {
+  cursor: pointer;
+}
+form {
+  margin: 0;
+}
+.form-wrapper {
+  background: #fff;
+  border: 1px solid transparent;
+  border-left: 0;
+  margin: 0;
+}
+.form-wrapper:hover {
+  border-left: 0;
+  box-shadow: 0 0 5px #ccc;
+  z-index: 2;
+}
+.form-wrapper:hover .form-btn-edit {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.form-wrapper .form-btn-edit {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.form-horizontal .form-group {
+  margin-bottom: 10px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.bg-gray {
+  background: #f4f4f4!important;
+}
+.gray-light {
+  color: #999!important;
+}
+.border-primary {
+  border-left: 5px solid #de5749;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.border-success {
+  border-left: 5px solid #5cb85c;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.m-t {
+  margin-top: 15px;
+}
+.m-b {
+  margin-bottom: 15px;
+}
+.m-b-n {
+  margin-bottom: -15px;
+}
+.m-b-none {
+  margin-bottom: 0;
+}
+.m-r-xs {
+  margin-right: 5px;
+}
+.m-t-sm {
+  margin-top: 10px;
+}
+.m-t-n-lg {
+  margin-top: -30px;
+}
+.m-t-xs {
+  margin-top: 5px;
+}
+.no-padding {
+  padding: 0!important;
+}
+.no-margin {
+  margin: 0!important;
+}
+.push-top-15,
+.push-top-sm {
+  margin-top: 15px;
+}
+.scrollToTop {
+  width: 30px;
+  height: 30px;
+  bottom: 15px;
+}
+.scrollToTop i {
+  line-height: 30px;
+  font-size: 15px;
+}
+.text-gray-light {
+  color: #999;
+}
+.text-success {
+  color: #5cb85c!important;
+}
+.text-info {
+  color: #00b9f2;
+}
+.text-red {
+  color: #de5749 !important;
+}
+.placeholder {
+  color: #999;
+  font-style: italic;
+}
+.well {
+  background: inherit;
+}
+.well.dash {
+  border: 1px dashed #ccc;
+}
+.guide-box {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-103%, -50%);
+  -moz-transform: translate(-103%, -50%);
+  -ms-transform: translate(-103%, -50%);
+  -o-transform: translate(-103%, -50%);
+  background: #00b9f2;
+  padding: 10px 15px 10px 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  color: white;
+  -webkit-box-shadow: 0 0 30px rgba(0, 55, 72, 0.3);
+  -moz-box-shadow: 0 0 30px rgba(0, 55, 72, 0.3);
+  -ms-box-shadow: 0 0 30px rgba(0, 55, 72, 0.3);
+  -o-box-shadow: 0 0 30px rgba(0, 55, 72, 0.3);
+  box-shadow: 0 0 30px rgba(0, 55, 72, 0.3);
+}
+.guide-box:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  top: 50%;
+  right: -5px;
+  margin-top: -5px;
+  border-width: 5px 0 5px 6px;
+  border-left-color: #00b9f2;
+}
+.guide-box .close-msg {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  color: #2ba3d0;
+  margin-right: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.guide-box .close-msg:hover {
+  color: #bf253d;
+}
+.auto-dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.auto-dropdown.f-w {
+  display: block;
+}
+.auto-dropdown .auto-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  background: white;
+  z-index: 10;
+  padding: 10px 0;
+  -webkit-box-shadow: 0 0 3px rgba(0, 55, 72, 0.3);
+  -moz-box-shadow: 0 0 3px rgba(0, 55, 72, 0.3);
+  -ms-box-shadow: 0 0 3px rgba(0, 55, 72, 0.3);
+  -o-box-shadow: 0 0 3px rgba(0, 55, 72, 0.3);
+  box-shadow: 0 0 3px rgba(0, 55, 72, 0.3);
+  border: 1px solid #ddd;
+}
+.auto-dropdown .auto-content li {
+  display: block;
+  font-weight: 700;
+  padding: 10px 15px;
+  color: #555;
+}
+.auto-dropdown .auto-content li:hover {
+  background: #ddd;
+}
+.autocomplete-suggestions strong {
+  color: #333;
+  font-weight: bold;
+}
+.autocomplete-suggestions .autocomplete-suggestion {
+  white-space: initial;
+  overflow: initial;
+  padding: 10px 5px;
+}
+/**
+ * Page components
+ *
+ * Description: This is the most accessible LESS file. For creating stucture of a LESS project
+ * There're some simple rules:
+ *  - use base rule on this file. E.g. every single rule/indent or each component. To generate the fast view for the parent components
+ *  - for children rules put it in matched folders and import it in parent's section
+ *
+ */
+/* ================================= */
 /**
  * HEADER CSS
  * Updated on 22/09/16
@@ -19869,6 +19905,34 @@ ul.pagination li span {
   float: left;
   width: 50%;
   padding-left: 15px;
+}
+/**
+ * SECTION PROFILE CSS
+ * Updated on 01/10/16
+ */
+.table {
+  margin: 0;
+  font-size: 12px;
+  border: 1px solid #f3f3f3;
+}
+.table .tbl-head {
+  background: #eee;
+}
+.table .tbl-head:hover {
+  background: #eee;
+}
+.table tr:hover {
+  background: #f1f1f1;
+}
+.table .del-row:hover {
+  color: #de5749;
+}
+.table .ico-word {
+  color: #00b9f2;
+}
+.table .ico-pdf,
+.table .ico-youtube {
+  color: #de5749;
 }
 /**
  * SECTION SIDEBAR CSS

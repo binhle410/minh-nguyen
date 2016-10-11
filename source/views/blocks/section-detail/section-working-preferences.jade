@@ -17,14 +17,7 @@
                             .clearfix
                                 .expected-location-wrapper
                                     .edit-field(style='display: none;')
-                                        .auto-dropdown.f-w
-                                            input.form-control(type="text", autofocus)
-                                            ul.auto-content
-                                                li.auto-itm(data-id="1", data-name="Singapore") Singapore
-                                                li.auto-itm(data-id="2", data-name="Ha noi") Ha noi
-                                                li.auto-itm(data-id="3", data-name="Mekong Delta") Mekong Delta
-                                                li.auto-itm(data-id="41", data-name="An Giang") An Giang
-                                                li.auto-itm(data-id="5", data-name="Bac Ninh") Bac Ninh
+                                        input.form-control#place-srch(type="text", autofocus)
                                         //- select.form-control(name='expectedLocation[]', tabindex='-1')
                                         //-     option(selected='', value='29') Singapore
                                         //-     option(value='24') Ha Noi
@@ -112,13 +105,7 @@
                                 |Expected Job Category
                             .edit-field(style='display: none;')
                                 .auto-dropdown.f-w
-                                    input.form-control(type="text")
-                                    ul.auto-content
-                                        li.auto-itm(data-id="1", data-name="Programmer") Programmer
-                                        li.auto-itm(data-id="2", data-name="Teacher") Teacher
-                                        li.auto-itm(data-id="3", data-name="Artist") Artist
-                                        li.auto-itm(data-id="4", data-name="Athletes") Athletes
-                                        li.auto-itm(data-id="5", data-name="Lecturer") Lecturer
+                                    input.form-control#job-search(type="text")
                                 //- select.form-control(name='expectedJobCategory[]', tabindex='-1')
                                 //-     option(value='72') Printing
                                 //-     option(value='73') Restaurant/Hotel

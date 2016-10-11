@@ -723,14 +723,7 @@
                           <div class="tags-edit"><span class="tag-xs"><span class="tag-name">CSS</span><a href="javascript:;"><i class="fa fa-fw fa-remove"></i></a></span><span class="tag-xs"><span class="tag-name">- Front-end Development</span><a href="javascript:;"><i class="fa fa-fw fa-remove"></i></a></span></div>
                           <div class="skill-input">
                             <div class="auto-dropdown">
-                              <input type="text" name="skills[]" autofocus class="form-control">
-                              <ul class="auto-content">
-                                <li data-id="1" data-name="Team working" class="auto-itm">Team working</li>
-                                <li data-id="2" data-name="Teacher" class="auto-itm">Teacher</li>
-                                <li data-id="3" data-name="TAA" class="auto-itm">TAA</li>
-                                <li data-id="4" data-name="Teaching" class="auto-itm">Teaching</li>
-                                <li data-id="5" data-name="Teen Services" class="auto-itm">Teen Services</li>
-                              </ul>
+                              <input id="skill-srch" type="text" name="skills[]" autofocus class="form-control">
                             </div>
                             <button type="button" class="btn"><i class="fa fa-plus"></i></button>
                           </div>
@@ -1506,16 +1499,7 @@
                           <div class="clearfix">
                             <div class="expected-location-wrapper">
                               <div style="display: none;" class="edit-field">
-                                <div class="auto-dropdown f-w">
-                                  <input type="text" autofocus class="form-control">
-                                  <ul class="auto-content">
-                                    <li data-id="1" data-name="Singapore" class="auto-itm">Singapore</li>
-                                    <li data-id="2" data-name="Ha noi" class="auto-itm">Ha noi</li>
-                                    <li data-id="3" data-name="Mekong Delta" class="auto-itm">Mekong Delta</li>
-                                    <li data-id="41" data-name="An Giang" class="auto-itm">An Giang</li>
-                                    <li data-id="5" data-name="Bac Ninh" class="auto-itm">Bac Ninh</li>
-                                  </ul>
-                                </div><small class="legend">(Maximum 3 locations)</small>
+                                <input id="place-srch" type="text" autofocus class="form-control"><small class="legend">(Maximum 3 locations)</small>
                               </div>
                               <div style="display: block;" class="view-field">
                                 <p class="form-control-static view-control">Singapore, Malaysia, USA</p>
@@ -1539,14 +1523,7 @@
                           <label for="expected-job-category"><strong style="display: none;" class="text-red edit-field">*</strong>Expected Job Category</label>
                           <div style="display: none;" class="edit-field">
                             <div class="auto-dropdown f-w">
-                              <input type="text" class="form-control">
-                              <ul class="auto-content">
-                                <li data-id="1" data-name="Programmer" class="auto-itm">Programmer</li>
-                                <li data-id="2" data-name="Teacher" class="auto-itm">Teacher</li>
-                                <li data-id="3" data-name="Artist" class="auto-itm">Artist</li>
-                                <li data-id="4" data-name="Athletes" class="auto-itm">Athletes</li>
-                                <li data-id="5" data-name="Lecturer" class="auto-itm">Lecturer</li>
-                              </ul>
+                              <input id="job-search" type="text" class="form-control">
                             </div><small class="legend">(Maximum 3 categories)</small>
                           </div>
                           <div style="display: block;" class="view-field">
@@ -1746,6 +1723,56 @@
                   </fieldset>
                 </div>
               </form>
+            </div>
+            <div class="section-detail section-media">
+              <div class="box">
+                <fieldset>
+                  <legend class="box-md"><i class="fa fa-fw fa-cubes"></i> Media</legend>
+                  <div class="content-section">
+                    <div class="form-wrapper box-md">
+                      <div class="table-responsive">
+                        <table class="table">
+                          <tr class="tbl-head">
+                            <th></th>
+                            <th>Name/Link</th>
+                            <th class="t-c">Size</th>
+                            <th class="t-c">Last Modified</th>
+                            <th class="t-c">Actions</th>
+                          </tr>
+                          <tr>
+                            <td class="ico-word"><i class="fa fa-file-word-o"></i></td>
+                            <td>File CV #Victor Le</td>
+                            <td class="t-c">100Kb</td>
+                            <td class="t-c">10:24:21 - 10.10.2016</td>
+                            <td class="t-c"><a href="javascript:;" class="del-row"><i class="fa fa-trash-o"></i></a></td>
+                          </tr>
+                          <tr>
+                            <td class="ico-pdf"><i class="fa fa-file-pdf-o"></i></td>
+                            <td>File CV #Victor Le PDF format</td>
+                            <td class="t-c">1.5Mb</td>
+                            <td class="t-c">10:20:15 - 10.10.2016</td>
+                            <td class="t-c"><a href="javascript:;" class="del-row"><i class="fa fa-trash-o"></i></a></td>
+                          </tr>
+                          <tr>
+                            <td class="ico-video"><i class="fa fa-file-video-o"></i></td>
+                            <td>Test Video #1</td>
+                            <td class="t-c">10.3Mb</td>
+                            <td class="t-c">11:20:06 - 05.10.2016</td>
+                            <td class="t-c"><a href="javascript:;" class="del-row"><i class="fa fa-trash-o"></i></a></td>
+                          </tr>
+                          <tr>
+                            <td class="ico-youtube"><i class="fa fa-youtube"></i></td>
+                            <td> <a href="#">https://www.youtube.com/watch?v=hnc_qF-WnmI</a></td>
+                            <td class="t-c">-</td>
+                            <td class="t-c">01:20:06 - 08.10.2016</td>
+                            <td class="t-c"><a href="javascript:;" class="del-row"><i class="fa fa-trash-o"></i></a></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
             </div>
             <div id="dialog-remove-item" tabindex="-1" role="dialog" aria-labelledby="delete-confirmation" aria-hidden="false" class="modal fade in">
               <form>

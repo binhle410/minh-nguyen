@@ -7,7 +7,6 @@
  * 4. Slider: slider()
  * 5. debounceInp(): Delay an amount of time before sending AJAX request to server
  * 5.1. ajax_lookup(): Perform AJAX request after debouncing input
- * 5.2 Save id of autocomplete box items for sending AJAX requests later
  */
 /* ----------------------------------------------- */
 /* ------------- FrontEnd Functions -------------- */
@@ -17,8 +16,12 @@
  * @return {[type]} [description]
  */
 function custom_select () {
-    $(".select-category").select2();
-    $(".select-location").select2();
+    $(".select-category").select2().on("select2-focus", function(e) {
+        console.log("focus");
+    });
+    $(".select-location").select2().on("select2-focus", function(e) {
+         console.log("focus");
+    });;
 }
 
 /**
@@ -73,66 +76,51 @@ function slider() {
     });
 }
 
-// 5. debounceInp(): Delay an amount of time before sending AJAX request to server
-function debounceInp() {
-    if(!$(".auto-dropdown input.form-control").length) { return; }
+// 5. drdownSrch(): Create a search dropdown when user type in search input
+function drdownSrch() {
+    if(!$("#job-search").length) { return; }
 
-    var $auto_inp = $(".auto-dropdown input.form-control");
-    $auto_inp.keyup( $.debounce( 250, ajax_lookup ) );
-}
+    var jobs = [
+                        { value: 'Programmer', data: 'AD' },
+                        { value: 'Accountant', data: 'Corel abc' },
+                        { value: 'Accountant dsgds gdsghs dhdfhfdhdf hdfhdf hfdh dhdf hdfh dfhfdh dfhfd hfdhd fhfd hfdh dfhdfh fd', data: 'Corel sfsf' }
+                    ];
 
-// 5.1. ajax_lookup(): Perform AJAX request after debouncing input
-function ajax_lookup() {
-    var $auto_box = $(this).next(),
-        $auto_itm = $auto_box.find(".auto-itm");
-    // Show autocomplete box
-    if(!$(this).val().length) {
-        $auto_box.hide();
-        return;
-    }
-
-    $auto_box.show();
-
-    // Hide the autocomplete box when user clicks outside of it.
-    $auto_box.bind("clickoutside", function(event){
-        $(this).hide();
+    $("#job-search").autocomplete({
+        lookup: jobs,
+        onSelect: function (suggestion) {
+            // Handler
+        }
     });
 
-    // Perform an AJAX GET lookup on $(this).val();
-    // ..........
-    // END: AJAX GET.
+    // if(!$("$skill-srch").length) { return; }
 
-    // Save id of autocomplete box items for sending AJAX requests later
-    saveItemId($auto_itm);
-}
-
-// 5.2 Save id of autocomplete box items for sending AJAX requests later
-function saveItemId($itm) {
-    var sendingData = [];
-
-    $itm.on("click", function(e) {
-        var itmObj = {
-                        "id"   : $(this).data("id"),
-                        "name" : $(this).data("name")
-                    }
-        sendingData.push(itmObj);
-        console.log(sendingData);
-    });
-
-    // Sending AJAX here
-    // ...
-    // END: Sending AjAX
+    // var skills = [
+    //                     { value: 'PSD', data: 'PSD' },
+    //                     { value: 'HTML', data: 'HTML' },
+    //                     { value: 'CSS', data: 'CSS' },
+    //                     { value: 'Corel', data: 'Corel' }
+    //                 ];
+    // $("$skill-srch").autocomplete({
+    //     lookup: skills,
+    //     onSelect: function (suggestion) {
+    //         // Handler
+    //     }
+    // });
 }
 
 /* ----------------------------------------------- */
 /* ----------------------------------------------- */
-/* OnLoad Page */
+/* OnLoPSD Page */
 $(document).ready(function($){
     custom_select();
     scrollbar();
     toggleMenu();
     slider();
-    debounceInp();
+    drdownSrch();
+
+
+
 });
 /* OnLoad Window */
 var init = function () {
