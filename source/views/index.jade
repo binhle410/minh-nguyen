@@ -4,18 +4,18 @@ block vars
 extends layouts/layout
 block main
     .slideshow.clearfix
-        include blocks/mainslider/m-blk.jade
-        include blocks/search-widget.jade
+        include blocks/home/main-slider
+        include blocks/home/search-widget
     section.main
-        include blocks/ads/top-ads.jade
+        include blocks/home/ads/top-ads.jade
         section.feature.container
             .row
                 .col-md-9.col-sm-12
-                    include blocks/tabs/m-blk
+                    include blocks/home/tabs/m-blk
                 .col-md-3.col-sm-12
-                    include blocks/ads/sidebar-ads
+                    include blocks/home/ads/sidebar-ads
         // END: FEATURE BLOCK
-        include blocks/banners/m-blk
-        include blocks/blog/m-blk
+        include blocks/home/banners/m-blk
+        include blocks/home/blog/m-blk
 block script
     script(type='text/javascript', src="./js/actions/search_job.plg.js")

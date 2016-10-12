@@ -287,3 +287,30 @@ form {
         padding: 10px 5px;
     }
 }
+
+// Warning box
+ .warning {
+    position: relative;
+    padding: 15px 30px 15px 15px;
+    .border-radius(3px);
+    border-left: 5px solid @dred;
+    background: white;
+    margin-bottom: 15px;
+    i {
+        &.fa-info-circle {
+            color: @dred;
+            font-size: 15px;
+            margin-right: 5px;
+        }
+    }
+    strong {
+        margin-right: 5px;
+    }
+    .warning-msg {
+        position: absolute;
+        color: #ccc;
+        top: 50%;
+        right: 15px;
+        .transform(translate(50%, -50%));
+    }
+ }

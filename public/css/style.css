@@ -18037,6 +18037,39 @@ form {
   overflow: initial;
   padding: 10px 5px;
 }
+.warning {
+  position: relative;
+  padding: 15px 30px 15px 15px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border-left: 5px solid #bf253d;
+  background: white;
+  margin-bottom: 15px;
+}
+.warning i.fa-info-circle {
+  color: #bf253d;
+  font-size: 15px;
+  margin-right: 5px;
+}
+.warning strong {
+  margin-right: 5px;
+}
+.warning .warning-msg {
+  position: absolute;
+  color: #ccc;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translate(50%, -50%);
+  -moz-transform: translate(50%, -50%);
+  -ms-transform: translate(50%, -50%);
+  -o-transform: translate(50%, -50%);
+}
 /**
  * Page components
  *
@@ -18223,6 +18256,10 @@ form {
   line-height: 13px;
   padding: 0 4px;
 }
+/**
+ * HOME CSS
+ * Updated on 12/10/16
+ */
 /**
  * SLIDER CSS
  * Updated on 22/09/16
@@ -18928,11 +18965,11 @@ form {
   display: none;
 }
 .side-column .facet-body .checkboxes {
-  height: 170px;
+  max-height: 170px;
   overflow: hidden;
 }
 .side-column .facet-body .checkboxes.more {
-  height: auto;
+  max-height: initial;
 }
 /**
  * JOB SEARCH: TOP CSS
@@ -20146,43 +20183,6 @@ ul.pagination li span {
 }
 .modal-content .modal-footer .btn.btn-primary:hover {
   background: #bf253d;
-}
-/**
- * WARNING BOX CSS
- * Updated on 04/10/16
- */
-.warning {
-  position: relative;
-  padding: 15px 30px 15px 15px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  border-left: 5px solid #bf253d;
-  background: white;
-  margin-bottom: 15px;
-}
-.warning i.fa-info-circle {
-  color: #bf253d;
-  font-size: 15px;
-  margin-right: 5px;
-}
-.warning strong {
-  margin-right: 5px;
-}
-.warning .warning-msg {
-  position: absolute;
-  color: #ccc;
-  top: 50%;
-  right: 15px;
-  -webkit-transform: translate(50%, -50%);
-  -moz-transform: translate(50%, -50%);
-  -ms-transform: translate(50%, -50%);
-  -o-transform: translate(50%, -50%);
 }
 /**
  * FOOTER CSS
