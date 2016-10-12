@@ -18969,7 +18969,7 @@ form {
   overflow: hidden;
 }
 .side-column .facet-body .checkboxes.more {
-  max-height: initial;
+  max-height: none;
 }
 /**
  * JOB SEARCH: TOP CSS
