@@ -17850,55 +17850,6 @@ form {
   margin-left: 0;
   margin-right: 0;
 }
-.btn {
-  border: 1px solid transparent;
-  padding: 5px 25px;
-  line-height: 1.42857143;
-  border-radius: 2px;
-  font-size: 12px;
-  background-color: #f4f4f4;
-  border-color: #ccc;
-  margin: 0;
-}
-.btn:hover {
-  background: #ddd;
-}
-.btn:focus {
-  outline: none;
-}
-.btn:first-child {
-  margin: 0;
-}
-.btn.btn-cancel {
-  margin-right: 10px;
-}
-.btn.btn-link {
-  border: none;
-  background: none;
-  color: #555;
-}
-.btn.btn-primary {
-  background: #de5749;
-  color: white;
-  border-color: transparent;
-}
-.btn.btn-primary:hover,
-.btn.btn-primary:focus {
-  background: #bf253d;
-  border-color: #bf253d;
-  color: white;
-  outline: none;
-}
-.btn.btn-remove-this-section {
-  border: none;
-  background: none;
-  font-size: 17px;
-  padding: 5px 25px;
-  margin-right: 10px;
-}
-.btn.btn-remove-this-section:hover {
-  color: #de5749;
-}
 .bg-gray {
   background: #f4f4f4!important;
 }
@@ -19498,6 +19449,55 @@ ul.pagination li span {
  * JOB PROFILE CSS
  * Updated on 01/10/16
  */
+.job-profile-pg .btn {
+  border: 1px solid transparent;
+  padding: 5px 25px;
+  line-height: 1.42857143;
+  border-radius: 2px;
+  font-size: 12px;
+  background-color: #f4f4f4;
+  border-color: #ccc;
+  margin: 0;
+}
+.job-profile-pg .btn:hover {
+  background: #ddd;
+}
+.job-profile-pg .btn:focus {
+  outline: none;
+}
+.job-profile-pg .btn:first-child {
+  margin: 0;
+}
+.job-profile-pg .btn.btn-cancel {
+  margin-right: 10px;
+}
+.job-profile-pg .btn.btn-link {
+  border: none;
+  background: none;
+  color: #555;
+}
+.job-profile-pg .btn.btn-primary {
+  background: #de5749;
+  color: white;
+  border-color: transparent;
+}
+.job-profile-pg .btn.btn-primary:hover,
+.job-profile-pg .btn.btn-primary:focus {
+  background: #bf253d;
+  border-color: #bf253d;
+  color: white;
+  outline: none;
+}
+.job-profile-pg .btn.btn-remove-this-section {
+  border: none;
+  background: none;
+  font-size: 17px;
+  padding: 5px 25px;
+  margin-right: 10px;
+}
+.job-profile-pg .btn.btn-remove-this-section:hover {
+  color: #de5749;
+}
 /**
  * SECTION DETAIL CSS
  * Updated on 01/10/16

@@ -3,6 +3,57 @@
  * Updated on 01/10/16
  */
 
+.job-profile-pg {
+    .btn {
+        border: 1px solid transparent;
+        padding: 5px 25px;
+        line-height: 1.42857143;
+        border-radius: 2px;
+        font-size: 12px;
+        background-color: #f4f4f4;
+        border-color: #ccc;
+        margin: 0;
+        &:hover {
+            background: #ddd;
+        }
+        &:focus {
+            outline: none;
+        }
+        &:first-child {
+            margin: 0;
+        }
+        &.btn-cancel {
+            margin-right: 10px;
+        }
+        &.btn-link {
+            border: none;
+            background: none;
+            color: #555;
+        }
+        &.btn-primary {
+            background: @red;
+            color: white;
+            border-color: transparent;
+            &:hover, &:focus {
+                background: @dred;
+                border-color: @dred;
+                color: white;
+                outline: none;
+            }
+        }
+        &.btn-remove-this-section {
+            border: none;
+            background: none;
+            font-size: 17px;
+            padding: 5px 25px;
+            margin-right: 10px;
+            &:hover {
+                color: @red;
+            }
+        }
+    }
+}
+
  @import "profile/section-detail.less";
  @import "profile/section-sidebar.less";
 
