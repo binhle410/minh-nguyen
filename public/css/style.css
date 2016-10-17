@@ -18295,6 +18295,7 @@ form {
   padding: 10px 35px;
   background: #de5749;
   color: white;
+  font-size: 14px;
 }
 .dropdown .uprof-menu li.prof-itm .btn:hover,
 .dropdown .uprof-menu li.prof-itm .btn:focus {
