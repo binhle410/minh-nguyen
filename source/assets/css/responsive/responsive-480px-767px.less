@@ -42,6 +42,7 @@
                     a {
                         padding: 15px;
                         margin: 0;
+                        line-height: normal;
                     }
                     &.employer-site-link {
                         a {
@@ -97,6 +98,36 @@
                     }
                     span {
                         display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    .dropdown {
+        .dropdown-menu {
+            width: 100%;
+            &.uprof-menu {
+                display: block;
+                border: none;
+                border-bottom: 1px solid #f7f7f7;
+                box-shadow: none;
+                li {
+                    &.prof-itm {
+                        padding: 15px;
+                    }
+                    .btn {
+                        &:hover, &:focus {
+                            color: white;
+                        }
+                    }
+                }
+            }
+            li {
+                a {
+                    padding: 15px;
+                    &:hover {
+                        background: transparent;
+                        color: @dred;
                     }
                 }
             }
