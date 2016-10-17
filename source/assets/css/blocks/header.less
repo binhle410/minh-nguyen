@@ -188,11 +188,11 @@
 
 .dropdown {
     &.open {
-        span {
+        .a-count {
             display: none;
         }
     }
-    span {
+    .a-count {
         display: inline-block;
         color: #fff;
         background: @dred;
@@ -207,5 +207,55 @@
         right: 10px;
         line-height: 13px;
         padding: 0 4px;
+    }
+    .user-prof {
+        &:before {
+            content: none;
+        }
+    }
+    .fa-stack {
+        margin-right: 5px;
+    }
+    .caret {
+        margin-left: 5px;
+    }
+}
+
+.dropdown {
+    .uprof-menu {
+        right: 0;
+        top: 100%;
+        min-width: 300px;
+        li {
+            display: block;
+            &.prof-itm {
+                border-top: none;
+                padding: 20px;
+                span {
+                    display: inline-block;
+                    margin-bottom: 5px;
+                }
+                .btn {
+                    display: inline-block;
+                    padding: 10px 35px;
+                }
+            }
+            border-top: 1px solid #f2f2f2;
+            .fa {
+                font-size: 18px;
+                margin: 0 10px 0 0;
+                width: auto;
+                padding: 0;
+                color: #888;
+            }
+            a {
+                &:hover {
+                    color: @red;
+                    .fa {
+                        color: @red;
+                    }
+                }
+            }
+        }
     }
 }

@@ -2,6 +2,7 @@ block vars
   title Home - novaland.biz
   showTop false
   bodyClass home
+  loggedIn false
 doctype html
 //[if IE 8]><html lang="en" class="no-js ie ie8"><![endif]
 //[if IE 9]><html lang="en" class="no-js ie ie9"><![endif]
@@ -24,7 +25,10 @@ html(class="no-js", lang="en")
     .scrollToTop.circle
       i.fa.fa-chevron-up
     .page-wrapper
-      include ../includes/header.jade
+      if !loggedIn
+        include ../includes/header.jade
+      else
+        include ../includes/header_loggedin.jade
       block main
       include ../includes/footer.jade
       include ../includes/scripts.jade

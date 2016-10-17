@@ -17850,6 +17850,55 @@ form {
   margin-left: 0;
   margin-right: 0;
 }
+.btn {
+  border: 1px solid transparent;
+  padding: 5px 25px;
+  line-height: 1.42857143;
+  border-radius: 2px;
+  font-size: 12px;
+  background-color: #f4f4f4;
+  border-color: #ccc;
+  margin: 0;
+}
+.btn:hover {
+  background: #ddd;
+}
+.btn:focus {
+  outline: none;
+}
+.btn:first-child {
+  margin: 0;
+}
+.btn.btn-cancel {
+  margin-right: 10px;
+}
+.btn.btn-link {
+  border: none;
+  background: none;
+  color: #555;
+}
+.btn.btn-primary {
+  background: #de5749;
+  color: white;
+  border-color: transparent;
+}
+.btn.btn-primary:hover,
+.btn.btn-primary:focus {
+  background: #bf253d;
+  border-color: #bf253d;
+  color: white;
+  outline: none;
+}
+.btn.btn-remove-this-section {
+  border: none;
+  background: none;
+  font-size: 17px;
+  padding: 5px 25px;
+  margin-right: 10px;
+}
+.btn.btn-remove-this-section:hover {
+  color: #de5749;
+}
 .bg-gray {
   background: #f4f4f4!important;
 }
@@ -18230,10 +18279,10 @@ form {
   color: #ff8e82;
   font-size: 13px;
 }
-.dropdown.open span {
+.dropdown.open .a-count {
   display: none;
 }
-.dropdown span {
+.dropdown .a-count {
   display: inline-block;
   color: #fff;
   background: #bf253d;
@@ -18255,6 +18304,49 @@ form {
   right: 10px;
   line-height: 13px;
   padding: 0 4px;
+}
+.dropdown .user-prof:before {
+  content: none;
+}
+.dropdown .fa-stack {
+  margin-right: 5px;
+}
+.dropdown .caret {
+  margin-left: 5px;
+}
+.dropdown .uprof-menu {
+  right: 0;
+  top: 100%;
+  min-width: 300px;
+}
+.dropdown .uprof-menu li {
+  display: block;
+  border-top: 1px solid #f2f2f2;
+}
+.dropdown .uprof-menu li.prof-itm {
+  border-top: none;
+  padding: 20px;
+}
+.dropdown .uprof-menu li.prof-itm span {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.dropdown .uprof-menu li.prof-itm .btn {
+  display: inline-block;
+  padding: 10px 35px;
+}
+.dropdown .uprof-menu li .fa {
+  font-size: 18px;
+  margin: 0 10px 0 0;
+  width: auto;
+  padding: 0;
+  color: #888;
+}
+.dropdown .uprof-menu li a:hover {
+  color: #de5749;
+}
+.dropdown .uprof-menu li a:hover .fa {
+  color: #de5749;
 }
 /**
  * HOME CSS
@@ -19394,55 +19486,6 @@ ul.pagination li span {
   margin: 0;
   padding: 0;
   background: none;
-}
-.main-profile .btn {
-  border: 1px solid transparent;
-  padding: 5px 25px;
-  line-height: 1.42857143;
-  border-radius: 2px;
-  font-size: 12px;
-  background-color: #f4f4f4;
-  border-color: #ccc;
-  margin: 0;
-}
-.main-profile .btn:hover {
-  background: #ddd;
-}
-.main-profile .btn:focus {
-  outline: none;
-}
-.main-profile .btn:first-child {
-  margin: 0;
-}
-.main-profile .btn.btn-cancel {
-  margin-right: 10px;
-}
-.main-profile .btn.btn-link {
-  border: none;
-  background: none;
-  color: #555;
-}
-.main-profile .btn.btn-primary {
-  background: #de5749;
-  color: white;
-  border-color: transparent;
-}
-.main-profile .btn.btn-primary:hover,
-.main-profile .btn.btn-primary:focus {
-  background: #bf253d;
-  border-color: #bf253d;
-  color: white;
-  outline: none;
-}
-.main-profile .btn.btn-remove-this-section {
-  border: none;
-  background: none;
-  font-size: 17px;
-  padding: 5px 25px;
-  margin-right: 10px;
-}
-.main-profile .btn.btn-remove-this-section:hover {
-  color: #de5749;
 }
 .main-profile .btn-outline {
   border: 1px solid #ccc;
