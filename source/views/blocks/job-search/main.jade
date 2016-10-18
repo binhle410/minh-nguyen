@@ -1,10 +1,22 @@
 .job-search
     .container.box
-        .row
+        .jsrch-wrap.row
             .side-column.col-sm-4.col-lg-3
+                if jobSrLoading
+                    .loading-blk.ld-filter-blk
+                        .spinner
+                            .bounce1
+                            .bounce2
+                            .bounce3
                 form.filter-jobs
                     include left-column/m-blk
             .job-search-body.col-sm-8.col-lg-7
+                if jobSrLoading
+                    .loading-blk.ld-job-srch
+                        .spinner
+                            .bounce1
+                            .bounce2
+                            .bounce3
                 include body/m-blk
             .col-lg-2
                 include right-column/m-blk

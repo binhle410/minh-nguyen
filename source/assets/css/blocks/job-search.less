@@ -8,6 +8,25 @@
     }
 }
 
+.loading-blk {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+}
+.spinner {
+    margin: 200px auto 0;
+    width: auto;
+    > div {
+        width: 20px;
+        height: 20px;
+        background: @dred;
+    }
+}
+
 @import "job-search/top.less";
 @import "job-search/left-column.less";
 @import "job-search/body-column.less";
@@ -31,3 +50,4 @@
 .minw-appl-job {
     width: 280px;
 }
+

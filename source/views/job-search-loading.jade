@@ -1,0 +1,15 @@
+block vars
+  -title="interview-spot.com"
+  -bodyClass="job-search-pg"
+  -jobSrLoading=true
+extends layouts/layout
+block main
+    section.main
+        include blocks/job-search/top
+        include blocks/job-search/main
+
+// JS : JOB search ----------
+block script
+  script(type='text/javascript', src="js/actions/job-search.js")
+  script(type='text/javascript', src="js/actions/filter-form.js")
+  script(type='text/javascript', src="./js/actions/search_job.plg.js")
