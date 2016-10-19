@@ -3,6 +3,12 @@
  * Updated on 22/09/16
  */
 
+ .demo-ui-pg {
+     .row {
+        padding: 15px 0;
+     }
+ }
+
  // General settings
 .page-wrapper {
     background: transparent;
@@ -112,6 +118,126 @@ form {
         margin-bottom: 10px;
         margin-left: 0;
         margin-right: 0;
+    }
+}
+.form-control {
+    height: 30px;
+    box-shadow: none;
+    font-size: 12px;
+    font-style: normal;
+}
+.has-feedback {
+    label {
+        ~ .form-control-feedback {
+            top: 19px;
+        }
+    }
+}
+
+// Button class ---------
+.btn {
+    border: 1px solid transparent;
+    padding: 5px 25px;
+    line-height: 1.42857143;
+    border-radius: 2px;
+    font-size: 12px;
+    color: @dgray;
+    margin: 0;
+    height: 30px;
+    &:hover {
+        border-color: transparent;
+    }
+    &:focus {
+        outline: none;
+    }
+    &:first-child {
+        margin: 0;
+    }
+    &.btn-sm {
+        font-size: 10px;
+        padding: 5px 10px;
+        line-height: 1.46666667;
+        border-radius: 3px;
+    }
+    &.btn-lg {
+        padding: 10px 25px;
+        font-size: 18px;
+        line-height: 1.46666667;
+        border-radius: 4px;
+        margin: 10px 0;
+        height: auto;
+    }
+    &.btn-default, &.btn-lgray {
+        background-color: #f4f4f4;
+        border-color: #ccc;
+        color: @dgray;
+        .open > &.dropdown-toggle {
+            background: #ddd;
+            border-color: #ccc;
+            box-shadow: none;
+            color: @dgray;
+        }
+        &:hover {
+            background: #ddd;
+        }
+    }
+    &.btn-bdline {
+        background: white;
+        border-color: #aaa;
+        &:hover {
+            background: #ccc;
+            border-color: transparent;
+        }
+    }
+    &.btn-dgray {
+        color: white;
+        background: @dgray;
+        &:hover {
+            background: darken(@dgray, 10%);
+        }
+    }
+    &.btn-primary, &.btn-red {
+        background: @red;
+        color: white;
+        border-color: transparent;
+        &:hover, &:focus {
+            background: @dred;
+            border-color: @dred;
+            color: white;
+            outline: none;
+        }
+    }
+    &.btn-success {
+        color: white;
+    }
+    &.btn-remove-this-section {
+        border: none;
+        background: none;
+        font-size: 17px;
+        padding: 5px 25px;
+        margin-right: 10px;
+        &:hover {
+            color: @red;
+        }
+    }
+    &.btn-cancel {
+        margin-right: 10px;
+    }
+    &.btn-link {
+        border: none;
+        background: none;
+        color: #555;
+    }
+}
+
+// Dropdown menu class
+.dropdown-menu {
+    > li {
+        > a {
+            &:hover {
+                color: @dred;
+            }
+        }
     }
 }
 

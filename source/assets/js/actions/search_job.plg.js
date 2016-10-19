@@ -6,12 +6,16 @@
  */
 // 1. custom_select(): Custom select
 function custom_select () {
-    $(".select-category").select2().on("select2-focus", function(e) {
-        console.log("focus");
-    });
-    $(".select-location").select2().on("select2-focus", function(e) {
-         console.log("focus");
-    });;
+    if(!$(".select2-ip").length) { return; }
+    var $select_ip = $(".select2-ip");
+    if ($select_ip.data("search")) {
+        $select_ip.select2({
+            minimumResultsForSearch: Infinity
+        });
+    } else {
+        $select_ip.select2();
+    }
+
 }
 
 // 2. drdownSrch(): Create a search dropdown when user type in search input

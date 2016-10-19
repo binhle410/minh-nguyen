@@ -17760,6 +17760,9 @@ ul {
  * ALLPAGE CSS
  * Updated on 22/09/16
  */
+.demo-ui-pg .row {
+  padding: 15px 0;
+}
 .page-wrapper {
   background: transparent;
 }
@@ -17849,6 +17852,119 @@ form {
   margin-bottom: 10px;
   margin-left: 0;
   margin-right: 0;
+}
+.form-control {
+  height: 30px;
+  box-shadow: none;
+  font-size: 12px;
+  font-style: normal;
+}
+.has-feedback label ~ .form-control-feedback {
+  top: 19px;
+}
+.btn {
+  border: 1px solid transparent;
+  padding: 5px 25px;
+  line-height: 1.42857143;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #555;
+  margin: 0;
+  height: 30px;
+}
+.btn:hover {
+  border-color: transparent;
+}
+.btn:focus {
+  outline: none;
+}
+.btn:first-child {
+  margin: 0;
+}
+.btn.btn-sm {
+  font-size: 10px;
+  padding: 5px 10px;
+  line-height: 1.46666667;
+  border-radius: 3px;
+}
+.btn.btn-lg {
+  padding: 10px 25px;
+  font-size: 18px;
+  line-height: 1.46666667;
+  border-radius: 4px;
+  margin: 10px 0;
+  height: auto;
+}
+.btn.btn-default,
+.btn.btn-lgray {
+  background-color: #f4f4f4;
+  border-color: #ccc;
+  color: #555;
+}
+.open > .btn.btn-default.dropdown-toggle,
+.open > .btn.btn-lgray.dropdown-toggle {
+  background: #ddd;
+  border-color: #ccc;
+  box-shadow: none;
+  color: #555;
+}
+.btn.btn-default:hover,
+.btn.btn-lgray:hover {
+  background: #ddd;
+}
+.btn.btn-bdline {
+  background: white;
+  border-color: #aaa;
+}
+.btn.btn-bdline:hover {
+  background: #ccc;
+  border-color: transparent;
+}
+.btn.btn-dgray {
+  color: white;
+  background: #555;
+}
+.btn.btn-dgray:hover {
+  background: #3b3b3b;
+}
+.btn.btn-primary,
+.btn.btn-red {
+  background: #de5749;
+  color: white;
+  border-color: transparent;
+}
+.btn.btn-primary:hover,
+.btn.btn-red:hover,
+.btn.btn-primary:focus,
+.btn.btn-red:focus {
+  background: #bf253d;
+  border-color: #bf253d;
+  color: white;
+  outline: none;
+}
+.btn.btn-success {
+  color: white;
+}
+.btn.btn-remove-this-section {
+  border: none;
+  background: none;
+  font-size: 17px;
+  padding: 5px 25px;
+  margin-right: 10px;
+}
+.btn.btn-remove-this-section:hover {
+  color: #de5749;
+}
+.btn.btn-cancel {
+  margin-right: 10px;
+}
+.btn.btn-link {
+  border: none;
+  background: none;
+  color: #555;
+}
+.dropdown-menu > li > a:hover {
+  color: #bf253d;
 }
 .bg-gray {
   background: #f4f4f4!important;
@@ -19152,15 +19268,9 @@ form {
   background-size: 17px 17px;
   background-position: 12px 50%;
 }
-.stats-blk .btn-outline {
+.stats-blk .btn-bdline {
   margin: 5px 0;
-  background: white;
-  color: #555;
-  border-color: #aaa;
   font-size: 14px;
-}
-.stats-blk .btn-outline:hover {
-  background: #ccc;
 }
 /**
  * JOB SEARCH: JOB LIST CSS
@@ -19197,7 +19307,7 @@ form {
   height: 90px;
   background: url("../images/ribbon.png") no-repeat;
   background-size: 70%;
-  z-index: 999;
+  z-index: 5;
   content: "";
   position: absolute;
   top: -14px;
@@ -19277,7 +19387,7 @@ form {
 }
 .job .job-select {
   position: relative;
-  z-index: 2000;
+  z-index: 10;
 }
 .job .job-select input {
   display: none;
@@ -19512,55 +19622,6 @@ ul.pagination li span {
  * JOB PROFILE CSS
  * Updated on 01/10/16
  */
-.job-profile-pg .btn {
-  border: 1px solid transparent;
-  padding: 5px 25px;
-  line-height: 1.42857143;
-  border-radius: 2px;
-  font-size: 12px;
-  background-color: #f4f4f4;
-  border-color: #ccc;
-  margin: 0;
-}
-.job-profile-pg .btn:hover {
-  background: #ddd;
-}
-.job-profile-pg .btn:focus {
-  outline: none;
-}
-.job-profile-pg .btn:first-child {
-  margin: 0;
-}
-.job-profile-pg .btn.btn-cancel {
-  margin-right: 10px;
-}
-.job-profile-pg .btn.btn-link {
-  border: none;
-  background: none;
-  color: #555;
-}
-.job-profile-pg .btn.btn-primary {
-  background: #de5749;
-  color: white;
-  border-color: transparent;
-}
-.job-profile-pg .btn.btn-primary:hover,
-.job-profile-pg .btn.btn-primary:focus {
-  background: #bf253d;
-  border-color: #bf253d;
-  color: white;
-  outline: none;
-}
-.job-profile-pg .btn.btn-remove-this-section {
-  border: none;
-  background: none;
-  font-size: 17px;
-  padding: 5px 25px;
-  margin-right: 10px;
-}
-.job-profile-pg .btn.btn-remove-this-section:hover {
-  color: #de5749;
-}
 /**
  * SECTION DETAIL CSS
  * Updated on 01/10/16
@@ -19927,6 +19988,7 @@ ul.pagination li span {
   background-clip: padding-box;
   background: #e0e0e0;
   border: none;
+  height: auto;
 }
 .main-profile .btn.contact-information-toggler:hover {
   background: #e0e0e0;

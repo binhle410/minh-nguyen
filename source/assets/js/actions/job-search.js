@@ -1,7 +1,6 @@
 (function( $ ) {
 /**
  * JOB SEARCH - ONLOAD - JS
- * 1. Custom select: custom_select()
  * 2. Open Filter on mobile: openFilter()
  * 3. chooseJob   : click to take a job for application.
  * 3.1 renderJobs : render jobs json to the view
@@ -14,17 +13,6 @@
 /* ----------------------------------------------- */
 /* ------------- FrontEnd Functions -------------- */
 /* ----------------------------------------------- */
-
-//  1. Custom select: custom_select()
-function custom_select () {
-    $(".date-filter select").select2({
-        minimumResultsForSearch: -1
-    });
-    $(".page-filter select").select2({
-        minimumResultsForSearch: -1
-    });
-}
-
 
 // 2. Open Filter on mobile: openFilter()
 function openFilter() {
@@ -195,7 +183,6 @@ function removeAApplJob() {
 /* ----------------------------------------------- */
 /* OnLoad Page */
 $(document).ready(function($){
-    custom_select();
     openFilter();
     chooseJob();
     toggleApplJobBox();

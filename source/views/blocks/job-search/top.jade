@@ -10,7 +10,7 @@
                                     input.form-control.search-all.input-lg#job-search(type='text', placeholder='Enter job title, position, skills...')
                             .form-group.category-search.col-sm-4.hidden-xs
                                 .border-text-box
-                                    select.select-category
+                                    select.select-category.select2-ip
                                         option(value='-1') All categories
                                         option(value='1') Accounting
                                         option(value='2') Administrative/Clerical
@@ -163,10 +163,10 @@
                             | Find Jobs
                             // /react-text
         .category-widget.col-sm-1
-            a.btn-browse-job.btn.btn-default.btn-lg.hidden-xs(href='#', target='_blank', title='Browse jobs by categories')
+            a.btn-browse-job.btn.btn-dgray.btn-lg.hidden-xs(href='#', target='_blank', title='Browse jobs by categories')
                 span
                     i.fa.fa-lg.fa-list-alt
-            a.btn-browse-job.btn.btn-default.btn-lg.visible-xs(href='#', target='_blank', title='Browse jobs by categories')
+            a.btn-browse-job.btn.btn-dgray.btn-lg.visible-xs(href='#', target='_blank', title='Browse jobs by categories')
                 span
                     i.fa.fa-lg.fa-list-alt
                     | Browse jobs by categories

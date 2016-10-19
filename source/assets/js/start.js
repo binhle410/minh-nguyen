@@ -11,17 +11,18 @@
 /* ----------------------------------------------- */
 /* ------------- FrontEnd Functions -------------- */
 /* ----------------------------------------------- */
-/**
- * [custom_select description]
- * @return {[type]} [description]
- */
-function custom_select () {
-    $(".select-category").select2().on("select2-focus", function(e) {
-        console.log("focus");
+// 1. Custom select: custom_select()
+function custom_select() {
+    // if(!$(".select-category").length && !$(".select-location").length && !$(".date-filter select").length) && !$(".page-filter select").length ) { return; }
+
+    $(".select-category").select2();
+    $(".select-location").select2();
+    $(".date-filter select").select2({
+        minimumResultsForSearch: Infinity
     });
-    $(".select-location").select2().on("select2-focus", function(e) {
-         console.log("focus");
-    });;
+    $(".page-filter select").select2({
+        minimumResultsForSearch: Infinity
+    });
 }
 
 /**

@@ -1,0 +1,97 @@
+block vars
+  -title="Demo elements - interview-spot.com"
+  -bodyClass="demo-ui-pg"
+  -loggedIn = true
+extends layouts/layout
+block main
+    section.main.container
+        .demo-bk
+            h2 DEMO: Input
+            .row
+                .col-md-4
+                    .form-group
+                        label Email address
+                        input.form-control(type="text", placeholder="Enter email")
+                    button.btn.btn-primary Click me
+                .col-md-4
+                    | ---
+                .col-md-4
+                    | ---
+            .row
+                .col-md-4
+                    .form-group.has-success.has-feedback
+                        label.control-label(for='inputSuccess3') Input with success
+                        input#inputSuccess3.form-control(type='text')
+                        i.fa.fa-check.form-control-feedback
+                .col-md-4
+                    .form-group.has-warning.has-feedback
+                        label.control-label(for='inputWarning3') Input with warning
+                        input#inputWarning3.form-control(type='text')
+                        i.fa.fa-warning.form-control-feedback
+                .col-md-4
+                    .form-group.has-error.has-feedback
+                        label.control-label(for='inputError3') Input with error
+                        input#inputError3.form-control(type='text')
+                        i.fa.fa-times.form-control-feedback
+            hr
+            h2 DEMO: Buttons
+            .row
+                button.btn.btn-default Default
+                button.btn.btn-default.btn-lg Default - Large
+                button.btn.btn-default.btn-sm Default - Small
+                br
+                button.btn.btn-primary Primary
+                button.btn.btn-primary.btn-lg Primary - Large
+                button.btn.btn-primary.btn-sm Primary - Small
+                br
+                button.btn.btn-dgray Dark gray
+                button.btn.btn-dgray.btn-lg Dark gray - Large
+                button.btn.btn-dgray.btn-sm Dark gray - Small
+                br
+                button.btn.btn-bdline Border line
+                button.btn.btn-bdline.btn-lg Border line - Small
+                button.btn.btn-bdline.btn-sm Border line - Large
+            hr
+            h2 DEMO: Alert
+            .row
+                .bs-example(data-example-id='simple-alerts')
+                    .alert.alert-success(role='alert')
+                        strong Well done!
+                        |  You successfully read this important alert message.
+                    .alert.alert-info(role='alert')
+                        strong Heads up!
+                        |  This alert needs your attention, but it's not super important.
+                    .alert.alert-warning(role='alert')
+                        strong Warning!
+                        |  Better check yourself, you're not looking too good.
+                    .alert.alert-danger(role='alert')
+                        strong Oh snap!
+                        |  Change a few things up and try submitting again.
+            hr
+            h2 DEMO: dropdown
+            .row
+                // Single button
+                .btn-group
+                    button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                        | Action
+                        span.caret
+                    ul.dropdown-menu
+                        li
+                            a(href='#') Action
+                        li
+                            a(href='#') Another action
+                        li
+                            a(href='#') Something else here
+                        li.divider(role='separator')
+                        li
+                            a(href='#') Separated link
+
+
+
+
+
+
+// JS : JOB profile ----------
+block script
+  script(type='text/javascript', src="js/actions/job-profile.js")
+  script(type='text/javascript', src="./js/actions/search_job.plg.js")
