@@ -81,8 +81,38 @@ function getBnfList() {
 
     var $ckbox = $("#benefit-edit-mode input.filter-ipt");
     $ckbox.on("change", function(e) {
-        _bnfList = scanCkbox($ckbox);
-        console.log(_bnfList);
+        var checkbox= $(this);
+        var label = checkbox.parent();
+        var icon = checkbox.next().find(".fa.fa-fw");
+
+        var count_active=$("#benefit-edit-mode label.active").length;
+        if(count_active>=5)
+        {
+            if(checkbox.is(":checked"))
+            {
+                e.preventDefault();
+                $(".max-number-of-benefits").show();
+            }
+            else
+            {
+                $(".max-number-of-benefits").hide();
+                label.removeClass("active");
+                icon.removeClass("fa-check");
+            }
+        }
+        else{
+             if(checkbox.is(":checked"))
+            {
+                label.addClass("active");
+                icon.addClass("fa-check");
+            }
+            else{
+                label.removeClass("active");
+                icon.removeClass("fa-check");
+            }
+            _bnfList = scanCkbox($ckbox);
+            console.log(_bnfList);
+        }
     });
 }
 
@@ -91,17 +121,18 @@ function activeBnfItem() {
     if(!$("#benefit-edit-mode .benefit-itm label").length) { return; }
 
     // Toggle class active on each benefit item label
-    var $bnfLabel = $("#benefit-edit-mode .benefit-itm label");
-    $bnfLabel.on("click", function(e) {
-        var $ckbox = $(this).find("input.filter-ipt");
-        if($ckbox.prop("checked")) {
-            $(this).addClass("active");
-            $(this).find(".fa.fa-fw").addClass("fa-check");
-        } else {
-            $(this).removeClass("active");
-            $(this).find(".fa.fa-fw").removeClass("fa-check");
-        }
-    });
+    // var $bnfLabel = $("#benefit-edit-mode .benefit-itm label");
+    // $bnfLabel.on("click", function(e) {
+    //     var $ckbox = $(this).find("input.filter-ipt");
+
+    //     if($ckbox.prop("checked")) {
+    //         $(this).addClass("active");
+    //         $(this).find(".fa.fa-fw").addClass("fa-check");
+    //     } else {
+    //         $(this).removeClass("active");
+    //         $(this).find(".fa.fa-fw").removeClass("fa-check");
+    //     }
+    // });
 }
 
 // 2.2. Scan all checked checkboxes

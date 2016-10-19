@@ -31,7 +31,6 @@
                     filter: alpha(opacity=70);
                 }
             }
-
             .benefit-icon, .benefit-name, i {
                 color: #777;
             }
@@ -43,7 +42,7 @@
     &#benefit-edit-mode {
         label {
             &:hover {
-                color: @green;
+                color: #777;
                 a.benefit-icon {
                     background: #e5ffe5;
                     border: 1px solid @green;
@@ -53,6 +52,20 @@
                 }
                 .benefit-name, .ic-check .fa {
                     color: @green;
+                }
+            }
+            &.disabled {
+                &:hover {
+                    a {
+                        background: #eee;
+                        border: 1px solid #ddd;
+                        i {
+                            color: #777;
+                        }
+                    }
+                    .benefit-name, .ic-check .fa {
+                        color: #777;
+                    }
                 }
             }
         }

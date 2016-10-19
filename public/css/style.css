@@ -20100,7 +20100,7 @@ ul.pagination li span {
   padding: 7px;
 }
 .icon-group#benefit-edit-mode label:hover {
-  color: #5cb85c;
+  color: #777;
 }
 .icon-group#benefit-edit-mode label:hover a.benefit-icon {
   background: #e5ffe5;
@@ -20112,6 +20112,17 @@ ul.pagination li span {
 .icon-group#benefit-edit-mode label:hover .benefit-name,
 .icon-group#benefit-edit-mode label:hover .ic-check .fa {
   color: #5cb85c;
+}
+.icon-group#benefit-edit-mode label.disabled:hover a {
+  background: #eee;
+  border: 1px solid #ddd;
+}
+.icon-group#benefit-edit-mode label.disabled:hover a i {
+  color: #777;
+}
+.icon-group#benefit-edit-mode label.disabled:hover .benefit-name,
+.icon-group#benefit-edit-mode label.disabled:hover .ic-check .fa {
+  color: #777;
 }
 .icon-group a {
   background: #eee;
