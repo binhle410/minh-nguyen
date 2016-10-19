@@ -84,35 +84,29 @@ function getBnfList() {
         var checkbox= $(this);
         var label = checkbox.parent();
         var icon = checkbox.next().find(".fa.fa-fw");
-
-        var count_active=$("#benefit-edit-mode label.active").length;
-        if(count_active>=5)
-        {
-            if(checkbox.is(":checked"))
-            {
-                e.preventDefault();
-                $(".max-number-of-benefits").show();
-            }
-            else
-            {
-                $(".max-number-of-benefits").hide();
+        
+        if(_bnfList) {
+            if(_bnfList.length >= 5) {
+                checkbox.prop("checked", false);
                 label.removeClass("active");
                 icon.removeClass("fa-check");
+                _bnfList = scanCkbox($ckbox);
+                return;
             }
-        }
-        else{
-             if(checkbox.is(":checked"))
-            {
+        } 
+        if(checkbox.is(":checked")) {
                 label.addClass("active");
                 icon.addClass("fa-check");
-            }
-            else{
+        } else {
                 label.removeClass("active");
                 icon.removeClass("fa-check");
-            }
-            _bnfList = scanCkbox($ckbox);
-            console.log(_bnfList);
         }
+            
+        _bnfList = scanCkbox($ckbox);
+       
+     
+        console.log(_bnfList);
+ 
     });
 }
 
