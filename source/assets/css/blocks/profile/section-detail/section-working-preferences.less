@@ -42,7 +42,23 @@
     &#benefit-edit-mode {
         label {
             &:hover {
-                color: #777;
+                color: #fff;
+                a.benefit-icon {
+                    background: darken(#eee, 10%);
+                    border: 1px solid darken(#ddd, 10%);
+                    i {
+                        color: darken(#777, 10%);
+                    }
+                }
+                .benefit-name {
+                    color: darken(#777, 10%);
+                }
+                // .benefit-name, .ic-check .fa {
+                //     color: darken(##777, 2%);
+                // }
+            }
+            &.active {
+                color: @green;
                 a.benefit-icon {
                     background: #e5ffe5;
                     border: 1px solid @green;
@@ -54,20 +70,20 @@
                     color: @green;
                 }
             }
-            &.disabled {
-                &:hover {
-                    a {
-                        background: #eee;
-                        border: 1px solid #ddd;
-                        i {
-                            color: #777;
-                        }
-                    }
-                    .benefit-name, .ic-check .fa {
-                        color: #777;
-                    }
-                }
-            }
+            // &.disabled {
+            //     &:hover {
+            //         a {
+            //             background: #eee;
+            //             border: 1px solid #ddd;
+            //             i {
+            //                 color: #777;
+            //             }
+            //         }
+            //         .benefit-name, .ic-check .fa {
+            //             color: #777;
+            //         }
+            //     }
+            // }
         }
     }
     a {

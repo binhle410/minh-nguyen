@@ -19900,6 +19900,13 @@ ul.pagination li span {
 .main-profile .box-md {
   padding: 20px;
 }
+.main-profile .max-number-of-benefits {
+  margin-top: 10px;
+  margin-bottom: -5px;
+}
+.main-profile .max-number-of-benefits em {
+  color: #de5749;
+}
 /**
  * SECTION RESUME HEADER CSS
  * Updated on 01/10/16
@@ -20100,29 +20107,31 @@ ul.pagination li span {
   padding: 7px;
 }
 .icon-group#benefit-edit-mode label:hover {
-  color: #777;
+  color: #fff;
 }
 .icon-group#benefit-edit-mode label:hover a.benefit-icon {
+  background: #d5d5d5;
+  border: 1px solid #c4c4c4;
+}
+.icon-group#benefit-edit-mode label:hover a.benefit-icon i {
+  color: #5e5e5e;
+}
+.icon-group#benefit-edit-mode label:hover .benefit-name {
+  color: #5e5e5e;
+}
+.icon-group#benefit-edit-mode label.active {
+  color: #5cb85c;
+}
+.icon-group#benefit-edit-mode label.active a.benefit-icon {
   background: #e5ffe5;
   border: 1px solid #5cb85c;
 }
-.icon-group#benefit-edit-mode label:hover a.benefit-icon i {
+.icon-group#benefit-edit-mode label.active a.benefit-icon i {
   color: #5cb85c;
 }
-.icon-group#benefit-edit-mode label:hover .benefit-name,
-.icon-group#benefit-edit-mode label:hover .ic-check .fa {
+.icon-group#benefit-edit-mode label.active .benefit-name,
+.icon-group#benefit-edit-mode label.active .ic-check .fa {
   color: #5cb85c;
-}
-.icon-group#benefit-edit-mode label.disabled:hover a {
-  background: #eee;
-  border: 1px solid #ddd;
-}
-.icon-group#benefit-edit-mode label.disabled:hover a i {
-  color: #777;
-}
-.icon-group#benefit-edit-mode label.disabled:hover .benefit-name,
-.icon-group#benefit-edit-mode label.disabled:hover .ic-check .fa {
-  color: #777;
 }
 .icon-group a {
   background: #eee;

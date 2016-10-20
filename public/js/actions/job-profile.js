@@ -3,8 +3,7 @@
  * JOB PROFILE - ONLOAD - JS
  * 1.   editForms()     : Edit each form
  * 2.   getBnfList()    : Get Benefit list
- * 2.1. activeBnfItem() : Toggle class active on each benefit item label
- * 2.2. scanCkbox()     : Scan all checked checkboxes
+ * 2.1. scanCkbox()     : Scan all checked checkboxes
  * 3. addForm()         :  Add one more form in each section
  * 3.1. delForm()       : Delete one form
  * 4. toggleCttBox()    : Toggle contact box
@@ -80,56 +79,52 @@ function getBnfList() {
     if(!$("#benefit-edit-mode input.filter-ipt").length) { return; }
 
     var $ckbox = $("#benefit-edit-mode input.filter-ipt");
+    $("#benefit-edit-mode .max-number-of-benefits").hide();
     $ckbox.on("change", function(e) {
-        var checkbox= $(this);
-        var label = checkbox.parent();
-        var icon = checkbox.next().find(".fa.fa-fw");
-        
+        var $t_ckbox= $(this);
+        var $label = $t_ckbox.parent();
+        var $icon = $t_ckbox.next().find(".fa.fa-fw");
+
+        _bnfList = scanCkbox($ckbox);
         if(_bnfList) {
             if(_bnfList.length >= 5) {
-                checkbox.prop("checked", false);
-                label.removeClass("active");
-                icon.removeClass("fa-check");
-                _bnfList = scanCkbox($ckbox);
-                return;
+                $("#benefit-edit-mode .max-number-of-benefits").show();
+                if(_bnfList.length == 5) {
+                    $t_ckbox.prop("checked", true);
+                    $label.addClass("active");
+                    $icon.addClass("fa-check");
+                    _bnfList = scanCkbox($ckbox);
+                } else {
+                    $t_ckbox.prop("checked", false);
+                    $label.removeClass("active");
+                    $icon.removeClass("fa-check");
+                    _bnfList = scanCkbox($ckbox);
+                    return;
+                }
+                // $t_ckbox.prop("checked", false);
+                // $label.removeClass("active");
+                // $icon.removeClass("fa-check");
+                // _bnfList = scanCkbox($ckbox);
+            } else {
+                $("#benefit-edit-mode .max-number-of-benefits").hide();
             }
         } 
-        if(checkbox.is(":checked")) {
-                label.addClass("active");
-                icon.addClass("fa-check");
+        if($t_ckbox.is(":checked")) {
+            $label.addClass("active");
+            $icon.addClass("fa-check");
         } else {
-                label.removeClass("active");
-                icon.removeClass("fa-check");
+            $label.removeClass("active");
+            $icon.removeClass("fa-check");
         }
             
         _bnfList = scanCkbox($ckbox);
-       
-     
+
         console.log(_bnfList);
  
     });
 }
 
-// 2.1. Toggle class active on each benefit item label
-function activeBnfItem() {
-    if(!$("#benefit-edit-mode .benefit-itm label").length) { return; }
-
-    // Toggle class active on each benefit item label
-    // var $bnfLabel = $("#benefit-edit-mode .benefit-itm label");
-    // $bnfLabel.on("click", function(e) {
-    //     var $ckbox = $(this).find("input.filter-ipt");
-
-    //     if($ckbox.prop("checked")) {
-    //         $(this).addClass("active");
-    //         $(this).find(".fa.fa-fw").addClass("fa-check");
-    //     } else {
-    //         $(this).removeClass("active");
-    //         $(this).find(".fa.fa-fw").removeClass("fa-check");
-    //     }
-    // });
-}
-
-// 2.2. Scan all checked checkboxes
+// 2.1. Scan all checked checkboxes
 function scanCkbox($elemObj) {
     var data = [];
     $elemObj.each(function(i) {
@@ -315,7 +310,6 @@ $(document).ready(function($) {
     editForms();
     cancelEdit();
     getBnfList();
-    activeBnfItem();
     addForm();
     delForm();
     toggleCttBox();
