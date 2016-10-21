@@ -8,14 +8,18 @@
 function custom_select () {
     if(!$(".select2-ip").length) { return; }
     var $select_ip = $(".select2-ip");
-    if ($select_ip.data("search")) {
-        $select_ip.select2({
-            minimumResultsForSearch: Infinity
-        });
-    } else {
-        $select_ip.select2();
-    }
-
+    // $select_ip.on("click", function(e) {
+    //     console.log($(this).data('search'));
+    // })
+    $select_ip.each(function(i) {
+         if (!$(this).data("search") == true) {
+            $(this).select2({
+                minimumResultsForSearch: Infinity
+            });
+        } else {
+            $(this).select2();
+        }
+    });
 }
 
 // 2. drdownSrch(): Create a search dropdown when user type in search input

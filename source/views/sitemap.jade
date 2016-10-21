@@ -1,0 +1,22 @@
+block vars
+  -title="Sitemap - interview-spot.com"
+  -bodyClass = "home sitemap"
+extends layouts/layout
+block main
+    section.main
+        .container
+            ol
+                li
+                    a(href="./index.html") Index
+                li
+                    a(href="./job-search.html") Job Search
+                li
+                    a(href="./job-search-loading.html") Job Search Loading
+                li
+                    a(href="./profile.html") Profile
+                li
+                    a(href="./demo-elements.html") Demo Elements
+                li
+                    a(href="./sitemap.html") Sitemap
+block script
+    script(type='text/javascript', src="./js/actions/search_job.plg.js")

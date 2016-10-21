@@ -18230,6 +18230,27 @@ form {
     transform: scale(1);
   }
 }
+.avatar {
+  border: 1px #E5E5E5 solid;
+  background: #fff;
+  width: 115px;
+  height: 115px;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  background: url("../images/no_img_user.png") center no-repeat;
+  background-size: cover;
+}
+.avatar.avatar-sm {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.sitemap li {
+  margin: 15px 0;
+}
 /**
  * Page components
  *
@@ -18452,7 +18473,7 @@ form {
 }
 .dropdown .uprof-menu li.prof-itm .btn {
   display: inline-block;
-  padding: 10px 35px;
+  padding: 5px 35px;
   background: #de5749;
   color: white;
   font-size: 14px;
@@ -19935,18 +19956,8 @@ ul.pagination li span {
   margin: 5px 0 20px 0;
 }
 .main-profile .user-pic .avatar {
-  border: 1px #E5E5E5 solid;
-  background: #fff;
-  width: 115px;
-  height: 115px;
-  line-height: 115px;
-  display: block;
-  overflow: hidden;
-  text-align: center;
   margin: 18px auto;
   margin-right: 25px;
-  background: url("../images/no_img_user.png") center no-repeat;
-  background-size: cover;
 }
 .main-profile .user-pic .dropdown-menu {
   margin-left: 10px;

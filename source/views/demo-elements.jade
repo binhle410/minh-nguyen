@@ -34,6 +34,43 @@ block main
                         input#inputError3.form-control(type='text')
                         i.fa.fa-times.form-control-feedback
             hr
+            h2 DEMO: Select2
+            .row
+                h3 Hiding the search box
+                code
+                    |&lt;select class="select2-ip"&gt;
+                    br
+                    | ...
+                    br
+                    | &lt;/select&gt;
+                    br
+                    br
+                select.select2-ip
+                    option(value=0) Demo Input SelectTo 0
+                    option(value=1) Demo Input SelectTo 1
+                    option(value=2) Demo Input SelectTo 2
+                    option(value=3) Demo Input SelectTo 3
+                    option(value=4) Demo Input SelectTo 4
+                    option(value=5) Demo Input SelectTo 5
+                br
+                br
+                h3 Showing the search box
+                code
+                    |&lt;select class="select2-ip" data-search="true"&gt;
+                    br
+                    | ...
+                    br
+                    | &lt;/select&gt;
+                    br
+                    br
+                select.select2-ip(data-search="true")
+                    option(value=0) Demo Input SelectTo 0
+                    option(value=1) Demo Input SelectTo 1
+                    option(value=2) Demo Input SelectTo 2
+                    option(value=3) Demo Input SelectTo 3
+                    option(value=4) Demo Input SelectTo 4
+                    option(value=5) Demo Input SelectTo 5
+            hr
             h2 DEMO: Buttons
             .row
                 button.btn.btn-default Default
