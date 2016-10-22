@@ -8,7 +8,6 @@
  * 3.1. delForm()       : Delete one form
  * 4. toggleCttBox()    : Toggle contact box
  * 5. tnSrchBtn()       : Turn on/off Searchable button
- * 6. inputDateFm()     : Format date input
  * 7. countRmCh()       : Count remaining characters when user types in textarea
  * 8. addSkill()        : Add one more skill
  * 8.1 delSkill()       : Delete a skill
@@ -232,14 +231,6 @@ function tnSrchBtn() {
     });
 }
 
-// 6. inputDateFm(): Format date input
-function inputDateFm() {
-    if(!$(".datepicker").length) { return; }
-
-    $(".datepicker").inputmask('dd/mm/yyyy');
-
-}
-
 // 7. countRmCh(): Count remaining characters when user types in textarea
 function countRmCh() {
     if(!$("textarea.form-control").length) { return; }
@@ -314,7 +305,6 @@ $(document).ready(function($) {
     delForm();
     toggleCttBox();
     tnSrchBtn();
-    inputDateFm();
     countRmCh();
     addSkill();
     delSkill();

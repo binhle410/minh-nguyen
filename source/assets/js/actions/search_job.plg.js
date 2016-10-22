@@ -3,6 +3,7 @@
  * SEARCH JOB - ONLOAD - JS
  * 1. custom_select(): Custom select
  * 2. drdownSrch(): Create a search dropdown when user type in search input
+ * 3. inputDateFm()     : Format date input
  */
 // 1. custom_select(): Custom select
 function custom_select () {
@@ -64,6 +65,26 @@ function drdownSrch(objClass, preData, fnCallback) {
     });
 }
 
+// 3. inputDateFm(): Format date input
+function inputDateFm() {
+    if(!$(".datepicker").length) { return; }
+
+    $(".datepicker").inputmask('dd/mm/yyyy');
+
+}
+
+function dateTimePicker() {
+    if(!$(".datetimepicker").length) { return; }
+
+    $(".datetimepicker").datetimepicker({
+        format: 'DD/MM/YYYY',
+        icons: {
+                    previous: 'fa fa-angle-left',
+                    next: 'fa fa-angle-right'
+                },
+        // debug: true
+    });
+}
 
 // Callback when searching and select 1
 function anyFnCallbackSelect(suggestion) {
@@ -77,6 +98,8 @@ $(document).ready(function($){
     drdownSrch('#job-search', jobs, anyFnCallbackSelect);
     drdownSrch('#skill-srch', skills, anyFnCallbackSelect);
     drdownSrch('#place-srch', places, anyFnCallbackSelect);
+    inputDateFm();
+    dateTimePicker();
 });
 /* OnLoad Window */
 var init = function () {

@@ -42,3 +42,23 @@
         border: none;
     }
 }
+
+.btn-loading {
+    &.loading {
+        .fa-refresh {
+            display: block;
+        }
+        .btn-search {
+            background: #aaa;
+            // cursor: not-allowed;
+            pointer-events: none;
+        }
+    }
+    .fa-refresh {
+        display: none;
+        position: absolute;
+        top: 33%;
+        left: 20px;
+        z-index: 1;
+    }
+}

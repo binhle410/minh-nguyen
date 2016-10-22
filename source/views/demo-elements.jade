@@ -36,40 +36,111 @@ block main
             hr
             h2 DEMO: Select2
             .row
-                h3 Hiding the search box
-                code
-                    |&lt;select class="select2-ip"&gt;
-                    br
-                    | ...
-                    br
-                    | &lt;/select&gt;
-                    br
-                    br
-                select.select2-ip
-                    option(value=0) Demo Input SelectTo 0
-                    option(value=1) Demo Input SelectTo 1
-                    option(value=2) Demo Input SelectTo 2
-                    option(value=3) Demo Input SelectTo 3
-                    option(value=4) Demo Input SelectTo 4
-                    option(value=5) Demo Input SelectTo 5
-                br
-                br
-                h3 Showing the search box
-                code
-                    |&lt;select class="select2-ip" data-search="true"&gt;
-                    br
-                    | ...
-                    br
-                    | &lt;/select&gt;
-                    br
-                    br
-                select.select2-ip(data-search="true")
-                    option(value=0) Demo Input SelectTo 0
-                    option(value=1) Demo Input SelectTo 1
-                    option(value=2) Demo Input SelectTo 2
-                    option(value=3) Demo Input SelectTo 3
-                    option(value=4) Demo Input SelectTo 4
-                    option(value=5) Demo Input SelectTo 5
+                .col-md-4
+                    h3 Hiding the search box
+                    code
+                        |&lt;select class="select2-ip"&gt;
+                        br
+                        | ...
+                        br
+                        | &lt;/select&gt;
+                        br
+                        br
+                    select.select2-ip
+                        option(value=0) Demo Input SelectTo 0
+                        option(value=1) Demo Input SelectTo 1
+                        option(value=2) Demo Input SelectTo 2
+                        option(value=3) Demo Input SelectTo 3
+                        option(value=4) Demo Input SelectTo 4
+                        option(value=5) Demo Input SelectTo 5
+                .col-md-4
+                    h3 Showing the search box
+                    code
+                        |&lt;select class="select2-ip" data-search="true"&gt;
+                        br
+                        | ...
+                        br
+                        | &lt;/select&gt;
+                        br
+                        br
+                    select.select2-ip(data-search="true")
+                        option(value=0) Demo Input SelectTo 0
+                        option(value=1) Demo Input SelectTo 1
+                        option(value=2) Demo Input SelectTo 2
+                        option(value=3) Demo Input SelectTo 3
+                        option(value=4) Demo Input SelectTo 4
+                        option(value=5) Demo Input SelectTo 5
+                .col-md-4
+                    h3 Large size select2 input
+                    code
+                        |&lt;select class="select2-ip select2-ip-lg"&gt;
+                        br
+                        | ...
+                        br
+                        | &lt;/select&gt;
+                        br
+                        br
+                    select.select2-ip.select2-ip-lg
+                        option(value=0) Demo Input SelectTo 0
+                        option(value=1) Demo Input SelectTo 1
+                        option(value=2) Demo Input SelectTo 2
+                        option(value=3) Demo Input SelectTo 3
+                        option(value=4) Demo Input SelectTo 4
+                        option(value=5) Demo Input SelectTo 5
+                .col-md-4
+                    h3 Full width select2 input
+                    code
+                        |&lt;select class="select2-ip f-w"&gt;
+                        br
+                        | ...
+                        br
+                        | &lt;/select&gt;
+                        br
+                        br
+                    select.select2-ip.f-w 
+                        option(value=0) Demo Input SelectTo 0
+                        option(value=1) Demo Input SelectTo 1
+                        option(value=2) Demo Input SelectTo 2
+                        option(value=3) Demo Input SelectTo 3
+                        option(value=4) Demo Input SelectTo 4
+                        option(value=5) Demo Input SelectTo 5
+                .col-md-4
+                    h3 Multiple choices select2 input
+                    code
+                        |&lt;select class="select2-ip f-w" multiple="multiple"&gt;
+                        br
+                        | ...
+                        br
+                        | &lt;/select&gt;
+                        br
+                        br
+                    select.select2-ip.f-w(multiple="multiple")
+                        option(value=0) Demo Input SelectTo 0
+                        option(value=1) Demo Input SelectTo 1
+                        option(value=2) Demo Input SelectTo 2
+                        option(value=3) Demo Input SelectTo 3
+                        option(value=4) Demo Input SelectTo 4
+                        option(value=5) Demo Input SelectTo 5
+            hr
+            h2 DEMO: Date input mask
+            code &lt;input type="text" class="form-control datepicker"&gt;
+            .row
+                .col-md-4
+                    input(type="text", class="form-control datepicker")
+                .col-md-4
+                    | ---
+                .col-md-4
+                    | ---
+            hr
+            h2 DEMO: Datetime Picker
+            code &lt;input type="text" class="form-control datetimepicker"&gt;
+            .row
+                .col-md-4
+                    input.form-control.datetimepicker(type="text")
+                .col-md-4
+                    | ---
+                .col-md-4
+                    | ---
             hr
             h2 DEMO: Buttons
             .row

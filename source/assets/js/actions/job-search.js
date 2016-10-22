@@ -179,6 +179,21 @@ function removeAApplJob() {
     });
 }
 
+// 4. notAllowCl(): Make Find Job button not clickable when it was clicked
+function notAllowCl() {
+    if(!$(".btn-loading .btn-search").length) { return; }
+
+    var $btn_srch = $(".btn-loading .btn-search"),
+        $lding_state = $btn_srch.parent();
+    $btn_srch.on("click", function(e) {
+        if($lding_state.hasClass("loading")) {
+            $lding_state.removeClass("loading");
+        } else {
+            $lding_state.addClass("loading");
+        }
+    });
+}
+
 /* ----------------------------------------------- */
 /* ----------------------------------------------- */
 /* OnLoad Page */
@@ -189,6 +204,7 @@ $(document).ready(function($){
     removeAllAppJobs ();
     clickApply();
     removeAApplJob();
+    notAllowCl();
 });
 /* OnLoad Window */
 var init = function () {

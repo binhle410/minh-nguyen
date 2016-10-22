@@ -510,3 +510,43 @@ form {
         margin: 15px 0;
     }
 }
+
+// Select2 Plugin CSS
+.select2-ip {
+    &.select2-ip-lg {
+        & + .select2-container {
+            .select2-selection {
+                height: 48px;
+                .select2-selection__rendered {
+                    height: 48px;
+                    line-height: 48px;
+                }
+                .select2-selection__arrow {
+                    height: 48px;
+                }
+            }
+        }
+    }
+    &.f-w {
+        & + .select2-container {
+            width: 100%!important;
+        }
+    }
+}
+
+// Bootstrap datetimepicker CSS
+.bootstrap-datetimepicker-widget {
+    display: block!important;
+    table {
+        td {
+            &.active, &.active:hover {
+                background: @red;
+            }
+            &.today {
+                &:before {
+                    border-bottom-color: @red;
+                }
+            }
+        }
+    }
+}
