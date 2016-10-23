@@ -1,0 +1,208 @@
+/**
+ * DETAIL CSS
+ * Updated on 23/10/16
+ */
+
+.detail-body {
+    a {
+        color: @dred;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+        &.link-more {
+            display: block;
+            margin-top: 30px;
+            text-decoration: none;
+        }
+    }
+}
+
+.detail-sidebar {
+    a {
+        color: #999;
+        &:hover {
+            color: #333;
+        }
+    }
+}
+
+.job-avt {
+    display: block;
+    margin: 25px auto 0 auto;
+    img {
+        margin: 0 auto;
+    }
+}
+
+.detail-ttl {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.detail-desc {
+    line-height: 1.5;
+    strong {
+        font-size: 16px;
+    }
+    a {
+        color: @red;
+        margin-left: 5px;
+    }
+}
+
+.box-ct {
+    ul, ol {
+        margin-bottom: 15px;
+        padding: 0;
+        li {
+            margin-left: 40px;
+        }
+    }
+    table {
+        width: 100%;
+        border: 1px solid #ddd;
+        th {
+            background: #f1f1f1;
+        }
+        tr {
+             border-bottom: 1px solid #ddd;
+        }
+        th, td {
+            padding: 5px;
+        }
+    }
+    .box-itm {
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        > label, > a {
+            display: block;
+        }
+        > label {
+            margin: 0 0 2px;
+        }
+    }
+}
+
+.box-also-view {
+    .box-ct {
+        .box-itm {
+            > a {
+                color: #333;
+                &:hover {
+                    color: @red;
+                }
+            }
+            > span {
+                color: #999;
+            }
+        }
+    }
+}
+
+.salary-box {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 5px 15px;
+    font-weight: bold;
+    .border-radius(3px);
+    line-height: 22px;
+    .money {
+        color: @red;
+        font-weight: 700;
+        font-size: 16px;
+    }
+}
+
+.apply-blk {
+    text-align: center;
+    padding-top: 30px;
+    .btn {
+        width: 100%;
+        margin: 0 0 10px 0;
+        padding: 10px 20px;
+        &.btn-default {
+            margin: 0 0 5px 0;
+            font-size: 14px;
+            padding: 7px 20px;
+        }
+    }
+    .smll {
+        display: block;
+        font-size: 12px;
+        color: #999;
+    }
+}
+
+.benefit-highlight-blk {
+    border-left: 5px solid @dred;
+    .border-radius(3px);
+    padding-left: 10px;
+    margin-bottom: 15px;
+    .be-itm {
+        padding: 5px 0;
+    }
+    .be-name {
+        color: #777;
+        padding: 10px;
+    }
+    .fa {
+        margin: 0 10px 0 0;
+        text-align: center;
+        color: #777;
+        line-height: 40px;
+    }
+}
+
+.detail-sidebar {
+    .list-group {
+        margin: 0 -20px;
+        .list-group-item {
+            border-left: none;
+            border-right: none;
+            .border-radius(0);
+            &:first-child {
+                border-top: none;
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        .item-icon {
+            display: inline-block;
+            background: #ddd;
+            .border-radius(50%);
+            width: 28px;
+            height: 28px;
+            text-align: center;
+            line-height: 28px;
+            margin-right: 10px;
+        }
+        .item-content {
+            display: inline-block;
+            p {
+                margin: 0;
+            }
+        }
+        .social-lk {
+            margin: 0 5px;
+        }
+    }
+}
+
+.detail-sidebar {
+    .box-ttl {
+        font-size: 20px;
+    }
+}
+
+.box {
+    &.box-consider {
+        .box-md {
+            padding-bottom: 0;
+        }
+    }
+}

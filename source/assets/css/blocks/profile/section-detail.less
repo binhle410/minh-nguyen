@@ -24,8 +24,6 @@
 }
 
 .main-profile {
-    margin-top: 15px;
-    margin-bottom: 15px;
     .panel {
         background: #fff;
         margin-bottom: 0;
@@ -53,13 +51,6 @@
 }
 
 .main-profile {
-    .box {
-        background: #fff;
-        border: 0;
-        border-top: 1px solid #ddd;
-        .border-radius(3px);
-        .box-shadow(0 1px 1px #ccc);
-    }
     label {
         font-weight: 700;
         font-size: 14px;
@@ -89,28 +80,6 @@
         }
         strong {
             margin-right: 3px;
-        }
-    }
-    .btn {
-        &.add-one-more-section {
-            margin: 0;
-            padding: 10px 0;
-            border: none;
-            border-top: 1px #ddd solid;
-            .border-radius(0 0 3px 3px);
-            font-size: 14px;
-            &:hover, &:focus {
-                color: #555;
-                background-color: #e0e0e0;
-                outline: none;
-                box-shadow: none;
-            }
-        }
-    }
-    .form-wrapper, .placeholder-section {
-        &.box-md {
-            padding: 20px;
-            background: none;
         }
     }
     .form-control-static {
@@ -211,14 +180,11 @@
                 font-size: 20px;
                 line-height: 30px;
                 padding: 10px 20px;
-                border-bottom: 1px solid #eee;
-                border-top: 1px solid #ddd;
-                border-left: none;
-                border-right: none;
                 width: 100%;
                 background: transparent;
                 border: none;
                 border-bottom: 1px solid #ddd;
+                border-top: 1px solid #ddd;
             }
         }
         h4 {
@@ -270,9 +236,6 @@
     .form-horizontal {
         margin: 0;
     }
-    .box-md {
-        padding: 20px;
-    }
     .max-number-of-benefits {
         margin-top: 10px;
         margin-bottom: -5px;
@@ -282,6 +245,48 @@
     }
 }
 
+.btn {
+    &.add-one-more-section {
+        height: auto;
+        margin: 0;
+        padding: 10px 0;
+        border: none;
+        .border-radius(0 0 3px 3px);
+        border-top: 1px #ddd solid;
+        border-right: 1px solid #ddd;
+        font-size: 14px;
+        .box-shadow(none);
+        background: #f4f4f4;
+        &:hover {
+            color: #555;
+            background-color: #eee;
+            outline: none;
+            box-shadow: none;
+        }
+        &:focus {
+            outline: none;
+        }
+        .fa {
+            margin-right: 3px;
+        }
+    }
+}
+
+.btn {
+    &.tab-prof {
+        .border-radius(0 0 0 0);
+        &:first-child {
+            .border-radius(0 0 0 3px);
+        }
+        &:last-child {
+            border-right: none;
+            .border-radius(0 0 3px 0);
+        }
+        &.active {
+            background: #e0e0e0;
+        }
+    }
+}
 
 @import "section-detail/section-resume-header.less";
 @import "section-detail/section-profile.less";

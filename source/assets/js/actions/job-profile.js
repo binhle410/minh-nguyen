@@ -12,6 +12,7 @@
  * 8. addSkill()        : Add one more skill
  * 8.1 delSkill()       : Delete a skill
  * 9. linkAct()         : Trigger events when clicking elements
+ * 10. closeGbox()      : Close guide box when clicking x btn
  *
  * _bnfList             : json Obj will be used for sending to server side.
  */
@@ -163,7 +164,7 @@ function addForm() {
         // Append new cloned Form into current section
         $currSec.append($cloneElem);
 
-        inputDateFm();
+        $(".datepicker").inputmask('dd/mm/yyyy');
     });
 }
 
@@ -178,18 +179,18 @@ function delForm() {
 
 // 4. Toggle contact box
 function toggleCttBox() {
-    if(!$(".contact-information-toggler").length) { return; }
+    if(!$(".tab-prof").length) { return; }
 
-    var $cttBtn = $(".contact-information-toggler");
+    var $cttBtn = $(".tab-prof");
+
     $cttBtn.on("click", function(e) {
-        var $secCtt = $(".section-contact");
-        if($secCtt.hasClass("active")) {
-            $secCtt.removeClass("active");
-            $secCtt.hide();
-        } else {
-            $secCtt.addClass("active");
-            $secCtt.show();
-        }
+        var $secCtt = $($(this).data("target"));
+
+        $(".tab-prof-wrap").show();
+        $(".tab-prof").removeClass("active");
+        $(this).addClass("active");
+        $(".tab-prof-ct").hide();
+        $secCtt.show();
     });
 }
 
@@ -294,6 +295,15 @@ function linkAct() {
     });
 }
 
+// 10. closeGbox(): Close guide box when clicking x btn
+function closeGbox() {
+    if(!$(".guide-box .close-msg").length) { return; }
+
+    $(".guide-box .close-msg").on("click", function(e) {
+        $(".guide-box").remove();
+    });
+}
+
 /* ----------------------------------------------- */
 /* ----------------------------------------------- */
 /* OnLoad Page */
@@ -309,6 +319,7 @@ $(document).ready(function($) {
     addSkill();
     delSkill();
     linkAct();
+    closeGbox();
 });
 /* OnLoad Window */
 var init = function () {

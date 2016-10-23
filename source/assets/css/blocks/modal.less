@@ -3,6 +3,8 @@
  * Updated on 22/09/16
  */
  .modal-content {
+     .border-radius(3px);
+     overflow: hidden;
      .modal-header {
          background: @red;
          .close {
@@ -39,3 +41,24 @@
          }
      }
  }
+
+#upload-img {
+    .modal-header {
+        background: none;
+        text-align: center;
+        padding: 10px 15px;
+        .modal-title {
+            color: @dgray;
+            font-size: 20px;
+        }
+        .close {
+            color: #555;
+        }
+    }
+    .modal-body {
+        text-align: center;
+        p {
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -3,40 +3,6 @@
  * Updated on 01/10/16
  */
 .main-profile {
-    .section-detail {
-        .tag-xs {
-            margin-right: 5px;
-            margin-bottom: 5px;
-            border-radius: 3px;
-            -moz-border-radius: 3px;
-            -webkit-border-radius: 3px;
-            background: #f8f8f8;
-            border: 1px #ddd solid;
-        }
-    }
-    .tag-xs {
-        display: inline-block;
-        padding: 0 10px 0 10px;
-        cursor: pointer;
-        overflow: hidden;
-        line-height: 30px;
-        height: 30px;
-        border-radius: 5px;
-        -moz-border-radius: 5px;
-        -webkit-border-radius: 5px;
-        background: #f8f8f8;
-        border: 1px #ddd solid;
-        -webkit-transition: color .3s;
-        transition: color .3s;
-    }
-    .tag-name {
-        display: inline-block;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 135px;
-        vertical-align: middle;
-    }
     .skill-input {
         .btn {
             margin-left: 10px;
@@ -48,3 +14,29 @@
     }
 }
 
+.tag-xs {
+    margin: 0 5px 5px 0;
+    .border-radius(5px);
+    background: #f8f8f8;
+    border: 1px #ddd solid;
+    display: inline-block;
+    padding: 0 10px 0 10px;
+    cursor: pointer;
+    overflow: hidden;
+    line-height: 30px;
+    height: 30px;
+    &:hover {
+        background: #e5e5e5;
+    }
+    .tag-name {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 135px;
+        vertical-align: middle;
+    }
+    .fa-plus {
+        margin-left: 10px;
+    }
+}

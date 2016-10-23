@@ -108,6 +108,12 @@ form {
             filter: alpha(opacity=100);
         }
     }
+    &, .placeholder-section {
+        &.box-md {
+            padding: 20px;
+            background: none;
+        }
+    }
     .form-btn-edit {
         opacity: 0;
         filter: alpha(opacity=0);
@@ -131,6 +137,21 @@ form {
         ~ .form-control-feedback {
             top: 19px;
         }
+    }
+}
+.box {
+    background: #fff;
+    .border-radius(3px);
+    .box-shadow(0 1px 1px #ccc);
+    margin-bottom: 15px;
+    border: none;
+    border-top: 1px solid #ddd;
+    .box-md {
+        padding: 20px;
+    }
+    .box-ttl {
+        font-size: 25px;
+        font-weight: 500;
     }
 }
 
@@ -365,7 +386,7 @@ form {
         margin-right: 10px;
         .transform(translate(-50%, -50%));
         &:hover {
-            color: @dred;
+            color: #333;
         }
     }
 }
@@ -548,5 +569,29 @@ form {
                 }
             }
         }
+    }
+}
+
+// Text CSS
+.txt-gray {
+    color: #999;
+}
+.txt-blue {
+    color: @blue;
+}
+.txt-green {
+    color: @green;
+}
+.txt-red {
+    color: @red;
+}
+.txt-black {
+    color: #000;
+}
+
+// Main profile CSS
+.main {
+    &.container {
+        padding-top: 15px;
     }
 }

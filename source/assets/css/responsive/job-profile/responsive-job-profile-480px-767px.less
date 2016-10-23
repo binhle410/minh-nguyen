@@ -20,9 +20,12 @@
                     &.contact-information-toggler {
                         text-align: right;
                         margin-top: -10px!important;
-                        margin-right: 10px;
+                        margin-right: 20px;
                         background: 0 0!important;
                         font-size: 20px;
+                        .box-shadow(none);
+                        float: left;
+                        width: auto;
                     }
                 }
             }
@@ -77,6 +80,20 @@
         label {
             &.control-label {
                 margin: 0;
+            }
+        }
+    }
+    .btn {
+        &.tab-prof {
+            display: inline-block;
+            width: 33.33333%;
+            text-align: center;
+            white-space: normal;
+            i.fa {
+                display: none;
+            }
+            strong {
+                font-size: 11px;
             }
         }
     }

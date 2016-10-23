@@ -1,0 +1,16 @@
+#upload-img.modal.fade.in(tabindex='-1', role='dialog', aria-labelledby='delete-confirmation', aria-hidden='false')
+    form
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    button.close(type='button btn-sm', data-dismiss='modal')
+                        span(aria-hidden='true', tabindex='8') ×
+                        span.sr-only Close
+                    strong.modal-title Upload an image
+                .modal-body
+                    p Upload image file (JPG, PNG) only.
+                    label.btn.btn-bdline Choose file
+                        input.hidden(type="file", name="avatar_img")
+                    button.btn.btn-primary(type="submit") Upload
+                .modal-footer
+                    button.btn.btn-default(type='button', data-dismiss='modal', tabindex='9') Close

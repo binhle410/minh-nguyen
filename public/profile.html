@@ -53,7 +53,7 @@
                     <li class="dropdown"><a href="#" data-toggle="dropdown" class="user-prof dropdown-toggle hidden-xs">
                         <div class="avatar avatar-sm img-circle"><img src="./uploads/user_ava.jpg"></div>Victor Lee<span class="caret"></span></a>
                       <ul class="uprof-menu dropdown-menu">
-                        <li class="prof-itm"><span>Victor Lee</span><br><a href="#" class="btn btn-primary">My Profile</a></li>
+                        <li class="prof-itm"><span class="visible-xs">Victor Lee</span><a href="#" class="btn btn-primary">My Profile</a></li>
                         <li><a href="#"><i class="fa fa-fw fa-lg fa-user"></i>Account Information</a></li>
                         <li><a href="#"><i class="fa fa-fw fa-lg fa-heart"></i>Saved Jobs</a></li>
                         <li><a href="#"><i class="fa fa-fw fa-lg fa-envelope"></i>Job Alerts</a></li>
@@ -78,20 +78,9 @@
                 <div class="user-info border-primary">
                   <div class="row">
                     <div class="col-xs-4 col-sm-3 center-block">
-                      <div class="form-wrapper relative no-edit-mode">
-                        <div class="user-pic">
-                          <form><span class="form-btn-edit hidden-xs">
-                              <button type="button" class="btn"><i class="fa fa-pencil"></i></button></span>
-                            <div class="dropdown"><a data-toggle="dropdown" aria-expanded="true" class="dropdown-toggle">
-                                <div class="avatar img-circle"><img src="./uploads/user_ava.jpg"></div></a>
-                              <ul role="menu" aria-labelledby="pic-dropdown" class="dropdown-menu hidden-xs">
-                                <li role="presentation"><a role="menuitem" tabindex="-1" class="block relative"><i class="fa fa-pencil fa-fw"></i>Upload photo
-                                    <input name="avatar" type="file" class="absolute-left transparent"></a></li>
-                              </ul>
-                            </div>
-                          </form>
-                        </div>
-                      </div>
+                      <div class="user-pic"><a href="#" data-toggle="modal" data-target="#upload-img" class="avatar img-circle"><img src="./uploads/user_ava.jpg">
+                          <p><i class="fa fa-camera"></i><span> Change</span></p></a></div>
+                      <!-- End: AVATAR-->
                     </div>
                     <div class="section-header hidden-section col-xs-8 col-sm-9">
                       <form class="form-wrapper">
@@ -155,518 +144,647 @@
                             </div>
                           </div>
                         </div>
-                        <div class="absolute-right m-t-n-lg m-r-xs visible-xs"><a href="#" class="btn btn-block contact-information-toggler"><i class="fa fa-fw fa-suitcase"></i><span class="hidden-xs">Contact Information</span></a></div>
                       </form>
                     </div>
+                    <!-- End: PROFILE INFO-->
                   </div>
-                  <div class="bg-gray text-right hidden-xs">
-                    <div class="row">
-                      <div class="col-xs-12 col-sm-5 pull-right"><a href="#" class="btn btn-block contact-information-toggler add-one-more-section"><i class="fa fa-fw fa-suitcase"></i><strong>Contact Information</strong></a></div>
-                    </div>
+                  <div class="bg-gray text-right">
+                    <div class="clearfix"><a href="javascript:;" data-target="#my-job-tab" class="btn tab-prof add-one-more-section col-xs-12 col-md-4"><i class="fa fa-fw fa-suitcase"></i><strong>My job</strong></a><a href="javascript:;" data-target="#media-tab" class="btn tab-prof add-one-more-section col-xs-12 col-md-4"><i class="fa fa-fw fa-cubes"></i><strong>Media</strong></a><a href="javascript:;" data-target="#contact-info-tab" class="btn tab-prof add-one-more-section col-xs-12 col-md-4"><i class="fa fa-fw fa-file-text-o"></i><strong>Contact Information</strong></a></div>
                   </div>
                 </div>
+                <!-- End: FEATURED RESUME BOX-->
               </div>
-              <div hidden="" class="section-contact">
-                <form class="form-horizontal">
+              <div class="tab-prof-wrap">
+                <div id="contact-info-tab" class="section-contact tab-prof-ct">
+                  <form class="form-horizontal">
+                    <div class="box">
+                      <fieldset>
+                        <div class="form-wrapper relative box-md"><span class="form-btn-edit">
+                            <button type="button" class="btn btn-sm"><i class="fa fa-pencil"></i></button></span>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="address">Email</label>
+                                <div class="view-field">
+                                  <p class="form-control-static view-control">victor.lee@gmail.com</p>
+                                </div>
+                                <div class="edit-field">
+                                  <input type="email" autofocus="" disabled="" value="victor.lee@gmail.com" class="form-control">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="cell-number"><strong class="text-red">*</strong>Cell Number</label>
+                                <div class="view-field clearfix">
+                                  <p class="form-control-static view-control pull-left">01696872113</p>
+                                  <div class="pull-left form-control-static text-gray-light"><em><i class="fa fa-eye"></i><span>  Visible to employer</span></em></div>
+                                </div>
+                                <div class="edit-field">
+                                  <input type="tel" name="cellphone" value="01696872113" class="form-control">
+                                  <label class="push-top-sm">
+                                    <input name="confidential" value="1" type="checkbox"><em>   Invisible to employer</em>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="date-of-birth"><strong class="text-red">*</strong>Date of birth</label>
+                                <div class="edit-field">
+                                  <input name="birthday" value="25/09/1993" class="form-control">
+                                </div>
+                                <div class="view-field">
+                                  <p class="form-control-static view-control">25/09/1993</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="nationality"><strong class="text-red">*</strong>Nationality</label>
+                                <div class="view-field">
+                                  <p class="form-control-static view-control">Local Vietnamese</p>
+                                </div>
+                                <div class="edit-field">
+                                  <select name="nationality" tabindex="-1" title="*                                Nationality" class="form-control">
+                                    <option value="">Please select...</option>
+                                    <option value="1" selected="">Local Vietnamese</option>
+                                    <option value="2">Foreigner</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label><strong class="text-red">*</strong>   Gender</label>
+                                <div class="edit-field">
+                                  <label class="radio-inline">
+                                    <input type="radio" name="gender" value="1" checked="checked">                                        Male
+                                  </label>
+                                  <label class="radio-inline">
+                                    <input type="radio" name="gender" value="2">                                        Female
+                                  </label>
+                                </div>
+                                <div class="view-field">
+                                  <p class="form-control-static view-control">Male</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label>  Marital Status</label>
+                                <div class="edit-field">
+                                  <label for="marital-single" class="radio-inline">
+                                    <input type="radio" name="marital" value="1" checked="checked">                                        Single
+                                  </label>
+                                  <label for="marital-married" class="radio-inline">
+                                    <input type="radio" name="marital" value="2">                                        Married
+                                  </label>
+                                </div>
+                                <div class="view-field">
+                                  <p class="form-control-static view-control">Single</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="country"><strong class="text-red">*</strong>                                    Country</label>
+                                <div class="view-field">
+                                  <p class="form-control-static view-control">Vietnam</p>
+                                </div>
+                                <div class="edit-field">
+                                  <div class="border-text-box">
+                                    <select name="country" tabindex="-1" title="*                                    Country" class="form-control">
+                                      <option value="">Please select...</option>
+                                      <option value="1" selected="">Vietnam</option>
+                                      <option value="2">Afghanistan</option>
+                                      <option value="3">Albania</option>
+                                      <option value="4">Algeria</option>
+                                      <option value="5">American Samoa</option>
+                                      <option value="6">Andorra</option>
+                                      <option value="7">Angola</option>
+                                      <option value="8">Anguilla</option>
+                                      <option value="9">Antarctica</option>
+                                      <option value="10">Antigua And Barbuda</option>
+                                      <option value="11">Argentina</option>
+                                      <option value="12">Armenia</option>
+                                      <option value="13">Aruba</option>
+                                      <option value="14">Australia</option>
+                                      <option value="15">Austria</option>
+                                      <option value="16">Azerbaijan</option>
+                                      <option value="17">Bahamas</option>
+                                      <option value="18">Bahrain</option>
+                                      <option value="19">Bangladesh</option>
+                                      <option value="20">Barbados</option>
+                                      <option value="21">Belarus</option>
+                                      <option value="22">Belgium</option>
+                                      <option value="23">Belize</option>
+                                      <option value="24">Benin</option>
+                                      <option value="25">Bermuda</option>
+                                      <option value="26">Bhutan</option>
+                                      <option value="27">Bolivia</option>
+                                      <option value="28">Bosnia And Herzegowina</option>
+                                      <option value="29">Botswana</option>
+                                      <option value="30">Bouvet Island</option>
+                                      <option value="31">Brazil</option>
+                                      <option value="32">British Indian Ocean Territory</option>
+                                      <option value="33">Brunei Darussalam</option>
+                                      <option value="34">Bulgaria</option>
+                                      <option value="35">Burkina Faso</option>
+                                      <option value="36">Burundi</option>
+                                      <option value="37">Cambodia</option>
+                                      <option value="38">Cameroon</option>
+                                      <option value="39">Canada</option>
+                                      <option value="40">Cape Verde</option>
+                                      <option value="41">Cayman Islands</option>
+                                      <option value="42">Central African Republic</option>
+                                      <option value="43">Chad</option>
+                                      <option value="44">Chile</option>
+                                      <option value="45">China</option>
+                                      <option value="46">Christmas Island</option>
+                                      <option value="47">Cocos (Keeling) Islands</option>
+                                      <option value="48">Colombia</option>
+                                      <option value="49">Comoros</option>
+                                      <option value="50">Congo</option>
+                                      <option value="51">Cook Islands</option>
+                                      <option value="52">Costa Rica</option>
+                                      <option value="53">Cote D'Ivoire</option>
+                                      <option value="54">Croatia</option>
+                                      <option value="55">Cuba</option>
+                                      <option value="56">Cyprus</option>
+                                      <option value="57">Czech Republic</option>
+                                      <option value="58">Denmark</option>
+                                      <option value="59">Djibouti</option>
+                                      <option value="60">Dominica</option>
+                                      <option value="61">Dominican Republic</option>
+                                      <option value="62">East Timor</option>
+                                      <option value="63">Ecuador</option>
+                                      <option value="64">Egypt</option>
+                                      <option value="65">El Salvador</option>
+                                      <option value="66">Equatorial Guinea</option>
+                                      <option value="67">Eritrea</option>
+                                      <option value="68">Estonia</option>
+                                      <option value="69">Ethiopia</option>
+                                      <option value="70">Falkland Islands</option>
+                                      <option value="71">Faroe Islands</option>
+                                      <option value="72">Fiji</option>
+                                      <option value="73">Finland</option>
+                                      <option value="74">France</option>
+                                      <option value="75">France, Metropolitan</option>
+                                      <option value="76">French Guiana</option>
+                                      <option value="77">French Polynesia</option>
+                                      <option value="78">French Southern Territories</option>
+                                      <option value="79">Gabon</option>
+                                      <option value="80">Gambia</option>
+                                      <option value="81">Georgia</option>
+                                      <option value="82">Germany</option>
+                                      <option value="83">Ghana</option>
+                                      <option value="84">Gibraltar</option>
+                                      <option value="85">Greece</option>
+                                      <option value="86">Greenland</option>
+                                      <option value="87">Grenada</option>
+                                      <option value="88">Guadeloupe</option>
+                                      <option value="89">Guam</option>
+                                      <option value="90">Guatemala</option>
+                                      <option value="91">Guinea</option>
+                                      <option value="92">Guinea-Bissau</option>
+                                      <option value="93">Guyana</option>
+                                      <option value="94">Haiti</option>
+                                      <option value="95">Heard And Mc Donald Islands</option>
+                                      <option value="96">Honduras</option>
+                                      <option value="97">Hong Kong</option>
+                                      <option value="98">Hungary</option>
+                                      <option value="99">Iceland</option>
+                                      <option value="100">India</option>
+                                      <option value="101">Indonesia</option>
+                                      <option value="102">Iran</option>
+                                      <option value="103">Iraq</option>
+                                      <option value="104">Ireland</option>
+                                      <option value="105">Israel</option>
+                                      <option value="106">Italy</option>
+                                      <option value="107">Jamaica</option>
+                                      <option value="108">Japan</option>
+                                      <option value="109">Jordan</option>
+                                      <option value="110">Kazakhstan</option>
+                                      <option value="111">Kenya</option>
+                                      <option value="112">Kiribati</option>
+                                      <option value="113">North Korea (People's Republic Of Korea)</option>
+                                      <option value="114">South Korea (Republic Of Korea)</option>
+                                      <option value="115">Kuwait</option>
+                                      <option value="116">Kyrgyzstan</option>
+                                      <option value="117">Lao People's Republic</option>
+                                      <option value="118">Latvia</option>
+                                      <option value="119">Lebanon</option>
+                                      <option value="120">Lesotho</option>
+                                      <option value="121">Liberia</option>
+                                      <option value="122">Libyan Arab Jamahiriya</option>
+                                      <option value="123">Liechtenstein</option>
+                                      <option value="124">Lithuania</option>
+                                      <option value="125">Luxembourg</option>
+                                      <option value="126">Macau</option>
+                                      <option value="127">Macedonia</option>
+                                      <option value="128">Madagascar</option>
+                                      <option value="129">Malawi</option>
+                                      <option value="130">Malaysia</option>
+                                      <option value="131">Maldives</option>
+                                      <option value="132">Mali</option>
+                                      <option value="133">Malta</option>
+                                      <option value="134">Marshall Islands</option>
+                                      <option value="135">Martinique</option>
+                                      <option value="136">Mauritania</option>
+                                      <option value="137">Mauritius</option>
+                                      <option value="138">Mayotte</option>
+                                      <option value="139">Mexico</option>
+                                      <option value="140">Micronesia</option>
+                                      <option value="141">Moldova</option>
+                                      <option value="142">Monaco</option>
+                                      <option value="143">Mongolia</option>
+                                      <option value="144">Montserrat</option>
+                                      <option value="145">Morocco</option>
+                                      <option value="146">Mozambique</option>
+                                      <option value="147">Myanmar</option>
+                                      <option value="148">Namibia</option>
+                                      <option value="149">Nauru</option>
+                                      <option value="150">Nepal</option>
+                                      <option value="151">Netherlands</option>
+                                      <option value="152">Netherlands Antilles</option>
+                                      <option value="153">New Caledonia</option>
+                                      <option value="154">New Zealand</option>
+                                      <option value="155">Nicaragua</option>
+                                      <option value="156">Niger</option>
+                                      <option value="157">Nigeria</option>
+                                      <option value="158">Niue</option>
+                                      <option value="159">Norfolk Island</option>
+                                      <option value="160">Northern Mariana Islands</option>
+                                      <option value="161">Norway</option>
+                                      <option value="162">Oman</option>
+                                      <option value="163">Pakistan</option>
+                                      <option value="164">Palau</option>
+                                      <option value="165">Panama</option>
+                                      <option value="166">Papua New Guinea</option>
+                                      <option value="167">Paraguay</option>
+                                      <option value="168">Peru</option>
+                                      <option value="169">Philippines</option>
+                                      <option value="170">Pitcairn</option>
+                                      <option value="171">Poland</option>
+                                      <option value="172">Portugal</option>
+                                      <option value="173">Puerto Rico</option>
+                                      <option value="174">Qatar</option>
+                                      <option value="175">Reunion</option>
+                                      <option value="176">Romania</option>
+                                      <option value="177">Russian Federation</option>
+                                      <option value="178">Rwanda</option>
+                                      <option value="179">Saint Kitts And Nevis</option>
+                                      <option value="180">Saint Lucia</option>
+                                      <option value="181">Saint Vincent And The Grenadines</option>
+                                      <option value="182">Samoa</option>
+                                      <option value="183">San Marino</option>
+                                      <option value="184">Sao Tome And Principe</option>
+                                      <option value="185">Saudi Arabia</option>
+                                      <option value="186">Senegal</option>
+                                      <option value="187">Seychelles</option>
+                                      <option value="188">Sierra Leone</option>
+                                      <option value="189">Singapore</option>
+                                      <option value="190">Slovakia</option>
+                                      <option value="191">Slovenia</option>
+                                      <option value="192">Solomon Islands</option>
+                                      <option value="193">Somalia</option>
+                                      <option value="194">South Africa</option>
+                                      <option value="195">South Georgia/South Sandwich Islands</option>
+                                      <option value="196">Spain</option>
+                                      <option value="197">Sri Lanka</option>
+                                      <option value="198">St Helena</option>
+                                      <option value="199">St Pierre and Miquelon</option>
+                                      <option value="200">Sudan</option>
+                                      <option value="201">Suriname</option>
+                                      <option value="202">Svalbard And Jan Mayen Islands</option>
+                                      <option value="203">Swaziland</option>
+                                      <option value="204">Sweden</option>
+                                      <option value="205">Switzerland</option>
+                                      <option value="206">Syrian Arab Republic</option>
+                                      <option value="207">Taiwan</option>
+                                      <option value="208">Tajikistan</option>
+                                      <option value="209">Tanzania</option>
+                                      <option value="210">Thailand</option>
+                                      <option value="211">Togo</option>
+                                      <option value="212">Tokelau</option>
+                                      <option value="213">Tonga</option>
+                                      <option value="214">Trinidad And Tobago</option>
+                                      <option value="215">Tunisia</option>
+                                      <option value="216">Turkey</option>
+                                      <option value="217">Turkmenistan</option>
+                                      <option value="218">Turks And Caicos Islands</option>
+                                      <option value="219">Tuvalu</option>
+                                      <option value="220">Uganda</option>
+                                      <option value="221">Ukraine</option>
+                                      <option value="222">United Arab Emirates</option>
+                                      <option value="223">United Kingdom</option>
+                                      <option value="224">United States</option>
+                                      <option value="225">United States Minor Outlying Islands</option>
+                                      <option value="226">Uruguay</option>
+                                      <option value="227">Uzbekistan</option>
+                                      <option value="228">Vanuatu</option>
+                                      <option value="229">Vatican City State</option>
+                                      <option value="230">Venezuela</option>
+                                      <option value="231">Virgin Islands (British)</option>
+                                      <option value="232">Virgin Islands (U.S.)</option>
+                                      <option value="233">Wallis And Futuna Islands</option>
+                                      <option value="234">Western Sahara</option>
+                                      <option value="235">Yemen</option>
+                                      <option value="236">Zaire</option>
+                                      <option value="237">Zambia</option>
+                                      <option value="238">Zimbabwe</option>
+                                      <option value="239">Other</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-6"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="city"><strong class="text-red">*</strong>  Province/City</label>
+                                <div class="view-field">
+                                  <p class="form-control-static view-control">Singapore</p>
+                                </div>
+                                <div class="edit-field">
+                                  <div class="border-text-box">
+                                    <select onchange="loadDistrict();" name="city" tabindex="-1" title="*                                    Province/City" class="form-control">
+                                      <option value="">Please select...</option>
+                                      <option value="29" selected="">Singapore</option>
+                                      <option value="24">Ha Noi</option>
+                                      <option value="71">Mekong Delta</option>
+                                      <option value="2">An Giang</option>
+                                      <option value="3">Ba Ria - Vung Tau</option>
+                                      <option value="4">Bac Can</option>
+                                      <option value="5">Bac Giang</option>
+                                      <option value="6">Bac Lieu</option>
+                                      <option value="7">Bac Ninh</option>
+                                      <option value="8">Ben Tre</option>
+                                      <option value="9">Bien Hoa</option>
+                                      <option value="10">Binh Dinh</option>
+                                      <option value="11">Binh Duong</option>
+                                      <option value="12">Binh Phuoc</option>
+                                      <option value="13">Binh Thuan</option>
+                                      <option value="14">Ca Mau</option>
+                                      <option value="15">Can Tho</option>
+                                      <option value="16">Cao Bang</option>
+                                      <option value="17">Da Nang</option>
+                                      <option value="18">Dac Lac</option>
+                                      <option value="69">Dien Bien</option>
+                                      <option value="19">Dong Nai</option>
+                                      <option value="20">Dong Thap</option>
+                                      <option value="21">Gia Lai</option>
+                                      <option value="22">Ha Giang</option>
+                                      <option value="23">Ha Nam</option>
+                                      <option value="25">Ha Tay</option>
+                                      <option value="26">Ha Tinh</option>
+                                      <option value="27">Hai Duong</option>
+                                      <option value="28">Hai Phong</option>
+                                      <option value="30">Hoa Binh</option>
+                                      <option value="31">Hue</option>
+                                      <option value="32">Hung Yen</option>
+                                      <option value="33">Khanh Hoa</option>
+                                      <option value="34">Kon Tum</option>
+                                      <option value="35">Lai Chau</option>
+                                      <option value="36">Lam Dong</option>
+                                      <option value="37">Lang Son</option>
+                                      <option value="38">Lao Cai</option>
+                                      <option value="39">Long An</option>
+                                      <option value="40">Nam Dinh</option>
+                                      <option value="41">Nghe An</option>
+                                      <option value="42">Ninh Binh</option>
+                                      <option value="43">Ninh Thuan</option>
+                                      <option value="44">Phu Tho</option>
+                                      <option value="45">Phu Yen</option>
+                                      <option value="46">Quang Binh</option>
+                                      <option value="47">Quang Nam</option>
+                                      <option value="48">Quang Ngai</option>
+                                      <option value="49">Quang Ninh</option>
+                                      <option value="50">Quang Tri</option>
+                                      <option value="51">Soc Trang</option>
+                                      <option value="52">Son La</option>
+                                      <option value="53">Tay Ninh</option>
+                                      <option value="54">Thai Binh</option>
+                                      <option value="55">Thai Nguyen</option>
+                                      <option value="56">Thanh Hoa</option>
+                                      <option value="57">Thua Thien-Hue</option>
+                                      <option value="58">Tien Giang</option>
+                                      <option value="59">Tra Vinh</option>
+                                      <option value="60">Tuyen Quang</option>
+                                      <option value="61">Kien Giang</option>
+                                      <option value="62">Vinh Long</option>
+                                      <option value="63">Vinh Phuc</option>
+                                      <option value="65">Yen Bai</option>
+                                      <option value="66">Other</option>
+                                      <option value="70">International</option>
+                                      <option value="72">Hau Giang</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="district">District</label>
+                                <div class="view-field">
+                                  <p class="form-control-static view-controlPost">Centre</p>
+                                </div>
+                                <div class="edit-field">
+                                  <div class="border-text-box">
+                                    <select name="district" class="form-control">
+                                      <option value="">Please select...</option>
+                                      <option value="1">District 1</option>
+                                      <option value="2">District 2</option>
+                                      <option value="3">District 3</option>
+                                      <option value="4">District 4</option>
+                                      <option value="34">District 5</option>
+                                      <option value="35">District 6</option>
+                                      <option value="36">District 7</option>
+                                      <option value="37">District 8</option>
+                                      <option value="38">District 9</option>
+                                      <option value="39">District 10</option>
+                                      <option value="40">District 11</option>
+                                      <option value="41">District 12</option>
+                                      <option value="42">Go Vap</option>
+                                      <option value="43" selected="">Tan Binh</option>
+                                      <option value="44">Tan Phu</option>
+                                      <option value="45">Binh Thanh</option>
+                                      <option value="46">Phu Nhuan</option>
+                                      <option value="47">Thu Duc</option>
+                                      <option value="48">Binh Tan</option>
+                                      <option value="49">Cu Chi</option>
+                                      <option value="50">Hoc Mon</option>
+                                      <option value="51">Binh Chanh</option>
+                                      <option value="52">Nha Be</option>
+                                      <option value="53">Can Gio</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group no-margin">
+                            <label for="address"><strong class="text-red">*</strong>                        Address</label>
+                            <div class="view-field">
+                              <p class="form-control-static view-control">#05-33 Singapore Post Centre</p>
+                            </div>
+                            <div class="edit-field">
+                              <input type="text" name="address" value="#05-33 Singapore Post Centre" class="form-control">
+                            </div>
+                          </div>
+                          <!-- Buttons-->
+                          <div class="form-group edit-field edit-btns">
+                            <div class="pull-left">(<strong class="text-red">*</strong>) is required field</div>
+                            <div class="pull-right text-right">
+                              <button type="button" class="btn btn-cancel btn-default">Cancel</button>
+                              <button type="button" class="btn btn-primary btn-save">Save</button>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </form>
+                </div>
+                <div id="my-job-tab" class="tab-prof-ct">
                   <div class="box">
                     <fieldset>
-                      <div class="form-wrapper relative box-md"><span class="form-btn-edit">
-                          <button type="button" class="btn btn-sm"><i class="fa fa-pencil"></i></button></span>
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                              <label for="address">Email</label>
-                              <div class="view-field">
-                                <p class="form-control-static view-control">victor.lee@gmail.com</p>
-                              </div>
-                              <div class="edit-field">
-                                <input type="email" autofocus="" disabled="" value="victor.lee@gmail.com" class="form-control">
-                              </div>
-                            </div>
+                      <div class="content-section">
+                        <div class="form-wrapper box-md">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nibh tortor. Phasellus varius urna in dui viverra fermentum. Morbi nec fringilla nibh. Aenean lobortis neque sed tempor efficitur.</p>
+                          <div class="table-responsive">
+                            <table class="table">
+                              <tr class="tbl-head">
+                                <th width="3%"></th>
+                                <th class="t-c">Job</th>
+                                <th class="t-c">Interview code</th>
+                                <th class="t-c">Status</th>
+                                <th class="t-c">Actions</th>
+                              </tr>
+                              <tr>
+                                <td class="t-c"><a href="javascript:;" title="Invited"><i class="fa fa-envelope-o"></i></a></td>
+                                <td class="t-c">Accountant</td>
+                                <td class="t-c">JEIDUG</td>
+                                <td class="t-c txt-gray">Pending</td>
+                                <td class="t-c"><a href="javascript:;" title="accept" class="accept"><i class="fa fa-check-circle"></i></a><a href="javascript:;" class="del-row"><i class="fa fa-trash-o"></i></a></td>
+                              </tr>
+                              <tr>
+                                <td class="t-c"><a href="javascript:;" title="Directively"><i class="fa fa-compress"></i></a></td>
+                                <td class="t-c">Developer</td>
+                                <td class="t-c">ABDEFD</td>
+                                <td class="t-c txt-blue">Completed</td>
+                                <td class="t-c"><a href="javascript:;" title="accept" class="accept"><i class="fa fa-check-circle"></i></a><a href="javascript:;" class="del-row"><i class="fa fa-trash-o"></i></a></td>
+                              </tr>
+                              <tr>
+                                <td class="t-c"><a href="javascript:;" title="Directively"><i class="fa fa-envelope-o"></i></a></td>
+                                <td class="t-c">Actor</td>
+                                <td class="t-c">ABDEFD</td>
+                                <td class="t-c txt-green">Accepted</td>
+                                <td class="t-c"><a href="javascript:;" title="unaccept" class="unaccept"><i class="fa fa-check-circle"></i></a><a href="javascript:;" class="del-row"><i class="fa fa-trash-o"></i></a></td>
+                              </tr>
+                              <tr>
+                                <td class="t-c"><a href="javascript:;" title="Directively"><i class="fa fa-envelope-o"></i></a></td>
+                                <td class="t-c">Developer</td>
+                                <td class="t-c">ABDEFD</td>
+                                <td class="t-c txt-red">Rejected</td>
+                                <td class="t-c"><a href="javascript:;" title="accept" class="unaccept"><i class="fa fa-check-circle"></i></a><a href="javascript:;" class="del-row"><i class="fa fa-trash-o"></i></a></td>
+                              </tr>
+                              <tr>
+                                <td class="t-c"><a href="javascript:;" title="Directively"><i class="fa fa-compress"></i></a></td>
+                                <td class="t-c">Developer</td>
+                                <td class="t-c">ABDEFD</td>
+                                <td class="t-c txt-black">Closed</td>
+                                <td class="t-c"><a href="javascript:;" title="unaccept" class="unaccept"><i class="fa fa-check-circle"></i></a><a href="javascript:;" class="del-row"><i class="fa fa-trash-o"></i></a></td>
+                              </tr>
+                            </table>
                           </div>
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                              <label for="cell-number"><strong class="text-red">*</strong>Cell Number</label>
-                              <div class="view-field clearfix">
-                                <p class="form-control-static view-control pull-left">01696872113</p>
-                                <div class="pull-left form-control-static text-gray-light"><em><i class="fa fa-eye"></i><span>  Visible to employer</span></em></div>
-                              </div>
-                              <div class="edit-field">
-                                <input type="tel" name="cellphone" value="01696872113" class="form-control">
-                                <label class="push-top-sm">
-                                  <input name="confidential" value="1" type="checkbox"><em>   Invisible to employer</em>
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                              <label for="date-of-birth"><strong class="text-red">*</strong>Date of birth</label>
-                              <div class="edit-field">
-                                <input name="birthday" value="25/09/1993" class="form-control">
-                              </div>
-                              <div class="view-field">
-                                <p class="form-control-static view-control">25/09/1993</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                              <label for="nationality"><strong class="text-red">*</strong>Nationality</label>
-                              <div class="view-field">
-                                <p class="form-control-static view-control">Local Vietnamese</p>
-                              </div>
-                              <div class="edit-field">
-                                <select name="nationality" tabindex="-1" title="*                                Nationality" class="form-control">
-                                  <option value="">Please select...</option>
-                                  <option value="1" selected="">Local Vietnamese</option>
-                                  <option value="2">Foreigner</option>
-                                </select>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                              <label><strong class="text-red">*</strong>   Gender</label>
-                              <div class="edit-field">
-                                <label class="radio-inline">
-                                  <input type="radio" name="gender" value="1" checked="checked">                                        Male
-                                </label>
-                                <label class="radio-inline">
-                                  <input type="radio" name="gender" value="2">                                        Female
-                                </label>
-                              </div>
-                              <div class="view-field">
-                                <p class="form-control-static view-control">Male</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                              <label>  Marital Status</label>
-                              <div class="edit-field">
-                                <label for="marital-single" class="radio-inline">
-                                  <input type="radio" name="marital" value="1" checked="checked">                                        Single
-                                </label>
-                                <label for="marital-married" class="radio-inline">
-                                  <input type="radio" name="marital" value="2">                                        Married
-                                </label>
-                              </div>
-                              <div class="view-field">
-                                <p class="form-control-static view-control">Single</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                              <label for="country"><strong class="text-red">*</strong>                                    Country</label>
-                              <div class="view-field">
-                                <p class="form-control-static view-control">Vietnam</p>
-                              </div>
-                              <div class="edit-field">
-                                <div class="border-text-box">
-                                  <select name="country" tabindex="-1" title="*                                    Country" class="form-control">
-                                    <option value="">Please select...</option>
-                                    <option value="1" selected="">Vietnam</option>
-                                    <option value="2">Afghanistan</option>
-                                    <option value="3">Albania</option>
-                                    <option value="4">Algeria</option>
-                                    <option value="5">American Samoa</option>
-                                    <option value="6">Andorra</option>
-                                    <option value="7">Angola</option>
-                                    <option value="8">Anguilla</option>
-                                    <option value="9">Antarctica</option>
-                                    <option value="10">Antigua And Barbuda</option>
-                                    <option value="11">Argentina</option>
-                                    <option value="12">Armenia</option>
-                                    <option value="13">Aruba</option>
-                                    <option value="14">Australia</option>
-                                    <option value="15">Austria</option>
-                                    <option value="16">Azerbaijan</option>
-                                    <option value="17">Bahamas</option>
-                                    <option value="18">Bahrain</option>
-                                    <option value="19">Bangladesh</option>
-                                    <option value="20">Barbados</option>
-                                    <option value="21">Belarus</option>
-                                    <option value="22">Belgium</option>
-                                    <option value="23">Belize</option>
-                                    <option value="24">Benin</option>
-                                    <option value="25">Bermuda</option>
-                                    <option value="26">Bhutan</option>
-                                    <option value="27">Bolivia</option>
-                                    <option value="28">Bosnia And Herzegowina</option>
-                                    <option value="29">Botswana</option>
-                                    <option value="30">Bouvet Island</option>
-                                    <option value="31">Brazil</option>
-                                    <option value="32">British Indian Ocean Territory</option>
-                                    <option value="33">Brunei Darussalam</option>
-                                    <option value="34">Bulgaria</option>
-                                    <option value="35">Burkina Faso</option>
-                                    <option value="36">Burundi</option>
-                                    <option value="37">Cambodia</option>
-                                    <option value="38">Cameroon</option>
-                                    <option value="39">Canada</option>
-                                    <option value="40">Cape Verde</option>
-                                    <option value="41">Cayman Islands</option>
-                                    <option value="42">Central African Republic</option>
-                                    <option value="43">Chad</option>
-                                    <option value="44">Chile</option>
-                                    <option value="45">China</option>
-                                    <option value="46">Christmas Island</option>
-                                    <option value="47">Cocos (Keeling) Islands</option>
-                                    <option value="48">Colombia</option>
-                                    <option value="49">Comoros</option>
-                                    <option value="50">Congo</option>
-                                    <option value="51">Cook Islands</option>
-                                    <option value="52">Costa Rica</option>
-                                    <option value="53">Cote D'Ivoire</option>
-                                    <option value="54">Croatia</option>
-                                    <option value="55">Cuba</option>
-                                    <option value="56">Cyprus</option>
-                                    <option value="57">Czech Republic</option>
-                                    <option value="58">Denmark</option>
-                                    <option value="59">Djibouti</option>
-                                    <option value="60">Dominica</option>
-                                    <option value="61">Dominican Republic</option>
-                                    <option value="62">East Timor</option>
-                                    <option value="63">Ecuador</option>
-                                    <option value="64">Egypt</option>
-                                    <option value="65">El Salvador</option>
-                                    <option value="66">Equatorial Guinea</option>
-                                    <option value="67">Eritrea</option>
-                                    <option value="68">Estonia</option>
-                                    <option value="69">Ethiopia</option>
-                                    <option value="70">Falkland Islands</option>
-                                    <option value="71">Faroe Islands</option>
-                                    <option value="72">Fiji</option>
-                                    <option value="73">Finland</option>
-                                    <option value="74">France</option>
-                                    <option value="75">France, Metropolitan</option>
-                                    <option value="76">French Guiana</option>
-                                    <option value="77">French Polynesia</option>
-                                    <option value="78">French Southern Territories</option>
-                                    <option value="79">Gabon</option>
-                                    <option value="80">Gambia</option>
-                                    <option value="81">Georgia</option>
-                                    <option value="82">Germany</option>
-                                    <option value="83">Ghana</option>
-                                    <option value="84">Gibraltar</option>
-                                    <option value="85">Greece</option>
-                                    <option value="86">Greenland</option>
-                                    <option value="87">Grenada</option>
-                                    <option value="88">Guadeloupe</option>
-                                    <option value="89">Guam</option>
-                                    <option value="90">Guatemala</option>
-                                    <option value="91">Guinea</option>
-                                    <option value="92">Guinea-Bissau</option>
-                                    <option value="93">Guyana</option>
-                                    <option value="94">Haiti</option>
-                                    <option value="95">Heard And Mc Donald Islands</option>
-                                    <option value="96">Honduras</option>
-                                    <option value="97">Hong Kong</option>
-                                    <option value="98">Hungary</option>
-                                    <option value="99">Iceland</option>
-                                    <option value="100">India</option>
-                                    <option value="101">Indonesia</option>
-                                    <option value="102">Iran</option>
-                                    <option value="103">Iraq</option>
-                                    <option value="104">Ireland</option>
-                                    <option value="105">Israel</option>
-                                    <option value="106">Italy</option>
-                                    <option value="107">Jamaica</option>
-                                    <option value="108">Japan</option>
-                                    <option value="109">Jordan</option>
-                                    <option value="110">Kazakhstan</option>
-                                    <option value="111">Kenya</option>
-                                    <option value="112">Kiribati</option>
-                                    <option value="113">North Korea (People's Republic Of Korea)</option>
-                                    <option value="114">South Korea (Republic Of Korea)</option>
-                                    <option value="115">Kuwait</option>
-                                    <option value="116">Kyrgyzstan</option>
-                                    <option value="117">Lao People's Republic</option>
-                                    <option value="118">Latvia</option>
-                                    <option value="119">Lebanon</option>
-                                    <option value="120">Lesotho</option>
-                                    <option value="121">Liberia</option>
-                                    <option value="122">Libyan Arab Jamahiriya</option>
-                                    <option value="123">Liechtenstein</option>
-                                    <option value="124">Lithuania</option>
-                                    <option value="125">Luxembourg</option>
-                                    <option value="126">Macau</option>
-                                    <option value="127">Macedonia</option>
-                                    <option value="128">Madagascar</option>
-                                    <option value="129">Malawi</option>
-                                    <option value="130">Malaysia</option>
-                                    <option value="131">Maldives</option>
-                                    <option value="132">Mali</option>
-                                    <option value="133">Malta</option>
-                                    <option value="134">Marshall Islands</option>
-                                    <option value="135">Martinique</option>
-                                    <option value="136">Mauritania</option>
-                                    <option value="137">Mauritius</option>
-                                    <option value="138">Mayotte</option>
-                                    <option value="139">Mexico</option>
-                                    <option value="140">Micronesia</option>
-                                    <option value="141">Moldova</option>
-                                    <option value="142">Monaco</option>
-                                    <option value="143">Mongolia</option>
-                                    <option value="144">Montserrat</option>
-                                    <option value="145">Morocco</option>
-                                    <option value="146">Mozambique</option>
-                                    <option value="147">Myanmar</option>
-                                    <option value="148">Namibia</option>
-                                    <option value="149">Nauru</option>
-                                    <option value="150">Nepal</option>
-                                    <option value="151">Netherlands</option>
-                                    <option value="152">Netherlands Antilles</option>
-                                    <option value="153">New Caledonia</option>
-                                    <option value="154">New Zealand</option>
-                                    <option value="155">Nicaragua</option>
-                                    <option value="156">Niger</option>
-                                    <option value="157">Nigeria</option>
-                                    <option value="158">Niue</option>
-                                    <option value="159">Norfolk Island</option>
-                                    <option value="160">Northern Mariana Islands</option>
-                                    <option value="161">Norway</option>
-                                    <option value="162">Oman</option>
-                                    <option value="163">Pakistan</option>
-                                    <option value="164">Palau</option>
-                                    <option value="165">Panama</option>
-                                    <option value="166">Papua New Guinea</option>
-                                    <option value="167">Paraguay</option>
-                                    <option value="168">Peru</option>
-                                    <option value="169">Philippines</option>
-                                    <option value="170">Pitcairn</option>
-                                    <option value="171">Poland</option>
-                                    <option value="172">Portugal</option>
-                                    <option value="173">Puerto Rico</option>
-                                    <option value="174">Qatar</option>
-                                    <option value="175">Reunion</option>
-                                    <option value="176">Romania</option>
-                                    <option value="177">Russian Federation</option>
-                                    <option value="178">Rwanda</option>
-                                    <option value="179">Saint Kitts And Nevis</option>
-                                    <option value="180">Saint Lucia</option>
-                                    <option value="181">Saint Vincent And The Grenadines</option>
-                                    <option value="182">Samoa</option>
-                                    <option value="183">San Marino</option>
-                                    <option value="184">Sao Tome And Principe</option>
-                                    <option value="185">Saudi Arabia</option>
-                                    <option value="186">Senegal</option>
-                                    <option value="187">Seychelles</option>
-                                    <option value="188">Sierra Leone</option>
-                                    <option value="189">Singapore</option>
-                                    <option value="190">Slovakia</option>
-                                    <option value="191">Slovenia</option>
-                                    <option value="192">Solomon Islands</option>
-                                    <option value="193">Somalia</option>
-                                    <option value="194">South Africa</option>
-                                    <option value="195">South Georgia/South Sandwich Islands</option>
-                                    <option value="196">Spain</option>
-                                    <option value="197">Sri Lanka</option>
-                                    <option value="198">St Helena</option>
-                                    <option value="199">St Pierre and Miquelon</option>
-                                    <option value="200">Sudan</option>
-                                    <option value="201">Suriname</option>
-                                    <option value="202">Svalbard And Jan Mayen Islands</option>
-                                    <option value="203">Swaziland</option>
-                                    <option value="204">Sweden</option>
-                                    <option value="205">Switzerland</option>
-                                    <option value="206">Syrian Arab Republic</option>
-                                    <option value="207">Taiwan</option>
-                                    <option value="208">Tajikistan</option>
-                                    <option value="209">Tanzania</option>
-                                    <option value="210">Thailand</option>
-                                    <option value="211">Togo</option>
-                                    <option value="212">Tokelau</option>
-                                    <option value="213">Tonga</option>
-                                    <option value="214">Trinidad And Tobago</option>
-                                    <option value="215">Tunisia</option>
-                                    <option value="216">Turkey</option>
-                                    <option value="217">Turkmenistan</option>
-                                    <option value="218">Turks And Caicos Islands</option>
-                                    <option value="219">Tuvalu</option>
-                                    <option value="220">Uganda</option>
-                                    <option value="221">Ukraine</option>
-                                    <option value="222">United Arab Emirates</option>
-                                    <option value="223">United Kingdom</option>
-                                    <option value="224">United States</option>
-                                    <option value="225">United States Minor Outlying Islands</option>
-                                    <option value="226">Uruguay</option>
-                                    <option value="227">Uzbekistan</option>
-                                    <option value="228">Vanuatu</option>
-                                    <option value="229">Vatican City State</option>
-                                    <option value="230">Venezuela</option>
-                                    <option value="231">Virgin Islands (British)</option>
-                                    <option value="232">Virgin Islands (U.S.)</option>
-                                    <option value="233">Wallis And Futuna Islands</option>
-                                    <option value="234">Western Sahara</option>
-                                    <option value="235">Yemen</option>
-                                    <option value="236">Zaire</option>
-                                    <option value="237">Zambia</option>
-                                    <option value="238">Zimbabwe</option>
-                                    <option value="239">Other</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-sm-6"></div>
-                        </div>
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                              <label for="city"><strong class="text-red">*</strong>  Province/City</label>
-                              <div class="view-field">
-                                <p class="form-control-static view-control">Singapore</p>
-                              </div>
-                              <div class="edit-field">
-                                <div class="border-text-box">
-                                  <select onchange="loadDistrict();" name="city" tabindex="-1" title="*                                    Province/City" class="form-control">
-                                    <option value="">Please select...</option>
-                                    <option value="29" selected="">Singapore</option>
-                                    <option value="24">Ha Noi</option>
-                                    <option value="71">Mekong Delta</option>
-                                    <option value="2">An Giang</option>
-                                    <option value="3">Ba Ria - Vung Tau</option>
-                                    <option value="4">Bac Can</option>
-                                    <option value="5">Bac Giang</option>
-                                    <option value="6">Bac Lieu</option>
-                                    <option value="7">Bac Ninh</option>
-                                    <option value="8">Ben Tre</option>
-                                    <option value="9">Bien Hoa</option>
-                                    <option value="10">Binh Dinh</option>
-                                    <option value="11">Binh Duong</option>
-                                    <option value="12">Binh Phuoc</option>
-                                    <option value="13">Binh Thuan</option>
-                                    <option value="14">Ca Mau</option>
-                                    <option value="15">Can Tho</option>
-                                    <option value="16">Cao Bang</option>
-                                    <option value="17">Da Nang</option>
-                                    <option value="18">Dac Lac</option>
-                                    <option value="69">Dien Bien</option>
-                                    <option value="19">Dong Nai</option>
-                                    <option value="20">Dong Thap</option>
-                                    <option value="21">Gia Lai</option>
-                                    <option value="22">Ha Giang</option>
-                                    <option value="23">Ha Nam</option>
-                                    <option value="25">Ha Tay</option>
-                                    <option value="26">Ha Tinh</option>
-                                    <option value="27">Hai Duong</option>
-                                    <option value="28">Hai Phong</option>
-                                    <option value="30">Hoa Binh</option>
-                                    <option value="31">Hue</option>
-                                    <option value="32">Hung Yen</option>
-                                    <option value="33">Khanh Hoa</option>
-                                    <option value="34">Kon Tum</option>
-                                    <option value="35">Lai Chau</option>
-                                    <option value="36">Lam Dong</option>
-                                    <option value="37">Lang Son</option>
-                                    <option value="38">Lao Cai</option>
-                                    <option value="39">Long An</option>
-                                    <option value="40">Nam Dinh</option>
-                                    <option value="41">Nghe An</option>
-                                    <option value="42">Ninh Binh</option>
-                                    <option value="43">Ninh Thuan</option>
-                                    <option value="44">Phu Tho</option>
-                                    <option value="45">Phu Yen</option>
-                                    <option value="46">Quang Binh</option>
-                                    <option value="47">Quang Nam</option>
-                                    <option value="48">Quang Ngai</option>
-                                    <option value="49">Quang Ninh</option>
-                                    <option value="50">Quang Tri</option>
-                                    <option value="51">Soc Trang</option>
-                                    <option value="52">Son La</option>
-                                    <option value="53">Tay Ninh</option>
-                                    <option value="54">Thai Binh</option>
-                                    <option value="55">Thai Nguyen</option>
-                                    <option value="56">Thanh Hoa</option>
-                                    <option value="57">Thua Thien-Hue</option>
-                                    <option value="58">Tien Giang</option>
-                                    <option value="59">Tra Vinh</option>
-                                    <option value="60">Tuyen Quang</option>
-                                    <option value="61">Kien Giang</option>
-                                    <option value="62">Vinh Long</option>
-                                    <option value="63">Vinh Phuc</option>
-                                    <option value="65">Yen Bai</option>
-                                    <option value="66">Other</option>
-                                    <option value="70">International</option>
-                                    <option value="72">Hau Giang</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                              <label for="district">District</label>
-                              <div class="view-field">
-                                <p class="form-control-static view-controlPost">Centre</p>
-                              </div>
-                              <div class="edit-field">
-                                <div class="border-text-box">
-                                  <select name="district" class="form-control">
-                                    <option value="">Please select...</option>
-                                    <option value="1">District 1</option>
-                                    <option value="2">District 2</option>
-                                    <option value="3">District 3</option>
-                                    <option value="4">District 4</option>
-                                    <option value="34">District 5</option>
-                                    <option value="35">District 6</option>
-                                    <option value="36">District 7</option>
-                                    <option value="37">District 8</option>
-                                    <option value="38">District 9</option>
-                                    <option value="39">District 10</option>
-                                    <option value="40">District 11</option>
-                                    <option value="41">District 12</option>
-                                    <option value="42">Go Vap</option>
-                                    <option value="43" selected="">Tan Binh</option>
-                                    <option value="44">Tan Phu</option>
-                                    <option value="45">Binh Thanh</option>
-                                    <option value="46">Phu Nhuan</option>
-                                    <option value="47">Thu Duc</option>
-                                    <option value="48">Binh Tan</option>
-                                    <option value="49">Cu Chi</option>
-                                    <option value="50">Hoc Mon</option>
-                                    <option value="51">Binh Chanh</option>
-                                    <option value="52">Nha Be</option>
-                                    <option value="53">Can Gio</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group no-margin">
-                          <label for="address"><strong class="text-red">*</strong>                        Address</label>
-                          <div class="view-field">
-                            <p class="form-control-static view-control">#05-33 Singapore Post Centre</p>
-                          </div>
-                          <div class="edit-field">
-                            <input type="text" name="address" value="#05-33 Singapore Post Centre" class="form-control">
-                          </div>
-                        </div>
-                        <!-- Buttons-->
-                        <div class="form-group edit-field edit-btns">
-                          <div class="pull-left">(<strong class="text-red">*</strong>) is required field</div>
-                          <div class="pull-right text-right">
-                            <button type="button" class="btn btn-cancel btn-default">Cancel</button>
-                            <button type="button" class="btn btn-primary btn-save">Save</button>
-                          </div>
+                          <!-- End: MY JOB TABLE-->
                         </div>
                       </div>
                     </fieldset>
                   </div>
-                </form>
+                  <!-- End: TAB MY JOB-->
+                </div>
+                <div id="media-tab" class="tab-prof-ct">
+                  <div class="box">
+                    <fieldset>
+                      <div class="content-section">
+                        <div class="form-wrapper box-md">
+                          <div class="add-media well well-sm dash">
+                            <form>
+                              <div class="row">
+                                <div class="media-upl t-c col-md-5">
+                                  <p class="media-desc">Upload file .doc, .docx, .pdf, .mp4 only.</p>
+                                  <input type="file" name="media-upl" id="media-upl" class="hidden">
+                                  <label for="media-upl" class="btn btn-default">Upload</label><span class="text-or"><span class="line"></span><span class="or-ct">OR</span></span>
+                                </div>
+                                <div class="media-youtb t-c col-md-5">
+                                  <p class="media-desc">You can copy & paste to embed a youtube video. Ex: https://youtu.be/*gwH8D4y5ZnM*</p>
+                                  <input type="text" name="youtb-link" placeholder="YouTube embed code" class="form-control">
+                                </div>
+                                <div class="media-btn-group t-c col-md-2"><a href="javascript:;" class="btn btn-primary">ADD</a></div>
+                              </div>
+                            </form>
+                          </div>
+                          <!-- End: UPLOAD BLK-->
+                          <div class="table-responsive">
+                            <table class="table">
+                              <tr class="tbl-head">
+                                <th></th>
+                                <th>Name/Link</th>
+                                <th class="t-c">Size</th>
+                                <th class="t-c">Last Modified</th>
+                                <th class="t-c">Actions</th>
+                              </tr>
+                              <tr>
+                                <td class="fa fa-file-word-o"></td>
+                                <td>File CV #Victor Le</td>
+                                <td class="t-c">100Kb</td>
+                                <td class="t-c">10:24:21 - 10.10.2016</td>
+                                <td class="t-c"><a href="javascript:;" class="del-row"><i class="fa fa-trash-o"></i></a></td>
+                              </tr>
+                              <tr>
+                                <td class="fa fa-file-pdf-o"></td>
+                                <td>File CV #Victor Le PDF format</td>
+                                <td class="t-c">1.5Mb</td>
+                                <td class="t-c">10:20:15 - 10.10.2016</td>
+                                <td class="t-c"><a href="javascript:;" class="del-row"><i class="fa fa-trash-o"></i></a></td>
+                              </tr>
+                              <tr>
+                                <td class="fa fa-file-video-o"></td>
+                                <td>Test Video #1</td>
+                                <td class="t-c">10.3Mb</td>
+                                <td class="t-c">11:20:06 - 05.10.2016</td>
+                                <td class="t-c"><a href="javascript:;" class="del-row"><i class="fa fa-trash-o"></i></a></td>
+                              </tr>
+                              <tr>
+                                <td class="fa fa-youtube"></td>
+                                <td><a href="#">https://www.youtube.com/watch?v=hnc_qF-WnmI</a></td>
+                                <td class="t-c">-</td>
+                                <td class="t-c">01:20:06 - 08.10.2016</td>
+                                <td class="t-c"><a href="javascript:;" class="del-row"><i class="fa fa-trash-o"></i></a></td>
+                              </tr>
+                            </table>
+                          </div>
+                          <!-- End: MEDIA TABLE-->
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <!-- End: TAB MEDIA-->
+                </div>
               </div>
             </div>
+            <!-- End: SECTION RESUME HEADER-->
             <div class="section-detail section-profile">
               <div class="box">
                 <fieldset>
@@ -1712,90 +1830,6 @@
                 </div>
               </form>
             </div>
-            <div class="section-detail section-media">
-              <div class="box">
-                <fieldset>
-                  <legend class="box-md"><i class="fa fa-fw fa-cubes"></i> Media</legend>
-                  <div class="content-section">
-                    <div class="form-wrapper box-md">
-                      <div class="add-media well well-sm dash">
-                        <form>
-                          <div class="row">
-                            <div class="media-upl t-c col-md-5">
-                              <p class="media-desc">Upload file .doc, .docx, .pdf, .mp4 only.</p>
-                              <input type="file" name="media-upl" id="media-upl" class="hidden">
-                              <label for="media-upl" class="btn">Upload</label><span class="text-or"><span class="line"></span><span class="or-ct">OR</span></span>
-                            </div>
-                            <div class="media-youtb t-c col-md-5">
-                              <p class="media-desc">You can copy & paste to embed a youtube video. Ex: https://youtu.be/*gwH8D4y5ZnM*</p>
-                              <input type="text" name="youtb-link" placeholder="YouTube embed code" class="form-control">
-                            </div>
-                            <div class="media-btn-group t-c col-md-2"><a href="javascript:;" class="btn btn-primary">ADD</a></div>
-                          </div>
-                        </form>
-                      </div>
-                      <div class="table-responsive">
-                        <table class="table">
-                          <tr class="tbl-head">
-                            <th></th>
-                            <th>Name/Link</th>
-                            <th class="t-c">Size</th>
-                            <th class="t-c">Last Modified</th>
-                            <th class="t-c">Actions</th>
-                          </tr>
-                          <tr>
-                            <td class="ico-word"><i class="fa fa-file-word-o"></i></td>
-                            <td>File CV #Victor Le</td>
-                            <td class="t-c">100Kb</td>
-                            <td class="t-c">10:24:21 - 10.10.2016</td>
-                            <td class="t-c"><a href="javascript:;" class="del-row"><i class="fa fa-trash-o"></i></a></td>
-                          </tr>
-                          <tr>
-                            <td class="ico-pdf"><i class="fa fa-file-pdf-o"></i></td>
-                            <td>File CV #Victor Le PDF format</td>
-                            <td class="t-c">1.5Mb</td>
-                            <td class="t-c">10:20:15 - 10.10.2016</td>
-                            <td class="t-c"><a href="javascript:;" class="del-row"><i class="fa fa-trash-o"></i></a></td>
-                          </tr>
-                          <tr>
-                            <td class="ico-video"><i class="fa fa-file-video-o"></i></td>
-                            <td>Test Video #1</td>
-                            <td class="t-c">10.3Mb</td>
-                            <td class="t-c">11:20:06 - 05.10.2016</td>
-                            <td class="t-c"><a href="javascript:;" class="del-row"><i class="fa fa-trash-o"></i></a></td>
-                          </tr>
-                          <tr>
-                            <td class="ico-youtube"><i class="fa fa-youtube"></i></td>
-                            <td><a href="#">https://www.youtube.com/watch?v=hnc_qF-WnmI</a></td>
-                            <td class="t-c">-</td>
-                            <td class="t-c">01:20:06 - 08.10.2016</td>
-                            <td class="t-c"><a href="javascript:;" class="del-row"><i class="fa fa-trash-o"></i></a></td>
-                          </tr>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-            </div>
-            <div id="dialog-remove-item" tabindex="-1" role="dialog" aria-labelledby="delete-confirmation" aria-hidden="false" class="modal fade in">
-              <form>
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button btn-sm" data-dismiss="modal" class="close"><span aria-hidden="true" tabindex="8">×</span><span class="sr-only">Close</span></button><strong class="modal-title">Delete Confirmation</strong>
-                    </div>
-                    <div class="modal-body">
-                      <p>Are you sure you want to delete?</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" data-dismiss="modal" tabindex="9" class="btn">Cancel</button>
-                      <button type="button" tabindex="10" class="btn btn-primary">Yes, delete this</button>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
           </div>
           <div class="col-xs-12 col-sm-4 col-md-3">
             <div class="panel panel-default section-sidebar section-profile-level">
@@ -1912,6 +1946,45 @@
           </div>
         </div>
       </section>
+      <div id="dialog-remove-item" tabindex="-1" role="dialog" aria-labelledby="delete-confirmation" aria-hidden="false" class="modal fade in">
+        <form>
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button btn-sm" data-dismiss="modal" class="close"><span aria-hidden="true" tabindex="8">×</span><span class="sr-only">Close</span></button><strong class="modal-title">Delete Confirmation</strong>
+              </div>
+              <div class="modal-body">
+                <p>Are you sure you want to delete?</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" data-dismiss="modal" tabindex="9" class="btn">Cancel</button>
+                <button type="button" tabindex="10" class="btn btn-primary">Yes, delete this</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div id="upload-img" tabindex="-1" role="dialog" aria-labelledby="delete-confirmation" aria-hidden="false" class="modal fade in">
+        <form>
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button btn-sm" data-dismiss="modal" class="close"><span aria-hidden="true" tabindex="8">×</span><span class="sr-only">Close</span></button><strong class="modal-title">Upload an image</strong>
+              </div>
+              <div class="modal-body">
+                <p>Upload image file (JPG, PNG) only.</p>
+                <label class="btn btn-bdline">Choose file
+                  <input type="file" name="avatar_img" class="hidden">
+                </label>
+                <button type="submit" class="btn btn-primary">Upload</button>
+              </div>
+              <div class="modal-footer">
+                <button type="button" data-dismiss="modal" tabindex="9" class="btn btn-default">Close</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
       <footer>
         <div class="container">
           <div class="row">

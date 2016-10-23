@@ -1,22 +1,13 @@
 .user-info.border-primary
     .row
         .col-xs-4.col-sm-3.center-block
-            .form-wrapper.relative.no-edit-mode
-                .user-pic
-                    form
-                        span.form-btn-edit.hidden-xs
-                            button.btn(type='button')
-                                i.fa.fa-pencil
-                        .dropdown
-                            a.dropdown-toggle(data-toggle='dropdown', aria-expanded='true')
-                                .avatar.img-circle
-                                    img(src="./uploads/user_ava.jpg")
-                            ul.dropdown-menu.hidden-xs(role='menu', aria-labelledby='pic-dropdown')
-                                li(role='presentation')
-                                    a.block.relative(role='menuitem', tabindex='-1')
-                                        i.fa.fa-pencil.fa-fw
-                                        | Upload photo
-                                        input.absolute-left.transparent(name='avatar', type='file')
+            .user-pic
+                a.avatar.img-circle(href="#", data-toggle='modal', data-target='#upload-img')
+                    img(src="./uploads/user_ava.jpg")
+                    p
+                        i.fa.fa-camera
+                        span  Change
+            // End: AVATAR
         .section-header.hidden-section.col-xs-8.col-sm-9
             form.form-wrapper
                 .relative.box-md
@@ -82,13 +73,16 @@
                                 a.btn.btn-outline.btn-bdline(href='javascript:;')
                                     i.fa.fa-fw.fa-file-pdf-o
                                     |  Download profile
-                .absolute-right.m-t-n-lg.m-r-xs.visible-xs
-                    a.btn.btn-block.contact-information-toggler(href='#')
-                        i.fa.fa-fw.fa-suitcase
-                        span.hidden-xs Contact Information
-    .bg-gray.text-right.hidden-xs
-        .row
-            .col-xs-12.col-sm-5.pull-right
-                a.btn.btn-block.contact-information-toggler.add-one-more-section(href='#')
-                    i.fa.fa-fw.fa-suitcase
-                    strong Contact Information
+        // End: PROFILE INFO
+    .bg-gray.text-right
+        .clearfix
+            a.btn.tab-prof.add-one-more-section.col-xs-12.col-md-4(href='javascript:;', data-target="#my-job-tab")
+                i.fa.fa-fw.fa-suitcase
+                strong My job
+            a.btn.tab-prof.add-one-more-section.col-xs-12.col-md-4(href='javascript:;', data-target="#media-tab")
+                i.fa.fa-fw.fa-cubes
+                strong Media
+            a.btn.tab-prof.add-one-more-section.col-xs-12.col-md-4(href='javascript:;', data-target="#contact-info-tab")
+                i.fa.fa-fw.fa-file-text-o
+                strong Contact Information
+// End: FEATURED RESUME BOX
