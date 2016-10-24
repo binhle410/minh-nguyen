@@ -1,0 +1,47 @@
+#apply-job.modal.fade.in(tabindex='-1', role='dialog', aria-hidden='false')
+    form
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    button.close(type='button btn-sm', data-dismiss='modal')
+                        span(aria-hidden='true', tabindex='8') ×
+                        span.sr-only Close
+                    .modal-title
+                        | You are applying for
+                        b Analog IC Design And Layout
+                .modal-body
+                    .resume-header
+                        .row
+                            .col-md-3
+                                a.avatar.img-circle(href="javascript:;")
+                                    img(src="./uploads/user_ava.jpg", alt="")
+                                    p
+                                        i.fa.fa-camera
+                                        span  Change
+                            .col-md-9
+                                h4.resume-name Victor Lee
+                                span.resume-pos Frontend Developer
+                    .resume-body 
+                        .row
+                            .col-md-6
+                                .frow
+                                    .col-md-3
+                                        label Email
+                                    .col-md-9
+                                        span.not-edit oaivyftu@gmail.com
+                                .frow
+                                    .col-md-3
+                                        label Phone number
+                                    .col-md-9
+                                        span.edittable +65 6285 6116
+                                .frow
+                                    .col-md-3
+                                        label Resume
+                                    .col-md-9
+                                        
+                            .col-md-6
+                                
+                .modal-footer
+                    button.btn(type='button', data-dismiss='modal', tabindex='9') Cancel
+                    button.btn.btn-primary(type='button', tabindex='10') Send application
+// End: MODAL APPLY JOB - JOB DETAIL

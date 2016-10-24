@@ -58,6 +58,10 @@ module.exports = function(grunt) {
         src: 'source/assets/js/actions/job-profile.js',
         dest: 'public/js/actions/job-profile.js'
       },
+      job_detail: {
+        src: 'source/assets/js/actions/job-detail.js',
+        dest: 'public/js/actions/job-detail.js'
+      },
       search_job_js: {
         src: 'source/assets/js/actions/search_job.plg.js',
         dest: 'public/js/actions/search_job.plg.js'
@@ -66,7 +70,7 @@ module.exports = function(grunt) {
         src: 'source/assets/js/template.js',
         dest: 'public/js/template.js'
       },
-      coming_soom: {
+      coming_soom: { 
         src: 'source/assets/js/coming.soon.config.js',
         dest: 'public/js/coming.soon.config.js'
       },
