@@ -21863,6 +21863,39 @@ ul.pagination li span {
 #upload-img .modal-body p {
   margin-bottom: 20px;
 }
+#apply-job .modal-dialog {
+  width: 760px;
+}
+#apply-job .modal-header {
+  background: white;
+}
+#apply-job .modal-title {
+  font-size: 18px;
+  color: #555;
+}
+#apply-job .modal-title .close {
+  color: #ddd;
+}
+#apply-job .modal-body {
+  padding: 0;
+}
+#apply-job .resume-header {
+  background: #eee;
+  padding: 10px 15px;
+}
+#apply-job .resume-header .avatar {
+  display: inline-block;
+}
+#apply-job .resume-header .resume-name {
+  margin: 15px 0 5px;
+  font-size: 19px;
+  font-weight: bold;
+}
+#apply-job .resume-header .resume-pos {
+  font-size: 15px;
+  border-bottom: 1px #de5749 dashed;
+  cursor: pointer;
+}
 /**
  * FOOTER CSS
  * Updated on 22/09/16

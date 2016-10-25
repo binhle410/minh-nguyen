@@ -1,0 +1,16 @@
+block vars
+  -title="Job Detail - interview-spot.com"
+  -loggedIn = true
+  -hasVideo = true
+extends layouts/layout
+block main
+    section.main.container
+        include blocks/detail/detail-header
+        .row
+            .detail-body.col-md-8
+                include blocks/detail/detail-body
+            .detail-sidebar.col-md-4
+                include blocks/detail/detail-sidebar
+    include blocks/detail/modal-apply-job
+block script
+    script(type='text/javascript', src="./js/actions/job-detail.js")

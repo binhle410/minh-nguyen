@@ -8,16 +8,13 @@
                         span.sr-only Close
                     .modal-title
                         | You are applying for
-                        b Analog IC Design And Layout
+                        b  Analog IC Design And Layout
                 .modal-body
                     .resume-header
                         .row
-                            .col-md-3
+                            .t-c.col-md-3
                                 a.avatar.img-circle(href="javascript:;")
                                     img(src="./uploads/user_ava.jpg", alt="")
-                                    p
-                                        i.fa.fa-camera
-                                        span  Change
                             .col-md-9
                                 h4.resume-name Victor Lee
                                 span.resume-pos Frontend Developer
@@ -38,9 +35,40 @@
                                     .col-md-3
                                         label Resume
                                     .col-md-9
-                                        
                             .col-md-6
-                                
+                                if !hasVideo
+                                    p You has not uploaded any videos yet. Please download apps on mobile to upload videos.
+                                    a.link-app(href="#")
+                                        img(src="./images/get_gg_play.png", alt="")
+                                    a.link-app(href="#")
+                                        img(src="./images/get_app_store.png", alt="")
+                                else
+                                    p Please choose a video to introduce yourself to the employers!
+                                    .vdeo-list
+                                        .vdeo-itm
+                                            input.hidden(type="radio", name="video-title")
+                                            label
+                                                .vdeo-img
+                                                    img(src="./uploads/video_thumb_1.jpg", alt="")
+                                                .vdeo-ct
+                                                    span.vdeo-ttl Video title 1
+                                                    span.vdeo-time 20.10.2016 12:24:23
+                                        .vdeo-itm
+                                            input.hidden(type="radio", name="video-title")
+                                            label
+                                                .vdeo-img
+                                                    img(src="./uploads/video_thumb_2.jpg", alt="")
+                                                .vdeo-ct
+                                                    span.vdeo-ttl Video title 2
+                                                    span.vdeo-time 22.10.2016 10:24:23
+                                        .vdeo-itm
+                                            input.hidden(type="radio", name="video-title")
+                                            label
+                                                .vdeo-img
+                                                    img(src="./uploads/video_thumb_3.jpg", alt="")
+                                                .vdeo-ct
+                                                    span.vdeo-ttl Video title 3
+                                                    span.vdeo-time 25.10.2016 12:24:23
                 .modal-footer
                     button.btn(type='button', data-dismiss='modal', tabindex='9') Cancel
                     button.btn.btn-primary(type='button', tabindex='10') Send application
