@@ -1,7 +1,7 @@
 #apply-job.modal.fade.in(tabindex='-1', role='dialog', aria-hidden='false')
-    form
-        .modal-dialog
-            .modal-content
+    .modal-dialog
+        .modal-content
+            form
                 .modal-header
                     button.close(type='button btn-sm', data-dismiss='modal')
                         span(aria-hidden='true', tabindex='8') ×
@@ -17,59 +17,110 @@
                                     img(src="./uploads/user_ava.jpg", alt="")
                             .col-md-9
                                 h4.resume-name Victor Lee
-                                span.resume-pos Frontend Developer
+                                span.edittable(data-placeholder="Professional headline. Ex: Project manager") Frontend Developer
+                                    i.fa.fa-pencil
                     .resume-body 
                         .row
-                            .col-md-6
-                                .frow
-                                    .col-md-3
+                            .col-sm-6
+                                .f-row
+                                    .f-col.col-sm-4
                                         label Email
-                                    .col-md-9
+                                    .f-col.col-sm-8
                                         span.not-edit oaivyftu@gmail.com
-                                .frow
-                                    .col-md-3
+                                .f-row
+                                    .f-col.col-sm-4
                                         label Phone number
-                                    .col-md-9
-                                        span.edittable +65 6285 6116
-                                .frow
-                                    .col-md-3
+                                    .f-col.col-sm-8
+                                        span.edittable(data-placeholder="Enter your phone number") +65 6285 6116
+                                            i.fa.fa-pencil
+                                .f-row
+                                    .f-col.col-sm-4
                                         label Resume
-                                    .col-md-9
-                            .col-md-6
+                                    .f-col.col-sm-8
+                                        .resume-opt
+                                            .resume-opt-itm
+                                                input.hidden(type="radio", name="resume-opt", id="resume-opt-1")
+                                                label(for="resume-opt-1")
+                                                    span.resume-opt-ttl Online Profile on Interviewspot
+                                                        span.smll  (Updated: 22/10/2016 22:03)
+                                            .resume-opt-itm
+                                                input.hidden(type="radio", name="resume-opt", id="resume-opt-2")
+                                                label(for="resume-opt-2")
+                                                    span.resume-opt-ttl Victor Lee CV.pdf
+                                                        span.smll  (Updated: 20/09/2016 01:09)
+                                            .resume-opt-itm.resume-opt-upl
+                                                input.hidden(type="radio", name="resume-opt", id="resume-opt-3")
+                                                label
+                                                    input.hidden(type="file", name="resume-file", id="resume-file")
+                                                    span.resume-opt-ttl Upload new CV
+                                                        i.fa.fa-arrow-circle-o-up
+                                                        span.smll You can only attach .doc, .docx, and .pdf files that are less than 2MB in size.
+                            .col-sm-6
                                 if !hasVideo
-                                    p You has not uploaded any videos yet. Please download apps on mobile to upload videos.
-                                    a.link-app(href="#")
-                                        img(src="./images/get_gg_play.png", alt="")
-                                    a.link-app(href="#")
-                                        img(src="./images/get_app_store.png", alt="")
+                                    p You have not uploaded any videos yet. Please download apps on mobile to upload videos.
+                                    p.t-c
+                                        a.link-app(href="#")
+                                            img(src="./uploads/download_gg.png", alt="")
+                                        a.link-app(href="#")
+                                            img(src="./uploads/download_store.png", alt="")
                                 else
                                     p Please choose a video to introduce yourself to the employers!
                                     .vdeo-list
                                         .vdeo-itm
-                                            input.hidden(type="radio", name="video-title")
-                                            label
-                                                .vdeo-img
+                                            input.hidden(type="radio", name="video-title", id="vdeo-job-1")
+                                            label(for="vdeo-job-1")
+                                                i.fa.fa-check
+                                                .vdeo-img.col-xs-3
                                                     img(src="./uploads/video_thumb_1.jpg", alt="")
-                                                .vdeo-ct
+                                                .vdeo-ct.col-xs-9
                                                     span.vdeo-ttl Video title 1
                                                     span.vdeo-time 20.10.2016 12:24:23
                                         .vdeo-itm
-                                            input.hidden(type="radio", name="video-title")
-                                            label
-                                                .vdeo-img
+                                            input.hidden(type="radio", name="video-title", id="vdeo-job-2")
+                                            label(for="vdeo-job-2")
+                                                i.fa.fa-check
+                                                .vdeo-img.col-xs-3
                                                     img(src="./uploads/video_thumb_2.jpg", alt="")
-                                                .vdeo-ct
+                                                .vdeo-ct.col-xs-9
                                                     span.vdeo-ttl Video title 2
                                                     span.vdeo-time 22.10.2016 10:24:23
                                         .vdeo-itm
-                                            input.hidden(type="radio", name="video-title")
-                                            label
-                                                .vdeo-img
+                                            input.hidden(type="radio", name="video-title", id="vdeo-job-3")
+                                            label(for="vdeo-job-3")
+                                                i.fa.fa-check
+                                                .vdeo-img.col-xs-3
                                                     img(src="./uploads/video_thumb_3.jpg", alt="")
-                                                .vdeo-ct
+                                                .vdeo-ct.col-xs-9
                                                     span.vdeo-ttl Video title 3
                                                     span.vdeo-time 25.10.2016 12:24:23
+                                        .vdeo-itm
+                                            input.hidden(type="radio", name="video-title", id="vdeo-job-4")
+                                            label(for="vdeo-job-4")
+                                                i.fa.fa-check
+                                                .vdeo-img.col-xs-3
+                                                    img(src="./uploads/video_thumb_3.jpg", alt="")
+                                                .vdeo-ct.col-xs-9
+                                                    span.vdeo-ttl Video title 4
+                                                    span.vdeo-time 25.10.2016 12:24:23
+                                        .vdeo-itm
+                                            input.hidden(type="radio", name="video-title", id="vdeo-job-5")
+                                            label(for="vdeo-job-5")
+                                                i.fa.fa-check
+                                                .vdeo-img.col-xs-3
+                                                    img(src="./uploads/video_thumb_3.jpg", alt="")
+                                                .vdeo-ct.col-xs-9
+                                                    span.vdeo-ttl Video title 5
+                                                    span.vdeo-time 25.10.2016 12:24:23
+                                        .vdeo-itm
+                                            input.hidden(type="radio", name="video-title", id="vdeo-job-6")
+                                            label(for="vdeo-job-6")
+                                                i.fa.fa-check
+                                                .vdeo-img.col-xs-3
+                                                    img(src="./uploads/video_thumb_3.jpg", alt="")
+                                                .vdeo-ct.col-xs-9
+                                                    span.vdeo-ttl Video title 6
+                                                    span.vdeo-time 25.10.2016 12:24:23
                 .modal-footer
-                    button.btn(type='button', data-dismiss='modal', tabindex='9') Cancel
+                    button.btn.btn-bdline(type='button', data-dismiss='modal', tabindex='9') Cancel
                     button.btn.btn-primary(type='button', tabindex='10') Send application
 // End: MODAL APPLY JOB - JOB DETAIL

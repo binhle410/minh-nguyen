@@ -2,6 +2,8 @@
  * MODAL CSS
  * Updated on 22/09/16
  */
+
+// Modal General CSS
  .modal-content {
      .border-radius(3px);
      overflow: hidden;
@@ -18,30 +20,14 @@
          }
      }
      .modal-footer {
-         padding: 20px;
-         .btn {
-             border: 1px solid #ccc;
-             background: #f4f4f4;
-             margin: 0;
-             padding: 5px 25px;
-             font-size: 12px;
-             &:hover {
-                 background: #ddd;
-             }
-             + .btn {
-                 margin-left: 10px;
-             }
-             &.btn-primary {
-                 background: @red;
-                 border-color: transparent;
-                 &:hover {
-                     background: @dred;
-                 }
-             }
-         }
-     }
+        padding: 20px;
+        .btn {
+            margin: 0;
+        }
+    }
  }
 
+// Modal Upload Image CSS
 #upload-img {
     .modal-header {
         background: none;
@@ -63,22 +49,26 @@
     }
 }
 
+// Modal Apply Job CSS
 #apply-job {
     .modal-dialog {
         width: 760px;
     }
     .modal-header {
         background: white;
+        .close {
+            color: #999;
+        }
     }
     .modal-title {
         font-size: 18px;
         color: @dgray;
-        .close {
-            color: #ddd;
-        }
     }
     .modal-body {
         padding: 0;
+        p {
+            margin: 0 0 15px;
+        }
     }
     .resume-header {
         background: #eee;
@@ -91,10 +81,183 @@
             font-size: 19px;
             font-weight: bold;
         }
-        .resume-pos {
-            font-size: 15px;
-            border-bottom: 1px @red dashed;
-            cursor: pointer;
+    }
+    .edit-group {
+        .form-control {
+            width: 300px;
+            float: left;
+            margin-right: 5px;
+        }
+        p {
+            color: @dred;
+            padding-top: 3px;
+            margin: 0;
+        }
+    }
+}
+
+#apply-job {
+    .f-row {
+        margin: 0 -5px 15px;
+        .clearfix();
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .f-col {
+            padding: 0 5px;
+            > label {
+                display: block;
+                text-align: right;
+                font-weight: bold;
+            }
+        }
+    }
+    .edittable {
+        font-size: 15px;
+        border-bottom: 1px #de5749 dashed;
+        cursor: pointer;
+        .fa-pencil {
+            display: inline-block;
+            margin-left: 5px; 
+            color: @dgray;
+        }
+    }
+}
+
+.resume-opt-itm {
+    > label {
+        position: relative;
+        padding-left: 20px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 3px;
+            left: 0; 
+            width: 12px;
+            height: 12px;
+            border: 1px solid #999;
+            background: white;
+            .border-radius(50%);
+        }
+        &:hover {
+            .resume-opt-ttl {
+                color: @red;
+            }
+        }
+        input[type="file"] {
+            position: absolute;
+            top: -1000px;
+        }
+    }
+    input[type="radio"]:checked + label {
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            top: 5px;
+            left: 2px;
+            width: 8px;
+            height: 8px;
+            background: @green;
+            .border-radius(50%);
+        }
+    }
+    .resume-opt-ttl {
+        font-weight: 500;
+        .fa-arrow-circle-o-up {
+            font-size: 17px;
+            margin-left: 5px;
+        }
+        .smll {
+            display: block;
+            font-size: 12px;
+            color: #999;
+            font-weight: normal;
+        }
+    }
+}
+
+#apply-job {
+    .resume-body {
+        padding: 10px 15px;
+        .edit-group {
+            .form-control {
+                width: 160px;
+            }
+        } 
+    }
+    .link-app {
+        width: 120px;
+        padding: 0 5px;
+        text-align: center;
+        display: inline-block;
+    }
+}
+
+.vdeo-list {
+    height: 175px;
+    overflow-y: auto;
+    padding-left: 10px;
+    label {
+        margin: 0 -5px;
+    }
+    .vdeo-img, .vdeo-ct {
+        padding: 0 5px;
+    }
+    .vdeo-ttl {
+        display: block;
+        font-weight: 500;
+        color: #333;
+    }
+    .vdeo-time {
+        font-size: 12px;
+        color: #999;
+    }
+}
+
+.vdeo-itm {
+    &:hover {
+        .vdeo-ttl {
+            color: @red;
+        }
+    }
+    label {
+        position: relative;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 6px;
+            .transform(translate(-50%, -50%));
+            font-size: 20px;
+            z-index: 2;
+            width: 12px;
+            height: 12px;
+            .border-radius(50%);
+            color: #ddd;
+            border: 1px solid #999;
+            background: white;
+        }
+        .fa-check {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 6px;
+            .transform(translate(-50%, -50%));
+            z-index: 3;
+            font-size: 8px;
+            color: white;
+        }
+    }
+    input[type="radio"]:checked + label {
+        &:before {
+            background: @green;
+            border: none;
+        }
+        .fa {
+            display: block;
         }
     }
 }

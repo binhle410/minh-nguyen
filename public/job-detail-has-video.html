@@ -9,7 +9,7 @@
     <title>Job Detail - interview-spot.com</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
@@ -88,7 +88,8 @@
                 <h2 class="detail-ttl">Analog IC Design And Layout</h2>
                 <p class="detail-desc"><strong>Staff.com</strong><br>#05-33 Singapore Post Centre, Singapore 408600<br>Work Location:<a href="#">Singapore</a></p><span class="salary-box"><span>Salary:</span><span class="money">  $200 - $250</span></span>
               </div>
-              <div class="apply-blk col-md-2"><a href="javascript:;" data-toggle="modal" data-target="#apply-job" class="btn btn-primary btn-lg">Apply Now</a><a class="btn btn-default btn-lg"><i class="fa fa-fw fa-thumbs-up"></i><span> I'm interested</span></a>
+              <div class="apply-blk col-md-2"><a href="javascript:;" data-toggle="modal" data-target="#apply-job" class="btn btn-primary">Apply Now</a><a class="btn btn-default btn-interested"><i class="fa fa-fw fa-thumbs-up"></i><span> I'm interested</span></a>
+                <p class="saved-job"><i class="fa fa-fw fa-thumbs-up"></i><span> I'm interested</span></p>
                 <p><span class="smll">610 Views</span><span class="smll">Posted 1 days ago</span></p>
               </div>
             </div>
@@ -109,7 +110,7 @@
                 </div>
                 <div class="job-imgs"> 
                   <div class="job-slides">
-                    <div class="job-slide-itm"><a href="http://www.youtube.com/watch?v=0O2aH4XLbto" class="popup-youtube"><img src="./images/playvideo.png" alt=""></a></div>
+                    <div class="job-slide-itm"><a href="http://www.youtube.com/watch?v=0O2aH4XLbto" class="popup-youtube"><img src="./uploads/com_img_4.jpg" alt=""></a></div>
                     <div class="job-slide-itm"><a href="./uploads/com_img_1.jpg"><img src="./uploads/com_img_1.jpg" alt=""></a></div>
                     <div class="job-slide-itm"><a href="./uploads/com_img_2.jpg"> <img src="./uploads/com_img_2.jpg" alt=""></a></div>
                     <div class="job-slide-itm"><a href="./uploads/com_img_3.jpg"><img src="./uploads/com_img_3.jpg" alt=""></a></div>
@@ -227,7 +228,7 @@
                     <div class="list-group-item"> 
                       <div class="item-icon"><i class="fa fa-bookmark"></i></div>
                       <div class="item-content">
-                        <p><a href="javascript:;">Save this job</a></p>
+                        <p><a href="javascript:;" class="save-job">Save this job</a></p>
                       </div>
                     </div>
                     <div class="list-group-item">
@@ -295,9 +296,9 @@
         </div>
       </section>
       <div id="apply-job" tabindex="-1" role="dialog" aria-hidden="false" class="modal fade in">
-        <form>
-          <div class="modal-dialog">
-            <div class="modal-content">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form>
               <div class="modal-header">
                 <button type="button btn-sm" data-dismiss="modal" class="close"><span aria-hidden="true" tabindex="8">×</span><span class="sr-only">Close</span></button>
                 <div class="modal-title">You are applying for<b> Analog IC Design And Layout</b></div>
@@ -307,54 +308,92 @@
                   <div class="row">
                     <div class="t-c col-md-3"><a href="javascript:;" class="avatar img-circle"><img src="./uploads/user_ava.jpg" alt=""></a></div>
                     <div class="col-md-9">
-                      <h4 class="resume-name">Victor Lee</h4><span class="resume-pos">Frontend Developer</span>
+                      <h4 class="resume-name">Victor Lee</h4><span data-placeholder="Professional headline. Ex: Project manager" class="edittable">Frontend Developer<i class="fa fa-pencil"></i></span>
                     </div>
                   </div>
                 </div>
                 <div class="resume-body"> 
                   <div class="row">
-                    <div class="col-md-6">
-                      <div class="frow">
-                        <div class="col-md-3">
+                    <div class="col-sm-6">
+                      <div class="f-row">
+                        <div class="f-col col-sm-4">
                           <label>Email</label>
                         </div>
-                        <div class="col-md-9"><span class="not-edit">oaivyftu@gmail.com</span></div>
+                        <div class="f-col col-sm-8"><span class="not-edit">oaivyftu@gmail.com</span></div>
                       </div>
-                      <div class="frow">
-                        <div class="col-md-3">
+                      <div class="f-row">
+                        <div class="f-col col-sm-4">
                           <label>Phone number</label>
                         </div>
-                        <div class="col-md-9"><span class="edittable">+65 6285 6116</span></div>
+                        <div class="f-col col-sm-8"><span data-placeholder="Enter your phone number" class="edittable">+65 6285 6116<i class="fa fa-pencil"></i></span></div>
                       </div>
-                      <div class="frow">
-                        <div class="col-md-3">
+                      <div class="f-row">
+                        <div class="f-col col-sm-4">
                           <label>Resume</label>
                         </div>
-                        <div class="col-md-9"></div>
+                        <div class="f-col col-sm-8">
+                          <div class="resume-opt">
+                            <div class="resume-opt-itm">
+                              <input type="radio" name="resume-opt" id="resume-opt-1" class="hidden">
+                              <label for="resume-opt-1"><span class="resume-opt-ttl">Online Profile on Interviewspot<span class="smll"> (Updated: 22/10/2016 22:03)</span></span></label>
+                            </div>
+                            <div class="resume-opt-itm">
+                              <input type="radio" name="resume-opt" id="resume-opt-2" class="hidden">
+                              <label for="resume-opt-2"><span class="resume-opt-ttl">Victor Lee CV.pdf<span class="smll"> (Updated: 20/09/2016 01:09)</span></span></label>
+                            </div>
+                            <div class="resume-opt-itm resume-opt-upl">
+                              <input type="radio" name="resume-opt" id="resume-opt-3" class="hidden">
+                              <label>
+                                <input type="file" name="resume-file" id="resume-file" class="hidden"><span class="resume-opt-ttl">Upload new CV<i class="fa fa-arrow-circle-o-up"></i><span class="smll">You can only attach .doc, .docx, and .pdf files that are less than 2MB in size.</span></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-sm-6">
                       <p>Please choose a video to introduce yourself to the employers!</p>
                       <div class="vdeo-list">
                         <div class="vdeo-itm">
-                          <input type="radio" name="video-title" class="hidden">
-                          <label>
-                            <div class="vdeo-img"><img src="./uploads/video_thumb_1.jpg" alt=""></div>
-                            <div class="vdeo-ct"><span class="vdeo-ttl">Video title 1</span><span class="vdeo-time">20.10.2016 12:24:23</span></div>
+                          <input type="radio" name="video-title" id="vdeo-job-1" class="hidden">
+                          <label for="vdeo-job-1"><i class="fa fa-check"></i>
+                            <div class="vdeo-img col-xs-3"><img src="./uploads/video_thumb_1.jpg" alt=""></div>
+                            <div class="vdeo-ct col-xs-9"><span class="vdeo-ttl">Video title 1</span><span class="vdeo-time">20.10.2016 12:24:23</span></div>
                           </label>
                         </div>
                         <div class="vdeo-itm">
-                          <input type="radio" name="video-title" class="hidden">
-                          <label>
-                            <div class="vdeo-img"><img src="./uploads/video_thumb_2.jpg" alt=""></div>
-                            <div class="vdeo-ct"><span class="vdeo-ttl">Video title 2</span><span class="vdeo-time">22.10.2016 10:24:23</span></div>
+                          <input type="radio" name="video-title" id="vdeo-job-2" class="hidden">
+                          <label for="vdeo-job-2"><i class="fa fa-check"></i>
+                            <div class="vdeo-img col-xs-3"><img src="./uploads/video_thumb_2.jpg" alt=""></div>
+                            <div class="vdeo-ct col-xs-9"><span class="vdeo-ttl">Video title 2</span><span class="vdeo-time">22.10.2016 10:24:23</span></div>
                           </label>
                         </div>
                         <div class="vdeo-itm">
-                          <input type="radio" name="video-title" class="hidden">
-                          <label>
-                            <div class="vdeo-img"><img src="./uploads/video_thumb_3.jpg" alt=""></div>
-                            <div class="vdeo-ct"><span class="vdeo-ttl">Video title 3</span><span class="vdeo-time">25.10.2016 12:24:23</span></div>
+                          <input type="radio" name="video-title" id="vdeo-job-3" class="hidden">
+                          <label for="vdeo-job-3"><i class="fa fa-check"></i>
+                            <div class="vdeo-img col-xs-3"><img src="./uploads/video_thumb_3.jpg" alt=""></div>
+                            <div class="vdeo-ct col-xs-9"><span class="vdeo-ttl">Video title 3</span><span class="vdeo-time">25.10.2016 12:24:23</span></div>
+                          </label>
+                        </div>
+                        <div class="vdeo-itm">
+                          <input type="radio" name="video-title" id="vdeo-job-4" class="hidden">
+                          <label for="vdeo-job-4"><i class="fa fa-check"></i>
+                            <div class="vdeo-img col-xs-3"><img src="./uploads/video_thumb_3.jpg" alt=""></div>
+                            <div class="vdeo-ct col-xs-9"><span class="vdeo-ttl">Video title 4</span><span class="vdeo-time">25.10.2016 12:24:23</span></div>
+                          </label>
+                        </div>
+                        <div class="vdeo-itm">
+                          <input type="radio" name="video-title" id="vdeo-job-5" class="hidden">
+                          <label for="vdeo-job-5"><i class="fa fa-check"></i>
+                            <div class="vdeo-img col-xs-3"><img src="./uploads/video_thumb_3.jpg" alt=""></div>
+                            <div class="vdeo-ct col-xs-9"><span class="vdeo-ttl">Video title 5</span><span class="vdeo-time">25.10.2016 12:24:23</span></div>
+                          </label>
+                        </div>
+                        <div class="vdeo-itm">
+                          <input type="radio" name="video-title" id="vdeo-job-6" class="hidden">
+                          <label for="vdeo-job-6"><i class="fa fa-check"></i>
+                            <div class="vdeo-img col-xs-3"><img src="./uploads/video_thumb_3.jpg" alt=""></div>
+                            <div class="vdeo-ct col-xs-9"><span class="vdeo-ttl">Video title 6</span><span class="vdeo-time">25.10.2016 12:24:23</span></div>
                           </label>
                         </div>
                       </div>
@@ -363,12 +402,12 @@
                 </div>
               </div>
               <div class="modal-footer">
-                <button type="button" data-dismiss="modal" tabindex="9" class="btn">Cancel</button>
+                <button type="button" data-dismiss="modal" tabindex="9" class="btn btn-bdline">Cancel</button>
                 <button type="button" tabindex="10" class="btn btn-primary">Send application</button>
               </div>
-            </div>
+            </form>
           </div>
-        </form>
+        </div>
       </div>
       <!-- End: MODAL APPLY JOB - JOB DETAIL-->
       <footer>

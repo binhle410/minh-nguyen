@@ -5,6 +5,7 @@
  * 2. jobLightbox()     : Create job image and video gallery slider
  * 3. showFixedNav()    : Show navbar fixted top menu when user scrolls window
  * 4. showPopover()     : show Popover
+ * 5. clkBrFile()       : Browse File when clicking resume option label
  */
 // 1. Make slide for job detail page
 function jobSlide() {
@@ -70,13 +71,13 @@ function showPopover() {
         content:  "<button type='button' class='close'><span>×</span></button>"
                 + "<form>"
                 +   "<div class='form-group'>"
-                +       "<input type='text' name='refer-f-name' class='form-control' placeholder='First Name'/>"
+                +       "<input type='text' name='refer-f-name' class='form-control' placeholder='First Name' required />"
                 +   "</div>"
                 +   "<div class='form-group'>"
-                +       "<input type='text' name='refer-l-name' class='form-control' placeholder='Last Name'/>"
+                +       "<input type='text' name='refer-l-name' class='form-control' placeholder='Last Name' required />"
                 +   "</div>"
                 +   "<div class='form-group'>"
-                +       "<input type='text' name='refer-email' class='form-control' placeholder='Email'/>"
+                +       "<input type='email' name='refer-email' class='form-control' placeholder='Email' required />"
                 +   "</div>"
                 +   "<div class='form-group pull-right'>"
                 +       "<button class='btn btn-primary'>Refer</button>"
@@ -84,8 +85,10 @@ function showPopover() {
                 +"</form>"
     });
 
+    // Validate form, Close form
     $('a.detail-popover').on('shown.bs.popover', function () {
-         $('.popover').find('.close').on("click", function(e) {
+        valiPopForm();
+        $('.popover').find('.close').on("click", function(e) {
             $('a.detail-popover').popover('hide');
         });
     })
@@ -93,6 +96,78 @@ function showPopover() {
     $('body').on('hidden.bs.popover', function (e) {
         $(e.target).data("bs.popover").inState.click = false;
     });
+}
+
+// 5. Browse File when clicking resume option label
+function clkBrFile() {
+    if(!$(".resume-opt-upl > label").length) { return; }
+
+    var $res_label = $(".resume-opt-upl > label");
+
+    $res_label.on("click", function(e) {
+        e.stopPropagation();
+        console.log("abc");
+        $("#resume-opt-3").trigger("click");
+    });
+}
+
+// 6. Edit a field
+function editField() {
+    if(!$(".edittable").length) { return; }
+
+    var $edit_span  = $(".edittable");
+
+    $edit_span.on("click", function(e) {
+        var $txt_field  = $(this),
+            $txt_ctner = $(this).parent(),
+            placeholder = $(this).data("placeholder"),
+            $edit_tml     = "<div class='edit-group'>"
+                          +     "<input type='text' class='form-control' value='"+ $(this).text() +"' placeholder='" + placeholder + "' />"
+                          +     "<button type='button' class='btn btn-default btn-save'>"
+                          +         "<i class='fa fa-check'></i>"
+                          +     "</button>"
+                          + "</div>",
+            count       = 0;
+        
+        $txt_field.hide();
+        $txt_ctner.append($edit_tml);
+
+        $(".edit-group .btn-save").on("click", function(e) {
+            if(!$(this).prev().val().length) {
+                if(count==0) {
+                    $(this).parent().append("<p>This field must not be empty.</p>");
+                    count++;
+                }
+            } else {
+                $txt_field.text($(this).prev().val());
+                $txt_field.show();
+                $(this).parent().remove();
+            }
+        });
+    });    
+}
+
+// 7. Validate popover form
+function valiPopForm() {
+    if(!$(".popover form").length) { return; }
+    console.log("abcd");
+    $(".popover form").validate();
+}
+
+// 8. Save job
+function saveJob() {
+    if(!$(".btn-interested").length) { return; }
+
+    $(".btn-interested").on("click", function(e) {
+        $(this).hide();
+        $(".saved-job").show();
+    });
+
+    if(!$(".save-job").length) { return; }
+
+    $(".save-job").on("click", function(e) {
+        $(".btn-interested").click();
+    })
 }
 
 /* ----------------------------------------------- */
@@ -103,6 +178,9 @@ $(document).ready(function($){
     jobLightbox();
     showFixedNav();
     showPopover();
+    clkBrFile();
+    editField();
+    saveJob();
 });
 /* OnLoad Window */
 var init = function () {
