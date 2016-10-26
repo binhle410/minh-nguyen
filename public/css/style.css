@@ -19358,6 +19358,12 @@ form {
 .main.container {
   padding-top: 15px;
 }
+.alert .fa-check-circle {
+  font-size: 16px;
+}
+.alert .close {
+  line-height: 16px;
+}
 /**
  * Page components
  *
@@ -21760,14 +21766,12 @@ ul.pagination li span {
 .box.box-consider .box-md {
   padding-bottom: 0;
 }
-.job-imgs {
+.job-feature {
   padding: 30px 40px;
   background: #f2f2f2;
 }
-.job-slides .fa {
+.job-feature .job-slides .slick-arrow {
   position: absolute;
-  height: 20px;
-  width: 20px;
   cursor: pointer;
   color: #999;
   top: 50%;
@@ -21776,11 +21780,38 @@ ul.pagination li span {
   -ms-transform: translate(0, -50%);
   -o-transform: translate(0, -50%);
 }
-.job-slides .fa-angle-left {
+.job-feature .job-slides .slick-arrow.fa-angle-left {
   left: -30px;
 }
-.job-slides .fa-angle-right {
+.job-feature .job-slides .slick-arrow.fa-angle-right {
   right: -30px;
+}
+.job-feature .job-slide-itm {
+  position: relative;
+}
+.job-feature .job-slide-itm:hover .overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+.job-feature .job-slide-itm > a:focus {
+  outline: none;
+}
+.job-feature .job-slide-itm .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.job-feature .job-slide-itm .overlay-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: white;
 }
 .slick-dots {
   bottom: -20px;
@@ -21808,6 +21839,83 @@ ul.pagination li span {
 }
 .slick-dots li button:before {
   content: none;
+}
+/**
+ * AFTER APPLY JOB CSS
+ * Updated on 26/10/16
+ */
+.alert-after-apply {
+  margin-top: 0;
+  position: relative;
+  padding-right: 30px;
+}
+.alert-after-apply .close {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.after-apply .box-md {
+  padding: 40px;
+}
+.after-apply .after-ttl {
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+.after-apply .apply-all {
+  margin: 15px 0 0;
+}
+.job-itm {
+  background: #fff;
+  padding: 15px 15px 15px 20px;
+  border-bottom: 1px solid #f2f2f2;
+}
+.job-itm:nth-child(odd) {
+  background: #fbfbfb;
+}
+.job-itm:hover {
+  background: #f9fcff;
+}
+.job-itm .job-itm-ttl {
+  margin: 0;
+}
+.job-itm .job-itm-ttl a {
+  font-weight: bold;
+  font-size: 16px;
+}
+.job-itm .company {
+  margin: 5px 0;
+}
+.job-itm .extra-info {
+  color: #999;
+  margin-top: 10px;
+}
+.job-itm .extra-info .circle {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #ddd;
+  text-align: center;
+  line-height: 15px;
+  margin-right: 5px;
+}
+.job-itm .extra-info .circle .fa {
+  font-size: 11px;
+}
+.job-itm .posted {
+  margin-top: -15px;
+  color: #999;
 }
 /**
  * MODAL CSS
@@ -22725,6 +22833,16 @@ footer .copyright {
   }
   .btn.tab-prof strong {
     font-size: 11px;
+  }
+  .after-apply .box-md {
+    padding: 10px;
+  }
+  .after-apply .job-apply {
+    padding-top: 10px;
+    text-align: left;
+  }
+  .after-apply .job-itm .posted {
+    margin-top: -25px;
   }
 }
 /**
