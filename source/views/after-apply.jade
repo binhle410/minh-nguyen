@@ -3,13 +3,14 @@ block vars
 extends layouts/layout
 block main
     section.main.container
-        .alert.alert-success.alert-after-apply(role='alert')
-            i.fa.fa-check-circle
-            strong  Congratulations!
-            |   You have successfully applied for 
-            strong Customer Services Manager
-            button.close.f-r
-                span ×
+        .warning.warning-success
+            i.fa.fa-info-circle
+            span
+                strong Congratulations!
+                |   You have successfully applied for 
+                strong Customer Services Manager
+            a.warning-msg.pull-right(href="javascript:;")
+                i.fa.fa-remove
         .after-apply.box
             .box-md
                 h3.after-ttl Jobs you might be interested in

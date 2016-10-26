@@ -128,7 +128,7 @@ function editField() {
                           +     "</button>"
                           + "</div>",
             count       = 0;
-        
+
         $txt_field.hide();
         $txt_ctner.append($edit_tml);
 
@@ -167,7 +167,7 @@ function saveJob() {
 
     $(".save-job").on("click", function(e) {
         $(".btn-interested").click();
-    })
+    });
 }
 
 /* ----------------------------------------------- */

@@ -2,48 +2,7 @@
  * DETAIL CSS
  * Updated on 23/10/16
  */
-
-.detail-body {
-    a {
-        color: @dred;
-        text-decoration: underline;
-        &:hover {
-            text-decoration: none;
-        }
-        &.link-more {
-            display: block;
-            margin-top: 30px;
-            text-decoration: none;
-        }
-    }
-}
-
-.detail-sidebar {
-    a {
-        color: #999;
-        &:hover {
-            color: #333;
-        }
-    }
-}
-
-.detail-navbar {
-    background: white;
-    padding: 20px 0 20px;
-    .box-shadow(0 0 50px rgba(0,0,0,.3));
-    .opacity(0);
-    visibility: hidden;
-    .transition(all .3s linear);
-    .detail-navbar-ttl {
-        font-size: 24px;
-        font-weight: bold;
-    }
-    .btn-primary {
-        width: 100%;
-        margin: 0;
-    }
-}
-
+// Detail header CSS
 .job-avt {
     display: block;
     margin: 25px auto 0 auto;
@@ -66,57 +25,6 @@
     a {
         color: @red;
         margin-left: 5px;
-    }
-}
-
-.box-ct {
-    ul, ol {
-        margin-bottom: 15px;
-        padding: 0;
-        li {
-            margin-left: 40px;
-        }
-    }
-    table {
-        width: 100%;
-        border: 1px solid #ddd;
-        th {
-            background: #f1f1f1;
-        }
-        tr {
-             border-bottom: 1px solid #ddd;
-        }
-        th, td {
-            padding: 5px;
-        }
-    }
-    .box-itm {
-        margin-bottom: 15px;
-        &:last-child {
-            margin-bottom: 0;
-        }
-        > label, > a {
-            display: block;
-        }
-        > label {
-            margin: 0 0 2px;
-        }
-    }
-}
-
-.box-also-view {
-    .box-ct {
-        .box-itm {
-            > a {
-                color: #333;
-                &:hover {
-                    color: @red;
-                }
-            }
-            > span {
-                color: #999;
-            }
-        }
     }
 }
 
@@ -158,8 +66,60 @@
     }
 }
 
+// Detail body CSS
+.detail-body {
+    a {
+        text-decoration: underline;
+        color: @red;
+        &:hover {
+            color: @dred;
+            text-decoration: none;
+        }
+        &.link-more {
+            display: block;
+            margin-top: 30px;
+            text-decoration: none;
+        }
+    }
+}
+
+.box-ct {
+    ul, ol {
+        margin-bottom: 15px;
+        padding: 0;
+        li {
+            margin-left: 40px;
+        }
+    }
+    table {
+        width: 100%;
+        border: 1px solid #ddd;
+        th {
+            background: #f1f1f1;
+        }
+        tr {
+             border-bottom: 1px solid #ddd;
+        }
+        th, td {
+            padding: 5px;
+        }
+    }
+    .box-itm {
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        > label, > a {
+            display: block;
+        }
+        > label {
+            margin: 0 0 2px;
+        }
+    }
+}
+
 .benefit-highlight-blk {
-    border-left: 5px solid @dred;
+    border-left: 5px solid @red;
     .border-radius(3px);
     padding-left: 10px;
     margin-bottom: 15px;
@@ -175,6 +135,16 @@
         text-align: center;
         color: #777;
         line-height: 40px;
+    }
+}
+
+// Detail Sidebar CSS
+.detail-sidebar {
+    a {
+        color: #999;
+        &:hover {
+            color: #333;
+        }
     }
 }
 
@@ -224,13 +194,13 @@
         z-index: 2;
         text-align: left;
         .popover-title {
-            background: #f2f2f2;
+            background: #fff;
             color: #555;
             font-size: 14px;
             font-weight: 500;
             text-align: center;
         }
-        .error {
+        label.error {
             color: @red;
             margin: 3px 0 0;
             font-weight: 500;
@@ -244,11 +214,46 @@
     }
 }
 
+.box-also-view {
+    .box-ct {
+        .box-itm {
+            > a {
+                color: #333;
+                &:hover {
+                    color: @red;
+                }
+            }
+            > span {
+                color: #999;
+            }
+        }
+    }
+}
+
 .box {
     &.box-consider {
         .box-md {
             padding-bottom: 0;
         }
+    }
+}
+
+// Fixed top navbar CSS
+.detail-navbar {
+    background: white;
+    padding: 20px 0 20px;
+    .box-shadow(0 0 50px rgba(0,0,0,.3));
+    .opacity(0);
+    visibility: hidden;
+    .transition(all .3s linear);
+    .detail-navbar-ttl {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0;
+    }
+    .btn-primary {
+        width: 100%;
+        margin: 0;
     }
 }
 
@@ -263,6 +268,9 @@
             color: #999;
             top: 50%;
             .transform(translate(0, -50%));
+            &.slick-disabled {
+                color: #ccc;
+            }
             &.fa-angle-left {
                 left: -30px;
             }
@@ -277,10 +285,18 @@
             .overlay {
                 background: rgba(0,0,0,.3);
             }
+            .overlay-icon {
+                .opacity(1);
+            }
         }
         > a {
             &:focus {
                 outline: none;
+            }
+        }
+        .popup-youtube {
+            .overlay {
+                background: rgba(0,0,0,.3);
             }
         }
         .overlay {
@@ -295,14 +311,13 @@
             top: 50%;
             left: 50%;
             .transform(translate(-50%, -50%));
-            font-size: 60px;
+            font-size: 40px;
             color: white;
+            .opacity(0.7);
         }
     }
 }
 
-
-// Slick CSS
 .slick-dots {
     bottom: -20px;
     li {

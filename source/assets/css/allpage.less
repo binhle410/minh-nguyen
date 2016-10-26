@@ -439,12 +439,20 @@ form {
     position: relative;
     padding: 15px 30px 15px 15px;
     .border-radius(3px);
-    border-left: 5px solid @dred;
+    border-left: 5px solid @red;
     background: white;
     margin-bottom: 15px;
+    &.warning-success {
+        border-left-color: @green;
+        i {
+            &.fa-info-circle {
+                color: @green;
+            }
+        }
+    }
     i {
         &.fa-info-circle {
-            color: @dred;
+            color: @red;
             font-size: 15px;
             margin-right: 5px;
         }
