@@ -14,6 +14,7 @@
     }
 }
 
+// Tag CSS
 .tag-xs {
     margin: 0 5px 5px 0;
     .border-radius(5px);
@@ -27,6 +28,16 @@
     height: 30px;
     &:hover {
         background: #e5e5e5;
+    }
+    &.active {
+        border-right-color: @red;
+        .tag-name {
+            color: @red;
+        }
+        .fa-check {
+            color: @red;
+            margin-left: 5px;
+        }
     }
     .tag-name {
         display: inline-block;
