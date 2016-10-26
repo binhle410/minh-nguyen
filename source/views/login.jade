@@ -8,7 +8,7 @@ block main
                 h1.t-c.user-sign-ttl Sign In
                 p.t-c Choose one of the following sign in methods.
                 p.t-c.social-bar
-                    a.btn.btn-default.btn-facebook(href="#")
+                    a.btn.btn-facebook(href="#")
                         i.fa.fa-fw.fa-facebook
                         span.social-name Facebook
                     a.btn.btn-primary(href="#")
@@ -16,12 +16,12 @@ block main
                         span.social-name Google
                 hr
                 p.t-c.user-sign-or Or sign in using your email address.
-                .user-sign-form.t-c
+                .user-sign-form
                     form
                         .form-group
-                            input.form-control(type="text", name="username", placeholder="Enter your email address", required)
+                            input.form-control(type="text", name="u_name", placeholder="Enter your email address", required)
                         .form-group
-                            input.form-control(type="password", name="password", placeholder="Enter your password", required)
+                            input.form-control(type="password", name="u_password", placeholder="Enter your password", required)
                             p.t-r.forgot
                                 a.link-sign.small(href="#") Forgot Password ?
                         .form-group
@@ -29,5 +29,6 @@ block main
                 hr
                 p.t-c Don't have an account yet ?
                     a.link-sign.register(href="#")   Register Now!
-                    
+        // END BOX LOGIN
+
         

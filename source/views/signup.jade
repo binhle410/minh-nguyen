@@ -8,7 +8,7 @@ block main
                 h1.t-c.user-sign-ttl Join Today
                 p.t-c Choose one of the following sign up methods.
                 p.t-c.social-bar
-                    a.btn.btn-default.btn-facebook(href="#")
+                    a.btn.btn-facebook(href="#")
                         i.fa.fa-fw.fa-facebook
                         span.social-name Facebook
                     a.btn.btn-primary(href="#")
@@ -16,27 +16,25 @@ block main
                         span.social-name Google
                 hr
                 p.t-c.user-sign-or Or sign up using your email address.
-                .user-sign-form.t-c
+                .user-sign-form
                     form
                         .form-group
-                            input.form-control(type="text", name="fname", placeholder="Enter your first name", required)
+                            input.form-control(type="text", name="u_fname", placeholder="Enter your first name", required)
                         .form-group
-                            input.form-control(type="text", name="lname", placeholder="Enter your last name", required)
+                            input.form-control(type="text", name="u_lname", placeholder="Enter your last name", required)
                         .form-group
-                            input.form-control(type="email", name="fname", placeholder="Enter your email", required)
+                            input.form-control(type="email", name="u_email", placeholder="Enter your email", required)
                         .form-group
-                            input.form-control(type="password", name="password", placeholder="Enter your password", required)
+                            input.form-control(type="password", name="u_password", placeholder="Enter your password", required)
                         .checkbox.t-l
                             label
                                 input(type="checkbox", name="chkIsNewLetter", check="checked")
-                                |  I Would Like To Receive Weekly And Monthly Newsletters From VietnamWorks.
+                                span.subscribe  I would like to receive Newsletters.
                         .form-group
                             button.btn.btn-primary(type="submit") Sign Up
                 p.t-c By clicking on "Sign Up", I have read and accept
-                    strong
-                        a.link-sign(href="#")   Privacy & Policy
+                    a.link-sign(href="#")   Privacy & Policy
                     |  and
-                    strong
-                        a.link-sign(href="#")   Terms of Use
-                    
+                    a.link-sign(href="#")   Terms of Use
+        // END BOX SIGN UP
         
