@@ -6,18 +6,41 @@
  * 3. showFixedNav()    : Show navbar fixted top menu when user scrolls window
  * 4. showPopover()     : show Popover
  * 5. clkBrFile()       : Browse File when clicking resume option label
+ * 5. valiPopForm()     : Validate popover form
+ * 6. saveJob()         : Save job
  */
 // 1. Make slide for job detail page
 function jobSlide() {
     if(!$(".job-slides").length) { return; }
 
     $('.job-slides').slick({
-        infinite: false,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        prevArrow: "<i class='fa fa-angle-left fa-3x'></i>",
-        nextArrow: "<i class='fa fa-angle-right fa-3x'></i>",
-        dots: true
+        infinite        : false,
+        slidesToShow    : 3,
+        slidesToScroll  : 3,
+        prevArrow       : "<i class='fa fa-angle-left fa-3x'></i>",
+        nextArrow       : "<i class='fa fa-angle-right fa-3x'></i>",
+        dots            : true,
+        responsive      : [
+                                {
+                                    breakpoint: 768,
+                                    settings: {
+                                        slidesToShow    : 2,
+                                        slidesToScroll  : 1,
+                                        arrows          : false,
+                                    }
+                                },
+                                {
+                                    breakpoint: 500,
+                                    settings: {
+                                        slidesToShow    : 1,
+                                        slidesToScroll  : 1,
+                                        arrows          : false,
+                                        centerMode      : true,
+                                        infinite        : true,
+                                        dots            : false
+                                    }
+                                },
+                            ]
     });
 }
 
@@ -98,63 +121,14 @@ function showPopover() {
     });
 }
 
-// 5. Browse File when clicking resume option label
-function clkBrFile() {
-    if(!$(".resume-opt-upl > label").length) { return; }
-
-    var $res_label = $(".resume-opt-upl > label");
-
-    $res_label.on("click", function(e) {
-        e.stopPropagation();
-        console.log("abc");
-        $("#resume-opt-3").trigger("click");
-    });
-}
-
-// 6. Edit a field
-function editField() {
-    if(!$(".edittable").length) { return; }
-
-    var $edit_span  = $(".edittable");
-
-    $edit_span.on("click", function(e) {
-        var $txt_field  = $(this),
-            $txt_ctner = $(this).parent(),
-            placeholder = $(this).data("placeholder"),
-            $edit_tml     = "<div class='edit-group'>"
-                          +     "<input type='text' class='form-control' value='"+ $(this).text() +"' placeholder='" + placeholder + "' />"
-                          +     "<button type='button' class='btn btn-default btn-save'>"
-                          +         "<i class='fa fa-check'></i>"
-                          +     "</button>"
-                          + "</div>",
-            count       = 0;
-
-        $txt_field.hide();
-        $txt_ctner.append($edit_tml);
-
-        $(".edit-group .btn-save").on("click", function(e) {
-            if(!$(this).prev().val().length) {
-                if(count==0) {
-                    $(this).parent().append("<p>This field must not be empty.</p>");
-                    count++;
-                }
-            } else {
-                $txt_field.text($(this).prev().val());
-                $txt_field.show();
-                $(this).parent().remove();
-            }
-        });
-    });    
-}
-
-// 7. Validate popover form
+// 5. Validate popover form
 function valiPopForm() {
     if(!$(".popover form").length) { return; }
     console.log("abcd");
     $(".popover form").validate();
 }
 
-// 8. Save job
+// 6. Save job
 function saveJob() {
     if(!$(".btn-interested").length) { return; }
 
@@ -178,8 +152,6 @@ $(document).ready(function($){
     jobLightbox();
     showFixedNav();
     showPopover();
-    clkBrFile();
-    editField();
     saveJob();
 });
 /* OnLoad Window */

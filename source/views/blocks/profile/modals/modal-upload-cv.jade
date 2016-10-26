@@ -1,0 +1,108 @@
+#upload-cv.modal.fade.in.resume-box(tabindex='-1', role='dialog', aria-hidden='false')
+    .modal-dialog
+        .modal-content
+            form
+                .modal-header
+                    button.close(type='button btn-sm', data-dismiss='modal')
+                        span(aria-hidden='true', tabindex='8') ×
+                        span.sr-only Close
+                    .modal-title Upload CV
+                .modal-body
+                    .resume-body 
+                        .row
+                            .col-sm-6
+                                .f-row
+                                    .f-col.col-sm-4
+                                        label Email
+                                    .f-col.col-sm-8
+                                        span.not-edit oaivyftu@gmail.com
+                                .f-row
+                                    .f-col.col-sm-4
+                                        label Phone number
+                                    .f-col.col-sm-8
+                                        span.edittable(data-placeholder="Enter your phone number") 
+                                            span.edit-ct +65 6285 6116
+                                            i.fa.fa-pencil
+                                .f-row
+                                    .f-col.col-sm-4
+                                        label Resume
+                                    .f-col.col-sm-8
+                                        .resume-opt
+                                            .resume-opt-itm
+                                                input.hidden(type="radio", name="resume-opt", id="resume-opt-1")
+                                                label(for="resume-opt-1")
+                                                    span.resume-opt-ttl Online Profile on Interviewspot
+                                                        span.smll  (Updated: 22/10/2016 22:03)
+                                            .resume-opt-itm
+                                                input.hidden(type="radio", name="resume-opt", id="resume-opt-2")
+                                                label(for="resume-opt-2")
+                                                    span.resume-opt-ttl Victor Lee CV.pdf
+                                                        span.smll  (Updated: 20/09/2016 01:09)
+                                            .resume-opt-itm.resume-opt-upl
+                                                input.hidden(type="radio", name="resume-opt", id="resume-opt-3")
+                                                label
+                                                    input.hidden(type="file", name="resume-file", id="resume-file")
+                                                    span.resume-opt-ttl Upload new CV
+                                                        i.fa.fa-arrow-circle-o-up
+                                                        span.smll You can only attach .doc, .docx, and .pdf files that are less than 2MB in size.
+                            .col-sm-6
+                                p Please choose a video to introduce yourself to the employers!
+                                .vdeo-list
+                                    .vdeo-itm
+                                        input.hidden(type="radio", name="video-title", id="vdeo-job-1")
+                                        label(for="vdeo-job-1")
+                                            i.fa.fa-check
+                                            .vdeo-img.col-xs-3
+                                                img(src="./uploads/video_thumb_1.jpg", alt="")
+                                            .vdeo-ct.col-xs-9
+                                                span.vdeo-ttl Video title 1
+                                                span.vdeo-time 20.10.2016 12:24:23
+                                    .vdeo-itm
+                                        input.hidden(type="radio", name="video-title", id="vdeo-job-2")
+                                        label(for="vdeo-job-2")
+                                            i.fa.fa-check
+                                            .vdeo-img.col-xs-3
+                                                img(src="./uploads/video_thumb_2.jpg", alt="")
+                                            .vdeo-ct.col-xs-9
+                                                span.vdeo-ttl Video title 2
+                                                span.vdeo-time 22.10.2016 10:24:23
+                                    .vdeo-itm
+                                        input.hidden(type="radio", name="video-title", id="vdeo-job-3")
+                                        label(for="vdeo-job-3")
+                                            i.fa.fa-check
+                                            .vdeo-img.col-xs-3
+                                                img(src="./uploads/video_thumb_3.jpg", alt="")
+                                            .vdeo-ct.col-xs-9
+                                                span.vdeo-ttl Video title 3
+                                                span.vdeo-time 25.10.2016 12:24:23
+                                    .vdeo-itm
+                                        input.hidden(type="radio", name="video-title", id="vdeo-job-4")
+                                        label(for="vdeo-job-4")
+                                            i.fa.fa-check
+                                            .vdeo-img.col-xs-3
+                                                img(src="./uploads/video_thumb_3.jpg", alt="")
+                                            .vdeo-ct.col-xs-9
+                                                span.vdeo-ttl Video title 4
+                                                span.vdeo-time 25.10.2016 12:24:23
+                                    .vdeo-itm
+                                        input.hidden(type="radio", name="video-title", id="vdeo-job-5")
+                                        label(for="vdeo-job-5")
+                                            i.fa.fa-check
+                                            .vdeo-img.col-xs-3
+                                                img(src="./uploads/video_thumb_3.jpg", alt="")
+                                            .vdeo-ct.col-xs-9
+                                                span.vdeo-ttl Video title 5
+                                                span.vdeo-time 25.10.2016 12:24:23
+                                    .vdeo-itm
+                                        input.hidden(type="radio", name="video-title", id="vdeo-job-6")
+                                        label(for="vdeo-job-6")
+                                            i.fa.fa-check
+                                            .vdeo-img.col-xs-3
+                                                img(src="./uploads/video_thumb_3.jpg", alt="")
+                                            .vdeo-ct.col-xs-9
+                                                span.vdeo-ttl Video title 6
+                                                span.vdeo-time 25.10.2016 12:24:23
+                .modal-footer
+                    button.btn.btn-bdline(type='button', data-dismiss='modal', tabindex='9') Cancel
+                    button.btn.btn-primary(type='button', tabindex='10') Upload CV
+// End: MODAL UPLOAD CV - PROFILE

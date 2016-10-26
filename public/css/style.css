@@ -19472,10 +19472,10 @@ form {
   display: inline-block;
 }
 .navbar-right > li > a.box-search-job i {
-  color: #bf253d;
+  color: #de5749;
 }
 .navbar-right > li > a.box-search-job:hover i {
-  color: #de5749;
+  color: #bf253d;
 }
 .navbar-right > li > a.alert-notifications:before {
   display: none;
@@ -19544,7 +19544,7 @@ form {
 .dropdown .a-count {
   display: inline-block;
   color: #fff;
-  background: #bf253d;
+  background: #de5749;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
@@ -20752,6 +20752,7 @@ ul.pagination li span {
   padding: 5px 30px;
   background: #de5749;
   border: none;
+  margin: 10px 0;
 }
 .float-popup .btn-apply-job:hover {
   background: #bf253d;
@@ -21304,6 +21305,16 @@ ul.pagination li span {
 .tag-xs:hover {
   background: #e5e5e5;
 }
+.tag-xs.active {
+  border-right-color: #de5749;
+}
+.tag-xs.active .tag-name {
+  color: #de5749;
+}
+.tag-xs.active .fa-check {
+  color: #de5749;
+  margin-left: 5px;
+}
 .tag-xs .tag-name {
   display: inline-block;
   white-space: nowrap;
@@ -21748,7 +21759,7 @@ ul.pagination li span {
 }
 .detail-navbar {
   background: white;
-  padding: 20px 0 20px;
+  padding: 10px 0;
   -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
   -ms-box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
@@ -21766,7 +21777,7 @@ ul.pagination li span {
   transition: all 0.3s linear;
 }
 .detail-navbar .detail-navbar-ttl {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   margin: 0;
 }
@@ -21775,7 +21786,7 @@ ul.pagination li span {
   margin: 0;
 }
 .job-feature {
-  padding: 30px 40px;
+  padding: 10px 30px;
   background: #f2f2f2;
 }
 .job-feature .job-slides .slick-arrow {
@@ -21792,10 +21803,10 @@ ul.pagination li span {
   color: #ccc;
 }
 .job-feature .job-slides .slick-arrow.fa-angle-left {
-  left: -30px;
+  left: -23px;
 }
 .job-feature .job-slides .slick-arrow.fa-angle-right {
-  right: -30px;
+  right: -23px;
 }
 .job-feature .job-slide-itm {
   position: relative;
@@ -21838,7 +21849,7 @@ ul.pagination li span {
   opacity: 0.7;
 }
 .slick-dots {
-  bottom: -20px;
+  bottom: -9px;
 }
 .slick-dots li {
   width: auto;
@@ -21849,8 +21860,8 @@ ul.pagination li span {
 }
 .slick-dots li button {
   padding: 0;
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
   background: #999;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -21993,134 +22004,134 @@ ul.pagination li span {
 #upload-img .modal-body p {
   margin-bottom: 20px;
 }
-#apply-job .modal-dialog {
+.resume-box .modal-dialog {
   width: 760px;
 }
-#apply-job .modal-header {
+.resume-box .modal-header {
   background: white;
 }
-#apply-job .modal-header .close {
+.resume-box .modal-header .close {
   color: #999;
 }
-#apply-job .modal-title {
+.resume-box .modal-title {
   font-size: 18px;
   color: #555;
 }
-#apply-job .modal-body {
+.resume-box .modal-body {
   padding: 0;
 }
-#apply-job .modal-body p {
+.resume-box .modal-body p {
   margin: 0 0 15px;
 }
-#apply-job .resume-header {
+.resume-box .resume-header {
   background: #eee;
   padding: 10px 15px;
 }
-#apply-job .resume-header .avatar {
+.resume-box .resume-header .avatar {
   display: inline-block;
 }
-#apply-job .resume-header .resume-name {
+.resume-box .resume-header .resume-name {
   margin: 15px 0 5px;
   font-size: 19px;
   font-weight: bold;
 }
-#apply-job .edit-group .form-control {
+.resume-box .edit-group .form-control {
   width: 300px;
   float: left;
   margin-right: 5px;
 }
-#apply-job .edit-group p {
+.resume-box .edit-group p {
   color: #bf253d;
   padding-top: 3px;
   margin: 0;
 }
-#apply-job .f-row {
+.resume-box .f-row {
   margin: 0 -5px 15px;
   *zoom: 1;
 }
-#apply-job .f-row:before,
-#apply-job .f-row:after {
+.resume-box .f-row:before,
+.resume-box .f-row:after {
   content: " ";
   display: table;
 }
-#apply-job .f-row:after {
+.resume-box .f-row:after {
   clear: both;
 }
-#apply-job .f-row:before,
-#apply-job .f-row:after {
+.resume-box .f-row:before,
+.resume-box .f-row:after {
   content: " ";
   display: table;
 }
-#apply-job .f-row:after {
+.resume-box .f-row:after {
   clear: both;
 }
-#apply-job .f-row:before,
-#apply-job .f-row:after {
+.resume-box .f-row:before,
+.resume-box .f-row:after {
   content: " ";
   display: table;
 }
-#apply-job .f-row:after {
+.resume-box .f-row:after {
   clear: both;
 }
-#apply-job .f-row:before,
-#apply-job .f-row:after {
+.resume-box .f-row:before,
+.resume-box .f-row:after {
   content: " ";
   display: table;
 }
-#apply-job .f-row:after {
+.resume-box .f-row:after {
   clear: both;
 }
-#apply-job .f-row:before,
-#apply-job .f-row:after {
+.resume-box .f-row:before,
+.resume-box .f-row:after {
   display: table;
   content: "";
   line-height: 0;
 }
-#apply-job .f-row:after {
+.resume-box .f-row:after {
   clear: both;
 }
-#apply-job .f-row:before,
-#apply-job .f-row:after {
+.resume-box .f-row:before,
+.resume-box .f-row:after {
   content: " ";
   display: table;
 }
-#apply-job .f-row:after {
+.resume-box .f-row:after {
   clear: both;
 }
-#apply-job .f-row:before,
-#apply-job .f-row:after {
+.resume-box .f-row:before,
+.resume-box .f-row:after {
   content: " ";
   display: table;
 }
-#apply-job .f-row:after {
+.resume-box .f-row:after {
   clear: both;
 }
-#apply-job .f-row:before,
-#apply-job .f-row:after {
+.resume-box .f-row:before,
+.resume-box .f-row:after {
   display: table;
   content: "";
   line-height: 0;
 }
-#apply-job .f-row:after {
+.resume-box .f-row:after {
   clear: both;
 }
-#apply-job .f-row:last-child {
+.resume-box .f-row:last-child {
   margin-bottom: 0;
 }
-#apply-job .f-row .f-col {
+.resume-box .f-row .f-col {
   padding: 0 5px;
 }
-#apply-job .f-row .f-col > label {
+.resume-box .f-row .f-col > label {
   display: block;
   text-align: right;
   font-weight: bold;
 }
-#apply-job .edittable {
+.resume-box .edittable {
   font-size: 15px;
   border-bottom: 1px #de5749 dashed;
   cursor: pointer;
 }
-#apply-job .edittable .fa-pencil {
+.resume-box .edittable .fa-pencil {
   display: inline-block;
   margin-left: 5px;
   color: #555;
@@ -22186,13 +22197,13 @@ ul.pagination li span {
   color: #999;
   font-weight: normal;
 }
-#apply-job .resume-body {
+.resume-box .resume-body {
   padding: 10px 15px;
 }
-#apply-job .resume-body .edit-group .form-control {
+.resume-box .resume-body .edit-group .form-control {
   width: 160px;
 }
-#apply-job .link-app {
+.resume-box .link-app {
   width: 120px;
   padding: 0 5px;
   text-align: center;
@@ -22323,6 +22334,74 @@ footer .copyright {
 .home-social a.instagram {
   background-position: -240px -115px;
 }
+/**
+ * LOGIN + SIGN UP CSS
+ * Updated on 26/10/16
+ */
+.user-sign-blk {
+  width: 760px;
+  margin: 5px auto 20px;
+}
+.user-sign-blk .box-md {
+  padding: 45px;
+}
+.user-sign-blk .user-sign-ttl {
+  font-weight: normal;
+}
+.user-sign-blk .social-bar .fa {
+  margin-right: 15px;
+  color: white;
+}
+.user-sign-blk .social-bar .btn {
+  color: white;
+  margin: 2px;
+}
+.user-sign-blk .social-bar .btn .social-name {
+  min-width: 70px;
+  display: inline-block;
+}
+.user-sign-blk .btn-facebook {
+  background: #3B5998;
+}
+.user-sign-blk .btn-facebook:hover {
+  background: #2d4373;
+}
+.user-sign-blk .btn-google {
+  background: #d73925;
+}
+.user-sign-blk .btn-google:hover {
+  background: #ab2d1e;
+}
+.user-sign-blk .user-sign-form {
+  padding: 0 100px;
+}
+.user-sign-blk .user-sign-form .forgot {
+  margin: 10px 0;
+}
+.user-sign-blk .user-sign-form .btn-primary {
+  width: 100%;
+}
+.user-sign-blk .user-sign-or {
+  margin-bottom: 30px;
+}
+.user-sign-blk .link-sign {
+  color: #999;
+}
+.user-sign-blk .link-sign:hover {
+  color: #333;
+}
+.user-sign-blk .checkbox label {
+  font-weight: 400;
+}
+/**
+ * IE HACK CSS
+ * Updated on 26/10/16
+ */
+@supports (-ms-ime-align:auto) {
+  .tag-xs {
+    line-height: 25px;
+  }
+}
 /* --------------------------- */
 /* MEDIA RESPONSIVE */
 /* ------ */
@@ -22331,6 +22410,27 @@ footer .copyright {
  *
  * description: css rules for screen of desktop
  */
+@media (max-width: 991px) {
+  .add-media {
+    height: auto;
+  }
+  .add-media .text-or {
+    position: relative;
+    display: block;
+    margin: 35px 0 10px;
+  }
+  .add-media .media-btn-group {
+    height: 50px;
+  }
+  .btn.tab-prof {
+    width: 33.3333%;
+  }
+}
+@media (max-width: 991px) {
+  .user-sign-blk {
+    width: 650px;
+  }
+}
 /**
  * Media 1200px+
  *
@@ -22399,22 +22499,6 @@ footer .copyright {
   .j-search-form .form-inline .btn-search {
     font-size: 14px;
     padding: 10px 0;
-  }
-}
-@media (max-width: 991px) {
-  .add-media {
-    height: auto;
-  }
-  .add-media .text-or {
-    position: relative;
-    display: block;
-    margin: 35px 0 10px;
-  }
-  .add-media .media-btn-group {
-    height: 50px;
-  }
-  .btn.tab-prof {
-    width: 33.3333%;
   }
 }
 @media (min-width: 768px) {
@@ -22730,9 +22814,34 @@ footer .copyright {
     margin-top: -25px;
   }
 }
+@media (max-width: 767px) {
+  .job-feature {
+    padding: 10px;
+  }
+  .detail-navbar .detail-navbar-ttl {
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 767px) {
+  .user-sign-blk {
+    width: auto;
+  }
+  .user-sign-blk .box-md {
+    padding: 25px 15px;
+  }
+  .user-sign-blk .user-sign-ttl {
+    font-size: 20px;
+  }
+  .user-sign-blk .user-sign-form {
+    padding: 0;
+  }
+}
 @media (max-width: 500px) {
   #apply-job .resume-header .edit-group .form-control {
     width: 160px;
+  }
+  .job-feature {
+    padding: 0;
   }
 }
 /**

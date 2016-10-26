@@ -1,17 +1,17 @@
 (function( $ ) {
 /**
  * START - ONLOAD - JS
- * 1. Custom select: custom_select()
- * 2. Custom scrollbar: scrollbar()
- * 3. Toggle Menu: toggleMenu()
- * 4. Slider: slider()
- * 5. debounceInp(): Delay an amount of time before sending AJAX request to server
- * 5.1. ajax_lookup(): Perform AJAX request after debouncing input
+ * 1. Custom select     : custom_select()
+ * 2. Custom scrollbar  : scrollbar()
+ * 3. Toggle Menu       : toggleMenu()
+ * 4. Slider            : slider()
+ * 5. clkBrFile()       : Browse File when clicking resume option label
+ * 6. editField()       : Edit a field
  */
 /* ----------------------------------------------- */
 /* ------------- FrontEnd Functions -------------- */
 /* ----------------------------------------------- */
-// 1. Custom select: custom_select()
+// 1. Custom select
 function custom_select() {
     // if(!$(".select-category").length && !$(".select-location").length && !$(".date-filter select").length) && !$(".page-filter select").length ) { return; }
 
@@ -25,14 +25,12 @@ function custom_select() {
     });
 }
 
-/**
- * [srollbar description]
- * @return {[type]} [description]
- */
+// 2. Custom scrollbar
 function scrollbar() {
     $(".scrollbar-inner").scrollbar();
 }
 
+// 3. Toggle Menu
 function toggleMenu() {
     if(!$(".navbar-toggle").length) { return; }
     $(".navbar-toggle").on('click', function(event) {
@@ -54,10 +52,7 @@ function toggleMenu() {
     });
 }
 
-/**
- * [slider description]
- * @return {[type]} [description]
- */
+// 4. Slider 
 function slider() {
     $("#owl-demo").owlCarousel({
 
@@ -77,6 +72,55 @@ function slider() {
     });
 }
 
+// 5. Browse File when clicking resume option label
+function clkBrFile() {
+    if(!$(".resume-opt-upl > label").length) { return; }
+
+    var $res_label = $(".resume-opt-upl > label");
+
+    $res_label.on("click", function(e) {
+        e.stopPropagation();
+        console.log("abc");
+        $("#resume-opt-3").trigger("click");
+    });
+}
+
+// 6. Edit a field
+function editField() {
+    if(!$(".edittable").length) { return; }
+
+    var $edit_span  = $(".edittable");
+
+    $edit_span.on("click", function(e) {
+        var $txt_field  = $(this),
+            $txt_ctner = $(this).parent(),
+            placeholder = $(this).data("placeholder"),
+            $edit_tml     = "<div class='edit-group'>"
+                          +     "<input type='text' class='form-control' value='"+ $(this).text() +"' placeholder='" + placeholder + "' />"
+                          +     "<button type='button' class='btn btn-default btn-save'>"
+                          +         "<i class='fa fa-check'></i>"
+                          +     "</button>"
+                          + "</div>",
+            count       = 0;
+
+        $txt_field.hide();
+        $txt_ctner.append($edit_tml);
+
+        $(".edit-group .btn-save").on("click", function(e) {
+            if(!$(this).prev().val().length) {
+                if(count==0) {
+                    $(this).parent().append("<p>This field must not be empty.</p>");
+                    count++;
+                }
+            } else {
+                $txt_field.find(".edit-ct").text($(this).prev().val());
+                $txt_field.show();
+                $(this).parent().remove();
+            }
+        });
+    });    
+}
+
 /* ----------------------------------------------- */
 /* ----------------------------------------------- */
 /* OnLoPSD Page */
@@ -85,6 +129,8 @@ $(document).ready(function($){
     scrollbar();
     toggleMenu();
     slider();
+    clkBrFile();
+    editField();
 });
 /* OnLoad Window */
 var init = function () {
