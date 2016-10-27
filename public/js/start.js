@@ -8,6 +8,7 @@
  * 5. clkBrFile()       : Browse File when clicking resume option label
  * 6. editField()       : Edit a field
  * 7. valiSignForm()    : Validate Login + Sign up form
+ * 8. openMbMenu()      : Open message list on mobile
  */
 /* ----------------------------------------------- */
 /* ------------- FrontEnd Functions -------------- */
@@ -129,6 +130,28 @@ function valiSignForm() {
     $(".user-sign-form form").validate();
 }
 
+// 8. Open message list on mobile
+function openMbMenu() {
+    if(!$(".mb-list-msg").length) { return; }
+
+    $(".mb-list-msg").on('click', function(e) {
+        $(".msg-list-box").css({
+            "opacity": 1,
+            "visibility": "visible"
+        });
+        $("body").addClass("bodyover");
+
+        $(".msg-header-ttl .close").on("click", function(e) {
+            $(".msg-list-box").css({
+                "opacity": 0,
+                "visibility": "hidden"
+            });
+        });
+    });
+
+
+}
+
 /* ----------------------------------------------- */
 /* ----------------------------------------------- */
 /* OnLoPSD Page */
@@ -140,6 +163,7 @@ $(document).ready(function($){
     clkBrFile();
     editField();
     valiSignForm();
+    openMbMenu();
 });
 /* OnLoad Window */
 var init = function () {

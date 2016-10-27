@@ -1,5 +1,7 @@
 .chatbox-header
-    .avatar
+    .mb-list-msg.visible-xs
+        i.fa.fa-fw.fa-comments-o
+    .avatar.img-circle
         img(src="./uploads/user_ava.jpg", alt="")
     .user-desc
         h3.name Harry Jones
@@ -20,7 +22,7 @@
                 .t-r
                     span.time 09:10 PM
         li.chatmsg-itm.other
-            p.date-info.t-c Sep 20
+            p.date-info.t-c Sep 20 
             .msg-content
                 .msg-txt 
                     p Hello
@@ -42,7 +44,7 @@
 .chatbox-compose
     form
         .form-group
-            textarea.form-control(name="user-msg", placeholder="What do you think about this message?")
+            textarea.form-control(name="user-msg", placeholder="Write your message...")
         .form-group.t-r
             button.btn.btn-primary Send message
 // End: BOX RIGHT MESSAGE CHATBOX - HAS MESSAGE
