@@ -22421,7 +22421,7 @@ footer .copyright {
 .msg-header {
   padding: 0 20px;
   border: 1px #ddd solid;
-  height: 61px;
+  height: 60px;
 }
 .msg-header .msg-header-ttl {
   font-size: 22px;
@@ -22435,7 +22435,7 @@ footer .copyright {
 .msg-list-body {
   border: 1px #ddd solid;
   border-top: none;
-  height: 540px;
+  height: 595px;
   overflow: hidden;
   overflow-y: auto;
 }
@@ -22539,7 +22539,7 @@ footer .copyright {
 }
 .chatbox {
   background: white;
-  height: 635px;
+  height: 655px;
   border: 1px #ddd solid;
   border-left: none;
   padding: 0;
@@ -22566,7 +22566,7 @@ footer .copyright {
   border-bottom: 1px solid #ddd;
   padding: 10px 15px;
   background: rgba(255, 255, 255, 0.7);
-  height: 60px;
+  height: 59px;
 }
 .chatbox-header:before,
 .chatbox-header:after {
@@ -22692,15 +22692,13 @@ footer .copyright {
   text-decoration: none;
 }
 .chatbox-compose {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 120px;
   padding: 10px 15px 0;
   border-top: 1px solid #ddd;
   z-index: 5;
   background: white;
+}
+.chatbox-compose textarea {
+  height: 50px;
 }
 .chatmsg-list .chatmsg-itm {
   *zoom: 1;
@@ -23467,18 +23465,13 @@ footer .copyright {
  */
 @media (max-width: 767px) {
   .msg-list-box {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 10;
-    filter: alpha(opacity=0);
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .3s linear;
   }
   .msg-list-box .msg-list-body {
     height: auto;

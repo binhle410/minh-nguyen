@@ -133,23 +133,21 @@ function valiSignForm() {
 // 8. Open message list on mobile
 function openMbMenu() {
     if(!$(".mb-list-msg").length) { return; }
+    $(window).on("resize", function(e) {
+        if($(window).width() <= 767) {
+            $(".mb-list-msg").on('click', function(e) {
+                $(".msg-list-box").show();
+                $("body").addClass("bodyover");
 
-    $(".mb-list-msg").on('click', function(e) {
-        $(".msg-list-box").css({
-            "opacity": 1,
-            "visibility": "visible"
-        });
-        $("body").addClass("bodyover");
-
-        $(".msg-header-ttl .close").on("click", function(e) {
-            $(".msg-list-box").css({
-                "opacity": 0,
-                "visibility": "hidden"
+                $(".msg-header-ttl .close").on("click", function(e) {
+                    $(".msg-list-box").hide();
+                    $("body").removeClass("bodyover");
+                });
             });
-        });
+        } else {
+            $(".msg-list-box").show();
+        }
     });
-
-
 }
 
 /* ----------------------------------------------- */

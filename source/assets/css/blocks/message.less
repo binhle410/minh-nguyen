@@ -14,7 +14,7 @@
 .msg-header {
     padding: 0 20px;
     border: 1px #ddd solid;
-    height: 61px;
+    height: 60px;
     .msg-header-ttl {
         font-size: 22px;
         font-weight: 500;
@@ -30,14 +30,14 @@
 .msg-list-body {
     border: 1px #ddd solid;
     border-top: none;
-    height: 540px;
+    height: 595px;
     overflow: hidden;
     overflow-y: auto;
 }
 
 // Message list - Left box CSS
 .msg-list {
-    margin: 0;
+    margin: 0; 
     .msg-itm {
         padding-left: 25px;
         cursor: pointer;
@@ -120,7 +120,7 @@
 // Chatbox Wrapper - Right box CSS
 .chatbox {
     background: white;
-    height: 635px;
+    height: 655px;
     border: 1px #ddd solid;
     border-left: none;
     padding: 0;
@@ -149,7 +149,7 @@
     border-bottom: 1px solid #ddd;
     padding: 10px 15px;
     background: rgba(255, 255, 255, 0.7);
-    height: 60px;
+    height: 59px;
     .avatar {
         float: left;
         width: 40px;
@@ -211,16 +211,15 @@
     }
 }
 
+// Chatbox compose - Right box CSS
 .chatbox-compose {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 120px;
     padding: 10px 15px 0;
     border-top: 1px solid #ddd;
     z-index: 5;
     background: white;
+    textarea {
+        height: 50px;
+    }
 }
 
 // Chat list - Right box CSS
