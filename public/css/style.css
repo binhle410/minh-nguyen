@@ -18849,6 +18849,14 @@ form {
   box-shadow: none;
   font-size: 12px;
   font-style: normal;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 .has-feedback label ~ .form-control-feedback {
   top: 19px;
@@ -22411,9 +22419,9 @@ footer .copyright {
   padding: 0;
 }
 .msg-header {
-  padding: 25px 20px;
+  padding: 0 20px;
   border: 1px #ddd solid;
-  height: 95px;
+  height: 61px;
 }
 .msg-header .msg-header-ttl {
   font-size: 22px;
@@ -22475,9 +22483,6 @@ footer .copyright {
   height: 50px;
   margin: 6px 10px 0 0;
 }
-.msg-list .msg-content {
-  overflow: hidden;
-}
 .msg-list .msg-time {
   color: #999;
   font-size: 12px;
@@ -22527,7 +22532,7 @@ footer .copyright {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   color: #ccc;
-  font-size: 20px;
+  font-size: 16px;
 }
 .msg-list .ico-close:hover {
   color: #b3b3b3;
@@ -22639,17 +22644,24 @@ footer .copyright {
   display: table-cell;
   vertical-align: middle;
   height: 40px;
+  max-width: 500px;
 }
 .chatbox-header .name {
   font-size: 18px;
   margin: 0;
   font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .chatbox-header .headline {
   font-size: 13px;
   line-height: 17px;
   color: #999;
   margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .chatbox-body {
   padding: 60px 15px 0;
@@ -22773,11 +22785,11 @@ footer .copyright {
 }
 .chatmsg-list .msg-content .msg-txt {
   padding: 5px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
@@ -22790,6 +22802,14 @@ footer .copyright {
 .chatmsg-list .time {
   color: #999;
   font-size: 11px;
+}
+.mb-list-msg {
+  float: left;
+  margin-right: 5px;
+  font-size: 30px;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
 }
 /**
  * IE HACK CSS
@@ -23420,5 +23440,60 @@ footer .copyright {
   }
   .main-profile .skill-input .btn {
     margin: 0;
+  }
+}
+/* --------------------------- */
+/* MEDIA RESPONSIVE */
+/* ------ */
+/**
+ * Media 1200px+
+ *
+ * description: css rules for screen of desktop
+ */
+@media (max-width: 992px) {
+  .chatbox-header .user-desc {
+    max-width: 300px;
+  }
+}
+/**
+ * Media 1024px-
+ *
+ * description: css rules for screen of tablets
+ */
+/**
+ * Media 480px-767px
+ *
+ * description: css rules for screen of new moderm smartphone
+ */
+@media (max-width: 767px) {
+  .msg-list-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    filter: alpha(opacity=0);
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s linear;
+  }
+  .msg-list-box .msg-list-body {
+    height: auto;
+  }
+  .chatbox-header .user-desc {
+    max-width: 260px;
+  }
+}
+/**
+ * Media 480px-
+ *
+ * description: css rules for screen of old school smartphone
+ */
+@media (max-width: 400px) {
+  .chatbox-header .user-desc {
+    max-width: 150px;
   }
 }

@@ -1,0 +1,26 @@
+/**
+ * Media 480px-767px
+ *
+ * description: css rules for screen of new moderm smartphone
+ */
+@media (max-width: 767px) {
+    .msg-list-box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        .opacity(0);
+        visibility: hidden;
+        transition: opacity .3s linear;
+        .msg-list-body {
+            height: auto;
+        } 
+    }
+    .chatbox-header {
+        .user-desc {
+            max-width: 260px;
+        }
+    }
+}
