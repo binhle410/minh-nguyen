@@ -23472,6 +23472,9 @@ footer .copyright {
     right: 0;
     bottom: 0;
     z-index: 10;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
   .msg-list-box .msg-list-body {
     height: auto;
