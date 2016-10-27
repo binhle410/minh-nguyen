@@ -22400,6 +22400,398 @@ footer .copyright {
   font-size: 11px;
 }
 /**
+ * MESSAGE CSS
+ * Updated on 27/10/16
+ */
+.main-message {
+  padding: 15px 0;
+}
+.msg-list-box {
+  background: #fbfbfb;
+  padding: 0;
+}
+.msg-header {
+  padding: 25px 20px;
+  border: 1px #ddd solid;
+  height: 95px;
+}
+.msg-header .msg-header-ttl {
+  font-size: 22px;
+  font-weight: 500;
+}
+.msg-header .fa-comments-o {
+  font-size: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.msg-list-body {
+  border: 1px #ddd solid;
+  border-top: none;
+  height: 540px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.msg-list {
+  margin: 0;
+}
+.msg-list .msg-itm {
+  padding-left: 25px;
+  cursor: pointer;
+  border-left: none;
+  border-right: none;
+  border-color: #ddd;
+}
+.msg-list .msg-itm:hover {
+  border-color: #ddd;
+}
+.msg-list .msg-itm:hover .ico-close {
+  display: block;
+}
+.msg-list .msg-itm:first-child {
+  border-top: none;
+}
+.msg-list .msg-itm:first-child,
+.msg-list .msg-itm:last-child {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.msg-list .msg-itm.active {
+  background: #eee;
+  color: #555;
+}
+.msg-list .msg-itm.sponsored .msg-ava {
+  border: none;
+  margin-top: 17px;
+}
+.msg-list .msg-ava {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin: 6px 10px 0 0;
+}
+.msg-list .msg-content {
+  overflow: hidden;
+}
+.msg-list .msg-time {
+  color: #999;
+  font-size: 12px;
+  font-weight: 500;
+}
+.msg-list .msg-heading {
+  font-weight: 500;
+  margin: 0 0 5px;
+}
+.msg-list .msg-text {
+  padding-right: 20px;
+  height: 40px;
+  overflow: hidden;
+  margin: 0;
+}
+.msg-list p.label {
+  color: #555;
+  padding: 0;
+}
+.msg-list .ico-onl {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background: #5cb85c;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.msg-list .ico-close {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  color: #ccc;
+  font-size: 20px;
+}
+.msg-list .ico-close:hover {
+  color: #b3b3b3;
+}
+.chatbox {
+  background: white;
+  height: 635px;
+  border: 1px #ddd solid;
+  border-left: none;
+  padding: 0;
+  overflow: hidden;
+}
+.chatbox.no-msg {
+  padding: 25px;
+}
+.chatbox .msg-chatbox-ttl {
+  font-size: 22px;
+  font-weight: normal;
+}
+.chatbox .msg-chatbox-desc {
+  font-weight: 500;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+.chatbox-header {
+  *zoom: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.7);
+  height: 60px;
+}
+.chatbox-header:before,
+.chatbox-header:after {
+  content: " ";
+  display: table;
+}
+.chatbox-header:after {
+  clear: both;
+}
+.chatbox-header:before,
+.chatbox-header:after {
+  content: " ";
+  display: table;
+}
+.chatbox-header:after {
+  clear: both;
+}
+.chatbox-header:before,
+.chatbox-header:after {
+  content: " ";
+  display: table;
+}
+.chatbox-header:after {
+  clear: both;
+}
+.chatbox-header:before,
+.chatbox-header:after {
+  content: " ";
+  display: table;
+}
+.chatbox-header:after {
+  clear: both;
+}
+.chatbox-header:before,
+.chatbox-header:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.chatbox-header:after {
+  clear: both;
+}
+.chatbox-header:before,
+.chatbox-header:after {
+  content: " ";
+  display: table;
+}
+.chatbox-header:after {
+  clear: both;
+}
+.chatbox-header:before,
+.chatbox-header:after {
+  content: " ";
+  display: table;
+}
+.chatbox-header:after {
+  clear: both;
+}
+.chatbox-header:before,
+.chatbox-header:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.chatbox-header:after {
+  clear: both;
+}
+.chatbox-header .avatar {
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.chatbox-header .user-desc {
+  display: table-cell;
+  vertical-align: middle;
+  height: 40px;
+}
+.chatbox-header .name {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 500;
+}
+.chatbox-header .headline {
+  font-size: 13px;
+  line-height: 17px;
+  color: #999;
+  margin: 0;
+}
+.chatbox-body {
+  padding: 60px 15px 0;
+  height: 515px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.chatbox-body.sponsored {
+  background: #F6F8FA;
+  padding: 60px 15px 15px;
+  height: 100%;
+}
+.chatbox-body.sponsored ul {
+  margin-bottom: 10px;
+}
+.chatbox-body.sponsored ul li {
+  margin-left: 40px;
+}
+.chatbox-body h3 {
+  font-weight: bold;
+}
+.chatbox-body a {
+  color: #de5749;
+  text-decoration: underline;
+}
+.chatbox-body a:hover {
+  color: #bf253d;
+  text-decoration: none;
+}
+.chatbox-compose {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  padding: 10px 15px 0;
+  border-top: 1px solid #ddd;
+  z-index: 5;
+  background: white;
+}
+.chatmsg-list .chatmsg-itm {
+  *zoom: 1;
+  list-style-type: none;
+  margin: 20px 0;
+}
+.chatmsg-list .chatmsg-itm:before,
+.chatmsg-list .chatmsg-itm:after {
+  content: " ";
+  display: table;
+}
+.chatmsg-list .chatmsg-itm:after {
+  clear: both;
+}
+.chatmsg-list .chatmsg-itm:before,
+.chatmsg-list .chatmsg-itm:after {
+  content: " ";
+  display: table;
+}
+.chatmsg-list .chatmsg-itm:after {
+  clear: both;
+}
+.chatmsg-list .chatmsg-itm:before,
+.chatmsg-list .chatmsg-itm:after {
+  content: " ";
+  display: table;
+}
+.chatmsg-list .chatmsg-itm:after {
+  clear: both;
+}
+.chatmsg-list .chatmsg-itm:before,
+.chatmsg-list .chatmsg-itm:after {
+  content: " ";
+  display: table;
+}
+.chatmsg-list .chatmsg-itm:after {
+  clear: both;
+}
+.chatmsg-list .chatmsg-itm:before,
+.chatmsg-list .chatmsg-itm:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.chatmsg-list .chatmsg-itm:after {
+  clear: both;
+}
+.chatmsg-list .chatmsg-itm:before,
+.chatmsg-list .chatmsg-itm:after {
+  content: " ";
+  display: table;
+}
+.chatmsg-list .chatmsg-itm:after {
+  clear: both;
+}
+.chatmsg-list .chatmsg-itm:before,
+.chatmsg-list .chatmsg-itm:after {
+  content: " ";
+  display: table;
+}
+.chatmsg-list .chatmsg-itm:after {
+  clear: both;
+}
+.chatmsg-list .chatmsg-itm:before,
+.chatmsg-list .chatmsg-itm:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.chatmsg-list .chatmsg-itm:after {
+  clear: both;
+}
+.chatmsg-list .chatmsg-itm.other .msg-content {
+  float: none;
+}
+.chatmsg-list .chatmsg-itm.other .msg-content .msg-txt {
+  background: #eee;
+}
+.chatmsg-list .msg-content {
+  float: right;
+  width: 80%;
+}
+.chatmsg-list .msg-content .msg-txt {
+  padding: 5px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #eee;
+  background: white;
+}
+.chatmsg-list .msg-content .msg-txt p {
+  margin: 0;
+}
+.chatmsg-list .time {
+  color: #999;
+  font-size: 11px;
+}
+/**
  * IE HACK CSS
  * Updated on 26/10/16
  */

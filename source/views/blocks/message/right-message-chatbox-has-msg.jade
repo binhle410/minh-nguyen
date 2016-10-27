@@ -1,0 +1,48 @@
+.chatbox-header
+    .avatar
+        img(src="./uploads/user_ava.jpg", alt="")
+    .user-desc
+        h3.name Harry Jones
+        h4.headline Researcher at Tokyo Metropolitan University
+.chatbox-body
+    ul.chatmsg-list
+        li.chatmsg-itm
+            p.date-info.t-c Sep 20
+            .msg-content
+                .msg-txt 
+                    p Dear Mr. Harry Jones,
+                    br
+                    p Congrats on the new role! Hope you're doing well.
+                    p I think you've got right one for starting up on online business.
+                    br
+                    p Pls keep in touch, my email: 
+                        a(href="#") victor.lee@gmail.com
+                .t-r
+                    span.time 09:10 PM
+        li.chatmsg-itm.other
+            p.date-info.t-c Sep 20
+            .msg-content
+                .msg-txt 
+                    p Hello
+                    br
+                    p Yes when can you speak? Mabe we can set up a skype call on 09/26 8:30pm PST. What is your ID?
+                    br
+                    p Harry
+                .t-l
+                    span.time 10:05 PM
+        li.chatmsg-itm
+            p.date-info.t-c Sep 20
+            .msg-content
+                .msg-txt
+                    p Im afraid we must set up an earlier call. This should be 09/25.  06:00pm PST.
+                    br
+                    p My ID is: AB3525132
+                .t-r
+                    span.time 10:10 PM
+.chatbox-compose
+    form
+        .form-group
+            textarea.form-control(name="user-msg", placeholder="What do you think about this message?")
+        .form-group.t-r
+            button.btn.btn-primary Send message
+// End: BOX RIGHT MESSAGE CHATBOX - HAS MESSAGE

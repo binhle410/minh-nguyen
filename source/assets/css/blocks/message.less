@@ -1,0 +1,254 @@
+/**
+ * MESSAGE CSS
+ * Updated on 27/10/16
+ */
+
+.main-message {
+    padding: 15px 0;
+}
+.msg-list-box {
+    background: #fbfbfb;
+    padding: 0;
+} 
+// Message header - Left box CSS
+.msg-header {
+    padding: 25px 20px;
+    border: 1px #ddd solid;
+    height: 95px;
+    .msg-header-ttl {
+        font-size: 22px;
+        font-weight: 500;
+    }
+    .fa-comments-o {
+        font-size: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+// Message list body - Left box CSS
+.msg-list-body {
+    border: 1px #ddd solid;
+    border-top: none;
+    height: 540px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+// Message list - Left box CSS
+.msg-list {
+    margin: 0;
+    .msg-itm {
+        padding-left: 25px;
+        cursor: pointer;
+        border-left: none;
+        border-right: none;
+        border-color: #ddd;
+        &:hover {
+            border-color: #ddd;
+            .ico-close {
+                display: block;
+            }
+        }
+        &:first-child {
+            border-top: none;
+        }
+        &:first-child, &:last-child {
+            .border-radius(0);
+        }
+        &.active {
+            background: #eee;
+            color: @dgray;
+        }
+        &.sponsored {
+            .msg-ava {
+                border: none;
+                margin-top: 17px;
+            }
+        }
+    }
+    .msg-ava {
+        float: left;
+        width: 50px;
+        height: 50px;
+        margin: 6px 10px 0 0;
+    }
+    .msg-content {
+        overflow: hidden;
+    }
+    .msg-time {
+        color: #999;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .msg-heading {
+        font-weight: 500;
+        margin: 0 0 5px;
+    }
+    .msg-text {
+        padding-right: 20px;
+        height: 40px;
+        overflow: hidden;
+        margin: 0;
+    }
+    p.label {
+        color: #555;
+        padding: 0;
+    }
+    .ico-onl {
+        position: absolute;
+        top: 50%;
+        left: 8px;
+        .transform(translateY(-50%));
+        width: 10px;
+        height: 10px;
+        background: @green;
+        .border-radius(50%);
+    }
+    .ico-close {
+        display: none;
+        position: absolute;
+        // padding-left: 1px;
+        top: 50%;
+        right: 10px;
+        .transform(translateY(-50%));
+        color: #ccc;
+        font-size: 20px;
+        &:hover {
+            color: darken(#ccc, 10%);
+        }
+    }
+}
+
+// Chatbox Wrapper - Right box CSS
+.chatbox {
+    background: white;
+    height: 635px;
+    border: 1px #ddd solid;
+    border-left: none;
+    padding: 0;
+    overflow: hidden;
+    &.no-msg {
+        padding: 25px;
+    }
+    .msg-chatbox-ttl {
+        font-size: 22px;
+        font-weight: normal;
+    }
+    .msg-chatbox-desc {
+        font-weight: 500;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+}
+
+// Chatbox header - Right box CSS
+.chatbox-header {
+    .clearfix();
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.7);
+    height: 60px;
+    .avatar {
+        float: left;
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+    .user-desc {
+        display: table-cell;
+        vertical-align: middle;
+        height: 40px;
+    }
+    .name {
+        font-size: 18px;
+        margin: 0;
+        font-weight: 500;
+    }
+    .headline {
+        font-size: 13px;
+        line-height: 17px;
+        color: #999;
+        margin: 0;
+    }
+}
+
+// Chatbox body - Right box CSS
+.chatbox-body {
+    padding: 60px 15px 0;
+    height: 515px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    &.sponsored {
+        background: #F6F8FA;
+        padding: 60px 15px 15px;
+        height: 100%;
+        ul {
+            margin-bottom: 10px;
+            li {
+                margin-left: 40px;
+            }
+        }
+    }
+    h3 {
+        font-weight: bold;
+    }
+    a {
+        color: @red;
+        text-decoration: underline;
+        &:hover {
+            color: @dred;
+            text-decoration: none;
+        }
+    }
+}
+
+.chatbox-compose {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    padding: 10px 15px 0;
+    border-top: 1px solid #ddd;
+    z-index: 5;
+    background: white;
+}
+
+// Chat list - Right box CSS
+.chatmsg-list {
+    .chatmsg-itm {
+        .clearfix();
+        list-style-type: none;
+        margin: 20px 0;
+        &.other {
+            .msg-content {
+                float: none;
+                .msg-txt {
+                    background: #eee;
+                }
+            }
+        }
+    }
+    .msg-content {
+        float: right;
+        width: 80%;
+        .msg-txt {
+            padding: 5px;
+            .border-radius(4px);
+            border: 1px solid #eee;
+            background: white;
+            p {
+                margin: 0;
+            }
+        }
+    }
+    .time {
+        color: #999;
+        font-size: 11px;
+    } 
+}

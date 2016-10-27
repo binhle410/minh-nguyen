@@ -1,0 +1,10 @@
+block vars
+    -title="Message - No messages - interview-spot.com"
+extends layouts/layout
+block main
+    section.main.main-message.container
+        .msg-list-box.col-sm-5.col-md-4.hidden-xs
+            include blocks/message/left-message-list
+        .chatbox.no-msg.col-sm-7.col-md-8
+            include blocks/message/right-message-chatbox-no-msg
+    
