@@ -7,6 +7,7 @@
  * 4. Slider            : slider()
  * 5. clkBrFile()       : Browse File when clicking resume option label
  * 6. editField()       : Edit a field
+ * 7. valiSignForm()    : Validate Login + Sign up form
  */
 /* ----------------------------------------------- */
 /* ------------- FrontEnd Functions -------------- */
@@ -121,6 +122,13 @@ function editField() {
     });    
 }
 
+// 7. Validate Login + Sign up form
+function valiSignForm() {
+    if(!$(".user-sign-form form").length) { return; }
+
+    $(".user-sign-form form").validate();
+}
+
 /* ----------------------------------------------- */
 /* ----------------------------------------------- */
 /* OnLoPSD Page */
@@ -131,6 +139,7 @@ $(document).ready(function($){
     slider();
     clkBrFile();
     editField();
+    valiSignForm();
 });
 /* OnLoad Window */
 var init = function () {
