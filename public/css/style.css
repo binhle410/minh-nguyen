@@ -21027,6 +21027,7 @@ ul.pagination li span {
 }
 .btn.add-one-more-section {
   height: auto;
+  line-height: 14px;
   margin: 0;
   padding: 10px 0;
   border: none;
@@ -21098,12 +21099,6 @@ ul.pagination li span {
  * SECTION RESUME HEADER CSS
  * Updated on 01/10/16
  */
-.section-header {
-  margin-top: 10px;
-}
-.section-header .absolute-right {
-  right: 15px;
-}
 .section-resume-header .dropdown > a:before {
   content: none;
 }
@@ -21121,10 +21116,26 @@ ul.pagination li span {
 .section-resume-header hr {
   margin: 5px 0 20px 0;
 }
-.main-profile .user-pic .avatar {
-  margin: 18px auto;
-  margin-right: 25px;
+.section-resume-header .user-info .row {
+  margin: 0;
   position: relative;
+}
+.section-resume-header .user-info .box-md {
+  padding-top: 0;
+}
+.section-resume-header .center-block {
+  padding: 0;
+  height: 195px;
+  text-align: center;
+}
+.user-pic {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 .main-profile .editMode .profile-info .name {
   width: 50%;
@@ -21161,11 +21172,59 @@ ul.pagination li span {
   font-weight: 400;
   text-transform: initial;
 }
+.section-header {
+  padding-top: 5px;
+  height: 195px;
+}
+.section-header .absolute-right {
+  right: 15px;
+}
 .tab-prof-wrap {
   display: none;
 }
 .add-media {
-  height: 110px;
+  padding: 10px;
+}
+.add-media.add-media-modal {
+  position: relative;
+}
+.add-media.add-media-modal .text-or {
+  position: relative;
+  display: block;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  margin: 10px 0;
+}
+.add-media.add-media-modal .text-or .line {
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 1px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.add-media.add-media-modal .text-or .or-ct {
+  padding: 3px 5px;
+}
+.add-media.add-media-modal .form-control {
+  width: 240px;
+}
+.add-media.add-media-modal .media-btn-group {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  height: auto;
+}
+.add-media.add-media-modal .media-btn-group .btn {
+  position: static;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
 }
 .add-media .media-upl {
   margin-top: 15px;
@@ -21230,7 +21289,7 @@ ul.pagination li span {
   color: #ccc;
 }
 .add-media .media-btn-group {
-  height: 90px;
+  height: 73px;
 }
 .add-media .media-btn-group .btn {
   position: absolute;
@@ -21319,13 +21378,13 @@ ul.pagination li span {
   background: #e5e5e5;
 }
 .tag-xs.active {
-  border-right-color: #de5749;
+  border-right-color: #5cb85c;
 }
 .tag-xs.active .tag-name {
-  color: #de5749;
+  color: #5cb85c;
 }
 .tag-xs.active .fa-check {
-  color: #de5749;
+  color: #5cb85c;
   margin-left: 5px;
 }
 .tag-xs .tag-name {
@@ -22286,11 +22345,11 @@ ul.pagination li span {
   font-size: 8px;
   color: white;
 }
-.vdeo-itm input[type="radio"]:checked + label:before {
+.vdeo-itm input[type="checkbox"]:checked + label:before {
   background: #5cb85c;
   border: none;
 }
-.vdeo-itm input[type="radio"]:checked + label .fa {
+.vdeo-itm input[type="checkbox"]:checked + label .fa {
   display: block;
 }
 /**
@@ -22827,17 +22886,6 @@ footer .copyright {
  * description: css rules for screen of desktop
  */
 @media (max-width: 991px) {
-  .add-media {
-    height: auto;
-  }
-  .add-media .text-or {
-    position: relative;
-    display: block;
-    margin: 35px 0 10px;
-  }
-  .add-media .media-btn-group {
-    height: 50px;
-  }
   .btn.tab-prof {
     width: 33.3333%;
   }
@@ -23299,9 +23347,20 @@ footer .copyright {
  *
  * description: css rules for screen of desktop
  */
-@media (max-width: 992px) {
+@media (max-width: 991px) {
+  .add-media {
+    height: auto;
+  }
+  .add-media .text-or {
+    position: relative;
+    display: block;
+    margin: 20px 0 0;
+  }
   .add-media .text-or .line {
     display: none;
+  }
+  .add-media .media-btn-group {
+    height: 40px;
   }
 }
 /**
@@ -23323,6 +23382,11 @@ footer .copyright {
   }
   label.radio-inline + label.radio-inline {
     margin: 10px 0 0;
+  }
+  .user-pic .avatar {
+    margin: 10px auto;
+    width: 100px;
+    height: 100px;
   }
 }
 /**
@@ -23351,22 +23415,11 @@ footer .copyright {
     float: left;
     width: auto;
   }
-  .main-profile .section-resume-header .user-pic .avatar {
-    margin: 10px auto;
-    width: 70px;
-    height: 70px;
-  }
-  .main-profile .section-resume-header .prof-itm-sm {
-    font-size: 12px;
-  }
   .main-profile .section-resume-header .download-resume {
     margin-top: 5px;
   }
   .main-profile .section-resume-header .download-resume .btn {
     padding: 5px;
-  }
-  .main-profile .section-resume-header .box-md {
-    padding-bottom: 40px;
   }
   .main-profile .editMode .profile-info .name,
   .main-profile .editMode .profile-info .last-name {
@@ -23421,11 +23474,24 @@ footer .copyright {
   .main-profile .placeholder-section.box-md {
     padding: 10px;
   }
+  .section-header {
+    font-size: 12px;
+  }
+  .section-header p {
+    margin: 0 0 5px;
+  }
   .btn.tab-prof {
     height: 60px;
   }
   .add-media .text-or {
     margin: 15px 0 0;
+  }
+}
+@media (max-width: 380px) {
+  .user-pic .avatar {
+    margin: 10px auto;
+    width: 70px;
+    height: 70px;
   }
 }
 @media (max-width: 360px) {

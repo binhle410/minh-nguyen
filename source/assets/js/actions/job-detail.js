@@ -5,9 +5,9 @@
  * 2. jobLightbox()     : Create job image and video gallery slider
  * 3. showFixedNav()    : Show navbar fixted top menu when user scrolls window
  * 4. showPopover()     : show Popover
- * 5. clkBrFile()       : Browse File when clicking resume option label
  * 5. valiPopForm()     : Validate popover form
  * 6. saveJob()         : Save job
+ * 7. ckVdeoStt()       : Check video option mode
  */
 // 1. Make slide for job detail page
 function jobSlide() {
@@ -144,6 +144,49 @@ function saveJob() {
     });
 }
 
+// 7. ckVdeoStt(): Check video option mode
+var _vdeoList = [];
+function ckVdeoStt() {
+    if(!$(".vdeo-itm .ipt").length) { return; }
+
+    var $ckboxes = $(".vdeo-itm .ipt");
+
+    $ckboxes.on("change", function(e) {
+        _vdeoList = scanCkbox($ckboxes);
+        console.log(_vdeoList);
+        if($(".vdeo-list").data("mode")=="single") {
+            if(_vdeoList) {
+                if(_vdeoList.length >= 1) {
+                    if(_vdeoList.length == 1) {
+                        $(this).prop("checked", true);
+                        _vdeoList = scanCkbox($ckboxes);
+                    } else {
+                        $(this).prop("checked", false);
+                        _vdeoList = scanCkbox($ckboxes);
+                        return;
+                    }
+                }
+            }
+        }
+    });
+}
+
+// 7.1. scanCkbox(): Scan all checked checkbox
+function scanCkbox($elem) {
+    var data = [];
+    
+    $elem.each(function(i) {
+        if($(this).prop("checked")) {
+            var temp_obj = {
+                                "id": $(this).val()
+                            };
+            data.push(temp_obj);
+        }
+    });
+
+    return data;
+}
+
 /* ----------------------------------------------- */
 /* ----------------------------------------------- */
 /* OnLoad Page */
@@ -153,6 +196,7 @@ $(document).ready(function($){
     showFixedNav();
     showPopover();
     saveJob();
+    ckVdeoStt();
 });
 /* OnLoad Window */
 var init = function () {

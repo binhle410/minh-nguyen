@@ -101,10 +101,6 @@ function getBnfList() {
                     _bnfList = scanCkbox($ckbox);
                     return;
                 }
-                // $t_ckbox.prop("checked", false);
-                // $label.removeClass("active");
-                // $icon.removeClass("fa-check");
-                // _bnfList = scanCkbox($ckbox);
             } else {
                 $("#benefit-edit-mode .max-number-of-benefits").hide();
             }

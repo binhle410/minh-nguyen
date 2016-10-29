@@ -3,13 +3,6 @@
  * Updated on 01/10/16
  */
 
-.section-header {
-    margin-top: 10px;
-    .absolute-right {
-        right: 15px;
-    }
-}
-
 .section-resume-header {
     .dropdown {
         > a {
@@ -25,16 +18,27 @@
     hr {
         margin: 5px 0 20px 0;
     }
-}
-
-.main-profile {
-    .user-pic {
-        .avatar {
-            margin: 18px auto;
-            margin-right: 25px;
+    .user-info {
+        .row {
+            margin: 0;
             position: relative;
         }
+        .box-md {
+            padding-top: 0;
+        }
     }
+    .center-block {
+        padding: 0;
+        height: 195px;
+        text-align: center;
+    }
+}
+
+.user-pic {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    .transform(translateY(-50%));
 }
 
 .main-profile {
@@ -85,6 +89,15 @@
     }
 }
 
+// Right header - Resume header box CSS
+.section-header {
+    padding-top: 5px;
+    height: 195px;
+    .absolute-right {
+        right: 15px;
+    }
+}
+
 // TAB PROFILE CSS
 .tab-prof-wrap {
     display: none;
@@ -93,7 +106,39 @@
 
 // ADD MEDIA CSS
 .add-media {
-    height: 110px;
+    padding: 10px;
+    &.add-media-modal {
+        position: relative;
+        .text-or {
+            position: relative;
+            display: block;
+            .transform(none);
+            margin: 10px 0;
+            .line {
+                top: 50%;
+                left: 50%;
+                width: 200px;
+                height: 1px;
+                .transform(translate(-50%, -50%));
+            }
+            .or-ct { 
+                padding: 3px 5px;
+            }
+        }
+        .form-control {
+            width: 240px;
+        }
+        .media-btn-group {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            height: auto;
+            .btn {
+                position: static;
+                .transform(none);
+            }
+        }
+    }
     .media-upl {
         margin-top: 15px;
         font-size: 12px;
@@ -149,7 +194,7 @@
         }
     }
     .media-btn-group {
-        height: 90px;
+        height: 73px;
         .btn {
             position: absolute;
             left: 50%;
