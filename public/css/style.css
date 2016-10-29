@@ -21197,9 +21197,10 @@ ul.pagination li span {
   margin: 10px 0;
 }
 .add-media.add-media-modal .text-or .line {
+  display: block;
   top: 50%;
   left: 50%;
-  width: 200px;
+  width: 120px;
   height: 1px;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -21220,6 +21221,7 @@ ul.pagination li span {
 .add-media.add-media-modal .btn-primary {
   width: 28%;
   margin-left: 1%;
+  padding: 5px 0;
 }
 .add-media .media-upl {
   margin-top: 15px;
