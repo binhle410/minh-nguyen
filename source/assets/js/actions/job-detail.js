@@ -153,20 +153,11 @@ function ckVdeoStt() {
 
     $ckboxes.on("change", function(e) {
         _vdeoList = scanCkbox($ckboxes);
-        console.log(_vdeoList);
         if($(".vdeo-list").data("mode")=="single") {
-            if(_vdeoList) {
-                if(_vdeoList.length >= 1) {
-                    if(_vdeoList.length == 1) {
-                        $(this).prop("checked", true);
-                        _vdeoList = scanCkbox($ckboxes);
-                    } else {
-                        $(this).prop("checked", false);
-                        _vdeoList = scanCkbox($ckboxes);
-                        return;
-                    }
-                }
-            }
+            $ckboxes.prop("checked", false);
+            $(this).prop("checked", true);
+            _vdeoList = scanCkbox($ckboxes);
+            console.log(_vdeoList);
         }
     });
 }

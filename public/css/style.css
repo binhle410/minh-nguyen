@@ -21374,9 +21374,6 @@ ul.pagination li span {
 .tag-xs:hover {
   background: #e5e5e5;
 }
-.tag-xs.active {
-  border-right-color: #5cb85c;
-}
 .tag-xs.active .tag-name {
   color: #5cb85c;
 }
