@@ -20549,14 +20549,6 @@ form {
 .job .job-info .posted small {
   font-size: 11px;
 }
-.job .logo-placeholder {
-  width: 80px;
-  height: 70px;
-  margin-top: 10px;
-  background: url("../images/logo-placeholder.png") no-repeat;
-  background-size: 100%;
-  display: inline-block;
-}
 .job .job-select {
   position: relative;
   z-index: 10;
@@ -20592,6 +20584,14 @@ form {
   font-family: FontAwesome;
   content: "\f00c";
   color: #5cb85c;
+}
+.logo-placeholder {
+  width: 80px;
+  height: 70px;
+  margin-top: 10px;
+  background: url("../images/logo-placeholder.png") no-repeat;
+  background-size: 100%;
+  display: inline-block;
 }
 /**
  * JOB SEARCH: JOB INFO CSS
@@ -21594,6 +21594,7 @@ ul.pagination li span {
 .job-avt {
   display: block;
   margin: 25px auto 0 auto;
+  text-align: center;
 }
 .job-avt img {
   margin: 0 auto;
@@ -23186,6 +23187,10 @@ footer .copyright {
   .job-search .stats-blk .row {
     margin: 0 -15px;
   }
+  .logo-placeholder {
+    width: 60px;
+    height: 60px;
+  }
   .job {
     padding: 15px 0;
   }
@@ -23194,10 +23199,6 @@ footer .copyright {
   }
   .job .job-info h3 a {
     font-size: 14px;
-  }
-  .job .logo-placeholder {
-    width: 60px;
-    height: 60px;
   }
   .stats-blk {
     height: 40px;
