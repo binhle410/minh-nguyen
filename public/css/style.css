@@ -20159,7 +20159,7 @@ form {
   right: 0;
   bottom: 0;
   background: rgba(255, 255, 255, 0.8);
-  z-index: 9999;
+  z-index: 15;
 }
 .spinner {
   margin: 200px auto 0;
