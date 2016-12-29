@@ -10,10 +10,21 @@
             a.box-search-job(href="job-search.html")
                 i.fa.fa-lg.fa-search
                 span Search
-        li
-            a.lang-select(href="#")
-                img(src="./images/us.png", alt="", width="24")
+        li.dropdown.lang-slt-box
+            a.lang-select.dropdown-toggle(href="#", data-toggle="dropdown")
+                img(src="./images/us.png", alt="lang", width="24")
                 span US English
+            .dropdown-menu.popover.lang-popover
+                .popover-content
+                    a.lang-item.active(href="#")
+                        img(src="./images/us.png", alt="lang", width="24")
+                        span US English
+                    a.lang-item(href="#")
+                        img(src="./images/fr.png", alt="lang", width="24")
+                        span French        
+                    a.lang-item(href="#")
+                        img(src="./images/vn.png", alt="lang", width="24")
+                        span Vietnam
         li.dropdown
             a.alert-notifications.dropdown-toggle(href="#", data-toggle="dropdown")
                 i.fa.fa-lg.fa-bell

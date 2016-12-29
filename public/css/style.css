@@ -19636,6 +19636,29 @@ form {
 .dropdown .uprof-menu li a:focus .fa {
   color: #de5749;
 }
+.dropdown .dropdown-menu.notification-popover {
+  top: 60px;
+}
+.dropdown.lang-slt-box .lang-select.dropdown-toggle::before {
+  display: none;
+}
+.dropdown.lang-slt-box .lang-popover.dropdown-menu {
+  top: 60px;
+  width: 100px;
+}
+.dropdown.lang-slt-box .lang-popover.dropdown-menu .lang-item {
+  display: block;
+  line-height: 30px;
+  height: 30px;
+  text-align: left;
+}
+.dropdown.lang-slt-box .lang-popover.dropdown-menu .lang-item.active {
+  font-weight: bold;
+}
+.dropdown.lang-slt-box .lang-popover.dropdown-menu .lang-item > img {
+  display: inline-block;
+  margin-right: 10px;
+}
 /**
  * HOME CSS
  * Updated on 12/10/16
