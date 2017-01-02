@@ -17,11 +17,15 @@ import { AppState, InternalStateType } from './app.service';
 import { GlobalState } from './global.state';
 import { NgaModule } from './theme/nga.module';
 import { PagesModule } from './pages/pages.module';
+import { AUTH_PROVIDERS } from 'angular2-jwt';
+
+import {AuthHttp} from 'angular2-jwt/angular2-jwt';
 
 // Application wide providers
 const APP_PROVIDERS = [
   AppState,
-  GlobalState
+  GlobalState,
+  AUTH_PROVIDERS
 ];
 
 type StoreType = {

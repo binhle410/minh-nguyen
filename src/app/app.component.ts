@@ -7,8 +7,11 @@ import { layoutPaths } from './theme/theme.constants';
 import { BaThemeConfig } from './theme/theme.config';
 import { BaMenuService } from './theme';
 import {ComponentsHelper } from 'ng2-bootstrap';
-
 import { MENU } from './app.menu';
+
+import {AuthHttp} from 'angular2-jwt/angular2-jwt';
+import {Response} from "@angular/http";
+
 /*
  * App Component
  * Top Level Component
@@ -25,6 +28,19 @@ import { MENU } from './app.menu';
   `
 })
 export class App {
+  thing: Response;
+
+  getThing() {
+    this.authHttp.get('https://localhost/projects/symfony3/health/web/app_dev.php/api/system')
+        .subscribe(
+            data => {
+              this.thing = data;
+              console.log(data);
+            },
+            err => console.log(err),
+            () => console.log('Request Complete')
+        );
+  }
 
   isMenuCollapsed: boolean = false;
 
@@ -33,7 +49,10 @@ export class App {
               private _spinner: BaThemeSpinner,
               private _config: BaThemeConfig,
               private _menuService: BaMenuService,
-              private viewContainerRef: ViewContainerRef) {
+              private viewContainerRef: ViewContainerRef,
+              public authHttp: AuthHttp) {
+
+    this.getThing();
 
     this._menuService.updateMenuByRoutes(<Routes>MENU);
 

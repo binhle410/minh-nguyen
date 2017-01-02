@@ -59,7 +59,7 @@ export const PAGES_MENU = [
       //  ]
       //},
       {
-        path: 'charts-sample',
+        path: 'charts',
         data: {
           menu: {
             title: 'Charts',
