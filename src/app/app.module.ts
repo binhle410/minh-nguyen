@@ -18,14 +18,18 @@ import { GlobalState } from './global.state';
 import { NgaModule } from './theme/nga.module';
 import { PagesModule } from './pages/pages.module';
 import { AUTH_PROVIDERS } from 'angular2-jwt';
+import { AuthGuard }                from 'app/security/authGuard.service';
+import { AuthService }                from 'app/security/auth.service';
 
-import {AuthHttp} from 'angular2-jwt/angular2-jwt';
+// import {AuthHttp} from 'angular2-jwt/angular2-jwt';
 
 // Application wide providers
 const APP_PROVIDERS = [
   AppState,
   GlobalState,
-  AUTH_PROVIDERS
+  AUTH_PROVIDERS,
+    AuthGuard,
+    AuthService
 ];
 
 type StoreType = {
@@ -51,6 +55,7 @@ type StoreType = {
     NgaModule.forRoot(),
     PagesModule,
     routing
+      // AuthHttp
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,

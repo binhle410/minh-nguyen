@@ -23,8 +23,8 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
  */
 const HMR = helpers.hasProcessFlag('hot');
 const METADATA = {
-  title: 'ng2-admin - Angular 2 Admin Template',
-  description: 'Free Angular 2 and Bootstrap 4 Admin Template',
+  title: 'Magenta Health Service',
+  description: 'Magenta Health Service Platform',
   baseUrl: '/',
   isDevServer: helpers.isWebpackDevServer()
 };

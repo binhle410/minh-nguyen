@@ -9,7 +9,7 @@ import { BaMenuService } from './theme';
 import {ComponentsHelper } from 'ng2-bootstrap';
 import { MENU } from './app.menu';
 
-import {AuthHttp} from 'angular2-jwt/angular2-jwt';
+import {AuthHttp} from 'angular2-jwt';
 import {Response} from "@angular/http";
 
 /*

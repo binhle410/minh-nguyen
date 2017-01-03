@@ -9,4 +9,10 @@ export class FlatButtons {
 
   constructor() {
   }
+  click(){
+    console.log("I was clicked");
+  }
+  alert(){
+    alert("hello clicker");
+  }
 }
