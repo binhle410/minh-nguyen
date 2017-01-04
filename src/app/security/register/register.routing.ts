@@ -1,12 +1,12 @@
 import { Routes, RouterModule }  from '@angular/router';
 
-import { LoginPage } from './login.component';
+import { Register } from './register.component';
 
 // noinspection TypeScriptValidateTypes
 const routes: Routes = [
   {
     path: '',
-    component: LoginPage
+    component: Register
   }
 ];
 

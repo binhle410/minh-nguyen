@@ -18,8 +18,8 @@ import { GlobalState } from './global.state';
 import { NgaModule } from './theme/nga.module';
 import { PagesModule } from './pages/pages.module';
 import { AUTH_PROVIDERS } from 'angular2-jwt';
-import { AuthGuard }                from 'app/security/authGuard.service';
-import { AuthService }                from 'app/security/auth.service';
+import { AuthGuard }                from './security/authGuard.service';
+import { AuthService }                from './security/auth.service';
 
 // import {AuthHttp} from 'angular2-jwt/angular2-jwt';
 
@@ -30,6 +30,7 @@ const APP_PROVIDERS = [
   AUTH_PROVIDERS,
     AuthGuard,
     AuthService
+
 ];
 
 type StoreType = {
@@ -47,6 +48,7 @@ type StoreType = {
     App
   ],
   imports: [ // import Angular's modules
+
     BrowserModule,
     HttpModule,
     RouterModule,

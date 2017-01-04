@@ -7,7 +7,7 @@ import {FormGroup, AbstractControl, FormBuilder, Validators} from '@angular/form
   styles: [require('./login.scss')],
   template: require('./login.html'),
 })
-export class LoginPage {
+export class Login {
 
   public form:FormGroup;
   public email:AbstractControl;

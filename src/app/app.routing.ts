@@ -3,15 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard }                from 'app/security/authGuard.service';
 
 export const routes: Routes = [
+  { path: 'login', loadChildren: () => System.import('./security/login/login.module')},
+  { path: 'register', loadChildren: () => System.import('./security/register/register.module')},
+
   { path: '', redirectTo: 'pages', pathMatch: 'full' },
   { path: '**', redirectTo: 'pages/dashboard' }
 ];
-
-export const AUTH_PROVIDERS = [AuthGuard];
-export const APP_ROUTER_PROVIDERS = [
-  AUTH_PROVIDERS
-];
-
-
 
 export const routing = RouterModule.forRoot(routes, { useHash: true });
