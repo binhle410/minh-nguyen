@@ -1,16 +1,16 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 import { Router }            from '@angular/router';
 
-import { ChannelPartnerService } from './channel-partner.service';
+import { SaleAccountService } from './sale-account.service';
 import { LocalDataSource } from 'ng2-smart-table';
 
 @Component({
-  selector: 'channel-partner',
+  selector: 'list-partner',
   encapsulation: ViewEncapsulation.None,
   //styles: [require('../smartTables.scss')],
-  template: require('./channel-partner.html'),
+  template: require('./sale-account.html'),
 })
-export class ChannelPartner {
+export class SaleAccount {
 
   query: string = '';
 
@@ -58,7 +58,7 @@ export class ChannelPartner {
   source: LocalDataSource = new LocalDataSource();
 
   constructor(
-    protected service: ChannelPartnerService,
+    protected service: SaleAccountService,
     private _router: Router) {
     this.service.getData().then((data) => {
       this.source.load(data);
@@ -82,6 +82,5 @@ export class ChannelPartner {
   }
 
   onEdit(event) {
-    this._router.navigate(['pages/principal/detail-cp', event.data.voucher]);
   }
 }

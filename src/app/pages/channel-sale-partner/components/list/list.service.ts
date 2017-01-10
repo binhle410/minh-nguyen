@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
 
 @Injectable()
-export class ChannelPartnerService {
+export class ListSalePartnerService {
 
-  channelPartnerData = [
+  listSalePartnerData = [
     {
       voucher: 1,
       location: 'New York, USA',
@@ -37,7 +37,7 @@ export class ChannelPartnerService {
   getData(): Promise<any> {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve(this.channelPartnerData);
+        resolve(this.listSalePartnerData);
       }, 2000);
     });
   }

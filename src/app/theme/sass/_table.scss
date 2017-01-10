@@ -410,3 +410,22 @@ nav.ng2-smart-pagination-nav {
   display: flex;
   justify-content: center;
 }
+
+.tbl-product-list {
+  .table {
+    > thead {
+      > tr {
+        > th {
+          &:first-child {
+            text-align: left;
+          }
+          > td {
+            &:first-child {
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}

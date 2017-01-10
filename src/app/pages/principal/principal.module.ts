@@ -11,7 +11,10 @@ import { Principal } from './principal.component';
 import { Company } from './components/company/company.component';
 import { ChannelPartner } from './components/channel-partner/channel-partner.component';
 import { ChannelPartnerService } from './components/channel-partner/channel-partner.service';
-
+import { ChannelSalePartner } from './components/channel-sale-partner/channel-sale-partner.component';
+import { ChannelSalePartnerService } from './components/channel-sale-partner/channel-sale-partner.service';
+import { DetailCP } from './components/detail/detail.component';
+import { DetailCPService } from './components/detail/detail.service';
 
 
 @NgModule({
@@ -25,10 +28,14 @@ import { ChannelPartnerService } from './components/channel-partner/channel-part
   declarations: [
       Principal,
       Company,
-      ChannelPartner
+      ChannelPartner,
+      ChannelSalePartner,
+      DetailCP
   ],
   providers: [
-    ChannelPartnerService
+    ChannelPartnerService,
+    ChannelSalePartnerService,
+    DetailCPService
   ]
 })
 export default class MapsModule {}
