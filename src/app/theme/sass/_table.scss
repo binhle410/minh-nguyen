@@ -419,10 +419,14 @@ nav.ng2-smart-pagination-nav {
           &:first-child {
             text-align: left;
           }
-          > td {
-            &:first-child {
-              text-align: left;
-            }
+        }
+      }
+    }
+    > tbody {
+      > tr.ng2-smart-row {
+        > td {
+          &:first-child {
+            text-align: left;
           }
         }
       }
