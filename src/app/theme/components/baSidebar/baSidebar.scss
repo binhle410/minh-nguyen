@@ -79,7 +79,7 @@ a.al-sidebar-list-link {
   text-decoration: none;
   color: $sidebar-text;
   line-height: 42px;
-  white-space: nowrap;
+  white-space: normal;
   overflow: hidden;
   cursor: pointer;
   &:hover {
@@ -149,7 +149,9 @@ a.al-sidebar-list-link {
       color: $sidebar-text;
       padding-left: 52px;
       height: auto;
-      line-height: 29px;
+      line-height: 20px;
+      padding-top: 7px;
+      padding-bottom: 7px;
       &:hover {
         color: $primary;
       }
