@@ -56,3 +56,17 @@ Yes!  Visit [our homepage](http://akveo.com/) or simply leave us a note to [cont
 Enjoy :metal:
 We're always happy to hear your feedback!
 
+==========================================
+### From SUNRISE TEAM
+* DEV PORT: http:localhost/4003
+
+# development
+npm run server
+# production
+npm run build:prod
+npm run server:prod
+
+# development
+npm run build:dev
+# production (jit)
+npm run build:prod
