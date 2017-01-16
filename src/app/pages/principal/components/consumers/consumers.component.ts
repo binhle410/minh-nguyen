@@ -1,17 +1,16 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 import { Router }            from '@angular/router';
 
-import { ChannelPartnerService } from './channel-partner.service';
+import { ConsumersService } from './consumers.service';
 import { LocalDataSource } from 'ng2-smart-table';
 
 @Component({
-  selector: 'channel-partner',
+  selector: 'consumers',
   encapsulation: ViewEncapsulation.None,
-  //styles: [require('../smartTables.scss')],
-  template: require('./channel-partner.html'),
+  template: require('./consumers.html'),
 })
-export class ChannelPartner {
-  public activePageTitle: string = 'Channel Partner';
+export class Consumers {
+  public activePageTitle: string = 'Consumers';
   // *tb Settings
   query: string = '';
   settings = {
@@ -21,9 +20,7 @@ export class ChannelPartner {
       cancelButtonContent: '<i class="ion-close"></i>',
     },
     edit: {
-      editButtonContent: '<i class="ion-edit"></i>',
-      saveButtonContent: '<i class="ion-checkmark"></i>',
-      cancelButtonContent: '<i class="ion-close"></i>',
+      editButtonContent: '<i class="ion-edit"></i>'
     },
     delete: {
       deleteButtonContent: '<i class="ion-trash-a"></i>'
@@ -58,11 +55,6 @@ export class ChannelPartner {
         title: 'Total claims',
         type: 'number'
       },
-      logo: {
-        title: 'Logo',
-        type: 'html',
-        filter: false
-      },
       cPartner: {
         title: 'Channel Partner',
         type: 'html'
@@ -79,7 +71,7 @@ export class ChannelPartner {
   source: LocalDataSource = new LocalDataSource();
 
   constructor(
-    protected service: ChannelPartnerService,
+    protected service: ConsumersService,
     private _router: Router) {
     this.service.getData().then((data) => {
       this.source.load(data);
@@ -103,6 +95,9 @@ export class ChannelPartner {
   }
 
   onEdit(event) {
-    this._router.navigate(['pages/principal/detail-cp', event.data.voucher]);
+    console.log('dddd', event);
+    this._router.navigate(['pages/principal/consumer', event.data.voucher]);
   }
+
+  
 }

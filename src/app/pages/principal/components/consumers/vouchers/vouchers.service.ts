@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
 
 @Injectable()
-export class DetailCPService {
+export class ConsumerVouchersService {
 
-  detailPartnerData = [
+  vouchersData = [
     {     
       refNo : 1,
       name : 'Hampden Sydney',
@@ -35,7 +35,7 @@ export class DetailCPService {
               + "<a href='#' class='td-txt-action' title='Download voucher'><i class='fa fa-download' aria-hidden='true'></i></a>"
     },
     {     
-      refNo : 1,
+      refNo : 3,
       name : 'Hampden Sydney',
       idNumb : '7003279852',
       nation : 'Chinese',
@@ -50,7 +50,7 @@ export class DetailCPService {
               + "<a href='#' class='td-txt-action' title='Download voucher'><i class='fa fa-download' aria-hidden='true'></i></a>"
     },
     {     
-      refNo : 1,
+      refNo : 4,
       name : 'Hampden Sydney',
       idNumb : '7003279852',
       nation : 'Chinese',
@@ -65,7 +65,7 @@ export class DetailCPService {
               + "<a href='#' class='td-txt-action' title='Download voucher'><i class='fa fa-download' aria-hidden='true'></i></a>"
     },
     {     
-      refNo : 1,
+      refNo : 5,
       name : 'Hampden Sydney',
       idNumb : '7003279852',
       nation : 'Chinese',
@@ -80,7 +80,7 @@ export class DetailCPService {
               + "<a href='#' class='td-txt-action' title='Download voucher'><i class='fa fa-download' aria-hidden='true'></i></a>"
     },
     {     
-      refNo : 1,
+      refNo : 6,
       name : 'Hampden Sydney',
       idNumb : '7003279852',
       nation : 'Chinese',
@@ -95,7 +95,7 @@ export class DetailCPService {
               + "<a href='#' class='td-txt-action' title='Download voucher'><i class='fa fa-download' aria-hidden='true'></i></a>"
     },
     {     
-      refNo : 1,
+      refNo : 7,
       name : 'Hampden Sydney',
       idNumb : '7003279852',
       nation : 'Chinese',
@@ -110,7 +110,7 @@ export class DetailCPService {
               + "<a href='#' class='td-txt-action' title='Download voucher'><i class='fa fa-download' aria-hidden='true'></i></a>"
     },
     {     
-      refNo : 1,
+      refNo : 8,
       name : 'Hampden Sydney',
       idNumb : '7003279852',
       nation : 'Chinese',
@@ -124,16 +124,12 @@ export class DetailCPService {
               + '&nbsp;&nbsp;&nbsp;&nbsp;'
               + "<a href='#' class='td-txt-action' title='Download voucher'><i class='fa fa-download' aria-hidden='true'></i></a>"
     }
-
-
-
   ];
-
 
   getData(): Promise<any> {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve(this.detailPartnerData);
+        resolve(this.vouchersData);
       }, 2000);
     });
   }

@@ -5,32 +5,100 @@ export class ChannelSalePartnerService {
 
   channelPartnerData = [
     {
-      voucher: 1,
-      location: 'San Francisco, USA',
-      logo: '<img src="assets/img/app/browsers/chrome.svg"/>',
-      email: 'peter@gmail.com',
-      claim: '18'
+      fName: "Kay",
+      lName: "Marcs",
+      mName: "",
+      cPartner: "Direct sales",
+      location: 'New York, USA',
+      logo: '<img src="assets/img/app/browsers/opera.svg"/>',
+      email: 'mdo@gmail.com',
+      voucher: 24,
+      claim: 28,
+      actions: "<a href='#' class='td-txt-action' title='Voucher History'><i class='fa fa-newspaper-o' aria-hidden='true'></i></a>"
     }, 
     {
+      fName: "Testing",
+      lName: "Namy",
+      mName: "so",
+      cPartner: "<a class='has-link' href=''>Testing Clarks</a>",
       voucher: 2,
-      location: 'Seattle, USA',
-      logo: '<img src="assets/img/app/browsers/opera.svg"/>',
-      email: 'mariaKeth@gmail.com',
-      claim: '22'
+      location: 'Califonia, USA',
+      logo: '<img src="assets/img/app/browsers/chrome.svg"/>',
+      email: 'tester@gmail.com',
+      claim: '2',
+      actions: "<a href='#' class='td-txt-action' title='Voucher History'><i class='fa fa-newspaper-o' aria-hidden='true'></i></a>"
     },
     {
+      fName: "Kinoke",
+      lName: "Haye",
+      mName: "",
+      cPartner: "<a class='has-link' href=''>Kinoke Clarks</a>",
       voucher: 3,
-      location: 'Carolina, USA',
-      logo: '<img src="assets/img/app/browsers/firefox.svg"/>',
-      email: 'evant@gmail.com',
-      claim: '48'
+      location: 'Florida, USA',
+      logo: '<img src="assets/img/app/browsers/ie.svg"/>',
+      email: 'johnny@gmail.com',
+      claim: '8',
+      actions: "<a href='#' class='td-txt-action' title='Voucher History'><i class='fa fa-newspaper-o' aria-hidden='true'></i></a>"
     }, 
     {
+      fName: "Oarn",
+      lName: "Portate",
+      mName: "se",
+      cPartner: "Direct sales",
       voucher: 4,
-      location: 'Kansas, USA',
+      location: 'New York, USA',
+      logo: '<img src="assets/img/app/browsers/firefox.svg"/>',
+      email: 'tester@gmail.com',
+      claim: '4',
+      actions: "<a href='#' class='td-txt-action' title='Voucher History'><i class='fa fa-newspaper-o' aria-hidden='true'></i></a>"
+    },
+    {
+      fName: "Kay",
+      lName: "Marcs",
+      mName: "",
+      cPartner: "<a class='has-link' href=''>Koey Clarks</a>",
+      location: 'New York, USA',
+      logo: '<img src="assets/img/app/browsers/opera.svg"/>',
+      email: 'mdo@gmail.com',
+      voucher: 24,
+      claim: 28,
+      actions: "<a href='#' class='td-txt-action' title='Voucher History'><i class='fa fa-newspaper-o' aria-hidden='true'></i></a>"
+    }, 
+    {
+      fName: "Testing",
+      lName: "Namy",
+      mName: "so",
+      cPartner: "<a class='has-link' href=''>Testing Clarks</a>",
+      voucher: 2,
+      location: 'Califonia, USA',
+      logo: '<img src="assets/img/app/browsers/chrome.svg"/>',
+      email: 'tester@gmail.com',
+      claim: '2',
+      actions: "<a href='#' class='td-txt-action' title='Voucher History'><i class='fa fa-newspaper-o' aria-hidden='true'></i></a>"
+    },
+    {
+      fName: "Kinoke",
+      lName: "Haye",
+      mName: "",
+      cPartner: "Direct sales",
+      voucher: 3,
+      location: 'Florida, USA',
       logo: '<img src="assets/img/app/browsers/ie.svg"/>',
-      email: 'jonathan@gmail.com',
-      claim: '4'
+      email: 'johnny@gmail.com',
+      claim: '8',
+      actions: "<a href='#' class='td-txt-action' title='Voucher History'><i class='fa fa-newspaper-o' aria-hidden='true'></i></a>"
+    }, 
+    {
+      fName: "Oarn",
+      lName: "Portate",
+      mName: "se",
+      cPartner: "<a class='has-link' href=''>Koey Portate</a>",
+      voucher: 4,
+      location: 'New York, USA',
+      logo: '<img src="assets/img/app/browsers/firefox.svg"/>',
+      email: 'tester@gmail.com',
+      claim: '4',
+      actions: "<a href='#' class='td-txt-action' title='Voucher History'><i class='fa fa-newspaper-o' aria-hidden='true'></i></a>"
     }
   ];
 

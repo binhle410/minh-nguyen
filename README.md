@@ -60,6 +60,9 @@ We're always happy to hear your feedback!
 ### From SUNRISE TEAM
 * DEV PORT: http:localhost/4003
 
+# RUN SERVER LOCALHOST
+npm run server:ci 
+
 # development
 npm run server
 # production

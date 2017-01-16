@@ -8,11 +8,25 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 // COMPONENT
 import { Principal } from './principal.component';
+
+// #-- SUB MODULE Company
 import { Company } from './components/company/company.component';
+
+// #-- SUB MODULE Consumer
+import { Consumers } from './components/consumers/consumers.component';
+import { ConsumersService } from './components/consumers/consumers.service';
+import { ConsumerVouchers } from './components/consumers/vouchers/vouchers.component';
+import { ConsumerVouchersService } from './components/consumers/vouchers/vouchers.service';
+
+// #-- SUB MODULE ChannelPartner
 import { ChannelPartner } from './components/channel-partner/channel-partner.component';
 import { ChannelPartnerService } from './components/channel-partner/channel-partner.service';
+
+// #-- SUB MODULE ChannelSalePartner
 import { ChannelSalePartner } from './components/channel-sale-partner/channel-sale-partner.component';
 import { ChannelSalePartnerService } from './components/channel-sale-partner/channel-sale-partner.service';
+
+// ...
 import { DetailCP } from './components/detail/detail.component';
 import { DetailCPService } from './components/detail/detail.service';
 
@@ -27,7 +41,11 @@ import { DetailCPService } from './components/detail/detail.service';
   ],
   declarations: [
       Principal,
-      Company,
+      Company,  
+
+      Consumers,
+      ConsumerVouchers,
+
       ChannelPartner,
       ChannelSalePartner,
       DetailCP
@@ -35,7 +53,10 @@ import { DetailCPService } from './components/detail/detail.service';
   providers: [
     ChannelPartnerService,
     ChannelSalePartnerService,
-    DetailCPService
+    DetailCPService,
+
+    ConsumersService,
+    ConsumerVouchersService
   ]
 })
 export default class MapsModule {}

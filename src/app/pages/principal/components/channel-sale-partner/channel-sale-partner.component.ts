@@ -10,9 +10,9 @@ import { LocalDataSource } from 'ng2-smart-table';
   template: require('./channel-sale-partner.html'),
 })
 export class ChannelSalePartner {
-
+  public activePageTitle: string = 'Channel Sale Partner';
+  // *tb Settings
   query: string = '';
-
   settings = {
     add: {
       addButtonContent: '<i class="ion-ios-plus-outline"></i>',
@@ -29,30 +29,52 @@ export class ChannelSalePartner {
       //confirmDelete: true
     },
     columns: {
+      fName: {
+        title: 'First name',
+        type: 'string'
+      },
+      mName: {
+        title: 'Middle name',
+        type: 'string'
+      },
+      lName: {
+        title: 'Last Email',
+        type: 'string'
+      }, 
+      location: {
+        title: 'Address',
+        type: 'string'
+      },
       email: {
         title: 'Admin Email',
         type: 'string'
       },
       voucher: {
-        title: 'Voucher',
+        title: 'Total vouchers',
         type: 'number'
       }, 
       claim: {
-        title: 'Claim',
+        title: 'Total claims',
         type: 'number'
-      },      
-      location: {
-        title: 'Location',
-        type: 'string'
       },
       logo: {
         title: 'Logo',
         type: 'html',
         filter: false
+      },
+      cPartner: {
+        title: 'Sales Partner',
+        type: 'html'
+      },
+      actions: {
+        title: 'Actions',
+        type: 'html',
+        filter: false
       }
     },
-    mode: 'external'
+    mode: 'external'    
   };
+
 
   source: LocalDataSource = new LocalDataSource();
 

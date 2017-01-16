@@ -28,20 +28,7 @@ import {Response} from "@angular/http";
   `
 })
 export class App {
-  thing: Response;
-
-  getThing() {
-    this.authHttp.get('https://localhost/projects/symfony3/health/web/app_dev.php/api/system')
-        .subscribe(
-            data => {
-              this.thing = data;
-              console.log(data);
-            },
-            err => console.log(err),
-            () => console.log('Request Complete')
-        );
-  }
-
+  thing: Response; 
   isMenuCollapsed: boolean = false;
 
   constructor(private _state: GlobalState,
@@ -52,7 +39,7 @@ export class App {
               private viewContainerRef: ViewContainerRef,
               public authHttp: AuthHttp) {
 
-    this.getThing();
+    //this.getAuth();
 
     this._menuService.updateMenuByRoutes(<Routes>MENU);
 
@@ -72,11 +59,33 @@ export class App {
     });
   }
 
+  /** START dev FUNC -----------------------------------------------------  */
+  /** 
+   * 1. Get Auth - Submit LOGIN
+  */  
+  getAuth() {
+    this.authHttp.get('https://localhost/projects/symfony3/health/web/app_dev.php/api/system')
+        .subscribe(
+            data => {
+              this.thing = data;
+              console.log(data);
+            },
+            err => console.log(err),
+            () => console.log('Request Complete')
+        );
+  }
+
+  /** 
+   * 2. _loadImages()
+  */ 
   private _loadImages(): void {
     // register some loaders
     BaThemePreloader.registerLoader(this._imageLoader.load(layoutPaths.images.root + 'sky-bg.jpg'));
   }
 
+  /** 
+   * 3. _fixModals()
+  */ 
   private _fixModals(): void {
     ComponentsHelper.prototype.getRootViewContainerRef = function () {
       // https://github.com/angular/angular/issues/9293
@@ -98,4 +107,6 @@ export class App {
       }
     };
   }
-}
+
+
+} // END COMP

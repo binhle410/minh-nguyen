@@ -1,23 +1,16 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 
 import { LocalDataSource } from 'ng2-smart-table';
-import { DetailCPService } from './detail.service';
+import { ConsumerVouchersService } from './vouchers.service';
 
 @Component({
-  selector: 'detail-cp',
+  selector: 'consumer-vouchers',
   encapsulation: ViewEncapsulation.None,
   //styles: [require('./bubbleMaps.scss')],
-  template: require('./detail.html'),
+  template: require('./vouchers.html'),
 })
-export class DetailCP {
-    
-  public defaultPicture = 'assets/img/theme/no-photo.png';
-  public profile:any = {
-    picture: 'assets/img/app/browsers/opera.svg'
-  };
-  public uploaderOptions:any = {
-    // url: 'http://website.com/upload'
-  };
+
+export class ConsumerVouchers {
 
   query: string = '';
 
@@ -38,13 +31,14 @@ export class DetailCP {
 
   
   constructor(
-    protected service: DetailCPService) {
+    protected service: ConsumerVouchersService) {
 
-    this.activePageTitle = "Channel Partner";
+    this.activePageTitle = "Vouchers of Mae Chark";
     this.setDataVouchers();
 
     // GET API DATA
     this.service.getData().then((data) => {
+      console.log(data);
       this.source.load(data);
     });
   }

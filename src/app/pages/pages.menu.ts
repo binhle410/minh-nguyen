@@ -15,10 +15,34 @@ export const PAGES_MENU = [
         },
         children: [
           {
+            path: 'dashboard',
+            data: {
+              menu: {
+                title: 'Dashboard',
+              }
+            }
+          },
+          {
             path: 'company',
             data: {
               menu: {
                 title: 'Company',
+              }
+            }
+          },
+          {
+            path: 'vouchers',
+            data: {
+              menu: {
+                title: 'Vouchers',
+              }
+            }
+          },
+          {
+            path: 'consumers',
+            data: {
+              menu: {
+                title: 'Consumers',
               }
             }
           },
@@ -35,6 +59,14 @@ export const PAGES_MENU = [
             data: {
               menu: {
                 title: 'Channel Sale Partner',
+              }
+            }
+          },
+          {
+            path: 'clinics',
+            data: {
+              menu: {
+                title: 'Clinics',
               }
             }
           }

@@ -432,3 +432,24 @@ nav.ng2-smart-pagination-nav {
   display: flex;
   justify-content: center;
 }
+
+
+/* SUNRISE css -*/ 
+.ng2-smart-table-container {
+  .ng2-smart-row {
+    a.has-link {
+      color: $success;
+      text-decoration: underline !important;
+      &:hover {
+        text-decoration: none !important;
+      }
+    }
+    a.td-txt-action {
+      color: #fff;
+      text-decoration: underline !important;
+      &:hover {
+        text-decoration: none !important;
+      }
+    }
+  }  
+}
