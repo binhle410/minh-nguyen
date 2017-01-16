@@ -63,6 +63,14 @@ export const PAGES_MENU = [
             }
           },
           {
+            path: 'products',
+            data: {
+              menu: {
+                title: 'Products',
+              }
+            }
+          },
+          {
             path: 'clinics',
             data: {
               menu: {
