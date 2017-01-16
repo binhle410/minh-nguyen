@@ -24,6 +24,9 @@ const routes: Routes = [
         path: 'register',
         loadChildren: () => System.import('./register/register.module')
       },
+      { path: 'principal', loadChildren: () => System.import('./principal/principal.module') },
+      { path: 'channel-partner', loadChildren: () => System.import('./channel-partner/channel-partner.module') },
+      { path: 'channel-sale-partner', loadChildren: () => System.import('./channel-sale-partner/channel-sale-partner.module') }
     ]
   }
 ];

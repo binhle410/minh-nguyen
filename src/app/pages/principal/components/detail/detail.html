@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-md-4 col-sm-4 col-xs-12 col-logo mbt-30 ">
+        <ba-card title="Logo Uploader" baCardClass="with-scroll">
+            <ba-picture-uploader [picture]="profile.picture" [defaultPicture]="defaultPicture" [uploaderOptions]="uploaderOptions"></ba-picture-uploader>
+        </ba-card>
+    </div>
+    <!-- END LOGO -->
+    <div class="col-md-8 col-sm-8 col-xs-12 col-info mbt-30 ">
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Admin Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" value="mdo@gmail.com">
+            </div>
+            <div class="form-group">
+                <label for="companyAddress">Location</label>
+                <input type="text" class="form-control" id="companyAddress" placeholder="Location" value="New York, USA">
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label for="iptVoucher">Voucher</label>
+                        <input type="text" class="form-control" id="iptVoucher" value="1" placeholder="Voucher">
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label for="iptVoucher">Claim</label>
+                        <input type="text" class="form-control" id="iptVoucher" value="1" placeholder="Claim" value="28">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary w120">Submit</button>
+        </form>
+
+    </div>
+    <!-- END INFO -->
+    <div class="col-xs-12">
+        <ba-card title="Voucher of Channel Partner" baCardClass="with-scroll" class="pos-relative tbl-product-list">
+            <button class="btn btn-success btn-export">Export XLS</button>
+            <ng2-smart-table
+            [settings]="settings"
+            [source]="source" ></ng2-smart-table>
+        </ba-card>
+    </div>
+</div>

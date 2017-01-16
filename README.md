@@ -4,6 +4,9 @@
 [![Join the chat at https://gitter.im/ng2-admin/Lobby](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ng2-admin/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Dependency Status](https://david-dm.org/akveo/ng2-admin.svg)](https://david-dm.org/akveo/ng2-admin)
 
+# PORT SERVER
+- Use port 4003
+
 # Admin panel framework based on Angular 2, Bootstrap 4 and Webpack
 
 Admin template made with :heart:  by [Akveo team](http://akveo.com/). Follow us on [Twitter](https://twitter.com/akveo_inc) to get latest news about this template first!
@@ -52,3 +55,4 @@ Yes!  Visit [our homepage](http://akveo.com/) or simply leave us a note to [cont
 
 Enjoy :metal:
 We're always happy to hear your feedback!
+

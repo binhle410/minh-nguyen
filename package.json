@@ -7,15 +7,15 @@
   "license": "MIT",
   "dependencies": {
 
-    "@angular/common": "2.2.4",
-    "@angular/compiler": "2.2.4",
-    "@angular/core": "2.2.4",
-    "@angular/forms": "2.2.4",
-    "@angular/http": "2.2.4",
-    "@angular/platform-browser": "2.2.4",
-    "@angular/platform-browser-dynamic": "2.2.4",
-    "@angular/platform-server": "2.2.4",
-    "@angular/router": "3.2.4",
+    "@angular/common": "2.2.3",
+    "@angular/compiler": "2.2.3",
+    "@angular/core": "2.2.3",
+    "@angular/forms": "2.2.3",
+    "@angular/http": "2.2.3",
+    "@angular/platform-browser": "2.2.3",
+    "@angular/platform-browser-dynamic": "2.2.3",
+    "@angular/platform-server": "2.2.3",
+    "@angular/router": "3.2.3",
 
     "@angularclass/conventions-loader": "^1.0.2",
     "@angularclass/hmr": "~1.2.2",
@@ -49,10 +49,11 @@
     "ng2-bootstrap": "1.1.16",
     "ng2-ckeditor": "1.0.7",
     "ng2-smart-table": "^0.3.2",
-    "ng2-tree": "~1.0.0",
+    "ng2-tree": "^0.0.2-7",
     "ng2-uploader": "1.1.0",
     "normalize.css": "^4.1.1",
-    "postcss-loader": "^1.0.0",
+    "postcss-loader": "1.0.0",
+    "postcss-load-config": "1.0.0",
     "rxjs": "5.0.0-beta.12",
     "tether": "^1.2.4",
     "zone.js": "~0.7.1"
@@ -111,7 +112,8 @@
     "es6-promise": "^3.1.2",
     "es6-shim": "^0.35.0",
     "es7-reflect-metadata": "^1.6.0",
-    "electron": "^1.4.0"
+    "electron": "^1.4.0",
+    "angular2-jwt": "^0.1.28"
   },
   "scripts": {
     "rimraf": "rimraf",
