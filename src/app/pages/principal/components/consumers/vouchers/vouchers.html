@@ -7,45 +7,47 @@
 </div><!-- PATHWAY -->
 
 <div class="widgets">
-  <form>
-      <div class="form-group row">
-          <div class="col-xs-4">
-              <label for="fname">First name</label>
-              <input type="text" class="form-control" id="fname" placeholder="First name" value="Keyol">
-          </div>               
-          <div class="col-xs-4">
-              <label for="mname">Middle name</label>
-              <input type="text" class="form-control" id="mname" placeholder="Middle name" value="">
-          </div>
-          <div class="col-xs-4">
-              <label for="fname">Last name</label>
-              <input type="text" class="form-control" id="lname" placeholder="Last name" value="Kern">
-          </div>
-      </div><!-- END: NAME -->
-      <div class="form-group row">
-          <div class="col-xs-8">
-              <label for="exampleInputEmail1">Admin Email</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" value="mdo@gmail.com">
-          </div>
-          <div class="col-xs-4">
-              <label for="mobilenum">Mobile</label>
-              <input type="text" class="form-control" id="mobilenum" placeholder="Mobile" value="01 436 645 353">
-          </div>
-      </div><!-- END: Email & Addr -->
-      <div class="form-group row">                
-          <div class="col-xs-8">
-              <label for="companyAddress">Address</label>
-              <input type="text" class="form-control" id="companyAddress" placeholder="Address" value="New York, USA">
-          </div>
-          <div class="col-xs-4">
-              <label for="postal-code">Postal code</label>
-              <input type="email" class="form-control" id="postal-code" placeholder="Postal code" value="258226">
-          </div>
-      </div><!-- END: Email & Addr -->
-      <div class="form-group">
-          <button type="submit" class="btn btn-primary w120">Submit</button>
-      </div>
-  </form><!-- END : FORM -->
+  <ba-card title="Consumer Info" baCardClass="with-scroll">
+    <form>
+        <div class=" row">
+            <div class="form-group col-md-4 col-xs-12">
+                <label for="fname">First name</label>
+                <input type="text" class="form-control" id="fname" placeholder="First name" value="Keyol">
+            </div>               
+            <div class="form-group col-md-4 col-xs-12">
+                <label for="mname">Middle name</label>
+                <input type="text" class="form-control" id="mname" placeholder="Middle name" value="">
+            </div>
+            <div class="form-group col-md-4  col-xs-12">
+                <label for="fname">Last name</label>
+                <input type="text" class="form-control" id="lname" placeholder="Last name" value="Kern">
+            </div>
+        </div><!-- END: NAME -->
+        <div class="row">
+            <div class="form-group col-md-8 col-xs-12">
+                <label for="exampleInputEmail1">Admin Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" value="mdo@gmail.com">
+            </div>
+            <div class="form-group col-md-4 col-xs-12">
+                <label for="mobilenum">Mobile</label>
+                <input type="text" class="form-control" id="mobilenum" placeholder="Mobile" value="01 436 645 353">
+            </div>
+        </div><!-- END: Email & Addr -->
+        <div class="row">                
+            <div class="form-group col-md-8 col-xs-12">
+                <label for="companyAddress">Address</label>
+                <input type="text" class="form-control" id="companyAddress" placeholder="Address" value="New York, USA">
+            </div>
+            <div class="form-group col-md-4 col-xs-12">
+                <label for="postal-code">Postal code</label>
+                <input type="email" class="form-control" id="postal-code" placeholder="Postal code" value="258226">
+            </div>
+        </div><!-- END: Email & Addr -->
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary w120">Submit</button>
+        </div>
+    </form>
+  </ba-card><!-- END : FORM -->
 
   <div class="tbl-grd-view">
       <ba-card title="Vouchers" baCardClass="with-scroll" class="pos-relative tbl-product-list">
