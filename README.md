@@ -23,6 +23,7 @@ Here you can find Angular 1.x based version: [Blur Admin](http://akveo.github.io
 ## Documentation
 Installation, customization and other useful articles: https://akveo.github.io/ng2-admin/
 
+## Current version Angular 2.2.3
 ## Based on
 Angular 2, Bootstrap 4, Webpack and lots of awesome modules and plugins
 
