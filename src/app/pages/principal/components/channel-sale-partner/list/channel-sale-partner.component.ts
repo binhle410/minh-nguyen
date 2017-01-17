@@ -1,19 +1,21 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 import { Router }            from '@angular/router';
 
-import { ChannelPartnerService } from './channel-partner.service';
+import { ChannelSalePartnerService } from './channel-sale-partner.service';
 import { LocalDataSource } from 'ng2-smart-table';
 
 @Component({
-  selector: 'channel-partner',
+  selector: 'channel-sale',
   encapsulation: ViewEncapsulation.None,
   //styles: [require('../smartTables.scss')],
-  template: require('./channel-partner.html'),
+  template: require('./channel-sale-partner.html'),
 })
-export class ChannelPartner {
-  public activePageTitle: string = 'Channel Partner';
-  // *tb Settings
+export class ChannelSalePartnerList {
+  public topCSetting:any         = {
+    pageTitle : 'Channel Sale Partner'
+  };
   query: string = '';
+
   settings = {
     add: {
       addButtonContent: '<i class="ion-ios-plus-outline"></i>',
@@ -30,56 +32,38 @@ export class ChannelPartner {
       //confirmDelete: true
     },
     columns: {
-      fName: {
-        title: 'First name',
+      name: {
+        title: 'Name',
         type: 'string'
-      },
-      mName: {
-        title: 'Middle name',
-        type: 'string'
-      },
-      lName: {
-        title: 'Last Email',
-        type: 'string'
-      }, 
-      location: {
-        title: 'Address',
-        type: 'string'
-      },
+      },      
       email: {
-        title: 'Admin Email',
+        title: 'Email',
         type: 'string'
+      },
+      consumer: {
+         title: 'Consumers',
+        type: 'number'
       },
       voucher: {
-        title: 'Total vouchers',
+        title: 'Vouchers',
         type: 'number'
       }, 
       claim: {
-        title: 'Total claims',
+        title: 'Channel Partners',
         type: 'number'
       },
       logo: {
         title: 'Logo',
         type: 'html',
         filter: false
-      },
-      cPartner: {
-        title: 'Channel Partner',
-        type: 'html'
-      },
-      actions: {
-        title: 'Actions',
-        type: 'html',
-        filter: false
       }
     },
-    mode: 'external'    
+    mode: 'external'
   };
 
   source: LocalDataSource = new LocalDataSource();
 
-  constructor(
-    protected service: ChannelPartnerService,
+  constructor(protected service: ChannelSalePartnerService, 
     private _router: Router) {
     this.service.getData().then((data) => {
       this.source.load(data);
@@ -103,6 +87,6 @@ export class ChannelPartner {
   }
 
   onEdit(event) {
-    this._router.navigate(['pages/principal/detail-cp', event.data.voucher]);
+    this._router.navigate(['pages/principal/csp', event.data.id]);
   }
 }

@@ -1,7 +1,7 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 @Component({
-  selector: 'consumers',
+  selector: 'csp',
   encapsulation: ViewEncapsulation.None,
   template: '<router-outlet></router-outlet>',
 })
-export class Consumers {}
+export class ChannelSalePartner {}

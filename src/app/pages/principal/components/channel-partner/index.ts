@@ -1,1 +1,1 @@
-export * from './channel-partner.component';
+export * from './cp.component';

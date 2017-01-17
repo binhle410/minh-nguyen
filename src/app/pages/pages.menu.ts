@@ -47,7 +47,7 @@ export const PAGES_MENU = [
             }
           },
           {
-            path: 'channel-partner',
+            path: 'cp',
             data: {
               menu: {
                 title: 'Channel Partner',
@@ -55,7 +55,7 @@ export const PAGES_MENU = [
             }
           },
           {
-            path: 'channel-sale-partner',
+            path: 'csp',
             data: {
               menu: {
                 title: 'Channel Sale Partner',
@@ -111,7 +111,7 @@ export const PAGES_MENU = [
         ]
       },
       {
-        path: 'channel-sale-partner',
+        path: 'csp',
         data: {
           menu: {
             title: 'Channel Sale Partner',

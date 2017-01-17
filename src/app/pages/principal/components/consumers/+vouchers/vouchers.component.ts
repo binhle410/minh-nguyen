@@ -27,13 +27,18 @@ export class ConsumerVouchers {
   };  
   
   source: LocalDataSource = new LocalDataSource();
-  activePageTitle: string;
+  public topCSetting:any  = {
+    pageTitle : 'Consumers',
+    subLink   : {
+      url   : '/pages/principal/consumers',
+      title : 'Consumers'
+    }
+  };
 
   
   constructor(
     protected service: ConsumerVouchersService) {
-
-    this.activePageTitle = "Vouchers of Mae Chark";
+    
     this.setDataVouchers();
 
     // GET API DATA
@@ -43,7 +48,9 @@ export class ConsumerVouchers {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.topCSetting.pageTitle = "Vouchers of Mae Chark A";
+  }
 
   /* Start dev func ------------------------------------------------ */
   setDataVouchers () {

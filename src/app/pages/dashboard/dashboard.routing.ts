@@ -2,7 +2,7 @@ import { Routes, RouterModule }  from '@angular/router';
 
 import { Dashboard } from './dashboard.component';
 // import {tokenNotExpired} from 'angular2-jwt/angular2-jwt';
-import { AuthGuard }                from 'app/security/authGuard.service';
+import { AuthGuard } from 'app/security/authGuard.service';
 
 // noinspection TypeScriptValidateTypes
 const routes: Routes = [

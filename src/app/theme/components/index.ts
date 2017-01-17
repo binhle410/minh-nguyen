@@ -12,3 +12,6 @@ export * from './baFullCalendar';
 export * from './baPictureUploader';
 export * from './baCheckbox';
 export * from './baMultiCheckbox';
+
+/* Mg Dev */
+export * from './mgContentTop';

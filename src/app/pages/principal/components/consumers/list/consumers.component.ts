@@ -1,16 +1,20 @@
 import {Component, ViewEncapsulation} from '@angular/core';
+import { Router }            from '@angular/router';
 
-import { ChannelSalePartnerService } from './channel-sale-partner.service';
+import { ConsumerListService } from './consumers.service';
 import { LocalDataSource } from 'ng2-smart-table';
 
 @Component({
-  selector: 'channel-sale',
+  selector: 'consumer-list',
   encapsulation: ViewEncapsulation.None,
-  //styles: [require('../smartTables.scss')],
-  template: require('./channel-sale-partner.html'),
+  template: require('./consumers.html'),
 })
-export class ChannelSalePartner {
-  public activePageTitle: string = 'Channel Sale Partner';
+export class ConsumerList {
+
+  public topCSetting:any         = {
+    pageTitle : 'Consumers'
+  };
+  
   // *tb Settings
   query: string = '';
   settings = {
@@ -20,9 +24,7 @@ export class ChannelSalePartner {
       cancelButtonContent: '<i class="ion-close"></i>',
     },
     edit: {
-      editButtonContent: '<i class="ion-edit"></i>',
-      saveButtonContent: '<i class="ion-checkmark"></i>',
-      cancelButtonContent: '<i class="ion-close"></i>',
+      editButtonContent: '<i class="ion-edit"></i>'
     },
     delete: {
       deleteButtonContent: '<i class="ion-trash-a"></i>'
@@ -57,13 +59,8 @@ export class ChannelSalePartner {
         title: 'Total claims',
         type: 'number'
       },
-      logo: {
-        title: 'Logo',
-        type: 'html',
-        filter: false
-      },
       cPartner: {
-        title: 'Sales Partner',
+        title: 'Channel Partner',
         type: 'html'
       },
       actions: {
@@ -75,13 +72,16 @@ export class ChannelSalePartner {
     mode: 'external'    
   };
 
-
   source: LocalDataSource = new LocalDataSource();
 
-  constructor(protected service: ChannelSalePartnerService) {
+  constructor(
+    protected service: ConsumerListService,
+    private _router: Router) {
     this.service.getData().then((data) => {
       this.source.load(data);
-    });
+    });  
+
+    this.topCSetting.pageTitle = "Consumers";
   }
 
   ngOnInit() {
@@ -101,6 +101,8 @@ export class ChannelSalePartner {
   }
 
   onEdit(event) {
-    console.log(event);
+    this._router.navigate(['pages/principal/consumers', event.data.voucher]);
   }
+
+  
 }

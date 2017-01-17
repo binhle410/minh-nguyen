@@ -1,12 +1,12 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
-  selector: 'company',
+  selector: 'csp-detail',
   encapsulation: ViewEncapsulation.None,
-  template: require('./company.html'),
+  template: require('./cspDetail.html'),
 })
-export class Company {
-  public activePageTitle: string = 'Company profile';
+export class CspDetail {
+
   public defaultPicture = 'assets/img/theme/no-photo.png';
   public profile:any = {
     picture: 'assets/img/app/profile/logo-company.jpg'
@@ -16,7 +16,7 @@ export class Company {
   };
 
   public topCSetting:any  = {
-    pageTitle : 'Company'
+    pageTitle : 'Channel Sale Partner Detail'
   };
 
   constructor() {

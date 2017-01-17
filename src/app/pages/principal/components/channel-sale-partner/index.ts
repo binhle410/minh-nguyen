@@ -1,1 +1,1 @@
-export * from './channel-sale-partner.component';
+export * from './csp.component';
