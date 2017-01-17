@@ -16,7 +16,11 @@ export class ProductDetail {
   };
 
   public topCSetting:any  = {
-    pageTitle : 'Product detail'
+    pageTitle : 'Product detail',
+    subLink   : {
+      url   : '/pages/principal/products',
+      title : 'Products'
+    }
   };
 
   constructor() {
