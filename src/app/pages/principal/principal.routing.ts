@@ -9,7 +9,8 @@ const routes: Routes = [
       { path: 'company', loadChildren: () => System.import('./subpages/company/company.module') },    
       { path: 'consumers', loadChildren: () => System.import('./subpages/consumers/consumers.module') },    
       { path: 'cp', loadChildren: () => System.import('./subpages/channel-partner/cp.module') },  
-      { path: 'csp', loadChildren: () => System.import('./subpages/channel-sale-partner/csp.module') }     
+      { path: 'csp', loadChildren: () => System.import('./subpages/channel-sale-partner/csp.module') },
+      { path: 'vouchers', loadChildren: () => System.import('./subpages/vouchers/vouchers.module') }     
     ]
   }
 ];
