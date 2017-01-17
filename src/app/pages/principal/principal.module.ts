@@ -4,30 +4,20 @@ import { FormsModule } from '@angular/forms';
 import { NgaModule } from '../../theme/nga.module';
 
 import { routing }       from './principal.routing';
-import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 // COMPONENT
 import { Principal } from './principal.component';
-
-// ...
-import { DetailCP } from './components/detail/detail.component';
-import { DetailCPService } from './components/detail/detail.service';
-
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     NgaModule,
-    routing,
-    Ng2SmartTableModule
+    routing
   ],
   declarations: [
-      Principal,
-      DetailCP
+      Principal
   ],
-  providers: [
-    DetailCPService,
-  ]
+  providers: []
 })
 export default class PrincipalModule {}
