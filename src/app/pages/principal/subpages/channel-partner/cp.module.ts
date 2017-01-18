@@ -9,6 +9,12 @@ import { ChannelPartner } from './cp.component';
 import { ChannelPartnerList } from './list/channel-partner.component';
 import { ChannelPartnerService } from './list/channel-partner.service';
 
+// Module
+// import { MgTable } from '../../../../theme/components/mgTable/mgTable.component';
+// import { MgTableModule } from '../../../../theme/components/mgTable/mgTable.module';
+// import { sharedMgTableModule } from '../../../shared/shareMgTable.module';
+import { jqxGridComponent } from '../../../../theme/components/mgTable/ts/angular_jqxgrid';
+
 
 @NgModule({
   imports: [
@@ -16,11 +22,15 @@ import { ChannelPartnerService } from './list/channel-partner.service';
     FormsModule,
     NgaModule,
     routing,
-    Ng2SmartTableModule
+    Ng2SmartTableModule,
+    // MgTableModule,
+    // sharedMgTableModule
   ],
   declarations: [
     ChannelPartner,
-    ChannelPartnerList
+    ChannelPartnerList,
+    jqxGridComponent
+    // MgTable
   ],
   providers: [
     ChannelPartnerService

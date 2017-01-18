@@ -1,14 +1,16 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {Component, ViewEncapsulation, ViewChild} from '@angular/core';
 import { Router }            from '@angular/router';
 
 import { ChannelPartnerService } from './channel-partner.service';
 import { LocalDataSource } from 'ng2-smart-table';
-
+import { jqxGridComponent } from '../../../../../theme/components/mgTable/ts/angular_jqxgrid';
+declare var generatedata: any;
 @Component({
   selector: 'channel-sale',
   encapsulation: ViewEncapsulation.None,
   //styles: [require('../smartTables.scss')],
   template: require('./channel-partner.html'),
+  styles: [require('../../../../../theme/components/mgTable/mgTable.scss')],
 })
 export class ChannelPartnerList {
   public topCSetting:any         = {
@@ -63,6 +65,55 @@ export class ChannelPartnerList {
 
   source: LocalDataSource = new LocalDataSource();
 
+
+  // MG TABLE
+  @ViewChild('gridReference') myGrid: jqxGridComponent;
+  clearFiltering(): void {
+      this.myGrid.clearfilters();
+  }
+
+  data: any = [
+    {
+      'name': 'test 1',
+      'productname': 'test 1',
+      'available': true,
+      'date': 'test 1',
+      'quantity': '1'
+    }
+  ];
+  // sourceTbl: any =
+  // {
+  //     localdata: this.data,
+  //     datafields:
+  //     [
+  //         { name: 'name', type: 'string' },
+  //         { name: 'productname', type: 'string' },
+  //         { name: 'available', type: 'bool' },
+  //         { name: 'date', type: 'string' },
+  //         { name: 'quantity', type: 'number' }
+  //     ],
+  //     datatype: "array"
+  // };
+  // dataAdapter: any = new $.jqx.dataAdapter(this.sourceTbl);
+  columns: any[] =
+  [
+      {
+          text: 'Name', columntype: 'textbox', filtertype: 'input', datafield: 'name', width: 215
+      },
+      {
+          text: 'Product', filtertype: 'checkedlist', datafield: 'productname', width: 220
+      },
+      {
+          text: 'Available', datafield: 'available', columntype: 'checkbox', filtertype: 'bool', width: 67
+      },
+      {
+          text: 'Ship Date', datafield: 'date', filtertype: 'range', width: 210, cellsalign: 'right', cellsformat: 'd'
+      },
+      {
+          text: 'Qty.', datafield: 'quantity', filtertype: 'number', cellsalign: 'right'
+      }
+  ]; 
+
   constructor(protected service: ChannelPartnerService, 
     private _router: Router) {
     this.service.getData().then((data) => {
@@ -71,6 +122,8 @@ export class ChannelPartnerList {
   }
 
   ngOnInit() {
+    console.log($.jqx);
+    
   }
 
   onDelete(event) {
