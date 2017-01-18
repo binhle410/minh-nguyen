@@ -11,7 +11,8 @@ const routes: Routes = [
       { path: 'cp', loadChildren: () => System.import('./subpages/channel-partner/cp.module') },  
       { path: 'csp', loadChildren: () => System.import('./subpages/channel-sale-partner/csp.module') },
       { path: 'vouchers', loadChildren: () => System.import('./subpages/vouchers/vouchers.module') },
-      { path: 'products', loadChildren: () => System.import('./subpages/products/product.module') }     
+      { path: 'products', loadChildren: () => System.import('./subpages/products/product.module') },
+      { path: 'clinics', loadChildren: () => System.import('./subpages/clinics/clinics.module') }     
     ]
   }
 ];
