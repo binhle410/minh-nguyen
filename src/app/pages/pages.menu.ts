@@ -111,7 +111,7 @@ export const PAGES_MENU = [
         ]
       },
       {
-        path: 'csp',
+        path: 'sale-partner',
         data: {
           menu: {
             title: 'Channel Sale Partner',
@@ -123,15 +123,47 @@ export const PAGES_MENU = [
         },
         children: [
           {
-            path: 'list',
+            path: 'dashboard',
             data: {
               menu: {
-                title: 'List',
+                title: 'Dashboard',
               }
             }
           },
           {
-            path: 'sale-account',
+            path: 'company',
+            data: {
+              menu: {
+                title: 'Company',
+              }
+            }
+          },
+          {
+            path: 'vouchers',
+            data: {
+              menu: {
+                title: 'Vouchers',
+              }
+            }
+          },
+          {
+            path: 'consumers',
+            data: {
+              menu: {
+                title: 'Consumers',
+              }
+            }
+          },
+          {
+            path: 'channel-partners',
+            data: {
+              menu: {
+                title: 'Channel Partner',
+              }
+            }
+          },
+          {
+            path: 'account-managers',
             data: {
               menu: {
                 title: 'Channel Sale Account Manager',

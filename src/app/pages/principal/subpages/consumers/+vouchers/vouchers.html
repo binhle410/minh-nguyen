@@ -43,7 +43,31 @@
   </ba-card><!-- END : FORM -->
 
   <div class="tbl-grd-view">
-      <ba-card title="Vouchers" baCardClass="with-scroll" class="pos-relative tbl-product-list">
+      <div class="content-top clearfix">
+        <h1 class="al-title">Vouchers</h1>
+      </div>
+      <ba-card baCardClass="with-scroll" class="pos-relative blk-daterange">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <input type="text"
+                class="form-control ipt-daterange"
+                date_range
+                placeholder="Purchase Date" />
+                <button type="button" class="btn btn-primary">Filter</button>
+                <button type="button" class="btn btn-defaukt">Reset</button>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <input type="text"
+                class="form-control ipt-daterange"
+                date_range
+                placeholder="Expiry Date" />
+                <button type="button" class="btn btn-primary">Filter</button>
+                <button type="button" class="btn btn-defaukt">Reset</button>
+            </div>
+        </div>
+    </ba-card>
+    <!-- END INPUT DATE RANGE -->
+      <ba-card title="List" baCardClass="with-scroll" class="pos-relative tbl-product-list">
           <button class="btn btn-success btn-export">Export XLS</button>
           <ng2-smart-table
           [settings]="settings"

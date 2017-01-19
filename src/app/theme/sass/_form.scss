@@ -683,3 +683,18 @@ label.custom-checkbox {
 .w180 {
   width: 180px;
 }
+.ipt-daterange {
+  width: 300px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.blk-daterange {
+  .btn {
+    padding: 0.5rem 0.75rem;
+    line-height: 1.25;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<mg-content-top [topCSetting]="topCSetting"></mg-content-top><!-- PATHWAY -->
+
+<div class="widgets">
+  <div class="row">
+    <ba-card title="List" baCardClass="with-scroll" class="pos-relative">
+      <button class="btn btn-success btn-export">Export XLS</button>
+      <ng2-smart-table
+      [settings]="settings"
+      [source]="source"
+      (delete)="onDelete($event)"
+      (edit)="onEdit($event)"
+      (create)="onCreate($event)"></ng2-smart-table>
+    </ba-card>
+  </div>
+</div>

@@ -8,10 +8,6 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 // COMPONENT
 import { ChannelSalePartnerComp } from './channel-sale-partner.component';
-import { ListSalePartner } from './components/list/list.component';
-import { ListSalePartnerService } from './components/list/list.service';
-import { SaleAccount } from './components/sale-account/sale-account.component';
-import { SaleAccountService } from './components/sale-account/sale-account.service';
 
 
 @NgModule({
@@ -23,13 +19,9 @@ import { SaleAccountService } from './components/sale-account/sale-account.servi
     Ng2SmartTableModule
   ],
   declarations: [
-      ChannelSalePartnerComp,
-      ListSalePartner,
-      SaleAccount
+      ChannelSalePartnerComp
   ],
   providers: [
-    ListSalePartnerService,
-    SaleAccountService
   ]
 })
-export default class MapsModule {}
+export default class SalePartnerModule {}

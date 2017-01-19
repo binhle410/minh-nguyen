@@ -68,11 +68,13 @@ export class Vouchers {
       },
       purcDate : {
         title: "Purchase Date",
-        type: 'string'
+        type: 'string',
+        filter: false
       },
       ExprDate : {
         title: "Expiry Date",
-        type: 'string'
+        type: 'string',
+        filter: false
       },
       price : {
         title: "Price",

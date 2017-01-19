@@ -9,6 +9,9 @@ import { routing }       from './vouchers.routing';
 import { Vouchers } from './vouchers.component';
 import { VouchersService } from './vouchers.service';
 
+// MODULES
+import { sharedDateRangeModule } from '../../../shared/shareDateRange.module';
+
 
 @NgModule({
   imports: [
@@ -16,7 +19,8 @@ import { VouchersService } from './vouchers.service';
     FormsModule,
     NgaModule,
     routing,
-    Ng2SmartTableModule
+    Ng2SmartTableModule,
+    sharedDateRangeModule
   ],
   declarations: [
       Vouchers

@@ -19,4 +19,4 @@ import { Company } from './company.component';
   providers: [
   ]
 })
-export default class ConsumersModule {}
+export default class CompanyModule {}
