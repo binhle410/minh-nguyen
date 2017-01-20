@@ -1,17 +1,19 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 import { Router }            from '@angular/router';
 
-import { OrdersPartnerService } from './orders.service';
+import { ChannelSalePartnerService } from './channel-sale-partner.service';
 import { LocalDataSource } from 'ng2-smart-table';
 
 @Component({
-  selector: 'orders-partner',
+  selector: 'channel-sale',
   encapsulation: ViewEncapsulation.None,
   //styles: [require('../smartTables.scss')],
-  template: require('./orders.html'),
+  template: require('./channel-sale-partner.html'),
 })
-export class OrdersPartner {
-
+export class ChannelSalePartnerList {
+  public topCSetting:any         = {
+    pageTitle : 'Channel Sale Partner'
+  };
   query: string = '';
 
   settings = {
@@ -30,21 +32,30 @@ export class OrdersPartner {
       //confirmDelete: true
     },
     columns: {
-      product_list: {
-        title: 'Product List',
-        type: 'string'
-      },
-      email: {
-        title: 'Comsumer email',
-        type: 'string'
-      }, 
       name: {
-        title: 'Comsumer name',
+        title: 'Name',
         type: 'string'
       },      
-      payment: {
-        title: 'Payment Status',
-        type: 'html'
+      email: {
+        title: 'Email',
+        type: 'string'
+      },
+      consumer: {
+         title: 'Consumers',
+        type: 'number'
+      },
+      voucher: {
+        title: 'Vouchers',
+        type: 'number'
+      }, 
+      claim: {
+        title: 'Channel Partners',
+        type: 'number'
+      },
+      logo: {
+        title: 'Logo',
+        type: 'html',
+        filter: false
       }
     },
     mode: 'external'
@@ -52,8 +63,7 @@ export class OrdersPartner {
 
   source: LocalDataSource = new LocalDataSource();
 
-  constructor(
-    protected service: OrdersPartnerService,
+  constructor(protected service: ChannelSalePartnerService, 
     private _router: Router) {
     this.service.getData().then((data) => {
       this.source.load(data);
@@ -77,5 +87,6 @@ export class OrdersPartner {
   }
 
   onEdit(event) {
+    this._router.navigate(['pages/channel-partner/csp', event.data.id]);
   }
 }

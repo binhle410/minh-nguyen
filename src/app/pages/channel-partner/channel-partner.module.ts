@@ -8,10 +8,6 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 // COMPONENT
 import { ChannelPartnerComp } from './channel-partner.component';
-import { ListPartner } from './components/list/list.component';
-import { ListPartnerService } from './components/list/list.service';
-import { OrdersPartner } from './components/orders/orders.component';
-import { OrdersPartnerService } from './components/orders/orders.service';
 
 
 @NgModule({
@@ -23,13 +19,9 @@ import { OrdersPartnerService } from './components/orders/orders.service';
     Ng2SmartTableModule
   ],
   declarations: [
-      ChannelPartnerComp,
-      ListPartner,
-      OrdersPartner
+      ChannelPartnerComp
   ],
   providers: [
-    ListPartnerService,
-    OrdersPartnerService
   ]
 })
 export default class MapsModule {}

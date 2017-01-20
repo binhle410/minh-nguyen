@@ -1,19 +1,22 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 import { Router }            from '@angular/router';
 
-import { ListPartnerService } from './list.service';
+import { ConsumerListService } from './consumers.service';
 import { LocalDataSource } from 'ng2-smart-table';
 
 @Component({
-  selector: 'list-partner',
+  selector: 'consumer-list',
   encapsulation: ViewEncapsulation.None,
-  //styles: [require('../smartTables.scss')],
-  template: require('./list.html'),
+  template: require('./consumers.html'),
 })
-export class ListPartner {
+export class ConsumerList {
 
+  public topCSetting:any         = {
+    pageTitle : 'Consumers'
+  };
+  
+  // *tb Settings
   query: string = '';
-
   settings = {
     add: {
       addButtonContent: '<i class="ion-ios-plus-outline"></i>',
@@ -21,48 +24,68 @@ export class ListPartner {
       cancelButtonContent: '<i class="ion-close"></i>',
     },
     edit: {
-      editButtonContent: '<i class="ion-edit"></i>',
-      saveButtonContent: '<i class="ion-checkmark"></i>',
-      cancelButtonContent: '<i class="ion-close"></i>',
+      editButtonContent: '<i class="ion-edit"></i>'
     },
     delete: {
       deleteButtonContent: '<i class="ion-trash-a"></i>'
       //confirmDelete: true
     },
     columns: {
+      fName: {
+        title: 'First name',
+        type: 'string'
+      },
+      mName: {
+        title: 'Middle name',
+        type: 'string'
+      },
+      lName: {
+        title: 'Last Email',
+        type: 'string'
+      }, 
+      location: {
+        title: 'Address',
+        type: 'string'
+      },
       email: {
         title: 'Admin Email',
         type: 'string'
       },
       voucher: {
-        title: 'Voucher',
+        title: 'Total vouchers',
         type: 'number'
       }, 
       claim: {
-        title: 'Claim',
+        title: 'Total claims',
         type: 'number'
-      },      
-      location: {
-        title: 'Location',
-        type: 'string'
       },
-      logo: {
-        title: 'Logo',
+      cPartner: {
+        title: 'Channel Partner',
+        type: 'html'
+      },
+      sPartner: {
+        title: 'Sales Partner',
+        type: 'html'
+      },
+      actions: {
+        title: 'Actions',
         type: 'html',
         filter: false
       }
     },
-    mode: 'external'
+    mode: 'external'    
   };
 
   source: LocalDataSource = new LocalDataSource();
 
   constructor(
-    protected service: ListPartnerService,
+    protected service: ConsumerListService,
     private _router: Router) {
     this.service.getData().then((data) => {
       this.source.load(data);
-    });
+    });  
+
+    this.topCSetting.pageTitle = "Consumers";
   }
 
   ngOnInit() {
@@ -82,5 +105,8 @@ export class ListPartner {
   }
 
   onEdit(event) {
+    this._router.navigate(['pages/channel-partner/consumers', event.data.voucher]);
   }
+
+  
 }

@@ -1,7 +1,8 @@
-<div class="widgets">
+<mg-content-top [topCSetting]="topCSetting"></mg-content-top><!-- PATHWAY -->
 
+<div class="widgets">
   <div class="row">
-    <ba-card title="Channel Partner Orders" baCardClass="with-scroll" class="pos-relative">
+    <ba-card title="List" baCardClass="with-scroll" class="pos-relative">
       <button class="btn btn-success btn-export">Export XLS</button>
       <ng2-smart-table
       [settings]="settings"
@@ -11,5 +12,4 @@
       (create)="onCreate($event)"></ng2-smart-table>
     </ba-card>
   </div>
-
 </div>

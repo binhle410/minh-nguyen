@@ -1,8 +1,6 @@
 import { Routes, RouterModule }  from '@angular/router';
 
 import { ChannelPartnerComp } from './channel-partner.component';
-import { ListPartner } from './components/list/list.component';
-import { OrdersPartner } from './components/orders/orders.component';
 
 // noinspection TypeScriptValidateTypes
 const routes: Routes = [
@@ -10,10 +8,11 @@ const routes: Routes = [
     path: '',
     component: ChannelPartnerComp,
     children: [
-      { path: 'list', component: ListPartner },
-      { path: 'orders', component: OrdersPartner },
-    //   { path: 'channel-sale-partner', component: ChannelSalePartner },
-    //   { path: 'detail-cp/:id', component: DetailCP }
+      { path: 'dashboard', loadChildren: () => System.import('./subpages/dashboard/dashboard.module') },
+      { path: 'company', loadChildren: () => System.import('./subpages/company/company.module') },  
+      { path: 'consumers', loadChildren: () => System.import('./subpages/consumers/consumers.module') },  
+      { path: 'vouchers', loadChildren: () => System.import('./subpages/vouchers/vouchers.module') },
+      { path: 'csp', loadChildren: () => System.import('./subpages/channel-sale-partner/csp.module') },
     ]
   }
 ];

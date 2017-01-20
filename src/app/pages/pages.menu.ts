@@ -93,18 +93,42 @@ export const PAGES_MENU = [
         },
         children: [
           {
-            path: 'list',
+            path: 'dashboard',
             data: {
               menu: {
-                title: 'List',
+                title: 'Dashboard',
               }
             }
           },
           {
-            path: 'orders',
+            path: 'company',
             data: {
               menu: {
-                title: 'Orders',
+                title: 'Company',
+              }
+            }
+          },
+          {
+            path: 'vouchers',
+            data: {
+              menu: {
+                title: 'Vouchers',
+              }
+            }
+          },
+          {
+            path: 'consumers',
+            data: {
+              menu: {
+                title: 'Consumers',
+              }
+            }
+          },
+          {
+            path: 'csp',
+            data: {
+              menu: {
+                title: 'Channel Sale Partner',
               }
             }
           }
